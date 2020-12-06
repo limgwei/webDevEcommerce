@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,22 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
+    
+    Route::apiResource('cart','CartApiController');
+    Route::apiResource('category','CategoryApiController');
+    Route::apiResource('chat','ChatApiController');
+    Route::apiResource('discount-product','DiscountProductApiController');
+    Route::apiResource('order','OrderApiController');
+    Route::apiResource('order-item','OrderItemApiController');
+    Route::apiResource('product','ProductApiController');
+    Route::apiResource('promocode','PromocodeApiController');
+    Route::apiResource('promocode-history','PromocodeHistoryApiController');
+    Route::apiResource('sub-category','SubCategoryApiController');
+    Route::apiResource('user','UserApiController');
+ 
+ 
 });
+
+
+
