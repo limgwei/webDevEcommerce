@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Traits\MediaUploadingTrait;
+use App\Http\Resources\UserResource;
+use App\Models\User;
 class UserApiController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class UserApiController extends Controller
      */
     public function index()
     {
-        //
+        return new UserResource(User::all());
     }
 
     /**
@@ -25,7 +27,15 @@ class UserApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create($request->all());
+
+        $file = $request->file('image');
+        $imageCount = count($request->file('image'));
+        
+         for($i = 0;$i<$imageCount;$i++){
+              $user->addMedia($file[$i])->toMediaCollection('image');
+              
+         }
     }
 
     /**
@@ -36,7 +46,7 @@ class UserApiController extends Controller
      */
     public function show($id)
     {
-        //
+        return new UserResource(User::where('id',$id)->get());
     }
 
     /**
@@ -47,8 +57,24 @@ class UserApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   $user = User::where('id',$id)->update($request->all);
+        
+
+       
+        $file = $request->file('image');
+        $imageCount = count($request->file('image'));
+
+        if ($user->image) {
+            foreach ($user->image as $media) { 
+                    $media->delete();  
+            }
+        }
+
+        for($i = 0;$i<$imageCount;$i++){
+            
+            $user->addMedia($file[$i])->toMediaCollection('image');
+   
+       }
     }
 
     /**
@@ -59,6 +85,6 @@ class UserApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::where('id',$id)->delete();
     }
 }

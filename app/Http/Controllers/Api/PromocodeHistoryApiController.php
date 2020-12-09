@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\PromocodeHistoryResource;
+use App\Models\PromocodeHistory;
 use Illuminate\Http\Request;
+
 
 class PromocodeHistoryApiController extends Controller
 {
-    /**
+  /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -15,8 +18,9 @@ class PromocodeHistoryApiController extends Controller
     public function index()
     {
         //
+        //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        return new PromocodeHistoryResource(PromocodeHistory::with(['user','promocode'])->get());
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -26,6 +30,9 @@ class PromocodeHistoryApiController extends Controller
     public function store(Request $request)
     {
         //
+        $promocodeHistory = PromocodeHistory::create($request->all());
+        return $promocodeHistory;
+           
     }
 
     /**
@@ -36,7 +43,8 @@ class PromocodeHistoryApiController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        return new PromocodeHistoryResource(PromocodeHistory::with(['user','promocode'])->where('id',$id)->get());
     }
 
     /**
@@ -49,6 +57,8 @@ class PromocodeHistoryApiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $promocodeHistory = PromocodeHistory::where('id',$id)->update($request->all());
+        return $promocodeHistory;
     }
 
     /**
@@ -59,6 +69,6 @@ class PromocodeHistoryApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        PromocodeHistory::where('id',$id)->delete();
     }
 }

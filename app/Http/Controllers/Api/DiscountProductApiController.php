@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\DiscountProductResource;
+use App\Models\DiscountProduct;
 use Illuminate\Http\Request;
+
 
 class DiscountProductApiController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -15,8 +18,9 @@ class DiscountProductApiController extends Controller
     public function index()
     {
         //
+        //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        return new DiscountProductResource(DiscountProduct::with(['product'])->get());
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -26,6 +30,9 @@ class DiscountProductApiController extends Controller
     public function store(Request $request)
     {
         //
+        $discountProduct = DiscountProduct::create($request->all());
+        return $discountProduct;
+           
     }
 
     /**
@@ -36,7 +43,8 @@ class DiscountProductApiController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        return new DiscountProductResource(DiscountProduct::with(['product'])->where('id',$id)->get());
     }
 
     /**
@@ -49,6 +57,8 @@ class DiscountProductApiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $discountProduct = DiscountProduct::where('id',$id)->update($request->all());
+        return $discountProduct;
     }
 
     /**
@@ -59,6 +69,6 @@ class DiscountProductApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DiscountProduct::where('id',$id)->delete();
     }
 }

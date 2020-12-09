@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\OrderItemResource;
+use App\Models\OrderItem;
 use Illuminate\Http\Request;
+
 
 class OrderItemApiController extends Controller
 {
@@ -15,8 +18,9 @@ class OrderItemApiController extends Controller
     public function index()
     {
         //
+        //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        return new OrderItemResource(OrderItem::with(['order','product'])->get());
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -26,6 +30,9 @@ class OrderItemApiController extends Controller
     public function store(Request $request)
     {
         //
+        $orderItem = OrderItem::create($request->all());
+        return $orderItem;
+           
     }
 
     /**
@@ -36,7 +43,8 @@ class OrderItemApiController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        return new OrderItemResource(OrderItem::with(['order','product'])->where('id',$id)->get());
     }
 
     /**
@@ -49,6 +57,8 @@ class OrderItemApiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $order = OrderItem::where('id',$id)->update($request->all());
+        return $order;
     }
 
     /**
@@ -59,6 +69,6 @@ class OrderItemApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        OrderItem::where('id',$id)->delete();
     }
 }

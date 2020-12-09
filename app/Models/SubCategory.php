@@ -4,13 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class SubCategory extends Model
+class SubCategory extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory,InteractsWithMedia;
 
     public $table = 'sub_categories';
 
+    protected $appends = [
+        'image',
+    ];
 
 
     protected $dates = [
@@ -20,17 +26,35 @@ class SubCategory extends Model
 
     protected $fillable = [
         'user_id',
-        'product_id',
+        'parent_id',
         'quantity',
     ];
 
-    public function product()
+    public function parent()
     {
-        return $this->belongsTo(Product::class, 'product_id');
+        return $this->belongsTo(SubCategory::class, 'parent_id');
     }
 
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function getImageAttribute()
+    {
+        $files = $this->getMedia('image');
+        $files->each(function ($item) {
+            $item->url       = $item->getUrl();
+            $item->thumbnail = $item->getUrl('thumb');
+            $item->preview   = $item->getUrl('preview');
+        });
+
+        return $files;
+    }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')->fit('crop', 50, 50);
+        $this->addMediaConversion('preview')->fit('crop', 120, 120);
     }
 }

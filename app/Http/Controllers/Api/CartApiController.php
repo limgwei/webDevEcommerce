@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
 use Illuminate\Http\Request;
+use App\Http\Resources\CartResource;
+
 
 class CartApiController extends Controller
 {
@@ -15,9 +18,9 @@ class CartApiController extends Controller
     public function index()
     {
         //
-        return 'yeah';
+        //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        return new CartResource(Cart::with(['user','product'])->get());
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -27,6 +30,9 @@ class CartApiController extends Controller
     public function store(Request $request)
     {
         //
+        $cart = Cart::create($request->all());
+        return $cart;
+           
     }
 
     /**
@@ -37,7 +43,8 @@ class CartApiController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        return new CartResource(Cart::with(['user','product'])->where('id',$id)->get());
     }
 
     /**
@@ -50,6 +57,8 @@ class CartApiController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $cart = Cart::where('id',$id)->update($request->all());
+        return $cart;
     }
 
     /**
@@ -60,6 +69,6 @@ class CartApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::where('id',$id)->delete();
     }
 }
