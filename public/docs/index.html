@@ -7,13 +7,13 @@
     <title>Laravel Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="docs/style.css">
-        <link rel="stylesheet" href="docs/css/style.css" media="screen" />
-        <link rel="stylesheet" href="docs/css/print.css" media="print" />
-        <script src="docs/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css" media="screen" />
+        <link rel="stylesheet" href="css/print.css" media="print" />
+        <script src="js/all.js"></script>
 
-        <link rel="stylesheet" href="docs/css/highlight-darcula.css" media="" />
-        <script src="docs/js/highlight.pack.js"></script>
+        <link rel="stylesheet" href="css/highlight-darcula.css" media="" />
+        <script src="js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
@@ -22,7 +22,7 @@
 <a href="#" id="nav-button">
       <span>
         NAV
-            <img src="docs/images/navbar.png" alt="-image" class=""/>
+            <img src="images/navbar.png" alt="-image" class=""/>
       </span>
 </a>
 <div class="tocify-wrapper">
@@ -56,9 +56,9 @@
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 <script>
-    var baseUrl = "http://localhost:8000";
+    var baseUrl = "http://localhost";
 </script>
-<script src="docs/js/tryitout-2.4.2.js"></script>
+<script src="js/tryitout-2.4.2.js"></script>
 <blockquote>
 <p>Base URL</p>
 </blockquote>
@@ -245,11 +245,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/cart/sed" \
+    -G "http://localhost/api/cart/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/sed"
+    "http://localhost/api/cart/sit"
 );
 
 let headers = {
@@ -298,11 +298,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/cart/quo" \
+    "http://localhost/api/cart/debitis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/quo"
+    "http://localhost/api/cart/debitis"
 );
 
 let headers = {
@@ -349,11 +349,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/cart/ratione" \
+    "http://localhost/api/cart/maiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/cart/ratione"
+    "http://localhost/api/cart/maiores"
 );
 
 let headers = {
@@ -493,11 +493,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/category/blanditiis" \
+    -G "http://localhost/api/category/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/category/blanditiis"
+    "http://localhost/api/category/velit"
 );
 
 let headers = {
@@ -546,11 +546,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/category/aut" \
+    "http://localhost/api/category/vero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/category/aut"
+    "http://localhost/api/category/vero"
 );
 
 let headers = {
@@ -597,11 +597,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/category/repellat" \
+    "http://localhost/api/category/quisquam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/category/repellat"
+    "http://localhost/api/category/quisquam"
 );
 
 let headers = {
@@ -753,11 +753,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/chat/voluptates" \
+    -G "http://localhost/api/chat/possimus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/chat/voluptates"
+    "http://localhost/api/chat/possimus"
 );
 
 let headers = {
@@ -806,11 +806,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/chat/nisi" \
+    "http://localhost/api/chat/debitis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/chat/nisi"
+    "http://localhost/api/chat/debitis"
 );
 
 let headers = {
@@ -857,11 +857,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/chat/neque" \
+    "http://localhost/api/chat/expedita" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/chat/neque"
+    "http://localhost/api/chat/expedita"
 );
 
 let headers = {
@@ -1014,11 +1014,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/discount-product/voluptatibus" \
+    -G "http://localhost/api/discount-product/adipisci" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/discount-product/voluptatibus"
+    "http://localhost/api/discount-product/adipisci"
 );
 
 let headers = {
@@ -1067,11 +1067,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/discount-product/rem" \
+    "http://localhost/api/discount-product/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/discount-product/rem"
+    "http://localhost/api/discount-product/vitae"
 );
 
 let headers = {
@@ -1118,11 +1118,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/discount-product/ducimus" \
+    "http://localhost/api/discount-product/accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/discount-product/ducimus"
+    "http://localhost/api/discount-product/accusantium"
 );
 
 let headers = {
@@ -1253,11 +1253,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/order/repudiandae" \
+    -G "http://localhost/api/order/accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order/repudiandae"
+    "http://localhost/api/order/accusantium"
 );
 
 let headers = {
@@ -1306,11 +1306,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/order/dignissimos" \
+    "http://localhost/api/order/ad" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order/dignissimos"
+    "http://localhost/api/order/ad"
 );
 
 let headers = {
@@ -1357,11 +1357,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/order/iste" \
+    "http://localhost/api/order/nam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order/iste"
+    "http://localhost/api/order/nam"
 );
 
 let headers = {
@@ -1492,11 +1492,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/order-item/temporibus" \
+    -G "http://localhost/api/order-item/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order-item/temporibus"
+    "http://localhost/api/order-item/ut"
 );
 
 let headers = {
@@ -1545,11 +1545,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/order-item/consectetur" \
+    "http://localhost/api/order-item/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order-item/consectetur"
+    "http://localhost/api/order-item/rerum"
 );
 
 let headers = {
@@ -1596,11 +1596,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/order-item/non" \
+    "http://localhost/api/order-item/officiis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/order-item/non"
+    "http://localhost/api/order-item/officiis"
 );
 
 let headers = {
@@ -2156,11 +2156,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/product/aut" \
+    -G "http://localhost/api/product/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/aut"
+    "http://localhost/api/product/dolores"
 );
 
 let headers = {
@@ -2209,11 +2209,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/product/reiciendis" \
+    "http://localhost/api/product/facilis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/reiciendis"
+    "http://localhost/api/product/facilis"
 );
 
 let headers = {
@@ -2260,11 +2260,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/product/nulla" \
+    "http://localhost/api/product/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/product/nulla"
+    "http://localhost/api/product/et"
 );
 
 let headers = {
@@ -2395,11 +2395,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/promocode/odit" \
+    -G "http://localhost/api/promocode/nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode/odit"
+    "http://localhost/api/promocode/nihil"
 );
 
 let headers = {
@@ -2448,11 +2448,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/promocode/labore" \
+    "http://localhost/api/promocode/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode/labore"
+    "http://localhost/api/promocode/ea"
 );
 
 let headers = {
@@ -2499,11 +2499,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/promocode/sint" \
+    "http://localhost/api/promocode/nam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode/sint"
+    "http://localhost/api/promocode/nam"
 );
 
 let headers = {
@@ -3122,11 +3122,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/promocode-history/ipsa" \
+    -G "http://localhost/api/promocode-history/ipsam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode-history/ipsa"
+    "http://localhost/api/promocode-history/ipsam"
 );
 
 let headers = {
@@ -3142,7 +3142,7 @@ fetch(url, {
 <p>Example response (500):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = ipsa)",
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = ipsam)",
     "exception": "Illuminate\\Database\\QueryException",
     "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
@@ -3663,11 +3663,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/promocode-history/deleniti" \
+    "http://localhost/api/promocode-history/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode-history/deleniti"
+    "http://localhost/api/promocode-history/vitae"
 );
 
 let headers = {
@@ -3714,11 +3714,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/promocode-history/voluptatem" \
+    "http://localhost/api/promocode-history/culpa" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/promocode-history/voluptatem"
+    "http://localhost/api/promocode-history/culpa"
 );
 
 let headers = {
@@ -3860,11 +3860,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/sub-category/voluptatem" \
+    -G "http://localhost/api/sub-category/eligendi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/sub-category/voluptatem"
+    "http://localhost/api/sub-category/eligendi"
 );
 
 let headers = {
@@ -3913,11 +3913,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/sub-category/asperiores" \
+    "http://localhost/api/sub-category/voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/sub-category/asperiores"
+    "http://localhost/api/sub-category/voluptas"
 );
 
 let headers = {
@@ -3964,11 +3964,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/sub-category/fuga" \
+    "http://localhost/api/sub-category/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/sub-category/fuga"
+    "http://localhost/api/sub-category/qui"
 );
 
 let headers = {
@@ -4244,11 +4244,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/user/quod" \
+    -G "http://localhost/api/user/ducimus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/quod"
+    "http://localhost/api/user/ducimus"
 );
 
 let headers = {
@@ -4297,11 +4297,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/user/asperiores" \
+    "http://localhost/api/user/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/asperiores"
+    "http://localhost/api/user/tempore"
 );
 
 let headers = {
@@ -4348,11 +4348,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/user/rerum" \
+    "http://localhost/api/user/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/rerum"
+    "http://localhost/api/user/dolores"
 );
 
 let headers = {
@@ -4411,6 +4411,22 @@ fetch(url, {
     method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (302):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta http-equiv="refresh" content="0;url='http://localhost/login'" /&gt;
+
+        &lt;title&gt;Redirecting to http://localhost/login&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Redirecting to &lt;a href="http://localhost/login"&gt;http://localhost/login&lt;/a&gt;.
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <div id="execution-results-GET-" hidden>
     <blockquote>Received response<span id="execution-response-status-GET-"></span>:</blockquote>
     <pre class="json"><code id="execution-response-content-GET-"></code></pre>
@@ -4429,6 +4445,964 @@ fetch(url, {
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>/</code></b>
+</p>
+</form>
+<h2>Show the application&#039;s login form.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- CSRF Token --&gt;
+    &lt;meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+
+    &lt;title&gt;Laravel&lt;/title&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src="http://localhost/js/app.js" defer&gt;&lt;/script&gt;
+
+    &lt;!-- Fonts --&gt;
+    &lt;link rel="dns-prefetch" href="//fonts.gstatic.com"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href="http://localhost/css/app.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"&gt;
+            &lt;div class="container"&gt;
+                &lt;a class="navbar-brand" href="http://localhost"&gt;
+                    Laravel
+                &lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;!-- Left Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+
+                    &lt;/ul&gt;
+
+                    &lt;!-- Right Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav ml-auto"&gt;
+                        &lt;!-- Authentication Links --&gt;
+                                                                                    &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/login"&gt;Login&lt;/a&gt;
+                                &lt;/li&gt;
+
+                                                            &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/register"&gt;Register&lt;/a&gt;
+                                &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;main class="py-4"&gt;
+            &lt;div class="container"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-header"&gt;Login&lt;/div&gt;
+
+                &lt;div class="card-body"&gt;
+                    &lt;form method="POST" action="http://localhost/login"&gt;
+                        &lt;input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email" autofocus&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="password" class="col-md-4 col-form-label text-md-right"&gt;Password&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="password" type="password" class="form-control " name="password" required autocomplete="current-password"&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;div class="col-md-6 offset-md-4"&gt;
+                                &lt;div class="form-check"&gt;
+                                    &lt;input class="form-check-input" type="checkbox" name="remember" id="remember" &gt;
+
+                                    &lt;label class="form-check-label" for="remember"&gt;
+                                        Remember Me
+                                    &lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row mb-0"&gt;
+                            &lt;div class="col-md-8 offset-md-4"&gt;
+                                &lt;button type="submit" class="btn btn-primary"&gt;
+                                    Login
+                                &lt;/button&gt;
+
+                                                                    &lt;a class="btn btn-link" href="http://localhost/password/reset"&gt;
+                                        Forgot Your Password?
+                                    &lt;/a&gt;
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div id="execution-results-GETlogin" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETlogin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETlogin"></code></pre>
+</div>
+<div id="execution-error-GETlogin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETlogin"></code></pre>
+</div>
+<form id="form-GETlogin" data-method="GET" data-path="login" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETlogin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETlogin" onclick="tryItOut('GETlogin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETlogin" onclick="cancelTryOut('GETlogin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETlogin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>login</code></b>
+</p>
+</form>
+<h2>Handle a login request to the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTlogin" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTlogin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTlogin"></code></pre>
+</div>
+<div id="execution-error-POSTlogin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTlogin"></code></pre>
+</div>
+<form id="form-POSTlogin" data-method="POST" data-path="login" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTlogin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTlogin" onclick="tryItOut('POSTlogin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTlogin" onclick="cancelTryOut('POSTlogin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTlogin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>login</code></b>
+</p>
+</form>
+<h2>Log the user out of the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTlogout" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTlogout"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTlogout"></code></pre>
+</div>
+<div id="execution-error-POSTlogout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTlogout"></code></pre>
+</div>
+<form id="form-POSTlogout" data-method="POST" data-path="logout" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTlogout', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTlogout" onclick="tryItOut('POSTlogout');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTlogout" onclick="cancelTryOut('POSTlogout');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTlogout" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>logout</code></b>
+</p>
+</form>
+<h2>Show the application registration form.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- CSRF Token --&gt;
+    &lt;meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+
+    &lt;title&gt;Laravel&lt;/title&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src="http://localhost/js/app.js" defer&gt;&lt;/script&gt;
+
+    &lt;!-- Fonts --&gt;
+    &lt;link rel="dns-prefetch" href="//fonts.gstatic.com"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href="http://localhost/css/app.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"&gt;
+            &lt;div class="container"&gt;
+                &lt;a class="navbar-brand" href="http://localhost"&gt;
+                    Laravel
+                &lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;!-- Left Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+
+                    &lt;/ul&gt;
+
+                    &lt;!-- Right Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav ml-auto"&gt;
+                        &lt;!-- Authentication Links --&gt;
+                                                                                    &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/login"&gt;Login&lt;/a&gt;
+                                &lt;/li&gt;
+
+                                                            &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/register"&gt;Register&lt;/a&gt;
+                                &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;main class="py-4"&gt;
+            &lt;div class="container"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-header"&gt;Register&lt;/div&gt;
+
+                &lt;div class="card-body"&gt;
+                    &lt;form method="POST" action="http://localhost/register"&gt;
+                        &lt;input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="name" class="col-md-4 col-form-label text-md-right"&gt;Name&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="name" type="text" class="form-control " name="name" value="" required autocomplete="name" autofocus&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email"&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="password" class="col-md-4 col-form-label text-md-right"&gt;Password&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="password" type="password" class="form-control " name="password" required autocomplete="new-password"&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="password-confirm" class="col-md-4 col-form-label text-md-right"&gt;Confirm Password&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row mb-0"&gt;
+                            &lt;div class="col-md-6 offset-md-4"&gt;
+                                &lt;button type="submit" class="btn btn-primary"&gt;
+                                    Register
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div id="execution-results-GETregister" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETregister"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETregister"></code></pre>
+</div>
+<div id="execution-error-GETregister" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETregister"></code></pre>
+</div>
+<form id="form-GETregister" data-method="GET" data-path="register" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETregister', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETregister" onclick="tryItOut('GETregister');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETregister" onclick="cancelTryOut('GETregister');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETregister" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>register</code></b>
+</p>
+</form>
+<h2>Handle a registration request for the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTregister" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTregister"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTregister"></code></pre>
+</div>
+<div id="execution-error-POSTregister" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTregister"></code></pre>
+</div>
+<form id="form-POSTregister" data-method="POST" data-path="register" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTregister', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTregister" onclick="tryItOut('POSTregister');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTregister" onclick="cancelTryOut('POSTregister');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTregister" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>register</code></b>
+</p>
+</form>
+<h2>Display the form to request a password reset link.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- CSRF Token --&gt;
+    &lt;meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+
+    &lt;title&gt;Laravel&lt;/title&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src="http://localhost/js/app.js" defer&gt;&lt;/script&gt;
+
+    &lt;!-- Fonts --&gt;
+    &lt;link rel="dns-prefetch" href="//fonts.gstatic.com"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href="http://localhost/css/app.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"&gt;
+            &lt;div class="container"&gt;
+                &lt;a class="navbar-brand" href="http://localhost"&gt;
+                    Laravel
+                &lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;!-- Left Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+
+                    &lt;/ul&gt;
+
+                    &lt;!-- Right Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav ml-auto"&gt;
+                        &lt;!-- Authentication Links --&gt;
+                                                                                    &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/login"&gt;Login&lt;/a&gt;
+                                &lt;/li&gt;
+
+                                                            &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/register"&gt;Register&lt;/a&gt;
+                                &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;main class="py-4"&gt;
+            &lt;div class="container"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-header"&gt;Reset Password&lt;/div&gt;
+
+                &lt;div class="card-body"&gt;
+
+                    &lt;form method="POST" action="http://localhost/password/email"&gt;
+                        &lt;input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email" autofocus&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row mb-0"&gt;
+                            &lt;div class="col-md-6 offset-md-4"&gt;
+                                &lt;button type="submit" class="btn btn-primary"&gt;
+                                    Send Password Reset Link
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div id="execution-results-GETpassword-reset" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETpassword-reset"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETpassword-reset"></code></pre>
+</div>
+<div id="execution-error-GETpassword-reset" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETpassword-reset"></code></pre>
+</div>
+<form id="form-GETpassword-reset" data-method="GET" data-path="password/reset" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETpassword-reset', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETpassword-reset" onclick="tryItOut('GETpassword-reset');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETpassword-reset" onclick="cancelTryOut('GETpassword-reset');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETpassword-reset" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>password/reset</code></b>
+</p>
+</form>
+<h2>Send a reset link to the given user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/password/email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTpassword-email" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTpassword-email"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTpassword-email"></code></pre>
+</div>
+<div id="execution-error-POSTpassword-email" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTpassword-email"></code></pre>
+</div>
+<form id="form-POSTpassword-email" data-method="POST" data-path="password/email" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTpassword-email', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTpassword-email" onclick="tryItOut('POSTpassword-email');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTpassword-email" onclick="cancelTryOut('POSTpassword-email');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTpassword-email" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>password/email</code></b>
+</p>
+</form>
+<h2>Display the password reset view for the given token.</h2>
+<p>If no token is present, display the link request form.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/password/reset/quo" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/reset/quo"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;!-- CSRF Token --&gt;
+    &lt;meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+
+    &lt;title&gt;Laravel&lt;/title&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src="http://localhost/js/app.js" defer&gt;&lt;/script&gt;
+
+    &lt;!-- Fonts --&gt;
+    &lt;link rel="dns-prefetch" href="//fonts.gstatic.com"&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href="http://localhost/css/app.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="app"&gt;
+        &lt;nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm"&gt;
+            &lt;div class="container"&gt;
+                &lt;a class="navbar-brand" href="http://localhost"&gt;
+                    Laravel
+                &lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;!-- Left Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav mr-auto"&gt;
+
+                    &lt;/ul&gt;
+
+                    &lt;!-- Right Side Of Navbar --&gt;
+                    &lt;ul class="navbar-nav ml-auto"&gt;
+                        &lt;!-- Authentication Links --&gt;
+                                                                                    &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/login"&gt;Login&lt;/a&gt;
+                                &lt;/li&gt;
+
+                                                            &lt;li class="nav-item"&gt;
+                                    &lt;a class="nav-link" href="http://localhost/register"&gt;Register&lt;/a&gt;
+                                &lt;/li&gt;
+                                                                        &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;main class="py-4"&gt;
+            &lt;div class="container"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-header"&gt;Reset Password&lt;/div&gt;
+
+                &lt;div class="card-body"&gt;
+                    &lt;form method="POST" action="http://localhost/password/reset"&gt;
+                        &lt;input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy"&gt;
+                        &lt;input type="hidden" name="token" value="quo"&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email" autofocus&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="password" class="col-md-4 col-form-label text-md-right"&gt;Password&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="password" type="password" class="form-control " name="password" required autocomplete="new-password"&gt;
+
+                                                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row"&gt;
+                            &lt;label for="password-confirm" class="col-md-4 col-form-label text-md-right"&gt;Confirm Password&lt;/label&gt;
+
+                            &lt;div class="col-md-6"&gt;
+                                &lt;input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="form-group row mb-0"&gt;
+                            &lt;div class="col-md-6 offset-md-4"&gt;
+                                &lt;button type="submit" class="btn btn-primary"&gt;
+                                    Reset Password
+                                &lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div id="execution-results-GETpassword-reset--token-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETpassword-reset--token-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETpassword-reset--token-"></code></pre>
+</div>
+<div id="execution-error-GETpassword-reset--token-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETpassword-reset--token-"></code></pre>
+</div>
+<form id="form-GETpassword-reset--token-" data-method="GET" data-path="password/reset/{token}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETpassword-reset--token-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETpassword-reset--token-" onclick="tryItOut('GETpassword-reset--token-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETpassword-reset--token-" onclick="cancelTryOut('GETpassword-reset--token-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETpassword-reset--token-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>password/reset/{token}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>token</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="token" data-endpoint="GETpassword-reset--token-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+<h2>Reset the given user&#039;s password.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTpassword-reset" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTpassword-reset"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTpassword-reset"></code></pre>
+</div>
+<div id="execution-error-POSTpassword-reset" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTpassword-reset"></code></pre>
+</div>
+<form id="form-POSTpassword-reset" data-method="POST" data-path="password/reset" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTpassword-reset', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTpassword-reset" onclick="tryItOut('POSTpassword-reset');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTpassword-reset" onclick="cancelTryOut('POSTpassword-reset');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTpassword-reset" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>password/reset</code></b>
+</p>
+</form>
+<h2>Display the password confirmation view.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/password/confirm" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/confirm"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETpassword-confirm" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETpassword-confirm"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETpassword-confirm"></code></pre>
+</div>
+<div id="execution-error-GETpassword-confirm" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETpassword-confirm"></code></pre>
+</div>
+<form id="form-GETpassword-confirm" data-method="GET" data-path="password/confirm" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETpassword-confirm', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETpassword-confirm" onclick="tryItOut('GETpassword-confirm');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETpassword-confirm" onclick="cancelTryOut('GETpassword-confirm');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETpassword-confirm" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>password/confirm</code></b>
+</p>
+</form>
+<h2>Confirm the given user&#039;s password.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/password/confirm" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/password/confirm"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTpassword-confirm" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTpassword-confirm"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTpassword-confirm"></code></pre>
+</div>
+<div id="execution-error-POSTpassword-confirm" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTpassword-confirm"></code></pre>
+</div>
+<form id="form-POSTpassword-confirm" data-method="POST" data-path="password/confirm" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTpassword-confirm', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTpassword-confirm" onclick="tryItOut('POSTpassword-confirm');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTpassword-confirm" onclick="cancelTryOut('POSTpassword-confirm');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTpassword-confirm" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>password/confirm</code></b>
+</p>
+</form>
+<h2>Show the application dashboard.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/home" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/home"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GEThome" hidden>
+    <blockquote>Received response<span id="execution-response-status-GEThome"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GEThome"></code></pre>
+</div>
+<div id="execution-error-GEThome" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GEThome"></code></pre>
+</div>
+<form id="form-GEThome" data-method="GET" data-path="home" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GEThome', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GEThome" onclick="tryItOut('GEThome');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GEThome" onclick="cancelTryOut('GEThome');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GEThome" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>home</code></b>
 </p>
 </form>
     </div>

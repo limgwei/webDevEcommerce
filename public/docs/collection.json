@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "e70784dc-2f59-4b70-a343-ca258701a716",
+        "_postman_id": "8d3d8642-57f3-4363-95ec-442d8069891a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -90,7 +90,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "sed",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -127,7 +127,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "quo",
+                                    "value": "debitis",
                                     "description": ""
                                 }
                             ]
@@ -164,7 +164,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "ratione",
+                                    "value": "maiores",
                                     "description": ""
                                 }
                             ]
@@ -259,7 +259,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "blanditiis",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -296,7 +296,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "aut",
+                                    "value": "vero",
                                     "description": ""
                                 }
                             ]
@@ -333,7 +333,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "repellat",
+                                    "value": "quisquam",
                                     "description": ""
                                 }
                             ]
@@ -428,7 +428,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "voluptates",
+                                    "value": "possimus",
                                     "description": ""
                                 }
                             ]
@@ -465,7 +465,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "nisi",
+                                    "value": "debitis",
                                     "description": ""
                                 }
                             ]
@@ -502,7 +502,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "neque",
+                                    "value": "expedita",
                                     "description": ""
                                 }
                             ]
@@ -597,7 +597,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "voluptatibus",
+                                    "value": "adipisci",
                                     "description": ""
                                 }
                             ]
@@ -634,7 +634,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "rem",
+                                    "value": "vitae",
                                     "description": ""
                                 }
                             ]
@@ -671,7 +671,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "ducimus",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -766,7 +766,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "repudiandae",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -803,7 +803,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "dignissimos",
+                                    "value": "ad",
                                     "description": ""
                                 }
                             ]
@@ -840,7 +840,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "iste",
+                                    "value": "nam",
                                     "description": ""
                                 }
                             ]
@@ -935,7 +935,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "temporibus",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -972,7 +972,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "consectetur",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -1009,7 +1009,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "non",
+                                    "value": "officiis",
                                     "description": ""
                                 }
                             ]
@@ -1104,7 +1104,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "aut",
+                                    "value": "dolores",
                                     "description": ""
                                 }
                             ]
@@ -1141,7 +1141,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "reiciendis",
+                                    "value": "facilis",
                                     "description": ""
                                 }
                             ]
@@ -1178,7 +1178,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "nulla",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1273,7 +1273,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "odit",
+                                    "value": "nihil",
                                     "description": ""
                                 }
                             ]
@@ -1310,7 +1310,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "labore",
+                                    "value": "ea",
                                     "description": ""
                                 }
                             ]
@@ -1347,7 +1347,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "sint",
+                                    "value": "nam",
                                     "description": ""
                                 }
                             ]
@@ -1442,7 +1442,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "ipsa",
+                                    "value": "ipsam",
                                     "description": ""
                                 }
                             ]
@@ -1479,7 +1479,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "deleniti",
+                                    "value": "vitae",
                                     "description": ""
                                 }
                             ]
@@ -1516,7 +1516,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "voluptatem",
+                                    "value": "culpa",
                                     "description": ""
                                 }
                             ]
@@ -1611,7 +1611,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "voluptatem",
+                                    "value": "eligendi",
                                     "description": ""
                                 }
                             ]
@@ -1648,7 +1648,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "asperiores",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]
@@ -1685,7 +1685,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "fuga",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -1780,7 +1780,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "quod",
+                                    "value": "ducimus",
                                     "description": ""
                                 }
                             ]
@@ -1817,7 +1817,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "asperiores",
+                                    "value": "tempore",
                                     "description": ""
                                 }
                             ]
@@ -1854,7 +1854,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "rerum",
+                                    "value": "dolores",
                                     "description": ""
                                 }
                             ]
@@ -1887,6 +1887,362 @@
                             "path": "\/",
                             "query": [],
                             "raw": "http:\/\/{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the application's login form.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/login"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Handle a login request to the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Log the user out of the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the application registration form.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "register",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/register"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Handle a registration request for the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "register",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the form to request a password reset link.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/reset",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/reset"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Send a reset link to the given user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/email",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/email"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the password reset view for the given token.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/reset\/:token",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/reset\/:token",
+                            "variable": [
+                                {
+                                    "id": "token",
+                                    "key": "token",
+                                    "value": "quo",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "If no token is present, display the link request form.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Reset the given user's password.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/reset",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/reset"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the password confirmation view.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/confirm",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/confirm"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Confirm the given user's password.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "password\/confirm",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/password\/confirm"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the application dashboard.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "home",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/home"
                         },
                         "method": "GET",
                         "header": [
