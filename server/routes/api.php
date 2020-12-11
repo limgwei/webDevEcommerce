@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
-    
+
+
     Route::apiResource('cart','CartApiController');
+    Route::apiResource('admin','AdminApiController');
+    Route::apiResource('banner','BannerApiController');
     Route::apiResource('category','CategoryApiController');
     Route::apiResource('chat','ChatApiController');
     Route::apiResource('discount-product','DiscountProductApiController');

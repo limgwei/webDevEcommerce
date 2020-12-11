@@ -10,14 +10,14 @@
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/cart" \
+    -G "/api/cart" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart"
+    "/api/cart"
 );
 
 let headers = {
@@ -71,14 +71,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/cart" \
+    "/api/cart" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart"
+    "/api/cart"
 );
 
 let headers = {
@@ -125,14 +125,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/cart/eaque" \
+    -G "/api/cart/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/eaque"
+    "/api/cart/enim"
 );
 
 let headers = {
@@ -192,14 +192,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/cart/eum" \
+    "/api/cart/molestiae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/eum"
+    "/api/cart/molestiae"
 );
 
 let headers = {
@@ -256,14 +256,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/cart/aut" \
+    "/api/cart/nulla" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/aut"
+    "/api/cart/nulla"
 );
 
 let headers = {
@@ -316,14 +316,422 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/category" \
+    -G "/api/admin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category"
+    "/api/admin"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "username": "gg",
+            "password": "gg",
+            "created_at": null,
+            "updated_at": null
+        }
+    ]
+}
+```
+<div id="execution-results-GETapi-admin" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-admin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-admin"></code></pre>
+</div>
+<div id="execution-error-GETapi-admin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-admin"></code></pre>
+</div>
+<form id="form-GETapi-admin" data-method="GET" data-path="api/admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-admin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-admin" onclick="tryItOut('GETapi-admin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-admin" onclick="cancelTryOut('GETapi-admin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-admin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/admin</code></b>
+</p>
+</form>
+
+
+## Display Banner and link to category or product.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/api/banner" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/api/banner"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": []
+}
+```
+<div id="execution-results-GETapi-banner" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-banner"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-banner"></code></pre>
+</div>
+<div id="execution-error-GETapi-banner" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-banner"></code></pre>
+</div>
+<form id="form-GETapi-banner" data-method="GET" data-path="api/banner" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-banner', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-banner" onclick="tryItOut('GETapi-banner');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-banner" onclick="cancelTryOut('GETapi-banner');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-banner" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/banner</code></b>
+</p>
+</form>
+
+
+## Store new banner
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "/api/banner" \
+    -H "Content-Type: multipart/form-data" \
+    -H "Accept: application/json" \
+    -F "name=nemo" \
+    -F "category_id=9" \
+    -F "product_id=2" \
+    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php759E.tmp" 
+```
+
+```javascript
+const url = new URL(
+    "/api/banner"
+);
+
+let headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('name', 'nemo');
+body.append('category_id', '9');
+body.append('product_id', '2');
+body.append('image[]', document.querySelector('input[name="image[]"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-banner" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-banner"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-banner"></code></pre>
+</div>
+<div id="execution-error-POSTapi-banner" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-banner"></code></pre>
+</div>
+<form id="form-POSTapi-banner" data-method="POST" data-path="api/banner" data-authed="0" data-hasfiles="1" data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-banner', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-banner" onclick="tryItOut('POSTapi-banner');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-banner" onclick="cancelTryOut('POSTapi-banner');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-banner" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/banner</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>image</code></b>&nbsp;&nbsp;<small>file[]</small>     <i>optional</i> &nbsp;
+<input type="file" name="image.0" data-endpoint="POSTapi-banner" data-component="body"  hidden>
+<input type="file" name="image.1" data-endpoint="POSTapi-banner" data-component="body" hidden>
+<br>
+</p>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-banner" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>category_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+<input type="number" name="category_id" data-endpoint="POSTapi-banner" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>product_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+<input type="number" name="product_id" data-endpoint="POSTapi-banner" data-component="body"  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Display the specified resource.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/api/banner/qui" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/api/banner/qui"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": []
+}
+```
+<div id="execution-results-GETapi-banner--banner-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-banner--banner-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-banner--banner-"></code></pre>
+</div>
+<div id="execution-error-GETapi-banner--banner-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-banner--banner-"></code></pre>
+</div>
+<form id="form-GETapi-banner--banner-" data-method="GET" data-path="api/banner/{banner}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-banner--banner-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-banner--banner-" onclick="tryItOut('GETapi-banner--banner-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-banner--banner-" onclick="cancelTryOut('GETapi-banner--banner-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-banner--banner-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/banner/{banner}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>banner</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="banner" data-endpoint="GETapi-banner--banner-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## Update the specified resource in storage.
+
+
+
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "/api/banner/earum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/api/banner/earum"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-PUTapi-banner--banner-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-banner--banner-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-banner--banner-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-banner--banner-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-banner--banner-"></code></pre>
+</div>
+<form id="form-PUTapi-banner--banner-" data-method="PUT" data-path="api/banner/{banner}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-banner--banner-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-banner--banner-" onclick="tryItOut('PUTapi-banner--banner-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-banner--banner-" onclick="cancelTryOut('PUTapi-banner--banner-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-banner--banner-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/banner/{banner}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/banner/{banner}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>banner</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="banner" data-endpoint="PUTapi-banner--banner-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## Remove the specified resource from storage.
+
+
+
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "/api/banner/accusamus" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/api/banner/accusamus"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-DELETEapi-banner--banner-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-banner--banner-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-banner--banner-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-banner--banner-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-banner--banner-"></code></pre>
+</div>
+<form id="form-DELETEapi-banner--banner-" data-method="DELETE" data-path="api/banner/{banner}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-banner--banner-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-banner--banner-" onclick="tryItOut('DELETEapi-banner--banner-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-banner--banner-" onclick="cancelTryOut('DELETEapi-banner--banner-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-banner--banner-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/banner/{banner}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>banner</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="banner" data-endpoint="DELETEapi-banner--banner-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## Display a listing of the resource.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/api/category" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/api/category"
 );
 
 let headers = {
@@ -377,14 +785,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/category" \
+    "/api/category" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category"
+    "/api/category"
 );
 
 let headers = {
@@ -431,14 +839,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/category/asperiores" \
+    -G "/api/category/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/asperiores"
+    "/api/category/reiciendis"
 );
 
 let headers = {
@@ -498,14 +906,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/category/debitis" \
+    "/api/category/voluptatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/debitis"
+    "/api/category/voluptatibus"
 );
 
 let headers = {
@@ -562,14 +970,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/category/alias" \
+    "/api/category/aperiam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/alias"
+    "/api/category/aperiam"
 );
 
 let headers = {
@@ -622,14 +1030,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/chat" \
+    -G "/api/chat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat"
+    "/api/chat"
 );
 
 let headers = {
@@ -683,14 +1091,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/chat" \
+    "/api/chat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat"
+    "/api/chat"
 );
 
 let headers = {
@@ -737,14 +1145,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/chat/magni" \
+    -G "/api/chat/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/magni"
+    "/api/chat/doloribus"
 );
 
 let headers = {
@@ -804,14 +1212,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/chat/laudantium" \
+    "/api/chat/occaecati" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/laudantium"
+    "/api/chat/occaecati"
 );
 
 let headers = {
@@ -868,14 +1276,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/chat/vitae" \
+    "/api/chat/minus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/vitae"
+    "/api/chat/minus"
 );
 
 let headers = {
@@ -928,14 +1336,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/discount-product" \
+    -G "/api/discount-product" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product"
+    "/api/discount-product"
 );
 
 let headers = {
@@ -989,14 +1397,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/discount-product" \
+    "/api/discount-product" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product"
+    "/api/discount-product"
 );
 
 let headers = {
@@ -1043,14 +1451,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/discount-product/placeat" \
+    -G "/api/discount-product/odio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/placeat"
+    "/api/discount-product/odio"
 );
 
 let headers = {
@@ -1110,14 +1518,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/discount-product/dolor" \
+    "/api/discount-product/eos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/dolor"
+    "/api/discount-product/eos"
 );
 
 let headers = {
@@ -1174,14 +1582,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/discount-product/dolorem" \
+    "/api/discount-product/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/dolorem"
+    "/api/discount-product/aut"
 );
 
 let headers = {
@@ -1234,14 +1642,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order" \
+    -G "/api/order" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order"
+    "/api/order"
 );
 
 let headers = {
@@ -1295,14 +1703,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/order" \
+    "/api/order" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order"
+    "/api/order"
 );
 
 let headers = {
@@ -1349,14 +1757,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order/vel" \
+    -G "/api/order/maxime" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/vel"
+    "/api/order/maxime"
 );
 
 let headers = {
@@ -1416,14 +1824,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/order/tempore" \
+    "/api/order/facilis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/tempore"
+    "/api/order/facilis"
 );
 
 let headers = {
@@ -1480,14 +1888,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/order/asperiores" \
+    "/api/order/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/asperiores"
+    "/api/order/velit"
 );
 
 let headers = {
@@ -1540,14 +1948,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order-item" \
+    -G "/api/order-item" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item"
+    "/api/order-item"
 );
 
 let headers = {
@@ -1601,14 +2009,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/order-item" \
+    "/api/order-item" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item"
+    "/api/order-item"
 );
 
 let headers = {
@@ -1655,14 +2063,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order-item/non" \
+    -G "/api/order-item/natus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/non"
+    "/api/order-item/natus"
 );
 
 let headers = {
@@ -1722,14 +2130,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/order-item/eveniet" \
+    "/api/order-item/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/eveniet"
+    "/api/order-item/eum"
 );
 
 let headers = {
@@ -1786,14 +2194,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/order-item/dolor" \
+    "/api/order-item/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/dolor"
+    "/api/order-item/non"
 );
 
 let headers = {
@@ -1846,14 +2254,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/product" \
+    -G "/api/product" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product"
+    "/api/product"
 );
 
 let headers = {
@@ -1907,14 +2315,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/product" \
+    "/api/product" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product"
+    "/api/product"
 );
 
 let headers = {
@@ -1961,14 +2369,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/product/mollitia" \
+    -G "/api/product/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/mollitia"
+    "/api/product/sed"
 );
 
 let headers = {
@@ -2028,14 +2436,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/product/ut" \
+    "/api/product/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/ut"
+    "/api/product/consequatur"
 );
 
 let headers = {
@@ -2092,14 +2500,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/product/sint" \
+    "/api/product/magni" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/sint"
+    "/api/product/magni"
 );
 
 let headers = {
@@ -2152,14 +2560,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode" \
+    -G "/api/promocode" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode"
+    "/api/promocode"
 );
 
 let headers = {
@@ -2213,14 +2621,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/promocode" \
+    "/api/promocode" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode"
+    "/api/promocode"
 );
 
 let headers = {
@@ -2267,14 +2675,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode/quas" \
+    -G "/api/promocode/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/quas"
+    "/api/promocode/est"
 );
 
 let headers = {
@@ -2334,14 +2742,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/promocode/at" \
+    "/api/promocode/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/at"
+    "/api/promocode/asperiores"
 );
 
 let headers = {
@@ -2398,14 +2806,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/promocode/nostrum" \
+    "/api/promocode/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/nostrum"
+    "/api/promocode/perferendis"
 );
 
 let headers = {
@@ -2458,14 +2866,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode-history" \
+    -G "/api/promocode-history" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history"
+    "/api/promocode-history"
 );
 
 let headers = {
@@ -2743,20 +3151,6 @@ fetch(url, {
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
-            "type": "->"
-        },
-        {
             "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
@@ -3007,14 +3401,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/promocode-history" \
+    "/api/promocode-history" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history"
+    "/api/promocode-history"
 );
 
 let headers = {
@@ -3061,14 +3455,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode-history/nesciunt" \
+    -G "/api/promocode-history/facere" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/nesciunt"
+    "/api/promocode-history/facere"
 );
 
 let headers = {
@@ -3088,7 +3482,7 @@ fetch(url, {
 
 ```json
 {
-    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = nesciunt)",
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = facere)",
     "exception": "Illuminate\\Database\\QueryException",
     "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
@@ -3343,20 +3737,6 @@ fetch(url, {
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
@@ -3616,14 +3996,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/promocode-history/asperiores" \
+    "/api/promocode-history/vero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/asperiores"
+    "/api/promocode-history/vero"
 );
 
 let headers = {
@@ -3680,14 +4060,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/promocode-history/velit" \
+    "/api/promocode-history/odio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/velit"
+    "/api/promocode-history/odio"
 );
 
 let headers = {
@@ -3740,14 +4120,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/sub-category" \
+    -G "/api/sub-category" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category"
+    "/api/sub-category"
 );
 
 let headers = {
@@ -3801,14 +4181,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/sub-category" \
+    "/api/sub-category" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category"
+    "/api/sub-category"
 );
 
 let headers = {
@@ -3855,14 +4235,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/sub-category/voluptatem" \
+    -G "/api/sub-category/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/voluptatem"
+    "/api/sub-category/autem"
 );
 
 let headers = {
@@ -3922,14 +4302,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/sub-category/praesentium" \
+    "/api/sub-category/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/praesentium"
+    "/api/sub-category/omnis"
 );
 
 let headers = {
@@ -3986,14 +4366,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/sub-category/nulla" \
+    "/api/sub-category/voluptatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/nulla"
+    "/api/sub-category/voluptatibus"
 );
 
 let headers = {
@@ -4046,14 +4426,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user" \
+    -G "/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user"
+    "/api/user"
 );
 
 let headers = {
@@ -4107,14 +4487,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/user" \
+    "/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user"
+    "/api/user"
 );
 
 let headers = {
@@ -4161,14 +4541,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user/velit" \
+    -G "/api/user/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/velit"
+    "/api/user/et"
 );
 
 let headers = {
@@ -4228,14 +4608,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/user/eveniet" \
+    "/api/user/id" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/eveniet"
+    "/api/user/id"
 );
 
 let headers = {
@@ -4292,14 +4672,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/user/consequuntur" \
+    "/api/user/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/consequuntur"
+    "/api/user/quis"
 );
 
 let headers = {
@@ -4352,14 +4732,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/" \
+    -G "/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/"
+    "/"
 );
 
 let headers = {
@@ -4423,14 +4803,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/login" \
+    -G "/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/login"
+    "/login"
 );
 
 let headers = {
@@ -4457,7 +4837,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+    <meta name="csrf-token" content="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
 
     <title>Laravel</title>
 
@@ -4512,7 +4892,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/login">
-                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+                        <input type="hidden" name="_token" value="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -4597,14 +4977,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/login" \
+    "/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/login"
+    "/login"
 );
 
 let headers = {
@@ -4651,14 +5031,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/logout" \
+    "/logout" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/logout"
+    "/logout"
 );
 
 let headers = {
@@ -4705,14 +5085,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/register" \
+    -G "/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/register"
+    "/register"
 );
 
 let headers = {
@@ -4739,7 +5119,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+    <meta name="csrf-token" content="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
 
     <title>Laravel</title>
 
@@ -4794,7 +5174,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/register">
-                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+                        <input type="hidden" name="_token" value="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
@@ -4880,14 +5260,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/register" \
+    "/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/register"
+    "/register"
 );
 
 let headers = {
@@ -4934,14 +5314,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/password/reset" \
+    -G "/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/reset"
+    "/password/reset"
 );
 
 let headers = {
@@ -4968,7 +5348,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+    <meta name="csrf-token" content="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
 
     <title>Laravel</title>
 
@@ -5024,7 +5404,7 @@ fetch(url, {
                 <div class="card-body">
                     
                     <form method="POST" action="http://localhost/password/email">
-                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+                        <input type="hidden" name="_token" value="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -5084,14 +5464,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/password/email" \
+    "/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/email"
+    "/password/email"
 );
 
 let headers = {
@@ -5138,14 +5518,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/password/reset/accusamus" \
+    -G "/password/reset/optio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/reset/accusamus"
+    "/password/reset/optio"
 );
 
 let headers = {
@@ -5172,7 +5552,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+    <meta name="csrf-token" content="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
 
     <title>Laravel</title>
 
@@ -5227,8 +5607,8 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/password/reset">
-                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
-                        <input type="hidden" name="token" value="accusamus">
+                        <input type="hidden" name="_token" value="BHohDGkCKm3cN84yViITiMKQ9mhNSjlNkT3zJxUv">
+                        <input type="hidden" name="token" value="optio">
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
@@ -5312,14 +5692,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/password/reset" \
+    "/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/reset"
+    "/password/reset"
 );
 
 let headers = {
@@ -5366,14 +5746,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/password/confirm" \
+    -G "/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/confirm"
+    "/password/confirm"
 );
 
 let headers = {
@@ -5427,14 +5807,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/password/confirm" \
+    "/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/confirm"
+    "/password/confirm"
 );
 
 let headers = {
@@ -5481,14 +5861,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/home" \
+    -G "/home" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/home"
+    "/home"
 );
 
 let headers = {

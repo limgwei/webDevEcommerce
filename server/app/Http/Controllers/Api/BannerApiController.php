@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class BannerApiController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display Banner and link to category or product.
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,8 +20,12 @@ class BannerApiController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
+     * Store new banner
+     * @bodyParam image file[]
+     * @bodyParam name string required
+     * @bodyParam category_id int
+     * @bodyParam product_id int
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -37,7 +41,7 @@ class BannerApiController extends Controller
               
          }
         return $banner;
-    }
+    } //backend funciton
 
     /**
      * Display the specified resource.
