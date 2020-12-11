@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "8d3d8642-57f3-4363-95ec-442d8069891a",
+        "_postman_id": "bfdc2c19-8ab8-4603-93b4-40e23f230741",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -90,7 +90,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "sit",
+                                    "value": "eaque",
                                     "description": ""
                                 }
                             ]
@@ -127,7 +127,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "debitis",
+                                    "value": "eum",
                                     "description": ""
                                 }
                             ]
@@ -164,7 +164,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "maiores",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -259,7 +259,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "velit",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -296,175 +296,6 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "vero",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/category\/:category",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/category\/:category",
-                            "variable": [
-                                {
-                                    "id": "category",
-                                    "key": "category",
-                                    "value": "quisquam",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/chat",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/chat"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/chat",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/chat"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/chat\/:chat",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
-                            "variable": [
-                                {
-                                    "id": "chat",
-                                    "key": "chat",
-                                    "value": "possimus",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/chat\/:chat",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
-                            "variable": [
-                                {
-                                    "id": "chat",
-                                    "key": "chat",
                                     "value": "debitis",
                                     "description": ""
                                 }
@@ -495,14 +326,14 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/chat\/:chat",
+                            "path": "api\/category\/:category",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
+                            "raw": "http:\/\/{{baseUrl}}\/api\/category\/:category",
                             "variable": [
                                 {
-                                    "id": "chat",
-                                    "key": "chat",
-                                    "value": "expedita",
+                                    "id": "category",
+                                    "key": "category",
+                                    "value": "alias",
                                     "description": ""
                                 }
                             ]
@@ -532,9 +363,9 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount-product",
+                            "path": "api\/chat",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/chat"
                         },
                         "method": "GET",
                         "header": [
@@ -561,9 +392,9 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount-product",
+                            "path": "api\/chat",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/chat"
                         },
                         "method": "POST",
                         "header": [
@@ -590,14 +421,14 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount-product\/:discount_product",
+                            "path": "api\/chat\/:chat",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product\/:discount_product",
+                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
                             "variable": [
                                 {
-                                    "id": "discount_product",
-                                    "key": "discount_product",
-                                    "value": "adipisci",
+                                    "id": "chat",
+                                    "key": "chat",
+                                    "value": "magni",
                                     "description": ""
                                 }
                             ]
@@ -627,18 +458,187 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount-product\/:discount_product",
+                            "path": "api\/chat\/:chat",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product\/:discount_product",
+                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
                             "variable": [
                                 {
-                                    "id": "discount_product",
-                                    "key": "discount_product",
+                                    "id": "chat",
+                                    "key": "chat",
+                                    "value": "laudantium",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/chat\/:chat",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/chat\/:chat",
+                            "variable": [
+                                {
+                                    "id": "chat",
+                                    "key": "chat",
                                     "value": "vitae",
                                     "description": ""
                                 }
                             ]
                         },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount-product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount-product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount-product\/:discount_product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product\/:discount_product",
+                            "variable": [
+                                {
+                                    "id": "discount_product",
+                                    "key": "discount_product",
+                                    "value": "placeat",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount-product\/:discount_product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount-product\/:discount_product",
+                            "variable": [
+                                {
+                                    "id": "discount_product",
+                                    "key": "discount_product",
+                                    "value": "dolor",
+                                    "description": ""
+                                }
+                            ]
+                        },
                         "method": "PUT",
                         "header": [
                             {
@@ -671,7 +671,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "accusantium",
+                                    "value": "dolorem",
                                     "description": ""
                                 }
                             ]
@@ -766,7 +766,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "accusantium",
+                                    "value": "vel",
                                     "description": ""
                                 }
                             ]
@@ -803,7 +803,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "ad",
+                                    "value": "tempore",
                                     "description": ""
                                 }
                             ]
@@ -840,7 +840,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "nam",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -935,217 +935,217 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
+                                    "value": "non",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/order-item\/:order_item",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/order-item\/:order_item",
+                            "variable": [
+                                {
+                                    "id": "order_item",
+                                    "key": "order_item",
+                                    "value": "eveniet",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/order-item\/:order_item",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/order-item\/:order_item",
+                            "variable": [
+                                {
+                                    "id": "order_item",
+                                    "key": "order_item",
+                                    "value": "dolor",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/:product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/:product",
+                            "variable": [
+                                {
+                                    "id": "product",
+                                    "key": "product",
+                                    "value": "mollitia",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/:product",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/:product",
+                            "variable": [
+                                {
+                                    "id": "product",
+                                    "key": "product",
                                     "value": "ut",
                                     "description": ""
                                 }
                             ]
                         },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order-item\/:order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order-item\/:order_item",
-                            "variable": [
-                                {
-                                    "id": "order_item",
-                                    "key": "order_item",
-                                    "value": "rerum",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order-item\/:order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order-item\/:order_item",
-                            "variable": [
-                                {
-                                    "id": "order_item",
-                                    "key": "order_item",
-                                    "value": "officiis",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/product"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/product"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product\/:product",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/:product",
-                            "variable": [
-                                {
-                                    "id": "product",
-                                    "key": "product",
-                                    "value": "dolores",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/product\/:product",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/product\/:product",
-                            "variable": [
-                                {
-                                    "id": "product",
-                                    "key": "product",
-                                    "value": "facilis",
-                                    "description": ""
-                                }
-                            ]
-                        },
                         "method": "PUT",
                         "header": [
                             {
@@ -1178,7 +1178,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "et",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]
@@ -1273,7 +1273,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "nihil",
+                                    "value": "quas",
                                     "description": ""
                                 }
                             ]
@@ -1310,7 +1310,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "ea",
+                                    "value": "at",
                                     "description": ""
                                 }
                             ]
@@ -1347,7 +1347,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "nam",
+                                    "value": "nostrum",
                                     "description": ""
                                 }
                             ]
@@ -1442,7 +1442,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "ipsam",
+                                    "value": "nesciunt",
                                     "description": ""
                                 }
                             ]
@@ -1479,7 +1479,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "vitae",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -1516,7 +1516,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "culpa",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1611,7 +1611,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "eligendi",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -1648,7 +1648,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "voluptas",
+                                    "value": "praesentium",
                                     "description": ""
                                 }
                             ]
@@ -1685,7 +1685,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "qui",
+                                    "value": "nulla",
                                     "description": ""
                                 }
                             ]
@@ -1780,7 +1780,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "ducimus",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1817,7 +1817,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "tempore",
+                                    "value": "eveniet",
                                     "description": ""
                                 }
                             ]
@@ -1854,7 +1854,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "dolores",
+                                    "value": "consequuntur",
                                     "description": ""
                                 }
                             ]
@@ -2123,7 +2123,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "quo",
+                                    "value": "accusamus",
                                     "description": ""
                                 }
                             ]

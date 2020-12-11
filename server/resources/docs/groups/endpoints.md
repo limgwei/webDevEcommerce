@@ -37,95 +37,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "user_id": 2,
-            "product_id": 1,
-            "quantity": 1,
-            "created_at": null,
-            "updated_at": null,
-            "user": {
-                "id": 2,
-                "name": "gg",
-                "email": "gg",
-                "email_verified_at": null,
-                "address": "gg",
-                "password": "gg",
-                "created_at": "2020-12-07T15:22:59.000000Z",
-                "updated_at": "2020-12-07T15:22:59.000000Z",
-                "image": [
-                    {
-                        "id": 2,
-                        "model_type": "App\\Models\\User",
-                        "model_id": 2,
-                        "uuid": "d2dea216-4943-4d22-8ee4-0eabccc65f6c",
-                        "collection_name": "image",
-                        "name": "kato",
-                        "file_name": "kato.jpg",
-                        "mime_type": "image\/jpeg",
-                        "disk": "public",
-                        "conversions_disk": "public",
-                        "size": 32559,
-                        "manipulations": [],
-                        "custom_properties": [],
-                        "generated_conversions": {
-                            "thumb": true,
-                            "preview": true
-                        },
-                        "responsive_images": [],
-                        "order_column": 2,
-                        "created_at": "2020-12-07T15:23:01.000000Z",
-                        "updated_at": "2020-12-07T15:23:03.000000Z",
-                        "url": "http:\/\/localhost\/storage\/2\/kato.jpg",
-                        "thumbnail": "http:\/\/localhost\/storage\/2\/conversions\/kato-thumb.jpg",
-                        "preview": "http:\/\/localhost\/storage\/2\/conversions\/kato-preview.jpg"
-                    }
-                ],
-                "media": [
-                    {
-                        "id": 2,
-                        "model_type": "App\\Models\\User",
-                        "model_id": 2,
-                        "uuid": "d2dea216-4943-4d22-8ee4-0eabccc65f6c",
-                        "collection_name": "image",
-                        "name": "kato",
-                        "file_name": "kato.jpg",
-                        "mime_type": "image\/jpeg",
-                        "disk": "public",
-                        "conversions_disk": "public",
-                        "size": 32559,
-                        "manipulations": [],
-                        "custom_properties": [],
-                        "generated_conversions": {
-                            "thumb": true,
-                            "preview": true
-                        },
-                        "responsive_images": [],
-                        "order_column": 2,
-                        "created_at": "2020-12-07T15:23:01.000000Z",
-                        "updated_at": "2020-12-07T15:23:03.000000Z",
-                        "url": "http:\/\/localhost\/storage\/2\/kato.jpg",
-                        "thumbnail": "http:\/\/localhost\/storage\/2\/conversions\/kato-thumb.jpg",
-                        "preview": "http:\/\/localhost\/storage\/2\/conversions\/kato-preview.jpg"
-                    }
-                ]
-            },
-            "product": {
-                "id": 1,
-                "sub_category_id": 1,
-                "name": "1",
-                "description": "1",
-                "price": 1,
-                "is_enable": 1,
-                "quantity": 1,
-                "created_at": "2020-12-07T05:27:42.000000Z",
-                "updated_at": "2020-12-07T05:27:42.000000Z",
-                "image": [],
-                "media": []
-            }
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-cart" hidden>
@@ -213,14 +125,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/cart/sit" \
+    -G "http://localhost/api/cart/eaque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/sit"
+    "http://localhost/api/cart/eaque"
 );
 
 let headers = {
@@ -280,14 +192,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/cart/debitis" \
+    "http://localhost/api/cart/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/debitis"
+    "http://localhost/api/cart/eum"
 );
 
 let headers = {
@@ -344,14 +256,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/cart/maiores" \
+    "http://localhost/api/cart/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/cart/maiores"
+    "http://localhost/api/cart/aut"
 );
 
 let headers = {
@@ -431,16 +343,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "name": "gg",
-            "created_at": null,
-            "updated_at": null,
-            "image": [],
-            "media": []
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-category" hidden>
@@ -528,14 +431,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/category/velit" \
+    -G "http://localhost/api/category/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/velit"
+    "http://localhost/api/category/asperiores"
 );
 
 let headers = {
@@ -595,14 +498,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/category/vero" \
+    "http://localhost/api/category/debitis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/vero"
+    "http://localhost/api/category/debitis"
 );
 
 let headers = {
@@ -659,14 +562,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/category/quisquam" \
+    "http://localhost/api/category/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/category/quisquam"
+    "http://localhost/api/category/alias"
 );
 
 let headers = {
@@ -746,28 +649,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "user_id": 1,
-            "text": "gg",
-            "is_admin": 0,
-            "created_at": "2020-12-08T12:46:50.000000Z",
-            "updated_at": "2020-12-08T12:46:50.000000Z",
-            "user": {
-                "id": 1,
-                "name": "s",
-                "email": "s",
-                "email_verified_at": "2020-12-07T16:42:10.000000Z",
-                "address": "s",
-                "password": "s",
-                "created_at": null,
-                "updated_at": null,
-                "image": [],
-                "media": []
-            }
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-chat" hidden>
@@ -855,14 +737,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/chat/possimus" \
+    -G "http://localhost/api/chat/magni" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/possimus"
+    "http://localhost/api/chat/magni"
 );
 
 let headers = {
@@ -922,14 +804,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/chat/debitis" \
+    "http://localhost/api/chat/laudantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/debitis"
+    "http://localhost/api/chat/laudantium"
 );
 
 let headers = {
@@ -986,14 +868,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/chat/expedita" \
+    "http://localhost/api/chat/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/chat/expedita"
+    "http://localhost/api/chat/vitae"
 );
 
 let headers = {
@@ -1073,29 +955,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "user_id": 2,
-            "product_id": 1,
-            "quantity": 1,
-            "created_at": null,
-            "updated_at": null,
-            "product": {
-                "id": 1,
-                "sub_category_id": 1,
-                "name": "1",
-                "description": "1",
-                "price": 1,
-                "is_enable": 1,
-                "quantity": 1,
-                "created_at": "2020-12-07T05:27:42.000000Z",
-                "updated_at": "2020-12-07T05:27:42.000000Z",
-                "image": [],
-                "media": []
-            }
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-discount-product" hidden>
@@ -1183,14 +1043,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/discount-product/adipisci" \
+    -G "http://localhost/api/discount-product/placeat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/adipisci"
+    "http://localhost/api/discount-product/placeat"
 );
 
 let headers = {
@@ -1250,14 +1110,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/discount-product/vitae" \
+    "http://localhost/api/discount-product/dolor" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/vitae"
+    "http://localhost/api/discount-product/dolor"
 );
 
 let headers = {
@@ -1314,14 +1174,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/discount-product/accusantium" \
+    "http://localhost/api/discount-product/dolorem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/discount-product/accusantium"
+    "http://localhost/api/discount-product/dolorem"
 );
 
 let headers = {
@@ -1489,14 +1349,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order/accusantium" \
+    -G "http://localhost/api/order/vel" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/accusantium"
+    "http://localhost/api/order/vel"
 );
 
 let headers = {
@@ -1556,14 +1416,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/order/ad" \
+    "http://localhost/api/order/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/ad"
+    "http://localhost/api/order/tempore"
 );
 
 let headers = {
@@ -1620,14 +1480,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/order/nam" \
+    "http://localhost/api/order/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order/nam"
+    "http://localhost/api/order/asperiores"
 );
 
 let headers = {
@@ -1795,14 +1655,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/order-item/ut" \
+    -G "http://localhost/api/order-item/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/ut"
+    "http://localhost/api/order-item/non"
 );
 
 let headers = {
@@ -1862,14 +1722,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/order-item/rerum" \
+    "http://localhost/api/order-item/eveniet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/rerum"
+    "http://localhost/api/order-item/eveniet"
 );
 
 let headers = {
@@ -1926,14 +1786,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/order-item/officiis" \
+    "http://localhost/api/order-item/dolor" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/order-item/officiis"
+    "http://localhost/api/order-item/dolor"
 );
 
 let headers = {
@@ -2009,436 +1869,11 @@ fetch(url, {
 ```
 
 
-> Example response (500):
+> Example response (200):
 
 ```json
 {
-    "message": "Call to a member function get() on array",
-    "exception": "Error",
-    "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\app\\Http\\Controllers\\Api\\ProductApiController.php",
-    "line": 20,
-    "trace": [
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
-            "line": 54,
-            "function": "index",
-            "class": "App\\Http\\Controllers\\Api\\ProductApiController",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
-            "line": 45,
-            "function": "callAction",
-            "class": "Illuminate\\Routing\\Controller",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 255,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\ControllerDispatcher",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 197,
-            "function": "runController",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 691,
-            "function": "run",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
-            "line": 41,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 127,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 103,
-            "function": "handleRequest",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 55,
-            "function": "handleRequestUsingNamedLimiter",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 693,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 668,
-            "function": "runRouteWithinStack",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 634,
-            "function": "runRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 623,
-            "function": "dispatchToRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 166,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Foundation\\Http\\{closure}",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
-            "line": 27,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
-            "line": 87,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fideloper\\Proxy\\TrustProxies",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 141,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 110,
-            "function": "sendRequestThroughRouter",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 324,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 305,
-            "function": "callLaravelOrLumenRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 76,
-            "function": "makeApiCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 51,
-            "function": "makeResponseCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 41,
-            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 236,
-            "function": "__invoke",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 172,
-            "function": "iterateThroughStrategies",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 127,
-            "function": "fetchResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 119,
-            "function": "processRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 73,
-            "function": "processRoutes",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 36,
-            "function": "handle",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
-            "line": 40,
-            "function": "Illuminate\\Container\\{closure}",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 93,
-            "function": "unwrapIfClosure",
-            "class": "Illuminate\\Container\\Util",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 37,
-            "function": "callBoundMethod",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
-            "line": 610,
-            "function": "call",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 136,
-            "function": "call",
-            "class": "Illuminate\\Container\\Container",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 258,
-            "function": "execute",
-            "class": "Illuminate\\Console\\Command",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 121,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Command\\Command",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
-            "line": 920,
-            "function": "run",
-            "class": "Illuminate\\Console\\Command",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
-            "line": 266,
-            "function": "doRunCommand",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
-            "line": 142,
-            "function": "doRun",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
-            "line": 93,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
-            "line": 129,
-            "function": "run",
-            "class": "Illuminate\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\artisan",
-            "line": 37,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Console\\Kernel",
-            "type": "->"
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-product" hidden>
@@ -2526,14 +1961,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/product/dolores" \
+    -G "http://localhost/api/product/mollitia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/dolores"
+    "http://localhost/api/product/mollitia"
 );
 
 let headers = {
@@ -2593,14 +2028,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/product/facilis" \
+    "http://localhost/api/product/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/facilis"
+    "http://localhost/api/product/ut"
 );
 
 let headers = {
@@ -2657,14 +2092,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/product/et" \
+    "http://localhost/api/product/sint" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/product/et"
+    "http://localhost/api/product/sint"
 );
 
 let headers = {
@@ -2832,14 +2267,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode/nihil" \
+    -G "http://localhost/api/promocode/quas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/nihil"
+    "http://localhost/api/promocode/quas"
 );
 
 let headers = {
@@ -2899,14 +2334,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/promocode/ea" \
+    "http://localhost/api/promocode/at" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/ea"
+    "http://localhost/api/promocode/at"
 );
 
 let headers = {
@@ -2963,14 +2398,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/promocode/nam" \
+    "http://localhost/api/promocode/nostrum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode/nam"
+    "http://localhost/api/promocode/nostrum"
 );
 
 let headers = {
@@ -3052,487 +2487,487 @@ fetch(url, {
 {
     "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories`)",
     "exception": "Illuminate\\Database\\QueryException",
-    "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
     "trace": [
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
             "line": 631,
             "function": "runQueryCallback",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
             "line": 339,
             "function": "run",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2303,
             "function": "select",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2291,
             "function": "runSelect",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2786,
             "function": "Illuminate\\Database\\Query\\{closure}",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2292,
             "function": "onceWithColumns",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
             "line": 549,
             "function": "get",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
             "line": 533,
             "function": "getModels",
             "class": "Illuminate\\Database\\Eloquent\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\app\\Http\\Controllers\\Api\\PromocodeHistoryApiController.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\app\\Http\\Controllers\\Api\\PromocodeHistoryApiController.php",
             "line": 22,
             "function": "get",
             "class": "Illuminate\\Database\\Eloquent\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
             "line": 54,
             "function": "index",
             "class": "App\\Http\\Controllers\\Api\\PromocodeHistoryApiController",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
             "line": 45,
             "function": "callAction",
             "class": "Illuminate\\Routing\\Controller",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
             "line": 255,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\ControllerDispatcher",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
             "line": 197,
             "function": "runController",
             "class": "Illuminate\\Routing\\Route",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 691,
             "function": "run",
             "class": "Illuminate\\Routing\\Route",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
             "line": 41,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 127,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 103,
             "function": "handleRequest",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 55,
             "function": "handleRequestUsingNamedLimiter",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 693,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 668,
             "function": "runRouteWithinStack",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 634,
             "function": "runRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 623,
             "function": "dispatchToRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 166,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Foundation\\Http\\{closure}",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
             "line": 27,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
             "line": 87,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 141,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 110,
             "function": "sendRequestThroughRouter",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 324,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 305,
             "function": "callLaravelOrLumenRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 76,
             "function": "makeApiCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 51,
             "function": "makeResponseCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 41,
             "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 236,
             "function": "__invoke",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 172,
             "function": "iterateThroughStrategies",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 127,
             "function": "fetchResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 119,
             "function": "processRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 73,
             "function": "processRoutes",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 36,
             "function": "handle",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
             "line": 40,
             "function": "Illuminate\\Container\\{closure}",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 93,
             "function": "unwrapIfClosure",
             "class": "Illuminate\\Container\\Util",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 37,
             "function": "callBoundMethod",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
             "line": 610,
             "function": "call",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 136,
             "function": "call",
             "class": "Illuminate\\Container\\Container",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Command\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Command\\Command.php",
             "line": 258,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 121,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Command\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 920,
             "function": "run",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 266,
             "function": "doRunCommand",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 142,
             "function": "doRun",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
             "line": 93,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
             "line": 129,
             "function": "run",
             "class": "Illuminate\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\artisan",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\artisan",
             "line": 37,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Console\\Kernel",
@@ -3626,14 +3061,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/promocode-history/ipsam" \
+    -G "http://localhost/api/promocode-history/nesciunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/ipsam"
+    "http://localhost/api/promocode-history/nesciunt"
 );
 
 let headers = {
@@ -3653,489 +3088,489 @@ fetch(url, {
 
 ```json
 {
-    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = ipsam)",
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = nesciunt)",
     "exception": "Illuminate\\Database\\QueryException",
-    "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
     "trace": [
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
             "line": 631,
             "function": "runQueryCallback",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
             "line": 339,
             "function": "run",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2303,
             "function": "select",
             "class": "Illuminate\\Database\\Connection",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2291,
             "function": "runSelect",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2786,
             "function": "Illuminate\\Database\\Query\\{closure}",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
             "line": 2292,
             "function": "onceWithColumns",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
             "line": 549,
             "function": "get",
             "class": "Illuminate\\Database\\Query\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
             "line": 533,
             "function": "getModels",
             "class": "Illuminate\\Database\\Eloquent\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\app\\Http\\Controllers\\Api\\PromocodeHistoryApiController.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\app\\Http\\Controllers\\Api\\PromocodeHistoryApiController.php",
             "line": 47,
             "function": "get",
             "class": "Illuminate\\Database\\Eloquent\\Builder",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
             "line": 54,
             "function": "show",
             "class": "App\\Http\\Controllers\\Api\\PromocodeHistoryApiController",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
             "line": 45,
             "function": "callAction",
             "class": "Illuminate\\Routing\\Controller",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
             "line": 255,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\ControllerDispatcher",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
             "line": 197,
             "function": "runController",
             "class": "Illuminate\\Routing\\Route",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 691,
             "function": "run",
             "class": "Illuminate\\Routing\\Route",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Routing\\{closure}",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
             "line": 41,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 127,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 103,
             "function": "handleRequest",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
             "line": 55,
             "function": "handleRequestUsingNamedLimiter",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 693,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 668,
             "function": "runRouteWithinStack",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 634,
             "function": "runRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 623,
             "function": "dispatchToRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 166,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Foundation\\Http\\{closure}",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
             "line": 27,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
             "line": 87,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 141,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 110,
             "function": "sendRequestThroughRouter",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 324,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 305,
             "function": "callLaravelOrLumenRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 76,
             "function": "makeApiCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 51,
             "function": "makeResponseCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 41,
             "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 236,
             "function": "__invoke",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 172,
             "function": "iterateThroughStrategies",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 127,
             "function": "fetchResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 119,
             "function": "processRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 73,
             "function": "processRoutes",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 36,
             "function": "handle",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
             "line": 40,
             "function": "Illuminate\\Container\\{closure}",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 93,
             "function": "unwrapIfClosure",
             "class": "Illuminate\\Container\\Util",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 37,
             "function": "callBoundMethod",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
             "line": 610,
             "function": "call",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 136,
             "function": "call",
             "class": "Illuminate\\Container\\Container",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Command\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Command\\Command.php",
             "line": 258,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 121,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Command\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 920,
             "function": "run",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 266,
             "function": "doRunCommand",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\symfony\\console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\symfony\\console\\Application.php",
             "line": 142,
             "function": "doRun",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
             "line": 93,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
             "line": 129,
             "function": "run",
             "class": "Illuminate\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\artisan",
+            "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\artisan",
             "line": 37,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Console\\Kernel",
@@ -4181,14 +3616,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/promocode-history/vitae" \
+    "http://localhost/api/promocode-history/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/vitae"
+    "http://localhost/api/promocode-history/asperiores"
 );
 
 let headers = {
@@ -4245,14 +3680,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/promocode-history/culpa" \
+    "http://localhost/api/promocode-history/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/promocode-history/culpa"
+    "http://localhost/api/promocode-history/velit"
 );
 
 let headers = {
@@ -4332,18 +3767,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "category_id": 1,
-            "name": "gg",
-            "parent_id": 0,
-            "created_at": null,
-            "updated_at": null,
-            "image": [],
-            "media": []
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-sub-category" hidden>
@@ -4431,14 +3855,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/sub-category/eligendi" \
+    -G "http://localhost/api/sub-category/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/eligendi"
+    "http://localhost/api/sub-category/voluptatem"
 );
 
 let headers = {
@@ -4498,14 +3922,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/sub-category/voluptas" \
+    "http://localhost/api/sub-category/praesentium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/voluptas"
+    "http://localhost/api/sub-category/praesentium"
 );
 
 let headers = {
@@ -4562,14 +3986,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/sub-category/qui" \
+    "http://localhost/api/sub-category/nulla" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/sub-category/qui"
+    "http://localhost/api/sub-category/nulla"
 );
 
 let headers = {
@@ -4649,152 +4073,7 @@ fetch(url, {
 
 ```json
 {
-    "data": [
-        {
-            "id": 1,
-            "name": "s",
-            "email": "s",
-            "email_verified_at": "2020-12-07T16:42:10.000000Z",
-            "address": "s",
-            "password": "s",
-            "created_at": null,
-            "updated_at": null,
-            "image": [],
-            "media": []
-        },
-        {
-            "id": 2,
-            "name": "gg",
-            "email": "gg",
-            "email_verified_at": null,
-            "address": "gg",
-            "password": "gg",
-            "created_at": "2020-12-07T15:22:59.000000Z",
-            "updated_at": "2020-12-07T15:22:59.000000Z",
-            "image": [
-                {
-                    "id": 2,
-                    "model_type": "App\\Models\\User",
-                    "model_id": 2,
-                    "uuid": "d2dea216-4943-4d22-8ee4-0eabccc65f6c",
-                    "collection_name": "image",
-                    "name": "kato",
-                    "file_name": "kato.jpg",
-                    "mime_type": "image\/jpeg",
-                    "disk": "public",
-                    "conversions_disk": "public",
-                    "size": 32559,
-                    "manipulations": [],
-                    "custom_properties": [],
-                    "generated_conversions": {
-                        "thumb": true,
-                        "preview": true
-                    },
-                    "responsive_images": [],
-                    "order_column": 2,
-                    "created_at": "2020-12-07T15:23:01.000000Z",
-                    "updated_at": "2020-12-07T15:23:03.000000Z",
-                    "url": "http:\/\/localhost\/storage\/2\/kato.jpg",
-                    "thumbnail": "http:\/\/localhost\/storage\/2\/conversions\/kato-thumb.jpg",
-                    "preview": "http:\/\/localhost\/storage\/2\/conversions\/kato-preview.jpg"
-                }
-            ],
-            "media": [
-                {
-                    "id": 2,
-                    "model_type": "App\\Models\\User",
-                    "model_id": 2,
-                    "uuid": "d2dea216-4943-4d22-8ee4-0eabccc65f6c",
-                    "collection_name": "image",
-                    "name": "kato",
-                    "file_name": "kato.jpg",
-                    "mime_type": "image\/jpeg",
-                    "disk": "public",
-                    "conversions_disk": "public",
-                    "size": 32559,
-                    "manipulations": [],
-                    "custom_properties": [],
-                    "generated_conversions": {
-                        "thumb": true,
-                        "preview": true
-                    },
-                    "responsive_images": [],
-                    "order_column": 2,
-                    "created_at": "2020-12-07T15:23:01.000000Z",
-                    "updated_at": "2020-12-07T15:23:03.000000Z",
-                    "url": "http:\/\/localhost\/storage\/2\/kato.jpg",
-                    "thumbnail": "http:\/\/localhost\/storage\/2\/conversions\/kato-thumb.jpg",
-                    "preview": "http:\/\/localhost\/storage\/2\/conversions\/kato-preview.jpg"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "name": "gg",
-            "email": "ggg",
-            "email_verified_at": null,
-            "address": "gg",
-            "password": "gg",
-            "created_at": "2020-12-07T15:33:22.000000Z",
-            "updated_at": "2020-12-07T15:33:22.000000Z",
-            "image": [
-                {
-                    "id": 3,
-                    "model_type": "App\\Models\\User",
-                    "model_id": 4,
-                    "uuid": "001d5613-b8d4-4c3f-b974-8c0b0b5c49df",
-                    "collection_name": "image",
-                    "name": "kato",
-                    "file_name": "kato.jpg",
-                    "mime_type": "image\/jpeg",
-                    "disk": "public",
-                    "conversions_disk": "public",
-                    "size": 32559,
-                    "manipulations": [],
-                    "custom_properties": [],
-                    "generated_conversions": {
-                        "thumb": true,
-                        "preview": true
-                    },
-                    "responsive_images": [],
-                    "order_column": 3,
-                    "created_at": "2020-12-07T15:33:22.000000Z",
-                    "updated_at": "2020-12-07T15:33:23.000000Z",
-                    "url": "http:\/\/localhost\/storage\/3\/kato.jpg",
-                    "thumbnail": "http:\/\/localhost\/storage\/3\/conversions\/kato-thumb.jpg",
-                    "preview": "http:\/\/localhost\/storage\/3\/conversions\/kato-preview.jpg"
-                }
-            ],
-            "media": [
-                {
-                    "id": 3,
-                    "model_type": "App\\Models\\User",
-                    "model_id": 4,
-                    "uuid": "001d5613-b8d4-4c3f-b974-8c0b0b5c49df",
-                    "collection_name": "image",
-                    "name": "kato",
-                    "file_name": "kato.jpg",
-                    "mime_type": "image\/jpeg",
-                    "disk": "public",
-                    "conversions_disk": "public",
-                    "size": 32559,
-                    "manipulations": [],
-                    "custom_properties": [],
-                    "generated_conversions": {
-                        "thumb": true,
-                        "preview": true
-                    },
-                    "responsive_images": [],
-                    "order_column": 3,
-                    "created_at": "2020-12-07T15:33:22.000000Z",
-                    "updated_at": "2020-12-07T15:33:23.000000Z",
-                    "url": "http:\/\/localhost\/storage\/3\/kato.jpg",
-                    "thumbnail": "http:\/\/localhost\/storage\/3\/conversions\/kato-thumb.jpg",
-                    "preview": "http:\/\/localhost\/storage\/3\/conversions\/kato-preview.jpg"
-                }
-            ]
-        }
-    ]
+    "data": []
 }
 ```
 <div id="execution-results-GETapi-user" hidden>
@@ -4882,14 +4161,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user/ducimus" \
+    -G "http://localhost/api/user/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/ducimus"
+    "http://localhost/api/user/velit"
 );
 
 let headers = {
@@ -4949,14 +4228,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/user/tempore" \
+    "http://localhost/api/user/eveniet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/tempore"
+    "http://localhost/api/user/eveniet"
 );
 
 let headers = {
@@ -5013,14 +4292,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/user/dolores" \
+    "http://localhost/api/user/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user/dolores"
+    "http://localhost/api/user/consequuntur"
 );
 
 let headers = {
@@ -5178,7 +4457,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
 
     <title>Laravel</title>
 
@@ -5233,7 +4512,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/login">
-                        <input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -5460,7 +4739,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
 
     <title>Laravel</title>
 
@@ -5515,7 +4794,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/register">
-                        <input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
@@ -5689,7 +4968,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
 
     <title>Laravel</title>
 
@@ -5745,7 +5024,7 @@ fetch(url, {
                 <div class="card-body">
                     
                     <form method="POST" action="http://localhost/password/email">
-                        <input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -5859,14 +5138,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/password/reset/quo" \
+    -G "http://localhost/password/reset/accusamus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/password/reset/quo"
+    "http://localhost/password/reset/accusamus"
 );
 
 let headers = {
@@ -5893,7 +5172,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
+    <meta name="csrf-token" content="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
 
     <title>Laravel</title>
 
@@ -5948,8 +5227,8 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/password/reset">
-                        <input type="hidden" name="_token" value="CkQzS27T5ExaojIgqra3bwlM72UrmcVqtT9j7tBy">
-                        <input type="hidden" name="token" value="quo">
+                        <input type="hidden" name="_token" value="DzI8S7yydsy7NQtFirMY0dR71yykbeOH3OWDOrgS">
+                        <input type="hidden" name="token" value="accusamus">
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
