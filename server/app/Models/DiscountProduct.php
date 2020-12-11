@@ -21,7 +21,6 @@ class DiscountProduct extends Model
 
     protected $fillable = [
         'product_id',
-        'type_id',
         'value',
         'start_date',
         'end_date',
@@ -30,11 +29,6 @@ class DiscountProduct extends Model
     public function product()
     {
         return $this->belongsTo(Product::class, 'product_id');
-    }
-
-    public function type()
-    {
-        return $this->belongsTo(Type::class, 'type_id');
     }
 
 }
