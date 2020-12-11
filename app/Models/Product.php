@@ -21,6 +21,7 @@ class Product extends Model implements HasMedia
     protected $dates = [
         'created_at',
         'updated_at',
+        'deleted_at'
     ];
 
     protected $fillable = [
@@ -28,7 +29,6 @@ class Product extends Model implements HasMedia
         'name',
         'description',
         'price',
-        'is_enable',
         'quantity'
     ];
 

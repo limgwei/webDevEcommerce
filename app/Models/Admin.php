@@ -16,8 +16,11 @@ class Admin extends Model
      */
     public $table = 'admin';
 
-
-
+    
+    protected $dates = [
+        'created_at',
+        'updated_at',
+    ];  
 
 
     protected $fillable = [

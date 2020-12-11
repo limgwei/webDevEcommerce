@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\DiscountProductResource;
-use App\Models\DiscountProduct;
 use Illuminate\Http\Request;
 
-
-class DiscountProductApiController extends Controller
+class UserController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -18,9 +15,18 @@ class DiscountProductApiController extends Controller
     public function index()
     {
         //
-        //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
-        return new DiscountProductResource(DiscountProduct::with(['product','type'])->get());
     }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -30,9 +36,6 @@ class DiscountProductApiController extends Controller
     public function store(Request $request)
     {
         //
-        $discountProduct = DiscountProduct::create($request->all());
-        return $discountProduct;
-           
     }
 
     /**
@@ -43,8 +46,18 @@ class DiscountProductApiController extends Controller
      */
     public function show($id)
     {
-        
-        return new DiscountProductResource(DiscountProduct::with(['product','type'])->where('id',$id)->get());
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
     }
 
     /**
@@ -57,8 +70,6 @@ class DiscountProductApiController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $discountProduct = DiscountProduct::where('id',$id)->update($request->all());
-        return $discountProduct;
     }
 
     /**
@@ -69,6 +80,6 @@ class DiscountProductApiController extends Controller
      */
     public function destroy($id)
     {
-        DiscountProduct::where('id',$id)->delete();
+        //
     }
 }

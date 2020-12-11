@@ -22,6 +22,7 @@ class OrderItem extends Model
         'user_id',
         'order_id',
         'quantity',
+        'current_price' //after discount only for 1 item
     ];
 
     public function order()

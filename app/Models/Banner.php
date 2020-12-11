@@ -8,12 +8,16 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Category extends Model implements HasMedia
+class Banner extends Model implements HasMedia
 {
     use HasFactory,InteractsWithMedia;
+
+    public $table = 'users';
+
     protected $appends = [
         'image',
     ];
+
 
     protected $dates = [
         'created_at',
@@ -23,6 +27,9 @@ class Category extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'description',
+        'category_id',
+        'product_id'
     ];
 
     public function getImageAttribute()

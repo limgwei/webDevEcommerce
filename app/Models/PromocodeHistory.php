@@ -25,7 +25,7 @@ class PromocodeHistory extends Model
 
     public function promocode()
     {
-        return $this->belongsTo(promocode::class, 'promocode_id');
+        return $this->belongsTo(Promocode::class, 'promocode_id');
     }
 
     public function user()

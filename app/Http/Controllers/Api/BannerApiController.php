@@ -3,21 +3,20 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ProductResource;
-use App\Models\Product;
+use App\Http\Resources\BannerResource;
+use App\Models\Banner;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Traits\MediaUploadingTrait;
 
-class ProductApiController extends Controller
+class BannerApiController extends Controller
 {
-      /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return new ProductResource(Product::with(['sub_category'])->get());
+        return new BannerResource(Banner::with(['category','product'])->get());
     }
 
     /**
@@ -28,15 +27,16 @@ class ProductApiController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
+        $banner = Banner::create($request->all());
 
         $file = $request->file('image');
         $imageCount = count($request->file('image'));
         
          for($i = 0;$i<$imageCount;$i++){
-              $product->addMedia($file[$i])->toMediaCollection('image');
+              $banner->addMedia($file[$i])->toMediaCollection('image');
               
          }
+        return $banner;
     }
 
     /**
@@ -47,7 +47,7 @@ class ProductApiController extends Controller
      */
     public function show($id)
     {
-        return new ProductResource(Product::with(['sub_category'])->where('id',$id)->get());
+        return new BannerResource(Banner::with(['product','category'])->where('id',$id)->get());
     }
 
     /**
@@ -58,24 +58,24 @@ class ProductApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {   $product = Product::where('id',$id)->update($request->all);
-        
+    {
+        $banner = Banner::where('id',$id)->update($request->all());
 
-       
+        
         $file = $request->file('image');
         $imageCount = count($request->file('image'));
 
-        if ($product->image) {
-            foreach ($product->image as $media) { 
+        if ($banner->image) {
+            foreach ($banner->image as $media) { 
                     $media->delete();  
             }
         }
 
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $product->addMedia($file[$i])->toMediaCollection('image');
-   
+        for($i = 0;$i<$imageCount;$i++){   
+            $banner->addMedia($file[$i])->toMediaCollection('image');
        }
+
+        return $banner;
     }
 
     /**
@@ -86,6 +86,6 @@ class ProductApiController extends Controller
      */
     public function destroy($id)
     {
-        Product::where('id',$id)->delete();
+        Banner::where('id',$id)->delete();
     }
 }

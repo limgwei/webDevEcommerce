@@ -22,12 +22,13 @@ class SubCategory extends Model implements HasMedia
     protected $dates = [
         'created_at',
         'updated_at',
+        'deleted_at'
     ];
 
     protected $fillable = [
         'user_id',
         'parent_id',
-        'quantity',
+        'name',
     ];
 
     public function parent()

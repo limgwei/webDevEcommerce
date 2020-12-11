@@ -19,6 +19,7 @@ class CreateCartsTable extends Migration
             $table->integer('product_id');
             $table->integer('quantity');
             $table->timestamps();
+            $table->softDeletes('deleted_at', 0);
         });
     }
 

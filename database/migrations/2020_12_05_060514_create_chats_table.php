@@ -17,8 +17,9 @@ class CreateChatsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->text('text');
-            $table->integer('is_admin');
+            $table->integer('is_admin')->nullable();
             $table->timestamps();
+            $table->softDeletes('deleted_at', 0);
         });
     }
 
