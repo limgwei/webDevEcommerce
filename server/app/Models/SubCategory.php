@@ -26,7 +26,7 @@ class SubCategory extends Model implements HasMedia
     ];
 
     protected $fillable = [
-        'user_id',
+        'category_id',
         'parent_id',
         'name',
     ];
@@ -36,9 +36,9 @@ class SubCategory extends Model implements HasMedia
         return $this->belongsTo(SubCategory::class, 'parent_id');
     }
 
-    public function user()
+    public function category()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function getImageAttribute()

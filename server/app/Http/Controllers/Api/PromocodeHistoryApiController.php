@@ -7,7 +7,11 @@ use App\Http\Resources\PromocodeHistoryResource;
 use App\Models\PromocodeHistory;
 use Illuminate\Http\Request;
 
-
+/**
+ * @group PromocodeHistory
+ *
+ * APIs for manage promocode history
+ */
 class PromocodeHistoryApiController extends Controller
 {
   /**

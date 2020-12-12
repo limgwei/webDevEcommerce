@@ -6,7 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\PromocodeResource;
 use App\Models\Promocode;
 use Illuminate\Http\Request;
-
+/**
+ * @group Promocode
+ *
+ * APIs for manage promocode
+ */
 class PromocodeApiController extends Controller
 {
     public function index()

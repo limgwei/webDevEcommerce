@@ -7,7 +7,11 @@ use App\Http\Resources\DiscountProductResource;
 use App\Models\DiscountProduct;
 use Illuminate\Http\Request;
 
-
+/**
+ * @group Discount Product
+ *
+ * APIs for manage discount product
+ */
 class DiscountProductApiController extends Controller
 {
      /**

@@ -7,12 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Models\Category;
 use App\Http\Resources\CategoryResource;
-
+/**
+ * @group Category
+ *
+ * APIs for manage category
+ */
 class CategoryApiController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * 
+     * Display all category
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -21,26 +25,7 @@ class CategoryApiController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $category = Category::create($request->all());
-
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-        
-         for($i = 0;$i<$imageCount;$i++){
-              $category->addMedia($file[$i])->toMediaCollection('image');
-              
-         }
-    }
-
-    /**
-     * Display the specified resource.
+     * Display the specified category.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -50,42 +35,4 @@ class CategoryApiController extends Controller
         return new CategoryResource(Category::where('id',$id)->get());
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {   $category = Category::where('id',$id)->update($request->all);
-        
-
-       
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-
-        if ($category->image) {
-            foreach ($category->image as $media) { 
-                    $media->delete();  
-            }
-        }
-
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $category->addMedia($file[$i])->toMediaCollection('image');
-   
-       }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        Category::where('id',$id)->delete();
-    }
 }

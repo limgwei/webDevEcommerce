@@ -7,7 +7,11 @@ use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
-
+/**
+ * @group Order
+ *
+ * APIs for manage order
+ */
 class OrderApiController extends Controller
 {
      /**

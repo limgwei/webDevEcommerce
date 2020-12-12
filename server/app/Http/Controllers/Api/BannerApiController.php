@@ -6,7 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\BannerResource;
 use App\Models\Banner;
 use Illuminate\Http\Request;
-
+/**
+ * @group Banner
+ *
+ * APIs for manage banners
+ */
 class BannerApiController extends Controller
 {
     /**

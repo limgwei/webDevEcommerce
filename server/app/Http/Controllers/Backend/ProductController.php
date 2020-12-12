@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -35,7 +36,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create($request->all());
+
+        $file = $request->file('image');
+        $imageCount = count($request->file('image'));
+        
+         for($i = 0;$i<$imageCount;$i++){
+              $product->addMedia($file[$i])->toMediaCollection('image');
+              
+         }
     }
 
     /**
@@ -69,7 +78,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::where('id',$id)->update($request->all);
+        
+
+       
+        $file = $request->file('image');
+        $imageCount = count($request->file('image'));
+
+        if ($product->image) {
+            foreach ($product->image as $media) { 
+                    $media->delete();  
+            }
+        }
+
+        for($i = 0;$i<$imageCount;$i++){
+            
+            $product->addMedia($file[$i])->toMediaCollection('image');
+   
+       }
     }
 
     /**
@@ -80,6 +106,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::where('id',$id)->delete();
     }
 }

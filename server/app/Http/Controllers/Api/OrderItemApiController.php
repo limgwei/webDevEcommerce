@@ -6,7 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderItemResource;
 use App\Models\OrderItem;
 use Illuminate\Http\Request;
-
+/**
+ * @group OrderItem
+ *
+ * APIs for manage order items
+ */
 
 class OrderItemApiController extends Controller
 {

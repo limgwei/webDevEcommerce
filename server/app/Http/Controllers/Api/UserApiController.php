@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+/**
+ * @group User
+ *
+ * APIs for manage user
+ */
 class UserApiController extends Controller
 {
     /**

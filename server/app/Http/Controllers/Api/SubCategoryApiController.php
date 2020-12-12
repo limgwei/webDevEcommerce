@@ -8,86 +8,108 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Resources\SubCategoryResource;
 use App\Models\SubCategory;
 
-
+/**
+ * @group SubCategory
+ *
+ * APIs for manage SubCategory
+ */
 
 class SubCategoryApiController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the subcategory.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return new SubCategoryResource(SubCategory::all());
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->get());
+
+        for($i=0;$i<$subCategories->count();$i++){
+
+            $sub = new SubCategoryResource(SubCategory::with(['category','parent'])->where('parent_id',$subCategories[$i]['id'])->get());
+            if($sub->isNotEmpty()){
+                $subCategories[$i]['got_sub'] = true;
+            }
+            else{
+                $subCategories[$i]['got_sub'] = false;
+            }
+        }
+    
+        return $subCategories;
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $subCategory = SubCategory::create($request->all());
-
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-        
-         for($i = 0;$i<$imageCount;$i++){
-              $subCategory->addMedia($file[$i])->toMediaCollection('image');
-              
-         }
-    }
-
-    /**
-     * Display the specified resource.
+     * Display the specified subcategory.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        return new SubCategoryResource(SubCategory::where('id',$id)->get());
-    }
+    {   
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('id',$id)->get());
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {   $subCategory = SubCategory::where('id',$id)->update($request->all);
-        
+        for($i=0;$i<$subCategories->count();$i++){
 
-       
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-
-        if ($subCategory->image) {
-            foreach ($subCategory->image as $media) { 
-                    $media->delete();  
+            $sub = new SubCategoryResource(SubCategory::with(['category','parent'])->where('parent_id',$subCategories[$i]['id'])->get());
+            if($sub->isNotEmpty()){
+                $subCategories[$i]['got_sub'] = true;
+            }
+            else{
+                $subCategories[$i]['got_sub'] = false;
             }
         }
 
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $subCategory->addMedia($file[$i])->toMediaCollection('image');
-   
-       }
+        return $subCategories;
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Display the subcategory under a category 
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function filter_by_category($id){
+
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('category_id',$id)->get());
+
+        for($i=0;$i<$subCategories->count();$i++){
+
+            $sub = new SubCategoryResource(SubCategory::with(['category','parent'])->where('parent_id',$subCategories[$i]['id'])->get());
+            if($sub->isNotEmpty()){
+                $subCategories[$i]['got_sub'] = true;
+            }
+            else{
+                $subCategories[$i]['got_sub'] = false;
+            }
+        }
+        
+        return $subCategories;
+    }
+
+    /**
+     * Display the subcategory under a subcategory
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        SubCategory::where('id',$id)->delete();
+    public function filter_by_subcategory($id){
+
+            $subCategories = new SubCategoryResource(SubCategory::with(['parent'])->where('parent_id',$id)->get());
+
+            for($i=0;$i<$subCategories->count();$i++){
+
+                $sub = new SubCategoryResource(SubCategory::with(['category','parent'])->where('parent_id',$subCategories[$i]['id'])->get());
+                if($sub->isNotEmpty()){
+                    $subCategories[$i]['got_sub'] = true;
+                }
+                else{
+                    $subCategories[$i]['got_sub'] = false;
+                }
+            }
+
+        return $subCategories;
+
     }
+
+
 }

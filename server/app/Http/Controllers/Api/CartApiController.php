@@ -8,10 +8,16 @@ use Illuminate\Http\Request;
 use App\Http\Resources\CartResource;
 
 
+/**
+ * @group Cart
+ *
+ * APIs for manage cart
+ */
+
 class CartApiController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Cart with user and product.
      *
      * @return \Illuminate\Http\Response
      */

@@ -7,7 +7,11 @@ use App\Http\Resources\ChatResource;
 use Illuminate\Http\Request;
 use App\Models\Chat;
 
-
+/**
+ * @group Chat
+ *
+ * APIs for manage chat
+ */
 class ChatApiController extends Controller
 {
     /**
