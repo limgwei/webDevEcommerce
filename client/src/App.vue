@@ -26,7 +26,6 @@ export default {
   *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 
   }
   html{
@@ -53,7 +52,7 @@ export default {
   .static-icon{
     font-size: 2.5rem;
     color: $icon-grey-1;
-    padding: .2rem;
+    padding: 0 1rem;
   }
 
   .btn{

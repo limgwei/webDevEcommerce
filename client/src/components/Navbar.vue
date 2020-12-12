@@ -8,6 +8,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Product</a></li>
+                <li><a href="/products/promo">Promotion</a></li>
                 <li><a href="#">Category</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
@@ -39,8 +40,8 @@ export default {
         
         .toggle{
             position: fixed;
-            margin-top: 8%;
-            margin-left: 8%;
+            margin-top: 5%;
+            margin-left: 3%;
             height: 6rem;
             width: 6rem;
             align-items: center;
@@ -58,7 +59,7 @@ export default {
         }
 
         .scrolled{
-            background: rgba(48, 48, 48);
+            background-color: rgba(48, 48, 48, 0.1);
         }
         .active{
             display: none;
@@ -68,14 +69,14 @@ export default {
         nav{   
         width: 100%;
         height: 100%;
-        background-color:rgba(48, 48, 48,90%) ;
+        background-color:rgba(48, 48, 48,0.7);
         position: fixed;
         z-index: 99;
 
         ul{   
             width: 20%;
             height: 100%;
-            background-color:rgba(48, 48, 48) ;
+            background:rgba(48, 48, 48,0.9) ;
             padding-top: 10%;
             text-align: center;
             z-index: 999;
