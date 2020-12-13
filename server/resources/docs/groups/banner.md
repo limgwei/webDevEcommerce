@@ -75,10 +75,10 @@ curl -X POST \
     "/api/banner" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=sint" \
-    -F "category_id=16" \
-    -F "product_id=3" \
-    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php6B4C.tmp" 
+    -F "name=possimus" \
+    -F "category_id=15" \
+    -F "product_id=8" \
+    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php3364.tmp" 
 ```
 
 ```javascript
@@ -92,9 +92,9 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'sint');
-body.append('category_id', '16');
-body.append('product_id', '3');
+body.append('name', 'possimus');
+body.append('category_id', '15');
+body.append('product_id', '8');
 body.append('image[]', document.querySelector('input[name="image[]"]').files[0]);
 
 fetch(url, {
@@ -159,14 +159,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/banner/dolorem" \
+    -G "/api/banner/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/banner/dolorem"
+    "/api/banner/non"
 );
 
 let headers = {
@@ -226,14 +226,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/api/banner/possimus" \
+    "/api/banner/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/banner/possimus"
+    "/api/banner/autem"
 );
 
 let headers = {
@@ -290,14 +290,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/api/banner/velit" \
+    "/api/banner/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/banner/velit"
+    "/api/banner/quia"
 );
 
 let headers = {

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ab460dcc-b1bc-48d7-a670-2c4de9cae7e7",
+        "_postman_id": "a0e32720-0072-499e-9632-ec5e68c53c58",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -74,17 +74,17 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "sint",
+                                    "value": "possimus",
                                     "type": "text"
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": 16,
+                                    "value": 15,
                                     "type": "text"
                                 },
                                 {
                                     "key": "product_id",
-                                    "value": 3,
+                                    "value": 8,
                                     "type": "text"
                                 },
                                 {
@@ -114,7 +114,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "dolorem",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -151,7 +151,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "possimus",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -188,7 +188,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "velit",
+                                    "value": "quia",
                                     "description": ""
                                 }
                             ]
@@ -289,7 +289,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "excepturi",
+                                    "value": "ratione",
                                     "description": ""
                                 }
                             ]
@@ -326,7 +326,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "hic",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -363,7 +363,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "quisquam",
+                                    "value": "quod",
                                     "description": ""
                                 }
                             ]
@@ -435,7 +435,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "atque",
+                                    "value": "odio",
                                     "description": ""
                                 }
                             ]
@@ -536,7 +536,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "est",
+                                    "value": "eum",
                                     "description": ""
                                 }
                             ]
@@ -573,7 +573,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "odio",
+                                    "value": "assumenda",
                                     "description": ""
                                 }
                             ]
@@ -610,7 +610,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "voluptatem",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -641,7 +641,7 @@
             "description": "\nAPIs for manage discount product",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Display a list of discount Product",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -651,35 +651,6 @@
                             "raw": "http:\/\/{{baseUrl}}\/api\/discount_product"
                         },
                         "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/discount_product",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product"
-                        },
-                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -711,7 +682,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "nam",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -736,24 +707,24 @@
                     "response": []
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Display by subcategory",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount_product\/:discount_product",
+                            "path": "api\/discount_product\/sub\/:id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/:discount_product",
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id",
                             "variable": [
                                 {
-                                    "id": "discount_product",
-                                    "key": "discount_product",
-                                    "value": "inventore",
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
                         },
-                        "method": "PUT",
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -773,24 +744,317 @@
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Display latest product",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/discount_product\/:discount_product",
+                            "path": "api\/discount_product\/latest",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/:discount_product",
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/latest"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display product order by name A-Z",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/name",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/name"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display product order by name Z-A",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/nameD",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/nameD"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display product order by price Low-High",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/price",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/price"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display product order by price High-Low",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/priceD",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/priceD"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display by subcategory and order by latest",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/sub\/:id\/latest",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id\/latest",
                             "variable": [
                                 {
-                                    "id": "discount_product",
-                                    "key": "discount_product",
-                                    "value": "eaque",
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "vel",
                                     "description": ""
                                 }
                             ]
                         },
-                        "method": "DELETE",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display by subcategory and order by name A-Z",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/sub\/:id\/name",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id\/name",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "asperiores",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display by subcategory and order by name Z-A",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/sub\/:id\/nameD",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id\/nameD",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "dolorum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display by subcategory and order by price Low-High",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/sub\/:id\/price",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id\/price",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ea",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display by subcategory and order by price High-Low",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/discount_product\/sub\/:id\/priceD",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/discount_product\/sub\/:id\/priceD",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "vero",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -1089,7 +1353,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "aut",
+                                    "value": "temporibus",
                                     "description": ""
                                 }
                             ]
@@ -1306,7 +1570,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "voluptas",
+                                    "value": "nam",
                                     "description": ""
                                 }
                             ]
@@ -1343,7 +1607,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "eos",
+                                    "value": "natus",
                                     "description": ""
                                 }
                             ]
@@ -1380,7 +1644,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "minima",
+                                    "value": "voluptate",
                                     "description": ""
                                 }
                             ]
@@ -1481,7 +1745,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "quae",
+                                    "value": "molestias",
                                     "description": ""
                                 }
                             ]
@@ -1518,7 +1782,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "voluptas",
+                                    "value": "quis",
                                     "description": ""
                                 }
                             ]
@@ -1555,7 +1819,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "possimus",
+                                    "value": "reiciendis",
                                     "description": ""
                                 }
                             ]
@@ -1627,7 +1891,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "dolor",
+                                    "value": "consequuntur",
                                     "description": ""
                                 }
                             ]
@@ -1664,7 +1928,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "tempora",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -1701,7 +1965,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "suscipit",
+                                    "value": "ratione",
                                     "description": ""
                                 }
                             ]
@@ -1883,7 +2147,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "maiores",
+                                    "value": "laborum",
                                     "description": ""
                                 }
                             ]
@@ -1920,7 +2184,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eum",
+                                    "value": "quos",
                                     "description": ""
                                 }
                             ]
@@ -1957,7 +2221,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "temporibus",
+                                    "value": "dolore",
                                     "description": ""
                                 }
                             ]
@@ -1994,7 +2258,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "cumque",
+                                    "value": "a",
                                     "description": ""
                                 }
                             ]
@@ -2031,7 +2295,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vitae",
+                                    "value": "excepturi",
                                     "description": ""
                                 }
                             ]
@@ -2132,7 +2396,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "dolor",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -2169,7 +2433,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "reprehenderit",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -2206,7 +2470,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "rerum",
+                                    "value": "perferendis",
                                     "description": ""
                                 }
                             ]
@@ -2307,7 +2571,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "alias",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -2344,7 +2608,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "doloribus",
+                                    "value": "repudiandae",
                                     "description": ""
                                 }
                             ]
@@ -2381,7 +2645,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "dolores",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -2453,7 +2717,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "nostrum",
+                                    "value": "recusandae",
                                     "description": ""
                                 }
                             ]
@@ -2490,7 +2754,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quam",
+                                    "value": "voluptatibus",
                                     "description": ""
                                 }
                             ]
@@ -2527,7 +2791,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vel",
+                                    "value": "quis",
                                     "description": ""
                                 }
                             ]
@@ -2628,7 +2892,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "et",
+                                    "value": "vitae",
                                     "description": ""
                                 }
                             ]
@@ -2665,7 +2929,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "ut",
+                                    "value": "nihil",
                                     "description": ""
                                 }
                             ]
@@ -2702,7 +2966,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "veniam",
+                                    "value": "dolores",
                                     "description": ""
                                 }
                             ]

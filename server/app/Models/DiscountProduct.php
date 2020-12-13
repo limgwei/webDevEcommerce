@@ -9,7 +9,7 @@ class DiscountProduct extends Model
 {
     use HasFactory;
 
-    public $table = 'carts';
+    public $table = 'discount_products';
 
 
 

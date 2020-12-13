@@ -38,7 +38,32 @@ fetch(url, {
 
 ```json
 {
-    "data": []
+    "data": [
+        {
+            "id": 1,
+            "sub_category_id": 1,
+            "name": "product1",
+            "description": "",
+            "price": 0,
+            "quantity": 0,
+            "created_at": null,
+            "updated_at": null,
+            "deleted_at": null,
+            "image": [],
+            "sub_category": {
+                "id": 1,
+                "category_id": 1,
+                "name": "sub1",
+                "parent_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "deleted_at": null,
+                "image": [],
+                "media": []
+            },
+            "media": []
+        }
+    ]
 }
 ```
 <div id="execution-results-GETapi-product" hidden>
@@ -72,14 +97,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/dolor" \
+    -G "/api/product/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/dolor"
+    "/api/product/consequuntur"
 );
 
 let headers = {
@@ -139,14 +164,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/search/tempora" \
+    -G "/api/product/search/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/search/tempora"
+    "/api/product/search/ut"
 );
 
 let headers = {
@@ -206,14 +231,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/suscipit" \
+    -G "/api/product/sub/ratione" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/suscipit"
+    "/api/product/sub/ratione"
 );
 
 let headers = {
@@ -578,14 +603,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/maiores/latest" \
+    -G "/api/product/sub/laborum/latest" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/maiores/latest"
+    "/api/product/sub/laborum/latest"
 );
 
 let headers = {
@@ -645,14 +670,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/eum/name" \
+    -G "/api/product/sub/quos/name" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/eum/name"
+    "/api/product/sub/quos/name"
 );
 
 let headers = {
@@ -712,14 +737,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/temporibus/nameD" \
+    -G "/api/product/sub/dolore/nameD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/temporibus/nameD"
+    "/api/product/sub/dolore/nameD"
 );
 
 let headers = {
@@ -779,14 +804,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/cumque/price" \
+    -G "/api/product/sub/a/price" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/cumque/price"
+    "/api/product/sub/a/price"
 );
 
 let headers = {
@@ -846,14 +871,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/vitae/priceD" \
+    -G "/api/product/sub/excepturi/priceD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/vitae/priceD"
+    "/api/product/sub/excepturi/priceD"
 );
 
 let headers = {

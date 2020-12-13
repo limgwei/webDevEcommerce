@@ -126,14 +126,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/chat/est" \
+    -G "/api/chat/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/chat/est"
+    "/api/chat/eum"
 );
 
 let headers = {
@@ -193,14 +193,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/api/chat/odio" \
+    "/api/chat/assumenda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/chat/odio"
+    "/api/chat/assumenda"
 );
 
 let headers = {
@@ -257,14 +257,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/api/chat/voluptatem" \
+    "/api/chat/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/chat/voluptatem"
+    "/api/chat/ut"
 );
 
 let headers = {

@@ -600,14 +600,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/promocode_history/alias" \
+    -G "/api/promocode_history/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/promocode_history/alias"
+    "/api/promocode_history/rerum"
 );
 
 let headers = {
@@ -627,7 +627,7 @@ fetch(url, {
 
 ```json
 {
-    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = alias)",
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = rerum)",
     "exception": "Illuminate\\Database\\QueryException",
     "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
@@ -1141,14 +1141,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/api/promocode_history/doloribus" \
+    "/api/promocode_history/repudiandae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/promocode_history/doloribus"
+    "/api/promocode_history/repudiandae"
 );
 
 let headers = {
@@ -1205,14 +1205,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/api/promocode_history/dolores" \
+    "/api/promocode_history/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/promocode_history/dolores"
+    "/api/promocode_history/est"
 );
 
 let headers = {

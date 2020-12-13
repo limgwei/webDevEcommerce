@@ -82,14 +82,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/category/atque" \
+    -G "/api/category/odio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/category/atque"
+    "/api/category/odio"
 );
 
 let headers = {

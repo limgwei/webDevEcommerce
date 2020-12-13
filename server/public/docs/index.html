@@ -44,7 +44,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: December 12 2020</li>
+            <li>Last updated: December 13 2020</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -120,10 +120,10 @@ fetch(url, {
     "/api/banner" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=sint" \
-    -F "category_id=16" \
-    -F "product_id=3" \
-    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php6B4C.tmp" </code></pre>
+    -F "name=possimus" \
+    -F "category_id=15" \
+    -F "product_id=8" \
+    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php3364.tmp" </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "/api/banner"
 );
@@ -134,9 +134,9 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'sint');
-body.append('category_id', '16');
-body.append('product_id', '3');
+body.append('name', 'possimus');
+body.append('category_id', '15');
+body.append('product_id', '8');
 body.append('image[]', document.querySelector('input[name="image[]"]').files[0]);
 
 fetch(url, {
@@ -192,11 +192,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/banner/dolorem" \
+    -G "/api/banner/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/banner/dolorem"
+    "/api/banner/non"
 );
 
 let headers = {
@@ -245,11 +245,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/banner/possimus" \
+    "/api/banner/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/banner/possimus"
+    "/api/banner/autem"
 );
 
 let headers = {
@@ -296,11 +296,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/banner/velit" \
+    "/api/banner/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/banner/velit"
+    "/api/banner/quia"
 );
 
 let headers = {
@@ -432,11 +432,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/cart/excepturi" \
+    -G "/api/cart/ratione" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/cart/excepturi"
+    "/api/cart/ratione"
 );
 
 let headers = {
@@ -485,11 +485,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/cart/hic" \
+    "/api/cart/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/cart/hic"
+    "/api/cart/est"
 );
 
 let headers = {
@@ -536,11 +536,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/cart/quisquam" \
+    "/api/cart/quod" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/cart/quisquam"
+    "/api/cart/quod"
 );
 
 let headers = {
@@ -641,11 +641,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/category/atque" \
+    -G "/api/category/odio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/category/atque"
+    "/api/category/odio"
 );
 
 let headers = {
@@ -783,11 +783,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/chat/est" \
+    -G "/api/chat/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/chat/est"
+    "/api/chat/eum"
 );
 
 let headers = {
@@ -836,11 +836,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/chat/odio" \
+    "/api/chat/assumenda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/chat/odio"
+    "/api/chat/assumenda"
 );
 
 let headers = {
@@ -887,11 +887,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/chat/voluptatem" \
+    "/api/chat/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/chat/voluptatem"
+    "/api/chat/ut"
 );
 
 let headers = {
@@ -930,7 +930,7 @@ fetch(url, {
 </p>
 </form><h1>Discount Product</h1>
 <p>APIs for manage discount product</p>
-<h2>Display a listing of the resource.</h2>
+<h2>Display a list of discount Product</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -977,57 +977,16 @@ fetch(url, {
  <b><code>api/discount_product</code></b>
 </p>
 </form>
-<h2>Store a newly created resource in storage.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X POST \
-    "/api/discount_product" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "/api/discount_product"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-<div id="execution-results-POSTapi-discount_product" hidden>
-    <blockquote>Received response<span id="execution-response-status-POSTapi-discount_product"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-discount_product"></code></pre>
-</div>
-<div id="execution-error-POSTapi-discount_product" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-discount_product"></code></pre>
-</div>
-<form id="form-POSTapi-discount_product" data-method="POST" data-path="api/discount_product" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-discount_product', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-discount_product" onclick="tryItOut('POSTapi-discount_product');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-discount_product" onclick="cancelTryOut('POSTapi-discount_product');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-discount_product" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-black">POST</small>
- <b><code>api/discount_product</code></b>
-</p>
-</form>
 <h2>Display the specified resource.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/discount_product/nam" \
+    -G "/api/discount_product/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/discount_product/nam"
+    "/api/discount_product/sit"
 );
 
 let headers = {
@@ -1071,16 +1030,16 @@ fetch(url, {
 <br>
 </p>
 </form>
-<h2>Update the specified resource in storage.</h2>
+<h2>Display by subcategory</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
-<pre><code class="language-bash">curl -X PUT \
-    "/api/discount_product/inventore" \
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/discount_product/inventore"
+    "/api/discount_product/sub/qui"
 );
 
 let headers = {
@@ -1089,49 +1048,51 @@ let headers = {
 };
 
 fetch(url, {
-    method: "PUT",
+    method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre>
-<div id="execution-results-PUTapi-discount_product--discount_product-" hidden>
-    <blockquote>Received response<span id="execution-response-status-PUTapi-discount_product--discount_product-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-discount_product--discount_product-"></code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id-"></code></pre>
 </div>
-<div id="execution-error-PUTapi-discount_product--discount_product-" hidden>
+<div id="execution-error-GETapi-discount_product-sub--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-discount_product--discount_product-"></code></pre>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id-"></code></pre>
 </div>
-<form id="form-PUTapi-discount_product--discount_product-" data-method="PUT" data-path="api/discount_product/{discount_product}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-discount_product--discount_product-', this);">
+<form id="form-GETapi-discount_product-sub--id-" data-method="GET" data-path="api/discount_product/sub/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-discount_product--discount_product-" onclick="tryItOut('PUTapi-discount_product--discount_product-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-discount_product--discount_product-" onclick="cancelTryOut('PUTapi-discount_product--discount_product-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-discount_product--discount_product-" hidden>Send Request 💥</button>
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id-" onclick="tryItOut('GETapi-discount_product-sub--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id-" onclick="cancelTryOut('GETapi-discount_product-sub--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id-" hidden>Send Request 💥</button>
     </h3>
 <p>
-<small class="badge badge-darkblue">PUT</small>
- <b><code>api/discount_product/{discount_product}</code></b>
-</p>
-<p>
-<small class="badge badge-purple">PATCH</small>
- <b><code>api/discount_product/{discount_product}</code></b>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}</code></b>
 </p>
 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
 <p>
-<b><code>discount_product</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="discount_product" data-endpoint="PUTapi-discount_product--discount_product-" data-component="url" required  hidden>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id-" data-component="url" required  hidden>
 <br>
 </p>
 </form>
-<h2>Remove the specified resource from storage.</h2>
+<h2>Display latest product</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
-<pre><code class="language-bash">curl -X DELETE \
-    "/api/discount_product/eaque" \
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/latest" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/discount_product/eaque"
+    "/api/discount_product/latest"
 );
 
 let headers = {
@@ -1140,32 +1101,485 @@ let headers = {
 };
 
 fetch(url, {
-    method: "DELETE",
+    method: "GET",
     headers,
 }).then(response =&gt; response.json());</code></pre>
-<div id="execution-results-DELETEapi-discount_product--discount_product-" hidden>
-    <blockquote>Received response<span id="execution-response-status-DELETEapi-discount_product--discount_product-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-discount_product--discount_product-"></code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-latest" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-latest"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-latest"></code></pre>
 </div>
-<div id="execution-error-DELETEapi-discount_product--discount_product-" hidden>
+<div id="execution-error-GETapi-discount_product-latest" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-discount_product--discount_product-"></code></pre>
+    <pre><code id="execution-error-message-GETapi-discount_product-latest"></code></pre>
 </div>
-<form id="form-DELETEapi-discount_product--discount_product-" data-method="DELETE" data-path="api/discount_product/{discount_product}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-discount_product--discount_product-', this);">
+<form id="form-GETapi-discount_product-latest" data-method="GET" data-path="api/discount_product/latest" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-latest', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-discount_product--discount_product-" onclick="tryItOut('DELETEapi-discount_product--discount_product-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-discount_product--discount_product-" onclick="cancelTryOut('DELETEapi-discount_product--discount_product-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-discount_product--discount_product-" hidden>Send Request 💥</button>
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-latest" onclick="tryItOut('GETapi-discount_product-latest');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-latest" onclick="cancelTryOut('GETapi-discount_product-latest');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-latest" hidden>Send Request 💥</button>
     </h3>
 <p>
-<small class="badge badge-red">DELETE</small>
- <b><code>api/discount_product/{discount_product}</code></b>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/latest</code></b>
+</p>
+</form>
+<h2>Display product order by name A-Z</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/name" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/name"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-name" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-name"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-name"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-name" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-name"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-name" data-method="GET" data-path="api/discount_product/name" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-name', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-name" onclick="tryItOut('GETapi-discount_product-name');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-name" onclick="cancelTryOut('GETapi-discount_product-name');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-name" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/name</code></b>
+</p>
+</form>
+<h2>Display product order by name Z-A</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/nameD" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/nameD"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-nameD" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-nameD"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-nameD"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-nameD" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-nameD"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-nameD" data-method="GET" data-path="api/discount_product/nameD" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-nameD', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-nameD" onclick="tryItOut('GETapi-discount_product-nameD');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-nameD" onclick="cancelTryOut('GETapi-discount_product-nameD');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-nameD" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/nameD</code></b>
+</p>
+</form>
+<h2>Display product order by price Low-High</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/price" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/price"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-price" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-price"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-price"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-price" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-price"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-price" data-method="GET" data-path="api/discount_product/price" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-price', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-price" onclick="tryItOut('GETapi-discount_product-price');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-price" onclick="cancelTryOut('GETapi-discount_product-price');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-price" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/price</code></b>
+</p>
+</form>
+<h2>Display product order by price High-Low</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/priceD" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/priceD"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-priceD" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-priceD"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-priceD"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-priceD" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-priceD"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-priceD" data-method="GET" data-path="api/discount_product/priceD" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-priceD', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-priceD" onclick="tryItOut('GETapi-discount_product-priceD');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-priceD" onclick="cancelTryOut('GETapi-discount_product-priceD');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-priceD" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/priceD</code></b>
+</p>
+</form>
+<h2>Display by subcategory and order by latest</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/vel/latest" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/sub/vel/latest"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id--latest" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id--latest"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id--latest"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-sub--id--latest" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id--latest"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-sub--id--latest" data-method="GET" data-path="api/discount_product/sub/{id}/latest" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id--latest', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id--latest" onclick="tryItOut('GETapi-discount_product-sub--id--latest');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id--latest" onclick="cancelTryOut('GETapi-discount_product-sub--id--latest');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id--latest" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}/latest</code></b>
 </p>
 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
 <p>
-<b><code>discount_product</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="discount_product" data-endpoint="DELETEapi-discount_product--discount_product-" data-component="url" required  hidden>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id--latest" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+<h2>Display by subcategory and order by name A-Z</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/asperiores/name" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/sub/asperiores/name"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id--name" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id--name"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id--name"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-sub--id--name" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id--name"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-sub--id--name" data-method="GET" data-path="api/discount_product/sub/{id}/name" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id--name', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id--name" onclick="tryItOut('GETapi-discount_product-sub--id--name');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id--name" onclick="cancelTryOut('GETapi-discount_product-sub--id--name');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id--name" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}/name</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id--name" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+<h2>Display by subcategory and order by name Z-A</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/dolorum/nameD" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/sub/dolorum/nameD"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id--nameD" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id--nameD"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id--nameD"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-sub--id--nameD" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id--nameD"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-sub--id--nameD" data-method="GET" data-path="api/discount_product/sub/{id}/nameD" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id--nameD', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id--nameD" onclick="tryItOut('GETapi-discount_product-sub--id--nameD');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id--nameD" onclick="cancelTryOut('GETapi-discount_product-sub--id--nameD');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id--nameD" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}/nameD</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id--nameD" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+<h2>Display by subcategory and order by price Low-High</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/ea/price" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/sub/ea/price"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id--price" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id--price"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id--price"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-sub--id--price" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id--price"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-sub--id--price" data-method="GET" data-path="api/discount_product/sub/{id}/price" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id--price', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id--price" onclick="tryItOut('GETapi-discount_product-sub--id--price');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id--price" onclick="cancelTryOut('GETapi-discount_product-sub--id--price');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id--price" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}/price</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id--price" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+<h2>Display by subcategory and order by price High-Low</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "/api/discount_product/sub/vero/priceD" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "/api/discount_product/sub/vero/priceD"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<div id="execution-results-GETapi-discount_product-sub--id--priceD" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-discount_product-sub--id--priceD"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-discount_product-sub--id--priceD"></code></pre>
+</div>
+<div id="execution-error-GETapi-discount_product-sub--id--priceD" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-discount_product-sub--id--priceD"></code></pre>
+</div>
+<form id="form-GETapi-discount_product-sub--id--priceD" data-method="GET" data-path="api/discount_product/sub/{id}/priceD" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-discount_product-sub--id--priceD', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-discount_product-sub--id--priceD" onclick="tryItOut('GETapi-discount_product-sub--id--priceD');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-discount_product-sub--id--priceD" onclick="cancelTryOut('GETapi-discount_product-sub--id--priceD');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-discount_product-sub--id--priceD" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/discount_product/sub/{id}/priceD</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-discount_product-sub--id--priceD" data-component="url" required  hidden>
 <br>
 </p>
 </form><h1>Endpoints</h1>
@@ -1313,7 +1727,7 @@ fetch(url, {
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
     &lt;!-- CSRF Token --&gt;
-    &lt;meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+    &lt;meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
 
     &lt;title&gt;Laravel&lt;/title&gt;
 
@@ -1368,7 +1782,7 @@ fetch(url, {
 
                 &lt;div class="card-body"&gt;
                     &lt;form method="POST" action="http://localhost/login"&gt;
-                        &lt;input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+                        &lt;input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
                         &lt;div class="form-group row"&gt;
                             &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
 
@@ -1555,7 +1969,7 @@ fetch(url, {
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
     &lt;!-- CSRF Token --&gt;
-    &lt;meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+    &lt;meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
 
     &lt;title&gt;Laravel&lt;/title&gt;
 
@@ -1610,7 +2024,7 @@ fetch(url, {
 
                 &lt;div class="card-body"&gt;
                     &lt;form method="POST" action="http://localhost/register"&gt;
-                        &lt;input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+                        &lt;input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
                         &lt;div class="form-group row"&gt;
                             &lt;label for="name" class="col-md-4 col-form-label text-md-right"&gt;Name&lt;/label&gt;
 
@@ -1757,7 +2171,7 @@ fetch(url, {
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
     &lt;!-- CSRF Token --&gt;
-    &lt;meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+    &lt;meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
 
     &lt;title&gt;Laravel&lt;/title&gt;
 
@@ -1813,7 +2227,7 @@ fetch(url, {
                 &lt;div class="card-body"&gt;
 
                     &lt;form method="POST" action="http://localhost/password/email"&gt;
-                        &lt;input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+                        &lt;input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
                         &lt;div class="form-group row"&gt;
                             &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
 
@@ -1908,11 +2322,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/password/reset/aut" \
+    -G "/password/reset/temporibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/password/reset/aut"
+    "/password/reset/temporibus"
 );
 
 let headers = {
@@ -1935,7 +2349,7 @@ fetch(url, {
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
     &lt;!-- CSRF Token --&gt;
-    &lt;meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
+    &lt;meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
 
     &lt;title&gt;Laravel&lt;/title&gt;
 
@@ -1990,8 +2404,8 @@ fetch(url, {
 
                 &lt;div class="card-body"&gt;
                     &lt;form method="POST" action="http://localhost/password/reset"&gt;
-                        &lt;input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV"&gt;
-                        &lt;input type="hidden" name="token" value="aut"&gt;
+                        &lt;input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ"&gt;
+                        &lt;input type="hidden" name="token" value="temporibus"&gt;
 
                         &lt;div class="form-group row"&gt;
                             &lt;label for="email" class="col-md-4 col-form-label text-md-right"&gt;E-Mail Address&lt;/label&gt;
@@ -2333,11 +2747,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/order/voluptas" \
+    -G "/api/order/nam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order/voluptas"
+    "/api/order/nam"
 );
 
 let headers = {
@@ -2386,11 +2800,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/order/eos" \
+    "/api/order/natus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order/eos"
+    "/api/order/natus"
 );
 
 let headers = {
@@ -2437,11 +2851,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/order/minima" \
+    "/api/order/voluptate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order/minima"
+    "/api/order/voluptate"
 );
 
 let headers = {
@@ -2573,11 +2987,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/order_item/quae" \
+    -G "/api/order_item/molestias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order_item/quae"
+    "/api/order_item/molestias"
 );
 
 let headers = {
@@ -2626,11 +3040,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/order_item/voluptas" \
+    "/api/order_item/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order_item/voluptas"
+    "/api/order_item/quis"
 );
 
 let headers = {
@@ -2677,11 +3091,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/order_item/possimus" \
+    "/api/order_item/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/order_item/possimus"
+    "/api/order_item/reiciendis"
 );
 
 let headers = {
@@ -2745,7 +3159,32 @@ fetch(url, {
 <p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "data": []
+    "data": [
+        {
+            "id": 1,
+            "sub_category_id": 1,
+            "name": "product1",
+            "description": "",
+            "price": 0,
+            "quantity": 0,
+            "created_at": null,
+            "updated_at": null,
+            "deleted_at": null,
+            "image": [],
+            "sub_category": {
+                "id": 1,
+                "category_id": 1,
+                "name": "sub1",
+                "parent_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "deleted_at": null,
+                "image": [],
+                "media": []
+            },
+            "media": []
+        }
+    ]
 }</code></pre>
 <div id="execution-results-GETapi-product" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-product"></span>:</blockquote>
@@ -2772,11 +3211,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/dolor" \
+    -G "/api/product/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/dolor"
+    "/api/product/consequuntur"
 );
 
 let headers = {
@@ -2825,11 +3264,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/search/tempora" \
+    -G "/api/product/search/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/search/tempora"
+    "/api/product/search/ut"
 );
 
 let headers = {
@@ -2878,11 +3317,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/suscipit" \
+    -G "/api/product/sub/ratione" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/suscipit"
+    "/api/product/sub/ratione"
 );
 
 let headers = {
@@ -3166,11 +3605,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/maiores/latest" \
+    -G "/api/product/sub/laborum/latest" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/maiores/latest"
+    "/api/product/sub/laborum/latest"
 );
 
 let headers = {
@@ -3219,11 +3658,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/eum/name" \
+    -G "/api/product/sub/quos/name" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/eum/name"
+    "/api/product/sub/quos/name"
 );
 
 let headers = {
@@ -3272,11 +3711,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/temporibus/nameD" \
+    -G "/api/product/sub/dolore/nameD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/temporibus/nameD"
+    "/api/product/sub/dolore/nameD"
 );
 
 let headers = {
@@ -3325,11 +3764,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/cumque/price" \
+    -G "/api/product/sub/a/price" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/cumque/price"
+    "/api/product/sub/a/price"
 );
 
 let headers = {
@@ -3378,11 +3817,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/product/sub/vitae/priceD" \
+    -G "/api/product/sub/excepturi/priceD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/product/sub/vitae/priceD"
+    "/api/product/sub/excepturi/priceD"
 );
 
 let headers = {
@@ -3520,11 +3959,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/promocode/dolor" \
+    -G "/api/promocode/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode/dolor"
+    "/api/promocode/velit"
 );
 
 let headers = {
@@ -3573,11 +4012,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/promocode/reprehenderit" \
+    "/api/promocode/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode/reprehenderit"
+    "/api/promocode/autem"
 );
 
 let headers = {
@@ -3624,11 +4063,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/promocode/rerum" \
+    "/api/promocode/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode/rerum"
+    "/api/promocode/perferendis"
 );
 
 let headers = {
@@ -4234,11 +4673,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/promocode_history/alias" \
+    -G "/api/promocode_history/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode_history/alias"
+    "/api/promocode_history/rerum"
 );
 
 let headers = {
@@ -4254,7 +4693,7 @@ fetch(url, {
 <p>Example response (500):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = alias)",
+    "message": "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trytry.promo_code_histories' doesn't exist (SQL: select * from `promo_code_histories` where `id` = rerum)",
     "exception": "Illuminate\\Database\\QueryException",
     "file": "C:\\Users\\HP\\Desktop\\laravel\\webDevEcommerce\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
     "line": 671,
@@ -4761,11 +5200,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/promocode_history/doloribus" \
+    "/api/promocode_history/repudiandae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode_history/doloribus"
+    "/api/promocode_history/repudiandae"
 );
 
 let headers = {
@@ -4812,11 +5251,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/promocode_history/dolores" \
+    "/api/promocode_history/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/promocode_history/dolores"
+    "/api/promocode_history/est"
 );
 
 let headers = {
@@ -4954,11 +5393,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/sub_category/nostrum" \
+    -G "/api/sub_category/recusandae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/sub_category/nostrum"
+    "/api/sub_category/recusandae"
 );
 
 let headers = {
@@ -5007,11 +5446,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/subcategory/category/quam" \
+    -G "/api/subcategory/category/voluptatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/subcategory/category/quam"
+    "/api/subcategory/category/voluptatibus"
 );
 
 let headers = {
@@ -5060,11 +5499,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/subcategory/subcategory/vel" \
+    -G "/api/subcategory/subcategory/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/subcategory/subcategory/vel"
+    "/api/subcategory/subcategory/quis"
 );
 
 let headers = {
@@ -5202,11 +5641,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "/api/user/et" \
+    -G "/api/user/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/user/et"
+    "/api/user/vitae"
 );
 
 let headers = {
@@ -5255,11 +5694,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "/api/user/ut" \
+    "/api/user/nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/user/ut"
+    "/api/user/nihil"
 );
 
 let headers = {
@@ -5306,11 +5745,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "/api/user/veniam" \
+    "/api/user/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "/api/user/veniam"
+    "/api/user/dolores"
 );
 
 let headers = {

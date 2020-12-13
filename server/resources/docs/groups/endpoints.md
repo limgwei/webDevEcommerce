@@ -184,7 +184,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
 
     <title>Laravel</title>
 
@@ -239,7 +239,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/login">
-                        <input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -466,7 +466,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
 
     <title>Laravel</title>
 
@@ -521,7 +521,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/register">
-                        <input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
@@ -695,7 +695,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
 
     <title>Laravel</title>
 
@@ -751,7 +751,7 @@ fetch(url, {
                 <div class="card-body">
                     
                     <form method="POST" action="http://localhost/password/email">
-                        <input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -865,14 +865,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "/password/reset/aut" \
+    -G "/password/reset/temporibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/password/reset/aut"
+    "/password/reset/temporibus"
 );
 
 let headers = {
@@ -899,7 +899,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
+    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
 
     <title>Laravel</title>
 
@@ -954,8 +954,8 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/password/reset">
-                        <input type="hidden" name="_token" value="XgUoRvYJuiy4G8qrSb73qZtA5TIpyILmOE2KvXPV">
-                        <input type="hidden" name="token" value="aut">
+                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+                        <input type="hidden" name="token" value="temporibus">
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>

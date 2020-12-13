@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\DiscountProduct;
 use Illuminate\Http\Request;
 
 class DiscountProductController extends Controller
@@ -35,7 +36,8 @@ class DiscountProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $discountProduct = DiscountProduct::create($request->all());
+        return $discountProduct;
     }
 
     /**
@@ -69,7 +71,8 @@ class DiscountProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $discountProduct = DiscountProduct::where('id',$id)->update($request->all());
+        return $discountProduct;
     }
 
     /**
@@ -80,6 +83,6 @@ class DiscountProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DiscountProduct::where('id',$id)->delete();
     }
 }

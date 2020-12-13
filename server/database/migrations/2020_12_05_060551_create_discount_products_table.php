@@ -16,7 +16,6 @@ class CreateDiscountProductsTable extends Migration
         Schema::create('discount_products', function (Blueprint $table) {
             $table->id();
             $table->integer('product_id');
-            $table->integer('type_id');
             $table->double('value');
             $table->date('start_date');
             $table->date('end_date');

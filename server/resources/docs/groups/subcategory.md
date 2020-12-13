@@ -119,14 +119,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/sub_category/nostrum" \
+    -G "/api/sub_category/recusandae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/sub_category/nostrum"
+    "/api/sub_category/recusandae"
 );
 
 let headers = {
@@ -186,14 +186,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/subcategory/category/quam" \
+    -G "/api/subcategory/category/voluptatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/subcategory/category/quam"
+    "/api/subcategory/category/voluptatibus"
 );
 
 let headers = {
@@ -253,14 +253,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/subcategory/subcategory/vel" \
+    -G "/api/subcategory/subcategory/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/subcategory/subcategory/vel"
+    "/api/subcategory/subcategory/quis"
 );
 
 let headers = {
