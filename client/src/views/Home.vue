@@ -8,8 +8,8 @@
 
 <script>
 // @ is an alias to /src
-import Slider from '@/components/Slider.vue'
-import CAbout from '@/components/CAbout.vue'
+import Slider from '@/components/Home/Slider.vue'
+import CAbout from '@/components/Home/CAbout.vue'
 
 export default {
   name: 'Home',

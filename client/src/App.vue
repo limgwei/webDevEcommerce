@@ -5,8 +5,8 @@
     <router-view/>
   </div>
 </template>
-<script>
-
+// <script>
+// import axious from 'axios'
 import Header from '@/components/Header.vue'
 import Navbar from '@/components/Navbar.vue'
 export default {

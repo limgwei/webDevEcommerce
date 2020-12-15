@@ -31,7 +31,7 @@ export default {
             
         .background-img{
             height: 50vh;
-            background-image: linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)),url("../assets/delivery.jpg");
+            background-image: linear-gradient(to right,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)),url("../../assets/delivery.jpg");
             background-size: cover;
             background-position: center;
             position: relative;

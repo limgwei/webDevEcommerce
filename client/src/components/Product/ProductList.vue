@@ -1,5 +1,7 @@
 <template>
     <div class="product-list">
+        
+        
             <div class="grid">
                 <div class="grid-item" v-for="product in products" :key="product.id">
                     <span v-if="product.discount">ON SALE</span>
@@ -40,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    
 
     .grid{
         
@@ -47,13 +50,15 @@ export default {
         display: grid;
         grid-gap: 1rem .5rem;
         grid-template-columns: auto auto auto auto;
+        grid-template-rows: 40rem;
         padding: 2rem;
         justify-content: flex-start;
 
     &-item{
-        height: 50vh;
+        height: 40vh;
         width: auto;
         position: relative;
+        padding-bottom: 1rem;
         span{
             color: white;
             position: absolute;
