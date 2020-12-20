@@ -19,8 +19,8 @@ class OrderItem extends Model
     ];
 
     protected $fillable = [
-        'user_id',
         'order_id',
+        'order_name',
         'quantity',
         'current_price' //after discount only for 1 item
     ];

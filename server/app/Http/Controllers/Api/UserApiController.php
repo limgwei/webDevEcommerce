@@ -13,7 +13,7 @@ use App\Models\User;
  * APIs for manage user
  */
 class UserApiController extends Controller
-{
+{   
     /**
      * Display a listing of the resource.
      *

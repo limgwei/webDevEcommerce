@@ -1,75 +1,6 @@
 # Endpoints
 
 
-## Display a listing of the resource.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "/api/admin" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "/api/admin"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (200):
-
-```json
-{
-    "data": [
-        {
-            "id": 1,
-            "username": "gg",
-            "password": "gg",
-            "created_at": null,
-            "updated_at": null
-        }
-    ]
-}
-```
-<div id="execution-results-GETapi-admin" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-admin"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-admin"></code></pre>
-</div>
-<div id="execution-error-GETapi-admin" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-admin"></code></pre>
-</div>
-<form id="form-GETapi-admin" data-method="GET" data-path="api/admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-admin', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-admin" onclick="tryItOut('GETapi-admin');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-admin" onclick="cancelTryOut('GETapi-admin');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-admin" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/admin</code></b>
-</p>
-</form>
-
-
 ## /
 
 
@@ -141,6 +72,196 @@ fetch(url, {
 </form>
 
 
+## Display a listing of the resource.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/admin" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/admin"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+
+[{&quot;id&quot;:1,&quot;username&quot;:&quot;gg&quot;,&quot;password&quot;:&quot;gg&quot;,&quot;created_at&quot;:null,&quot;updated_at&quot;:null}]
+```
+<div id="execution-results-GETadmin" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETadmin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETadmin"></code></pre>
+</div>
+<div id="execution-error-GETadmin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETadmin"></code></pre>
+</div>
+<form id="form-GETadmin" data-method="GET" data-path="admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin" onclick="tryItOut('GETadmin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin" onclick="cancelTryOut('GETadmin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>admin</code></b>
+</p>
+</form>
+
+
+## Show the form for reset password
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/admin/voluptates/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/admin/voluptates/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+
+[]
+```
+<div id="execution-results-GETadmin--admin--edit" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETadmin--admin--edit"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETadmin--admin--edit"></code></pre>
+</div>
+<div id="execution-error-GETadmin--admin--edit" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETadmin--admin--edit"></code></pre>
+</div>
+<form id="form-GETadmin--admin--edit" data-method="GET" data-path="admin/{admin}/edit" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin--admin--edit', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin--admin--edit" onclick="tryItOut('GETadmin--admin--edit');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin--admin--edit" onclick="cancelTryOut('GETadmin--admin--edit');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin--admin--edit" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>admin/{admin}/edit</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>admin</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="admin" data-endpoint="GETadmin--admin--edit" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## Update the specified resource in storage.
+
+
+
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "/admin/omnis" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/admin/omnis"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-PUTadmin--admin-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTadmin--admin-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTadmin--admin-"></code></pre>
+</div>
+<div id="execution-error-PUTadmin--admin-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTadmin--admin-"></code></pre>
+</div>
+<form id="form-PUTadmin--admin-" data-method="PUT" data-path="admin/{admin}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTadmin--admin-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTadmin--admin-" onclick="tryItOut('PUTadmin--admin-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTadmin--admin-" onclick="cancelTryOut('PUTadmin--admin-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTadmin--admin-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>admin/{admin}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>admin/{admin}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>admin</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="admin" data-endpoint="PUTadmin--admin-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
 ## Show the application&#039;s login form.
 
 
@@ -184,7 +305,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+    <meta name="csrf-token" content="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
 
     <title>Laravel</title>
 
@@ -239,7 +360,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/login">
-                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+                        <input type="hidden" name="_token" value="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -466,7 +587,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+    <meta name="csrf-token" content="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
 
     <title>Laravel</title>
 
@@ -521,7 +642,7 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/register">
-                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+                        <input type="hidden" name="_token" value="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
@@ -695,7 +816,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+    <meta name="csrf-token" content="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
 
     <title>Laravel</title>
 
@@ -751,7 +872,7 @@ fetch(url, {
                 <div class="card-body">
                     
                     <form method="POST" action="http://localhost/password/email">
-                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+                        <input type="hidden" name="_token" value="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -865,14 +986,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "/password/reset/temporibus" \
+    -G "/password/reset/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/password/reset/temporibus"
+    "/password/reset/et"
 );
 
 let headers = {
@@ -899,7 +1020,7 @@ fetch(url, {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
+    <meta name="csrf-token" content="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
 
     <title>Laravel</title>
 
@@ -954,8 +1075,8 @@ fetch(url, {
 
                 <div class="card-body">
                     <form method="POST" action="http://localhost/password/reset">
-                        <input type="hidden" name="_token" value="hCLDFv8pRGRpMwKjqfIHAkdJq2sAYAJH9JGDH7hQ">
-                        <input type="hidden" name="token" value="temporibus">
+                        <input type="hidden" name="_token" value="hFvUC7MjfaFXFCRYHTxkYlZHGQoMhoNb4IciqpKM">
+                        <input type="hidden" name="token" value="et">
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>

@@ -21,8 +21,9 @@ Route::get('/', function () {
 });
 
 ///Auth::routes();
-Route::group(['namespace'=>'App\Http\Controllers'],function(){
-    
+Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
+    Route::resource('admin','AdminController');
+    Route::resource('banner','BannerController');
 });
 
 

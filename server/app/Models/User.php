@@ -2,15 +2,19 @@
 
 namespace App\Models;
 
+use App\Notifications\PasswordResetNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use App\Notifications\ResetPasswordNotification;
 
-class User extends Authenticatable implements HasMedia
+
+class User extends Authenticatable implements HasMedia,MustVerifyEmail
 {
     use HasFactory, Notifiable,InteractsWithMedia;
 
@@ -33,7 +37,6 @@ class User extends Authenticatable implements HasMedia
         'password'
     ];
 
-
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -54,5 +57,12 @@ class User extends Authenticatable implements HasMedia
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
+    }
+
+        public function sendPasswordResetNotification($token)
+    {
+        //$url = 'https://example.com/reset-password?token='.$token;
+
+        $this->notify(new PasswordResetNotification($token));
     }
 }

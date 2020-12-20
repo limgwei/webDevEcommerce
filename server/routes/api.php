@@ -3,8 +3,14 @@
 use App\Http\Controllers\Api\DiscountProductApiController;
 use App\Http\Controllers\Api\ProductApiController;
 use App\Http\Controllers\Api\SubCategoryApiController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\VerificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +22,23 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
+
+// Authentication Routes...
+  Route::post('register', [RegisterController::class,'register']);
+  Route::post('login', [LoginController::class,'login']);
+  Route::post('logout', [LoginController::class,'logout']);
+// Password Reset Routes...
+Route::post('password/email', [ForgotPasswordController::class,'sendResetLinkEmail']);
+Route::post('password/reset', [ResetPasswordController::class,'reset']);
+Route::get('password/reset/{token}', [ResetPasswordController::class,'showResetForm']);
+
+//email verification
+Route::get('/email/resend',[VerificationController::class,'resend'])->name('verification.resend');
+Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])->name('verification.verify');
+
+
+
+Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], function () {
 
     Route::apiResource('discount_product','DiscountProductApiController');
     Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
@@ -47,8 +69,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
 
     Route::apiResource('cart','CartApiController');
 
-    Route::apiResource('admin','AdminApiController');
-
     Route::apiResource('banner','BannerApiController');
 
     Route::apiResource('category','CategoryApiController');
@@ -59,16 +79,13 @@ Route::group(['namespace' => 'App\Http\Controllers\Api'], function () {
 
     Route::apiResource('order_item','OrderItemApiController');
 
-    Route::apiResource('promocode','PromocodeApiController');
-
-    Route::apiResource('promocode_history','PromocodeHistoryApiController');
-
     Route::apiResource('sub_category','SubCategoryApiController');
     Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
     Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
 
     Route::apiResource('user','UserApiController');
- 
+
+    
  
 });
 

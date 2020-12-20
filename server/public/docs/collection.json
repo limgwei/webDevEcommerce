@@ -10,11 +10,252 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "a0e32720-0072-499e-9632-ec5e68c53c58",
+        "_postman_id": "0c37a73c-4863-4ce9-b0a7-712671cab2ab",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "AdminBanner",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the form for creating a new resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner\/create",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner\/create"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner\/:banner",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner\/:banner",
+                            "variable": [
+                                {
+                                    "id": "banner",
+                                    "key": "banner",
+                                    "value": "dicta",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the form for editing the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner\/:banner\/edit",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner\/:banner\/edit",
+                            "variable": [
+                                {
+                                    "id": "banner",
+                                    "key": "banner",
+                                    "value": "consequuntur",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner\/:banner",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner\/:banner",
+                            "variable": [
+                                {
+                                    "id": "banner",
+                                    "key": "banner",
+                                    "value": "sit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "banner\/:banner",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/banner\/:banner",
+                            "variable": [
+                                {
+                                    "id": "banner",
+                                    "key": "banner",
+                                    "value": "eius",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
         {
             "name": "Banner",
             "description": "\nAPIs for manage banners",
@@ -74,17 +315,17 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "possimus",
+                                    "value": "ab",
                                     "type": "text"
                                 },
                                 {
                                     "key": "category_id",
-                                    "value": 15,
+                                    "value": 8,
                                     "type": "text"
                                 },
                                 {
                                     "key": "product_id",
-                                    "value": 8,
+                                    "value": 17,
                                     "type": "text"
                                 },
                                 {
@@ -114,7 +355,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "non",
+                                    "value": "quis",
                                     "description": ""
                                 }
                             ]
@@ -151,7 +392,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "autem",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -188,7 +429,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "quia",
+                                    "value": "quo",
                                     "description": ""
                                 }
                             ]
@@ -289,7 +530,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "ratione",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -326,7 +567,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "est",
+                                    "value": "eum",
                                     "description": ""
                                 }
                             ]
@@ -363,7 +604,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "quod",
+                                    "value": "voluptatum",
                                     "description": ""
                                 }
                             ]
@@ -435,7 +676,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "odio",
+                                    "value": "vitae",
                                     "description": ""
                                 }
                             ]
@@ -536,7 +777,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "eum",
+                                    "value": "quas",
                                     "description": ""
                                 }
                             ]
@@ -573,7 +814,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "assumenda",
+                                    "value": "sunt",
                                     "description": ""
                                 }
                             ]
@@ -610,7 +851,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "ut",
+                                    "value": "esse",
                                     "description": ""
                                 }
                             ]
@@ -670,7 +911,7 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Display the specified discount product.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -682,7 +923,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "sit",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -719,7 +960,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "deleniti",
                                     "description": ""
                                 }
                             ]
@@ -901,7 +1142,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vel",
+                                    "value": "magnam",
                                     "description": ""
                                 }
                             ]
@@ -938,7 +1179,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "asperiores",
+                                    "value": "voluptas",
                                     "description": ""
                                 }
                             ]
@@ -975,7 +1216,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolorum",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -1012,7 +1253,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ea",
+                                    "value": "dolores",
                                     "description": ""
                                 }
                             ]
@@ -1049,7 +1290,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vero",
+                                    "value": "minus",
                                     "description": ""
                                 }
                             ]
@@ -1080,14 +1321,14 @@
             "description": "",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "\/",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/admin",
+                            "path": "\/",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/admin"
+                            "raw": "http:\/\/{{baseUrl}}\/\/"
                         },
                         "method": "GET",
                         "header": [
@@ -1109,16 +1350,90 @@
                     "response": []
                 },
                 {
-                    "name": "\/",
+                    "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "\/",
+                            "path": "admin",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                            "raw": "http:\/\/{{baseUrl}}\/admin"
                         },
                         "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show the form for reset password",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/:admin\/edit",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/:admin\/edit",
+                            "variable": [
+                                {
+                                    "id": "admin",
+                                    "key": "admin",
+                                    "value": "voluptates",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/:admin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/:admin",
+                            "variable": [
+                                {
+                                    "id": "admin",
+                                    "key": "admin",
+                                    "value": "omnis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -1353,7 +1668,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "temporibus",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1570,7 +1885,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "nam",
+                                    "value": "similique",
                                     "description": ""
                                 }
                             ]
@@ -1644,7 +1959,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "voluptate",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1745,7 +2060,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "molestias",
+                                    "value": "doloribus",
                                     "description": ""
                                 }
                             ]
@@ -1782,7 +2097,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "quis",
+                                    "value": "distinctio",
                                     "description": ""
                                 }
                             ]
@@ -1819,7 +2134,7 @@
                                 {
                                     "id": "order_item",
                                     "key": "order_item",
-                                    "value": "reiciendis",
+                                    "value": "recusandae",
                                     "description": ""
                                 }
                             ]
@@ -1891,7 +2206,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "consequuntur",
+                                    "value": "architecto",
                                     "description": ""
                                 }
                             ]
@@ -1928,7 +2243,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "ut",
+                                    "value": "id",
                                     "description": ""
                                 }
                             ]
@@ -1965,7 +2280,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ratione",
+                                    "value": "ad",
                                     "description": ""
                                 }
                             ]
@@ -2147,7 +2462,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "laborum",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -2184,7 +2499,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quos",
+                                    "value": "mollitia",
                                     "description": ""
                                 }
                             ]
@@ -2221,7 +2536,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "dolore",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -2258,7 +2573,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "a",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -2295,7 +2610,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "excepturi",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -2396,7 +2711,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "velit",
+                                    "value": "quis",
                                     "description": ""
                                 }
                             ]
@@ -2433,7 +2748,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "autem",
+                                    "value": "ipsum",
                                     "description": ""
                                 }
                             ]
@@ -2470,7 +2785,7 @@
                                 {
                                     "id": "promocode",
                                     "key": "promocode",
-                                    "value": "perferendis",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -2608,7 +2923,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "repudiandae",
+                                    "value": "ipsa",
                                     "description": ""
                                 }
                             ]
@@ -2645,7 +2960,7 @@
                                 {
                                     "id": "promocode_history",
                                     "key": "promocode_history",
-                                    "value": "est",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -2717,7 +3032,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "recusandae",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -2754,7 +3069,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatibus",
+                                    "value": "quidem",
                                     "description": ""
                                 }
                             ]
@@ -2791,7 +3106,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quis",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -2892,7 +3207,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "vitae",
+                                    "value": "voluptate",
                                     "description": ""
                                 }
                             ]
@@ -2929,7 +3244,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "nihil",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -2966,7 +3281,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "dolores",
+                                    "value": "illo",
                                     "description": ""
                                 }
                             ]

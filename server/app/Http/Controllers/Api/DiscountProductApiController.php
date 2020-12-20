@@ -61,10 +61,11 @@ class DiscountProductApiController extends Controller
     {   
         $now = Carbon::now()->toDateString('Y-m-d');
         return new DiscountProductResource(DiscountProduct::with(
-            ['product'=>function($query){
-               $query->select('*')->where('sub_category_id',1); 
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id); 
             }]
-            )->where([
+            )
+            ->where([
                 ['start_date','>=',$now],
                 ['end_date','<=',$now]
                 ])
@@ -206,7 +207,8 @@ class DiscountProductApiController extends Controller
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderBy('name'); 
             }]
-            )->where([
+            )
+            ->where([
                 ['start_date','>=',$now],
                 ['end_date','<=',$now]
                 ])
