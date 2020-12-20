@@ -1,26 +1,30 @@
 
+@isset ($error)
+  {{$error}}
+@endisset
 
 
-@foreach($banners as $banner)
+@foreach($products as $product)
   <div style="border:1px solid black">
 
-    <div>ID:{{$banner->id}}</div>
+    <div>ID:{{$product->id}}</div>
 
-    <div>Name:{{$banner->name}}</div>
-
+    <div>Name:{{$product->name}}</div>
+    <div>Description:{{$product->description}}</div>
     <div>Image: 
-      @foreach($banner->image as $key => $media)
+      @foreach($product->image as $key => $media)
         <img src="{{ $media->getUrl('') }}">
       @endforeach
     </div>
             
-    @isset($banner->category->id)
-      <div>Category:{{$banner->category->name}}</div>
+    @isset($product->sub_category->id)
+      <div>Subcategory:{{$product->sub_category->name}}</div>
     @endisset
+
+    <div>Price:{{$product->price}}</div>
+    <div>Quantity:{{$product->quantity}}</div>
    
-    @isset($banner->product->id)
-      <div>Product:{{$banner->product}}</div>
-    @endisset
+
    
   </div>
 @endforeach

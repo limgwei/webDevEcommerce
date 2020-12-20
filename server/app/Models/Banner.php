@@ -24,7 +24,7 @@ class Banner extends Model implements HasMedia
         'created_at',
         'updated_at',
         'deleted_at'
-    ];
+    ];  
 
     protected $fillable = [
         'name',

@@ -24,10 +24,14 @@ Route::get('/', function () {
 Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkValid'],function(){
 
     Route::resource('banner','BannerController');
-    Route::resource('user','UserController');
+    
     Route::resource('category','CategoryController');
     Route::resource('discountProduct','discountProductController');
-  
+    Route::resource('order','OrderController');
+    Route::resource('orderItem','OrderItemController');
+    Route::resource('product','ProductController');
+    Route::resource('subcategory','SubCategoryController');
+    Route::resource('user','UserController');
 });
 
  // Route::get('/login',LoginController::class,'login')->name('login');

@@ -1,6 +1,6 @@
 
 
-@foreach($users as $user)
+
 <div style="border:1px solid black;">
   <div>ID:{{$user->id}}</div>
   <div>Name:{{$user->name}}</div>
@@ -19,4 +19,3 @@
  {{$user->address}} 
  </div>
  </div>
-@endforeach

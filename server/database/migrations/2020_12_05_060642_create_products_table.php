@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->integer('quantity');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
-            $table->integer('is_enable')->nullable();
+            $table->integer('is_enable')->default('1');
         });
     }
 
