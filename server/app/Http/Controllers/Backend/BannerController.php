@@ -25,12 +25,12 @@ class BannerController extends Controller
      */
     public function index()
     {
-        $categories = Category::all()->pluck('name', 'id');
+        $categories = Category::all();
 
-        $product = Product::all()->pluck('name', 'id');
+        $products = Product::all();
         
-        $banner = Banner::with(['media','category','product'])->get();
-        return view('banner.index',compact('banner','categories','product'));
+        $banners = Banner::with(['media','category','product'])->get();
+        return view('banner.index',compact('banners','categories','products'));
     }
 
     /**
@@ -40,7 +40,7 @@ class BannerController extends Controller
      */
     public function create()
     { 
-        $categories = Category::all()->pluck('name', 'id');
+        $categories = Category::all();
 
         $products = Product::all();
         return view('banner.create',compact('categories','products'));
@@ -57,12 +57,14 @@ class BannerController extends Controller
         $banner = Banner::create($request->all());
 
 
-        $banner->addMedia(storage_path('tmp/uploads/' . $request->input('image')))->toMediaCollection('image');
+        $file = $request->file('image');
+        $imageCount = count($request->file('image'));
     
-
-        if ($media = $request->input('ck-media', false)) {
-        Media::whereIn('id', $media)->update(['model_id' => $banner->id]);
-    }
+         for($i = 0;$i<$imageCount;$i++){
+              $banner->addMedia($file[$i])->toMediaCollection('image');
+              
+         }
+    
 
         return redirect()->route('banner.index');
     }
@@ -76,14 +78,12 @@ class BannerController extends Controller
     public function show($id)
     {
 
+        $categories = Category::all();
 
-        $categories = Category::all()->pluck('name', 'id');
-
-        $product = Product::all()->pluck('name', 'id');
+        $products = Product::all();
         
-        $banner = Banner::with(['media','category','product'])->where('id',$id)->get();
-        
-        return view('banner.show',compact('banner','categories','product'));
+        $banner = Banner::with(['media','category','product'])->where('id',$id)->first();
+        return view('banner.show',compact('banner','categories','products'));
     }
 
     /**
@@ -95,11 +95,11 @@ class BannerController extends Controller
     public function edit($id)
     {
        
-        $categories = Category::all()->pluck('name', 'id');
+        $categories = Category::all();
 
-        $products = Product::all()->pluck('name', 'id');
+        $products = Product::all();
 
-        $banner = Banner::with(['media','category','product'])->where('id',$id)->get();
+        $banner = Banner::with(['media','category','product'])->where('id',$id)->first();
         
         return view('banner.edit', compact('products', 'categories', 'banner'));
     }
@@ -111,26 +111,28 @@ class BannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Banner $banner)
     {
-        $banner = Banner::where('id',$id)->update($request->all());
         $banner->update($request->all());
+      
+       
+        $file = $request->file('image');
+        
 
-        if (count($banner->image) > 0) {
-            foreach ($banner->image as $media) {
-                if (!in_array($media->file_name, $request->input('image', []))) {
-                    $media->delete();
-                }
+        if ($banner->image) {
+            foreach ($banner->image as $media) { 
+                    $media->delete();  
             }
         }
 
-        $media = $banner->image->pluck('file_name')->toArray();
-
-        foreach ($request->input('image', []) as $file) {
-            if (count($media) === 0 || !in_array($file, $media)) {
-                $banner->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('image');
-            }
+        if(!$file==null){
+            $imageCount = count($request->file('image'));
+            for($i = 0;$i<$imageCount;$i++){
+                $banner->addMedia($file[$i])->toMediaCollection('image');
+           }
         }
+
+         
 
         return redirect()->route('banner.index');
     }

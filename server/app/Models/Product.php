@@ -30,7 +30,8 @@ class Product extends Model implements HasMedia
         'name',
         'description',
         'price',
-        'quantity'
+        'quantity',
+        'is_enable'
     ];
 
     public function sub_category()

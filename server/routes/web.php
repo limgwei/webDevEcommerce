@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Backend\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -16,19 +16,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // redirect('welcome');
+    
     return redirect()->route('login');
 });
 
 ///Auth::routes();
-Route::group(['namespace'=>'App\Http\Controllers\Backend'],function(){
-    Route::resource('admin','AdminController');
+Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkValid'],function(){
+
     Route::resource('banner','BannerController');
+    Route::resource('user','UserController');
+    Route::resource('category','CategoryController');
+    Route::resource('discountProduct','discountProductController');
+  
 });
 
+ // Route::get('/login',LoginController::class,'login')->name('login');
+  Route::get('/login',[LoginController::class,'loginForm'])->name('login');
+  Route::post('/login',[LoginController::class,'login']);
+  Route::post('logout', [LoginController::class,'logout']);
 
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

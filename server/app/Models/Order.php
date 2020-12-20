@@ -24,8 +24,7 @@ class Order extends Model
         'address',
         'delivery_charge',
         'comment',
-        'status',
-        'promocode'
+        'status'
     ];
 
     public function user()

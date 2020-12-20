@@ -14,34 +14,6 @@ use App\Models\User;
  */
 class UserApiController extends Controller
 {   
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return new UserResource(User::all());
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $user = User::create($request->all());
-
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-        
-         for($i = 0;$i<$imageCount;$i++){
-              $user->addMedia($file[$i])->toMediaCollection('image');
-              
-         }
-    }
 
     /**
      * Display the specified resource.
@@ -61,11 +33,10 @@ class UserApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {   $user = User::where('id',$id)->update($request->all);
+    public function update(Request $request, User $user)
+    {   
         
-
-       
+        $user->update($request->all);
         $file = $request->file('image');
         $imageCount = count($request->file('image'));
 
@@ -92,4 +63,6 @@ class UserApiController extends Controller
     {
         User::where('id',$id)->delete();
     }
+
+    
 }

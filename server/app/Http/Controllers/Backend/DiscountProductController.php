@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\DiscountProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class DiscountProductController extends Controller
@@ -15,7 +16,11 @@ class DiscountProductController extends Controller
      */
     public function index()
     {
-        //
+       
+
+        $products = Product::all();
+        $discountProducts = DiscountProduct::with(['product'])->get();
+        return view('discountProduct.index',compact('discountProducts','products'));
     }
 
     /**
@@ -25,7 +30,8 @@ class DiscountProductController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+        return view('discountProduct.create',compact('products'));
     }
 
     /**
@@ -48,7 +54,10 @@ class DiscountProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $products = Product::all();
+        
+        $discountProduct = DiscountProduct::with(['product'])->where('id',$id)->first();
+        return view('discountProduct.show',compact('discountProduct','products'));
     }
 
     /**
@@ -59,7 +68,11 @@ class DiscountProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $products = Product::all();
+
+        $discountProduct = DiscountProduct::with(['product'])->where('id',$id)->first();
+        
+        return view('discountProduct.edit', compact('products', 'discountProduct'));
     }
 
     /**
@@ -69,10 +82,10 @@ class DiscountProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,DiscountProduct $discountProduct)
     {
-        $discountProduct = DiscountProduct::where('id',$id)->update($request->all());
-        return $discountProduct;
+        $discountProduct->update($request->all());
+        return redirect()->route('discountProduct.index');
     }
 
     /**

@@ -30,7 +30,7 @@ class Banner extends Model implements HasMedia
         'name',
         'description',
         'category_id',
-        'product_id'
+        'product_id',
     ];
 
     public function getImageAttribute()

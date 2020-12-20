@@ -34,7 +34,8 @@ class User extends Authenticatable implements HasMedia,MustVerifyEmail
         'name',
         'email',
         'address',
-        'password'
+        'password',
+        'is_enable'
     ];
 
     protected $casts = [
