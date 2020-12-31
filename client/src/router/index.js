@@ -3,7 +3,12 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Products from '../views/Products.vue'
 import ProductDetail from '../views/ProductDetail.vue'
+import Profile from '../views/Profile.vue'
+import Cart from '../views/Cart.vue'
 
+import EditUser from '../components/Profile/EditUser.vue'
+import History from '../components/Profile/History.vue'
+import HistoryDetail from '../components/Profile/HistoryDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,7 +29,29 @@ const routes = [
   path:'/products/detail',
   name:'detail',
   component: ProductDetail
-  }
+  },
+  {
+    path: '/Profile',
+    name: 'Profile',
+    component: Profile,
+    children:[
+      {path:'/',redirect:'Edit'},
+      {path:'Edit',component: EditUser},
+      {
+        path:'History',
+        component: History,
+        name: 'History',
+        children:[
+          {path: 'Profile/History/:id', name: 'History.Detail', component:HistoryDetail}
+        ]
+      }
+    ]
+  },
+  {
+    path:'/Cart',
+    name:'Cart',
+    component: Cart
+    }
 ]
 
 const router = new VueRouter({

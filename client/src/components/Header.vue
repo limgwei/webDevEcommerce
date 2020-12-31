@@ -4,7 +4,17 @@
         <div class="container">
             <img src="../assets/logo.png" alt="logo" class="logo">
 
-            <font-awesome-icon :icon="['fas','user']" class="small-icon"/>
+            <button @click="showModal" class="avatarbtntext">
+                <Avatar />
+            </button>
+            <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
+
+            <button class="avatarbtn">
+              <router-link to="/Profile" style="text-decoration:none">
+                <Avatar />
+              </router-link>
+            </button>
+            
             <font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" />
   
         </div>
@@ -13,12 +23,27 @@
 </template>
 
 <script>
-
+import Avatar from './Avatar';
+import RegisterLoginModal from './RegisterLoginModal';
 
 export default {
   name: 'Header',
   components:{
-  }
+    Avatar,
+    RegisterLoginModal
+  },data () {
+      return {
+        isModalVisible: false,
+      }
+  },
+  methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
+  },
 }
 </script>
 
@@ -40,7 +65,30 @@ export default {
       width: auto;
     }
   }
+  .avatarbtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid red;
+    outline: 0!important;
+    margin: auto 0 auto auto;
+  }
 
+.avatarbtntext{
+  width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid red;
+    outline: 0!important;
+    margin: auto 0 auto auto;
+}
+.avatarbtntext:hover{
+  cursor: pointer;
+}
+.modal{
+  position: fixed;
+  z-index: 99;
+}
   
 
 
