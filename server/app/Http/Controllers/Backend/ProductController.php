@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index()
     {
         
-        $subcategories_with_parent = SubCategory::whereNotNull('parent_id')->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
        
         $parent_id = array();
 
@@ -32,7 +32,11 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',$parent_id)->get();
+        $subcategories = SubCategory::where('id','<>',0);
+        foreach($parent_id as $parent){
+           $subcategories = $subcategories->where('id','<>',$parent);
+        }
+        $subcategories = $subcategories->get();
         
         $products = Product::with(['media','sub_category'])->get();
         return view('product.index',compact('subcategories','products'));
@@ -46,10 +50,10 @@ class ProductController extends Controller
     public function create()
     {   
 
-        $subcategories_with_parent = SubCategory::whereNotNull('parent_id')->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
        
         $parent_id = array();
-
+        //return $subcategories_with_parent;
         foreach($subcategories_with_parent as $subcategory_with_parent){
            
             if(!in_array($subcategory_with_parent->parent_id,$parent_id)){
@@ -59,7 +63,12 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',$parent_id)->get();
+        $subcategories = SubCategory::where('id','<>',0);
+        foreach($parent_id as $parent){
+           $subcategories = $subcategories->where('id','<>',$parent);
+        }
+        $subcategories = $subcategories->get();
+       
         
         
 
@@ -94,7 +103,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $subcategories_with_parent = SubCategory::whereNotNull('parent_id')->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
        
         $parent_id = array();
 
@@ -107,7 +116,11 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',$parent_id)->get();
+        $subcategories = SubCategory::where('id','<>',0);
+        foreach($parent_id as $parent){
+           $subcategories = $subcategories->where('id','<>',$parent);
+        }
+        $subcategories = $subcategories->get();
         
         $product = Product::with(['media','sub_category'])->where('id',$id)->first();
         return view('product.show',compact('product','subcategories'));
@@ -121,7 +134,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $subcategories_with_parent = SubCategory::whereNotNull('parent_id')->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
        
         $parent_id = array();
 
@@ -134,7 +147,11 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',$parent_id)->get();
+        $subcategories = SubCategory::where('id','<>',0);
+        foreach($parent_id as $parent){
+           $subcategories = $subcategories->where('id','<>',$parent);
+        }
+        $subcategories = $subcategories->get();
         
 
        

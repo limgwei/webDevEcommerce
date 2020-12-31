@@ -16,8 +16,8 @@ class SubCategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $products_sub_id = Product::whereNotNull('sub_category_id')->get();
+    {   
+        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
        
         $sub_id = array();
 
@@ -29,11 +29,17 @@ class SubCategoryController extends Controller
             }
             
         }
-
-        $parent_subs = SubCategory::where('id','<>',$sub_id)->get();
         
+        $parent_subs = SubCategory::where('id','<>',0);
+        
+        
+        foreach($sub_id as $sub){
+           $parent_subs = $parent_subs->where('id','<>',$sub);
+        }
+        $parent_subs = $parent_subs->get();
+
         $categories = Category::all();
-        $subcategories = SubCategory::with(['media','category','parent'])->get();
+        $subcategories = SubCategory::with(['category','parent'])->get();
         return view('subcategory.index',compact('subcategories','parent_subs','categories'));
     }
 
@@ -44,7 +50,7 @@ class SubCategoryController extends Controller
      */
     public function create()
     {
-        $products_sub_id = Product::whereNotNull('sub_category_id')->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
        
         $sub_id = array();
 
@@ -56,10 +62,23 @@ class SubCategoryController extends Controller
             }
             
         }
+            $categories = Category::all();
+      
+        
+            //$parent_subs = SubCategory::where('id','<>',$sub_id?$sub_id:0)->get();
+            $parent_subs = SubCategory::where('id','<>',0);
+        
+        
+            foreach($sub_id as $sub){
+               $parent_subs = $parent_subs->where('id','<>',$sub);
+            }
+            $parent_subs = $parent_subs->get();
 
-        $parent_subs = SubCategory::where('id','<>',$sub_id)->get();
-        $categories = Category::all();
-        return view('subcategory.create',compact('parent_subs','categories'));
+            return view('subcategory.create',compact('parent_subs','categories'));
+        
+        
+       
+     
     }
 
     /**
@@ -74,16 +93,10 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $subCategory = SubCategory::create($request->all());
+        SubCategory::create($request->all());
 
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-        
-         for($i = 0;$i<$imageCount;$i++){
-              $subCategory->addMedia($file[$i])->toMediaCollection('image');
-              
-         }
-         return redirect()->route('subcategory.index');
+        return redirect()->route('subcategory.index');
+         //return redirect()->route('subcategory.index');
         
     }
 
@@ -95,7 +108,7 @@ class SubCategoryController extends Controller
      */
     public function show($id)
     {
-        $products_sub_id = Product::whereNotNull('sub_category_id')->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
        
         $sub_id = array();
 
@@ -108,9 +121,15 @@ class SubCategoryController extends Controller
             
         }
 
-        $parent_subs = SubCategory::where('id','<>',$sub_id)->get();
+        $parent_subs = SubCategory::where('id','<>',0);
         
-        $subcategories = SubCategory::with(['media','category','parent'])->where('id',$id)->first();
+        
+        foreach($sub_id as $sub){
+           $parent_subs = $parent_subs->where('id','<>',$sub);
+        }
+        $parent_subs = $parent_subs->get();
+        
+        $subcategories = SubCategory::with(['category','parent'])->where('id',$id)->first();
 
         $categories = Category::all();
         return view('subcategory.show',compact('subcategories','parent_subs','categories'));
@@ -124,7 +143,7 @@ class SubCategoryController extends Controller
      */
     public function edit($id)
     {
-        $products_sub_id = Product::whereNotNull('sub_category_id')->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
        
         $sub_id = array();
 
@@ -137,12 +156,18 @@ class SubCategoryController extends Controller
             
         }
 
-        $parent_subs = SubCategory::where('id','<>',$sub_id)->get();
+        $parent_subs = SubCategory::where('id','<>',0);
         
-        $subcategories = SubCategory::with(['media','category','parent'])->where('id',$id)->first();
+        
+        foreach($sub_id as $sub){
+           $parent_subs = $parent_subs->where('id','<>',$sub);
+        }
+        $parent_subs = $parent_subs->get();
+        
+        $subcategory = SubCategory::with(['category','parent'])->where('id',$id)->first();
 
         $categories = Category::all();
-        return view('subcategory.edit',compact('subcategories','parent_subs','categories'));
+        return view('subcategory.edit',compact('subcategory','parent_subs','categories'));
     }
 
     /**
@@ -160,25 +185,7 @@ class SubCategoryController extends Controller
     public function update(Request $request, SubCategory $subcategory)
     {
         $subcategory->update($request->all);
-        
-
-       
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-
-        if ($subcategory->image) {
-            foreach ($subcategory->image as $media) { 
-                    $media->delete();  
-            }
-        }
-
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $subcategory->addMedia($file[$i])->toMediaCollection('image');
-   
-       }
-
-       return redirect()->route('subcategory.index');
+        return redirect()->route('subcategory.index');
     }
 
     /**
@@ -201,17 +208,5 @@ class SubCategoryController extends Controller
             $error = "You have to delete subcategory or product related before delete this subcategory.";
             return redirect()->route('subcategory.index',['error'=>$error]);
         }
-    }
-
-    public function storeCKEditorImages(Request $request)
-    {
-        
-
-        $model         = new Banner();
-        $model->id     = $request->input('crud_id', 0);
-        $model->exists = true;
-        $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
-
-        
     }
 }
