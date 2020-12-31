@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use App\Models\Category;
-use App\Models\Product;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
@@ -18,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::with(['media'])->get();
+        $categories = Category::all();
         return view('category.index',compact('categories'));
     }
 
@@ -42,16 +41,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = Category::create($request->all());
+        Category::create($request->all());
 
 
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-    
-         for($i = 0;$i<$imageCount;$i++){
-              $category->addMedia($file[$i])->toMediaCollection('image');
-              
-         }
     
 
         return redirect()->route('category.index');
@@ -65,7 +57,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {        
-        $category = Category::with(['media'])->where('id',$id)->first();
+        $category = Category::where('id',$id)->first();
         return view('category.show',compact('category'));
     }
 
@@ -77,7 +69,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::with(['media'])->where('id',$id)->first();
+        $category = Category::where('id',$id)->first();
         
         return view('category.edit', compact( 'category'));
     }
@@ -93,24 +85,6 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {      
         $category->update(array($request->all()));
-        
-        
-       
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
-
-        if ($category->image) {
-            foreach ($category->image as $media) { 
-                    $media->delete();  
-            }
-        }
-
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $category->addMedia($file[$i])->toMediaCollection('image');
-   
-       }
-
        return redirect()->route('category.index');
     }
 
@@ -133,18 +107,6 @@ class CategoryController extends Controller
             $error = "You have to delete banners or subcategory related before delete this category.";
             return redirect()->route('category.index',['error'=>$error]);
         }
-        
-    }
-
-    public function storeCKEditorImages(Request $request)
-    {
-        
-
-        $model         = new Category();
-        $model->id     = $request->input('crud_id', 0);
-        $model->exists = true;
-        $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
-
         
     }
 }

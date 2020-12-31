@@ -19,7 +19,7 @@ Fields require when post <br>
 <div>subcategory:
   <select name="sub_category_id">
   @foreach ($subcategories as $subcategory) 
-       @if($subcategory->id == $product->subcategory->id)
+       @if($subcategory->id == $product->subcategory_id)
         <option value="{{$subcategory->id}}" selected>{{$subcategory->name}}</option>
         @else
         <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>

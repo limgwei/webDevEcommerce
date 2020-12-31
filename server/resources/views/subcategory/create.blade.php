@@ -1,14 +1,11 @@
 
 
 
-<form action="/subcategory" method="post" enctype="multipart/form-data">
+<form action="/subcategory" method="post">
 
 @csrf
 Fields require when post <br>
 <div>name:<input type="text" name="name"></div>
-
-<div>image:<input type="file" name="image[]"></div>
-
 <div>subcategory:
   <select name="parent_id">
   <option value="0">___</option>
