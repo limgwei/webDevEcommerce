@@ -72,14 +72,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/libero" \
+    -G "/api/product/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/libero"
+    "/api/product/asperiores"
 );
 
 let headers = {
@@ -139,14 +139,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/search/dolores" \
+    -G "/api/product/search/architecto" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/search/dolores"
+    "/api/product/search/architecto"
 );
 
 let headers = {
@@ -206,14 +206,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/ab" \
+    -G "/api/product/sub/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/ab"
+    "/api/product/sub/ea"
 );
 
 let headers = {
@@ -578,14 +578,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/voluptate/latest" \
+    -G "/api/product/sub/similique/latest" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/voluptate/latest"
+    "/api/product/sub/similique/latest"
 );
 
 let headers = {
@@ -712,14 +712,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/odit/nameD" \
+    -G "/api/product/sub/ab/nameD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/odit/nameD"
+    "/api/product/sub/ab/nameD"
 );
 
 let headers = {
@@ -779,14 +779,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/odio/price" \
+    -G "/api/product/sub/dolorem/price" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/odio/price"
+    "/api/product/sub/dolorem/price"
 );
 
 let headers = {
@@ -846,14 +846,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/product/sub/possimus/priceD" \
+    -G "/api/product/sub/sint/priceD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/product/sub/possimus/priceD"
+    "/api/product/sub/sint/priceD"
 );
 
 let headers = {

@@ -72,14 +72,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/et" \
+    -G "/api/discount_product/rem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/et"
+    "/api/discount_product/rem"
 );
 
 let headers = {
@@ -139,14 +139,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/perferendis" \
+    -G "/api/discount_product/sub/fugiat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/perferendis"
+    "/api/discount_product/sub/fugiat"
 );
 
 let headers = {
@@ -511,14 +511,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/voluptate/latest" \
+    -G "/api/discount_product/sub/omnis/latest" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/voluptate/latest"
+    "/api/discount_product/sub/omnis/latest"
 );
 
 let headers = {
@@ -578,14 +578,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/ut/name" \
+    -G "/api/discount_product/sub/sit/name" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/ut/name"
+    "/api/discount_product/sub/sit/name"
 );
 
 let headers = {
@@ -645,14 +645,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/consequatur/nameD" \
+    -G "/api/discount_product/sub/ut/nameD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/consequatur/nameD"
+    "/api/discount_product/sub/ut/nameD"
 );
 
 let headers = {
@@ -712,14 +712,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/esse/price" \
+    -G "/api/discount_product/sub/distinctio/price" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/esse/price"
+    "/api/discount_product/sub/distinctio/price"
 );
 
 let headers = {
@@ -779,14 +779,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/discount_product/sub/nesciunt/priceD" \
+    -G "/api/discount_product/sub/exercitationem/priceD" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/discount_product/sub/nesciunt/priceD"
+    "/api/discount_product/sub/exercitationem/priceD"
 );
 
 let headers = {

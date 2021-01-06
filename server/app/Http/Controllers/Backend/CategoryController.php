@@ -33,7 +33,6 @@ class CategoryController extends Controller
 
     /**
      * Store category
-     * @bodyParam image file[]
      * @bodyParam name string required
      *
      * @param  \Illuminate\Http\Request  $request
@@ -76,7 +75,6 @@ class CategoryController extends Controller
 
     /**
      * Update the specified resource in storage.
-     * @bodyParam image file[]
      * @bodyParam name string required
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id

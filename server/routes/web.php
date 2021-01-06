@@ -29,7 +29,6 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
     Route::resource('category','CategoryController');
     Route::resource('discountProduct','discountProductController');
     Route::resource('order','OrderController');
-    Route::resource('orderItem','OrderItemController');
     Route::resource('product','ProductController');
     Route::resource('subcategory','SubCategoryController');
     Route::resource('user','UserController');

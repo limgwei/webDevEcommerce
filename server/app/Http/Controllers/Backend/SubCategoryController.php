@@ -84,7 +84,6 @@ class SubCategoryController extends Controller
     /**
      * Store subcategory
      * category_id and parent_id only pick 1
-     * @bodyParam image file[]
      * @bodyParam name string required
      * @bodyParam category_id
      * @bodyParam parent_id
@@ -174,7 +173,6 @@ class SubCategoryController extends Controller
      * Update the specified resource in storage.
      * Update subcategory in storage.
      * category_id and parent_id only pick 1
-     * @bodyParam image file[]
      * @bodyParam name string required
      * @bodyParam category_id
      * @bodyParam parent_id

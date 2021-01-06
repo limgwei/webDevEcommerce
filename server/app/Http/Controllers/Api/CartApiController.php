@@ -30,8 +30,8 @@ class CartApiController extends Controller
     }
     /**
      * Store a newly created cart in storage.
-     * @param  int  product_id
-     *  @param  int quantity
+     * @bodyParam  product_id int  
+     *  @bodyParam  quantity int 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -62,7 +62,7 @@ class CartApiController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param   int  $id
-     *  @param  int quantity
+     *  @bodyParam  quantity int 
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)

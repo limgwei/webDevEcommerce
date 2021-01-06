@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\OrderApiController;
 use App\Http\Controllers\Api\ProductApiController;
 use App\Http\Controllers\Api\SubCategoryApiController;
 use App\Http\Controllers\Api\BannerApiController;
+use App\Http\Controllers\Api\UserApiController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
@@ -80,16 +81,16 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     Route::apiResource('chat','ChatApiController',array("as" => "api"));
 
     Route::apiResource('order','OrderApiController',array("as" => "api"));
-    Route::post('order/orderItems/{id}',[OrderApiController::class,'getOrderItems']);
+    Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
 
    
 
     Route::apiResource('sub_category','SubCategoryApiController',array("as" => "api"));
     Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
     Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
-
-     Route::apiResource('user','UserApiController',array("as" => "api"));
-
+    Route::post('user/avatar',[UserApiController::class,'updateImage']);
+    Route::apiResource('user','UserApiController',array("as" => "api"));
+    
     
  
 });

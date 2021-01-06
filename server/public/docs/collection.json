@@ -10,17 +10,17 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "a0ade82f-5ac8-40dd-9f9f-e390d29686ec",
+        "_postman_id": "67c940ff-b025-4374-bf9c-a860a27864c6",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
             "name": "Banner",
-            "description": "\nAPIs for manage banners",
+            "description": "\nAPIs for user view banners",
             "item": [
                 {
-                    "name": "Display Banner and link to category or product.",
+                    "name": "Display all banner and link to category or product.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -41,7 +41,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
+                        "description": "a",
                         "auth": {
                             "type": "noauth"
                         }
@@ -49,7 +49,7 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "DDisplay specific banner and link to category or product.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -61,7 +61,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "perferendis",
+                                    "value": "cumque",
                                     "description": ""
                                 }
                             ]
@@ -92,7 +92,7 @@
             "description": "\nAPIs for manage cart",
             "item": [
                 {
-                    "name": "Display a listing of the Cart with user and product.",
+                    "name": "Display a listing of the Cart products where user",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -121,7 +121,7 @@
                     "response": []
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Store a newly created cart in storage.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -141,7 +141,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"product_id\": 2\n}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -150,7 +153,7 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Display the specified cart items.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -162,7 +165,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "beatae",
+                                    "value": "vero",
                                     "description": ""
                                 }
                             ]
@@ -187,7 +190,7 @@
                     "response": []
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update the specified cart items",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -199,7 +202,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "ab",
+                                    "value": "saepe",
                                     "description": ""
                                 }
                             ]
@@ -224,7 +227,7 @@
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Remove the specified product from cart",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -236,7 +239,7 @@
                                 {
                                     "id": "cart",
                                     "key": "cart",
-                                    "value": "ut",
+                                    "value": "autem",
                                     "description": ""
                                 }
                             ]
@@ -308,7 +311,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "quod",
+                                    "value": "sed",
                                     "description": ""
                                 }
                             ]
@@ -409,7 +412,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "sapiente",
+                                    "value": "blanditiis",
                                     "description": ""
                                 }
                             ]
@@ -446,7 +449,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "nobis",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -483,7 +486,7 @@
                                 {
                                     "id": "chat",
                                     "key": "chat",
-                                    "value": "voluptatum",
+                                    "value": "incidunt",
                                     "description": ""
                                 }
                             ]
@@ -555,7 +558,7 @@
                                 {
                                     "id": "discount_product",
                                     "key": "discount_product",
-                                    "value": "et",
+                                    "value": "rem",
                                     "description": ""
                                 }
                             ]
@@ -592,7 +595,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "perferendis",
+                                    "value": "fugiat",
                                     "description": ""
                                 }
                             ]
@@ -774,7 +777,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptate",
+                                    "value": "omnis",
                                     "description": ""
                                 }
                             ]
@@ -811,7 +814,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ut",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -848,7 +851,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consequatur",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -885,7 +888,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "esse",
+                                    "value": "distinctio",
                                     "description": ""
                                 }
                             ]
@@ -922,7 +925,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nesciunt",
+                                    "value": "exercitationem",
                                     "description": ""
                                 }
                             ]
@@ -1176,45 +1179,16 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quis",
+                                    "value": "eius",
                                     "description": ""
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "rerum",
+                                    "value": "quibusdam",
                                     "description": ""
                                 }
                             ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "\/",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "\/",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
                         },
                         "method": "GET",
                         "header": [
@@ -1335,7 +1309,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "ducimus",
+                                    "value": "ratione",
                                     "description": ""
                                 }
                             ]
@@ -1372,7 +1346,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "vel",
+                                    "value": "corrupti",
                                     "description": ""
                                 }
                             ]
@@ -1409,7 +1383,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "rerum",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -1446,7 +1420,7 @@
                                 {
                                     "id": "banner",
                                     "key": "banner",
-                                    "value": "sunt",
+                                    "value": "error",
                                     "description": ""
                                 }
                             ]
@@ -1542,7 +1516,7 @@
                         "header": [
                             {
                                 "key": "Content-Type",
-                                "value": "multipart\/form-data"
+                                "value": "application\/json"
                             },
                             {
                                 "key": "Accept",
@@ -1550,19 +1524,8 @@
                             }
                         ],
                         "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "name",
-                                    "value": "temporibus",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "image[]",
-                                    "src": [],
-                                    "type": "file"
-                                }
-                            ]
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"commodi\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -1584,7 +1547,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "molestiae",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1621,7 +1584,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "deleniti",
+                                    "value": "ad",
                                     "description": ""
                                 }
                             ]
@@ -1658,7 +1621,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "labore",
+                                    "value": "sapiente",
                                     "description": ""
                                 }
                             ]
@@ -1667,7 +1630,7 @@
                         "header": [
                             {
                                 "key": "Content-Type",
-                                "value": "multipart\/form-data"
+                                "value": "application\/json"
                             },
                             {
                                 "key": "Accept",
@@ -1675,19 +1638,8 @@
                             }
                         ],
                         "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "name",
-                                    "value": "amet",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "image[]",
-                                    "src": [],
-                                    "type": "file"
-                                }
-                            ]
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"quis\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -1709,7 +1661,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "commodi",
+                                    "value": "nisi",
                                     "description": ""
                                 }
                             ]
@@ -1833,7 +1785,7 @@
                                 {
                                     "id": "discountProduct",
                                     "key": "discountProduct",
-                                    "value": "voluptate",
+                                    "value": "iure",
                                     "description": ""
                                 }
                             ]
@@ -1870,7 +1822,7 @@
                                 {
                                     "id": "discountProduct",
                                     "key": "discountProduct",
-                                    "value": "temporibus",
+                                    "value": "repudiandae",
                                     "description": ""
                                 }
                             ]
@@ -1907,7 +1859,7 @@
                                 {
                                     "id": "discountProduct",
                                     "key": "discountProduct",
-                                    "value": "omnis",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1944,7 +1896,7 @@
                                 {
                                     "id": "discountProduct",
                                     "key": "discountProduct",
-                                    "value": "tempora",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -2010,73 +1962,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "eos",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "orderItem",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/orderItem"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "orderItem\/:orderItem",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/orderItem\/:orderItem",
-                            "variable": [
-                                {
-                                    "id": "orderItem",
-                                    "key": "orderItem",
-                                    "value": "enim",
+                                    "value": "eius",
                                     "description": ""
                                 }
                             ]
@@ -2200,7 +2086,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "aut",
+                                    "value": "inventore",
                                     "description": ""
                                 }
                             ]
@@ -2237,7 +2123,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "incidunt",
+                                    "value": "dolor",
                                     "description": ""
                                 }
                             ]
@@ -2274,7 +2160,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "sequi",
+                                    "value": "libero",
                                     "description": ""
                                 }
                             ]
@@ -2311,7 +2197,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "ut",
+                                    "value": "cupiditate",
                                     "description": ""
                                 }
                             ]
@@ -2406,7 +2292,7 @@
                                 {
                                     "id": "subcategory",
                                     "key": "subcategory",
-                                    "value": "autem",
+                                    "value": "quo",
                                     "description": ""
                                 }
                             ]
@@ -2443,7 +2329,7 @@
                                 {
                                     "id": "subcategory",
                                     "key": "subcategory",
-                                    "value": "repellat",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -2480,7 +2366,7 @@
                                 {
                                     "id": "subcategory",
                                     "key": "subcategory",
-                                    "value": "consequuntur",
+                                    "value": "molestiae",
                                     "description": ""
                                 }
                             ]
@@ -2546,7 +2432,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "repellat",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -2583,12 +2469,49 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "nemo",
+                                    "value": "corporis",
                                     "description": ""
                                 }
                             ]
                         },
                         "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "order\/orderItems\/{id}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "order\/orderItems\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/order\/orderItems\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "omnis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -2701,7 +2624,7 @@
             "description": "\nAPIs for manage order",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Display a listing of the order",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -2730,7 +2653,7 @@
                     "response": []
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Store a newly created order in storage",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -2750,7 +2673,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"price\": 379,\n    \"address\": \"eos\",\n    \"delivery_charge\": 12.5,\n    \"comment\": \"maiores\",\n    \"orderItems\": [\n        [],\n        []\n    ]\n}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -2759,7 +2685,7 @@
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Display the specified order",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -2771,7 +2697,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "quibusdam",
+                                    "value": "sed",
                                     "description": ""
                                 }
                             ]
@@ -2796,7 +2722,7 @@
                     "response": []
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update the specified order",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -2808,7 +2734,7 @@
                                 {
                                     "id": "order",
                                     "key": "order",
-                                    "value": "soluta",
+                                    "value": "ducimus",
                                     "description": ""
                                 }
                             ]
@@ -2824,7 +2750,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"status\": 2\n}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -2833,86 +2762,14 @@
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "display order items",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "api\/order\/:order",
+                            "path": "api\/order\/orderItems",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order\/:order",
-                            "variable": [
-                                {
-                                    "id": "order",
-                                    "key": "order",
-                                    "value": "quo",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "OrderItem",
-            "description": "\nAPIs for manage order items",
-            "item": [
-                {
-                    "name": "Display a listing of the resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order_item"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order_item"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/order\/orderItems"
                         },
                         "method": "POST",
                         "header": [
@@ -2925,118 +2782,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order_item\/:order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order_item\/:order_item",
-                            "variable": [
-                                {
-                                    "id": "order_item",
-                                    "key": "order_item",
-                                    "value": "sunt",
-                                    "description": ""
-                                }
-                            ]
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"order_id\": 18\n}"
                         },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order_item\/:order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order_item\/:order_item",
-                            "variable": [
-                                {
-                                    "id": "order_item",
-                                    "key": "order_item",
-                                    "value": "vel",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/order_item\/:order_item",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/order_item\/:order_item",
-                            "variable": [
-                                {
-                                    "id": "order_item",
-                                    "key": "order_item",
-                                    "value": "dolores",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -3092,7 +2841,7 @@
                                 {
                                     "id": "product",
                                     "key": "product",
-                                    "value": "libero",
+                                    "value": "asperiores",
                                     "description": ""
                                 }
                             ]
@@ -3129,7 +2878,7 @@
                                 {
                                     "id": "name",
                                     "key": "name",
-                                    "value": "dolores",
+                                    "value": "architecto",
                                     "description": ""
                                 }
                             ]
@@ -3166,7 +2915,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ab",
+                                    "value": "ea",
                                     "description": ""
                                 }
                             ]
@@ -3348,7 +3097,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptate",
+                                    "value": "similique",
                                     "description": ""
                                 }
                             ]
@@ -3422,7 +3171,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "odit",
+                                    "value": "ab",
                                     "description": ""
                                 }
                             ]
@@ -3459,7 +3208,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "odio",
+                                    "value": "dolorem",
                                     "description": ""
                                 }
                             ]
@@ -3496,7 +3245,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "possimus",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]
@@ -3568,7 +3317,7 @@
                                 {
                                     "id": "sub_category",
                                     "key": "sub_category",
-                                    "value": "est",
+                                    "value": "quasi",
                                     "description": ""
                                 }
                             ]
@@ -3605,7 +3354,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quas",
+                                    "value": "quam",
                                     "description": ""
                                 }
                             ]
@@ -3642,7 +3391,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -3669,11 +3418,49 @@
             ]
         },
         {
-            "name": "User",
+            "name": "Users",
             "description": "\nAPIs for manage user",
             "item": [
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Update the image",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/avatar",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/avatar"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "image[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified user info.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -3685,7 +3472,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "earum",
+                                    "value": "nesciunt",
                                     "description": ""
                                 }
                             ]
@@ -3710,7 +3497,7 @@
                     "response": []
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update the information",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -3722,49 +3509,12 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "fugit",
+                                    "value": "eius",
                                     "description": ""
                                 }
                             ]
                         },
                         "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user\/:user",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/user\/:user",
-                            "variable": [
-                                {
-                                    "id": "user",
-                                    "key": "user",
-                                    "value": "delectus",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
                         "header": [
                             {
                                 "key": "Content-Type",

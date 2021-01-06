@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Resources\UserResource;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 /**
- * @group User
+ * @group Users
  *
  * APIs for manage user
  */
@@ -26,7 +27,39 @@ class UserApiController extends Controller
         return new UserResource(User::where('id',$id)->get());
     }
 
-    /**
+   
+
+     /**
+     * Update the image
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @bodyParam image file[]
+     * @return \Illuminate\Http\Response
+     */
+    public function updateImage(Request $request){
+        $file = $request->file('image');
+        $user = Auth::user();
+        
+        $imageCount = count($request->file('image'));
+        
+        if ($user->image) {
+            foreach ($user->image as $media) { 
+                    $media->delete();  
+            }
+        }
+
+        for($i = 0;$i<$imageCount;$i++){
+            
+            return $user->addMedia($file[$i])->toMediaCollection('image');
+          
+       }
+
+       return $user;
+       
+    }   
+
+    
+     /**
      * Update the information
      *
      * @param  \Illuminate\Http\Request  $request
@@ -40,27 +73,15 @@ class UserApiController extends Controller
         
     }
 
-     /**
-     * Update the image
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param   file image
-     * @return \Illuminate\Http\Response
-     */
-    public function updateImage(Request $request, User $user){
-        $file = $request->file('image');
-        $imageCount = count($request->file('image'));
+    public function storeCKEditorImages(Request $request)
+    {
+        
 
-        if ($user->image) {
-            foreach ($user->image as $media) { 
-                    $media->delete();  
-            }
-        }
+        $model         = new User();
+        $model->id     = $request->input('crud_id', 0);
+        $model->exists = true;
+        $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
 
-        for($i = 0;$i<$imageCount;$i++){
-            
-            $user->addMedia($file[$i])->toMediaCollection('image');
-   
-       }
-    }    
+        
+    }
 }

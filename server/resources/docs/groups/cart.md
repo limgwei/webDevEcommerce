@@ -2,7 +2,7 @@
 
 APIs for manage cart
 
-## Display a listing of the Cart with user and product.
+## Display a listing of the Cart products where user
 
 
 
@@ -63,7 +63,7 @@ fetch(url, {
 </form>
 
 
-## Store a newly created resource in storage.
+## Store a newly created cart in storage.
 
 
 
@@ -74,7 +74,9 @@ fetch(url, {
 curl -X POST \
     "/api/cart" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
+    -H "Accept: application/json" \
+    -d '{"product_id":2}'
+
 ```
 
 ```javascript
@@ -87,10 +89,14 @@ let headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "product_id": 2
+}
 
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -114,10 +120,17 @@ fetch(url, {
 <small class="badge badge-black">POST</small>
  <b><code>api/cart</code></b>
 </p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>product_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+<input type="number" name="product_id" data-endpoint="POSTapi-cart" data-component="body"  hidden>
+<br>
+@bodyParam  quantity int</p>
+
 </form>
 
 
-## Display the specified resource.
+## Display the specified cart items.
 
 
 
@@ -126,14 +139,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/cart/beatae" \
+    -G "/api/cart/vero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/cart/beatae"
+    "/api/cart/vero"
 );
 
 let headers = {
@@ -184,7 +197,7 @@ fetch(url, {
 </form>
 
 
-## Update the specified resource in storage.
+## Update the specified cart items
 
 
 
@@ -193,14 +206,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/api/cart/ab" \
+    "/api/cart/saepe" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/cart/ab"
+    "/api/cart/saepe"
 );
 
 let headers = {
@@ -248,7 +261,7 @@ fetch(url, {
 </form>
 
 
-## Remove the specified resource from storage.
+## Remove the specified product from cart
 
 
 
@@ -257,14 +270,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/api/cart/ut" \
+    "/api/cart/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/cart/ut"
+    "/api/cart/autem"
 );
 
 let headers = {

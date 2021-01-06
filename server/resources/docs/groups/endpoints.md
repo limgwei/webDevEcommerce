@@ -1387,14 +1387,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/email/verify/quis/rerum" \
+    -G "/api/email/verify/eius/quibusdam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/email/verify/quis/rerum"
+    "/api/email/verify/eius/quibusdam"
 );
 
 let headers = {
@@ -1882,77 +1882,6 @@ fetch(url, {
 </form>
 
 
-## /
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "/" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "/"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (302):
-
-```json
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content="0;url='http://localhost/login'" />
-
-        <title>Redirecting to http://localhost/login</title>
-    </head>
-    <body>
-        Redirecting to <a href="http://localhost/login">http://localhost/login</a>.
-    </body>
-</html>
-```
-<div id="execution-results-GET-" hidden>
-    <blockquote>Received response<span id="execution-response-status-GET-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GET-"></code></pre>
-</div>
-<div id="execution-error-GET-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GET-"></code></pre>
-</div>
-<form id="form-GET-" data-method="GET" data-path="/" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GET-" onclick="tryItOut('GET-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GET-" onclick="cancelTryOut('GET-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GET-" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>/</code></b>
-</p>
-</form>
-
-
 ## Display a listing of the resource.
 
 
@@ -2158,14 +2087,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/banner/ducimus" \
+    -G "/banner/ratione" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/banner/ducimus"
+    "/banner/ratione"
 );
 
 let headers = {
@@ -2235,14 +2164,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/banner/vel/edit" \
+    -G "/banner/corrupti/edit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/banner/vel/edit"
+    "/banner/corrupti/edit"
 );
 
 let headers = {
@@ -2312,14 +2241,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/banner/rerum" \
+    "/banner/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/banner/rerum"
+    "/banner/ut"
 );
 
 let headers = {
@@ -2376,14 +2305,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/banner/sunt" \
+    "/banner/error" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/banner/sunt"
+    "/banner/error"
 );
 
 let headers = {
@@ -2579,10 +2508,10 @@ fetch(url, {
 ```bash
 curl -X POST \
     "/category" \
-    -H "Content-Type: multipart/form-data" \
+    -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -F "name=temporibus" \
-    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php7292.tmp" 
+    -d '{"name":"commodi"}'
+
 ```
 
 ```javascript
@@ -2591,18 +2520,18 @@ const url = new URL(
 );
 
 let headers = {
-    "Content-Type": "multipart/form-data",
+    "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
-const body = new FormData();
-body.append('name', 'temporibus');
-body.append('image[]', document.querySelector('input[name="image[]"]').files[0]);
+let body = {
+    "name": "commodi"
+}
 
 fetch(url, {
     method: "POST",
     headers,
-    body,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -2615,7 +2544,7 @@ fetch(url, {
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTcategory"></code></pre>
 </div>
-<form id="form-POSTcategory" data-method="POST" data-path="category" data-authed="0" data-hasfiles="1" data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTcategory', this);">
+<form id="form-POSTcategory" data-method="POST" data-path="category" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTcategory', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTcategory" onclick="tryItOut('POSTcategory');">Try it out ⚡</button>
@@ -2627,12 +2556,6 @@ fetch(url, {
  <b><code>category</code></b>
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-<p>
-<b><code>image</code></b>&nbsp;&nbsp;<small>file[]</small>     <i>optional</i> &nbsp;
-<input type="file" name="image.0" data-endpoint="POSTcategory" data-component="body"  hidden>
-<input type="file" name="image.1" data-endpoint="POSTcategory" data-component="body" hidden>
-<br>
-</p>
 <p>
 <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="name" data-endpoint="POSTcategory" data-component="body" required  hidden>
@@ -2651,14 +2574,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/category/molestiae" \
+    -G "/category/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/category/molestiae"
+    "/category/et"
 );
 
 let headers = {
@@ -2728,14 +2651,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/category/deleniti/edit" \
+    -G "/category/ad/edit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/category/deleniti/edit"
+    "/category/ad/edit"
 );
 
 let headers = {
@@ -2805,31 +2728,31 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/category/labore" \
-    -H "Content-Type: multipart/form-data" \
+    "/category/sapiente" \
+    -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -F "name=amet" \
-    -F "image[]=@C:\Users\HP\AppData\Local\Temp\php7311.tmp" 
+    -d '{"name":"quis"}'
+
 ```
 
 ```javascript
 const url = new URL(
-    "/category/labore"
+    "/category/sapiente"
 );
 
 let headers = {
-    "Content-Type": "multipart/form-data",
+    "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
-const body = new FormData();
-body.append('name', 'amet');
-body.append('image[]', document.querySelector('input[name="image[]"]').files[0]);
+let body = {
+    "name": "quis"
+}
 
 fetch(url, {
     method: "PUT",
     headers,
-    body,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -2842,7 +2765,7 @@ fetch(url, {
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-PUTcategory--category-"></code></pre>
 </div>
-<form id="form-PUTcategory--category-" data-method="PUT" data-path="category/{category}" data-authed="0" data-hasfiles="1" data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTcategory--category-', this);">
+<form id="form-PUTcategory--category-" data-method="PUT" data-path="category/{category}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTcategory--category-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTcategory--category-" onclick="tryItOut('PUTcategory--category-');">Try it out ⚡</button>
@@ -2865,12 +2788,6 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>image</code></b>&nbsp;&nbsp;<small>file[]</small>     <i>optional</i> &nbsp;
-<input type="file" name="image.0" data-endpoint="PUTcategory--category-" data-component="body"  hidden>
-<input type="file" name="image.1" data-endpoint="PUTcategory--category-" data-component="body" hidden>
-<br>
-</p>
-<p>
 <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="name" data-endpoint="PUTcategory--category-" data-component="body" required  hidden>
 <br>
@@ -2888,14 +2805,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/category/commodi" \
+    "/category/nisi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/category/commodi"
+    "/category/nisi"
 );
 
 let headers = {
@@ -3144,14 +3061,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/discountProduct/voluptate" \
+    -G "/discountProduct/iure" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/discountProduct/voluptate"
+    "/discountProduct/iure"
 );
 
 let headers = {
@@ -3221,14 +3138,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/discountProduct/temporibus/edit" \
+    -G "/discountProduct/repudiandae/edit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/discountProduct/temporibus/edit"
+    "/discountProduct/repudiandae/edit"
 );
 
 let headers = {
@@ -3298,14 +3215,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/discountProduct/omnis" \
+    "/discountProduct/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/discountProduct/omnis"
+    "/discountProduct/et"
 );
 
 let headers = {
@@ -3362,14 +3279,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/discountProduct/tempora" \
+    "/discountProduct/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/discountProduct/tempora"
+    "/discountProduct/aut"
 );
 
 let headers = {
@@ -3493,14 +3410,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/order/eos" \
+    -G "/order/eius" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/order/eos"
+    "/order/eius"
 );
 
 let headers = {
@@ -3556,154 +3473,6 @@ fetch(url, {
 <p>
 <b><code>order</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="order" data-endpoint="GETorder--order-" data-component="url" required  hidden>
-<br>
-</p>
-</form>
-
-
-## Display a listing of the resource.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "/orderItem" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "/orderItem"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (302):
-
-```json
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content="0;url='http://localhost/login'" />
-
-        <title>Redirecting to http://localhost/login</title>
-    </head>
-    <body>
-        Redirecting to <a href="http://localhost/login">http://localhost/login</a>.
-    </body>
-</html>
-```
-<div id="execution-results-GETorderItem" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETorderItem"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETorderItem"></code></pre>
-</div>
-<div id="execution-error-GETorderItem" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETorderItem"></code></pre>
-</div>
-<form id="form-GETorderItem" data-method="GET" data-path="orderItem" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETorderItem', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETorderItem" onclick="tryItOut('GETorderItem');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETorderItem" onclick="cancelTryOut('GETorderItem');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETorderItem" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>orderItem</code></b>
-</p>
-</form>
-
-
-## Display the specified resource.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "/orderItem/enim" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "/orderItem/enim"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (302):
-
-```json
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content="0;url='http://localhost/login'" />
-
-        <title>Redirecting to http://localhost/login</title>
-    </head>
-    <body>
-        Redirecting to <a href="http://localhost/login">http://localhost/login</a>.
-    </body>
-</html>
-```
-<div id="execution-results-GETorderItem--orderItem-" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETorderItem--orderItem-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETorderItem--orderItem-"></code></pre>
-</div>
-<div id="execution-error-GETorderItem--orderItem-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETorderItem--orderItem-"></code></pre>
-</div>
-<form id="form-GETorderItem--orderItem-" data-method="GET" data-path="orderItem/{orderItem}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETorderItem--orderItem-', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETorderItem--orderItem-" onclick="tryItOut('GETorderItem--orderItem-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETorderItem--orderItem-" onclick="cancelTryOut('GETorderItem--orderItem-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETorderItem--orderItem-" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>orderItem/{orderItem}</code></b>
-</p>
-<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-<p>
-<b><code>orderItem</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="orderItem" data-endpoint="GETorderItem--orderItem-" data-component="url" required  hidden>
 <br>
 </p>
 </form>
@@ -3914,14 +3683,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/product/aut" \
+    -G "/product/inventore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/product/aut"
+    "/product/inventore"
 );
 
 let headers = {
@@ -3991,14 +3760,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/product/incidunt/edit" \
+    -G "/product/dolor/edit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/product/incidunt/edit"
+    "/product/dolor/edit"
 );
 
 let headers = {
@@ -4068,14 +3837,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "/product/sequi" \
+    "/product/libero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/product/sequi"
+    "/product/libero"
 );
 
 let headers = {
@@ -4132,14 +3901,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/product/ut" \
+    "/product/cupiditate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/product/ut"
+    "/product/cupiditate"
 );
 
 let headers = {
@@ -4334,14 +4103,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/subcategory/autem" \
+    -G "/subcategory/quo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/subcategory/autem"
+    "/subcategory/quo"
 );
 
 let headers = {
@@ -4411,14 +4180,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/subcategory/repellat/edit" \
+    -G "/subcategory/ut/edit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/subcategory/repellat/edit"
+    "/subcategory/ut/edit"
 );
 
 let headers = {
@@ -4488,14 +4257,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/subcategory/consequuntur" \
+    "/subcategory/molestiae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/subcategory/consequuntur"
+    "/subcategory/molestiae"
 );
 
 let headers = {
@@ -4619,14 +4388,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/user/repellat" \
+    -G "/user/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/user/repellat"
+    "/user/aut"
 );
 
 let headers = {
@@ -4696,14 +4465,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "/user/nemo" \
+    "/user/corporis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/user/nemo"
+    "/user/corporis"
 );
 
 let headers = {
@@ -4742,6 +4511,83 @@ fetch(url, {
 <p>
 <b><code>user</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="user" data-endpoint="DELETEuser--user-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## order/orderItems/{id}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "/order/orderItems/omnis" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "/order/orderItems/omnis"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (302):
+
+```json
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='http://localhost/login'" />
+
+        <title>Redirecting to http://localhost/login</title>
+    </head>
+    <body>
+        Redirecting to <a href="http://localhost/login">http://localhost/login</a>.
+    </body>
+</html>
+```
+<div id="execution-results-GETorder-orderItems--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETorder-orderItems--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETorder-orderItems--id-"></code></pre>
+</div>
+<div id="execution-error-GETorder-orderItems--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETorder-orderItems--id-"></code></pre>
+</div>
+<form id="form-GETorder-orderItems--id-" data-method="GET" data-path="order/orderItems/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETorder-orderItems--id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETorder-orderItems--id-" onclick="tryItOut('GETorder-orderItems--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETorder-orderItems--id-" onclick="cancelTryOut('GETorder-orderItems--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETorder-orderItems--id-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>order/orderItems/{id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETorder-orderItems--id-" data-component="url" required  hidden>
 <br>
 </p>
 </form>
@@ -4786,7 +4632,7 @@ fetch(url, {
 require
 
 <form action="/login" method="post">
-<input type="hidden" name="_token" value="7bRIIrUhydS9oeTbgg3ZojV1wBGxfQoLNyueyLwl"> 
+<input type="hidden" name="_token" value="P7rpMCq2I8eTeJkoRPxH8aRwPPr7J3Ahc8FjJ5ue"> 
 
 username <input type="text" name="username"> 
 password <input type="text" name="password">

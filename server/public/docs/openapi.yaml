@@ -9,8 +9,8 @@ servers:
 paths:
     /api/banner:
         get:
-            summary: 'Display Banner and link to category or product.'
-            description: ''
+            summary: 'Display all banner and link to category or product.'
+            description: a
             parameters:
                 -
                     in: header
@@ -42,7 +42,7 @@ paths:
             security: []
     '/api/banner/{banner}':
         get:
-            summary: 'Display the specified resource.'
+            summary: 'DDisplay specific banner and link to category or product.'
             description: ''
             parameters:
                 -
@@ -78,13 +78,13 @@ paths:
                 in: path
                 name: banner
                 description: ''
-                example: perferendis
+                example: cumque
                 required: true
                 schema:
                     type: string
     /api/cart:
         get:
-            summary: 'Display a listing of the Cart with user and product.'
+            summary: 'Display a listing of the Cart products where user'
             description: ''
             parameters:
                 -
@@ -116,7 +116,7 @@ paths:
                 - Cart
             security: []
         post:
-            summary: 'Store a newly created resource in storage.'
+            summary: 'Store a newly created cart in storage.'
             description: ''
             parameters:
                 -
@@ -136,10 +136,21 @@ paths:
             responses: {  }
             tags:
                 - Cart
+            requestBody:
+                required: false
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                product_id:
+                                    type: integer
+                                    description: '@bodyParam  quantity int'
+                                    example: 2
             security: []
     '/api/cart/{cart}':
         get:
-            summary: 'Display the specified resource.'
+            summary: 'Display the specified cart items.'
             description: ''
             parameters:
                 -
@@ -171,7 +182,7 @@ paths:
                 - Cart
             security: []
         put:
-            summary: 'Update the specified resource in storage.'
+            summary: 'Update the specified cart items'
             description: ''
             parameters:
                 -
@@ -193,7 +204,7 @@ paths:
                 - Cart
             security: []
         delete:
-            summary: 'Remove the specified resource from storage.'
+            summary: 'Remove the specified product from cart'
             description: ''
             parameters:
                 -
@@ -219,7 +230,7 @@ paths:
                 in: path
                 name: cart
                 description: ''
-                example: beatae
+                example: vero
                 required: true
                 schema:
                     type: string
@@ -294,7 +305,7 @@ paths:
                 in: path
                 name: category
                 description: ''
-                example: quod
+                example: sed
                 required: true
                 schema:
                     type: string
@@ -435,7 +446,7 @@ paths:
                 in: path
                 name: chat
                 description: ''
-                example: sapiente
+                example: blanditiis
                 required: true
                 schema:
                     type: string
@@ -510,7 +521,7 @@ paths:
                 in: path
                 name: discount_product
                 description: ''
-                example: et
+                example: rem
                 required: true
                 schema:
                     type: string
@@ -552,7 +563,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: perferendis
+                example: fugiat
                 required: true
                 schema:
                     type: string
@@ -759,7 +770,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: voluptate
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -801,7 +812,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: ut
+                example: sit
                 required: true
                 schema:
                     type: string
@@ -843,7 +854,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: consequatur
+                example: ut
                 required: true
                 schema:
                     type: string
@@ -885,7 +896,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: esse
+                example: distinctio
                 required: true
                 schema:
                     type: string
@@ -927,7 +938,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: nesciunt
+                example: exercitationem
                 required: true
                 schema:
                     type: string
@@ -1183,7 +1194,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: quis
+                example: eius
                 required: true
                 schema:
                     type: string
@@ -1191,40 +1202,10 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: rerum
+                example: quibusdam
                 required: true
                 schema:
                     type: string
-    /:
-        get:
-            summary: ''
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/login'\" />\n\n        <title>Redirecting to http://localhost/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/login\">http://localhost/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
     /banner:
         get:
             summary: 'Display a listing of the resource.'
@@ -1386,7 +1367,7 @@ paths:
                 in: path
                 name: banner
                 description: ''
-                example: ducimus
+                example: ratione
                 required: true
                 schema:
                     type: string
@@ -1425,7 +1406,7 @@ paths:
                 in: path
                 name: banner
                 description: ''
-                example: vel
+                example: corrupti
                 required: true
                 schema:
                     type: string
@@ -1467,7 +1448,7 @@ paths:
                     in: header
                     name: Content-Type
                     description: ''
-                    example: multipart/form-data
+                    example: application/json
                     schema:
                         type: string
                 -
@@ -1483,19 +1464,14 @@ paths:
             requestBody:
                 required: true
                 content:
-                    multipart/form-data:
+                    application/json:
                         schema:
                             type: object
                             properties:
-                                image:
-                                    type: array
-                                    description: ''
-                                    example: [null, null]
-                                    items: { type: file }
                                 name:
                                     type: string
                                     description: ''
-                                    example: temporibus
+                                    example: commodi
                             required:
                                 - name
             security: []
@@ -1567,7 +1543,7 @@ paths:
                     in: header
                     name: Content-Type
                     description: ''
-                    example: multipart/form-data
+                    example: application/json
                     schema:
                         type: string
                 -
@@ -1583,19 +1559,14 @@ paths:
             requestBody:
                 required: true
                 content:
-                    multipart/form-data:
+                    application/json:
                         schema:
                             type: object
                             properties:
-                                image:
-                                    type: array
-                                    description: ''
-                                    example: [null, null]
-                                    items: { type: file }
                                 name:
                                     type: string
                                     description: ''
-                                    example: amet
+                                    example: quis
                             required:
                                 - name
             security: []
@@ -1626,7 +1597,7 @@ paths:
                 in: path
                 name: category
                 description: ''
-                example: molestiae
+                example: et
                 required: true
                 schema:
                     type: string
@@ -1665,7 +1636,7 @@ paths:
                 in: path
                 name: category
                 description: ''
-                example: deleniti
+                example: ad
                 required: true
                 schema:
                     type: string
@@ -1830,7 +1801,7 @@ paths:
                 in: path
                 name: discountProduct
                 description: ''
-                example: voluptate
+                example: iure
                 required: true
                 schema:
                     type: string
@@ -1869,7 +1840,7 @@ paths:
                 in: path
                 name: discountProduct
                 description: ''
-                example: temporibus
+                example: repudiandae
                 required: true
                 schema:
                     type: string
@@ -1938,76 +1909,7 @@ paths:
                 in: path
                 name: order
                 description: ''
-                example: eos
-                required: true
-                schema:
-                    type: string
-    /orderItem:
-        get:
-            summary: 'Display a listing of the resource.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/login'\" />\n\n        <title>Redirecting to http://localhost/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/login\">http://localhost/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
-    '/orderItem/{orderItem}':
-        get:
-            summary: 'Display the specified resource.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/login'\" />\n\n        <title>Redirecting to http://localhost/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/login\">http://localhost/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
-        parameters:
-            -
-                in: path
-                name: orderItem
-                description: ''
-                example: enim
+                example: eius
                 required: true
                 schema:
                     type: string
@@ -2172,7 +2074,7 @@ paths:
                 in: path
                 name: product
                 description: ''
-                example: aut
+                example: inventore
                 required: true
                 schema:
                     type: string
@@ -2211,7 +2113,7 @@ paths:
                 in: path
                 name: product
                 description: ''
-                example: incidunt
+                example: dolor
                 required: true
                 schema:
                     type: string
@@ -2332,7 +2234,7 @@ paths:
                 in: path
                 name: subcategory
                 description: ''
-                example: autem
+                example: quo
                 required: true
                 schema:
                     type: string
@@ -2371,7 +2273,7 @@ paths:
                 in: path
                 name: subcategory
                 description: ''
-                example: repellat
+                example: ut
                 required: true
                 schema:
                     type: string
@@ -2462,7 +2364,46 @@ paths:
                 in: path
                 name: user
                 description: ''
-                example: repellat
+                example: aut
+                required: true
+                schema:
+                    type: string
+    '/order/orderItems/{id}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                302:
+                    description: ''
+                    content:
+                        text/plain:
+                            schema:
+                                type: string
+                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/login'\" />\n\n        <title>Redirecting to http://localhost/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/login\">http://localhost/login</a>.\n    </body>\n</html>"
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -2492,7 +2433,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "require\r\n\r\n<form action=\"/login\" method=\"post\">\r\n<input type=\"hidden\" name=\"_token\" value=\"7bRIIrUhydS9oeTbgg3ZojV1wBGxfQoLNyueyLwl\"> \r\n\r\nusername <input type=\"text\" name=\"username\"> \r\npassword <input type=\"text\" name=\"password\">\r\n<button type=\"submit\">Submit</button>\r\n</form>"
+                                example: "require\r\n\r\n<form action=\"/login\" method=\"post\">\r\n<input type=\"hidden\" name=\"_token\" value=\"P7rpMCq2I8eTeJkoRPxH8aRwPPr7J3Ahc8FjJ5ue\"> \r\n\r\nusername <input type=\"text\" name=\"username\"> \r\npassword <input type=\"text\" name=\"password\">\r\n<button type=\"submit\">Submit</button>\r\n</form>"
             tags:
                 - Endpoints
             security: []
@@ -2543,7 +2484,7 @@ paths:
             security: []
     /api/order:
         get:
-            summary: 'Display a listing of the resource.'
+            summary: 'Display a listing of the order'
             description: ''
             parameters:
                 -
@@ -2575,7 +2516,7 @@ paths:
                 - Order
             security: []
         post:
-            summary: 'Store a newly created resource in storage.'
+            summary: 'Store a newly created order in storage'
             description: ''
             parameters:
                 -
@@ -2595,10 +2536,43 @@ paths:
             responses: {  }
             tags:
                 - Order
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                price:
+                                    type: number
+                                    description: ''
+                                    example: !!float 379
+                                address:
+                                    type: string
+                                    description: ''
+                                    example: eos
+                                delivery_charge:
+                                    type: number
+                                    description: ''
+                                    example: 12.5
+                                comment:
+                                    type: string
+                                    description: ''
+                                    example: maiores
+                                orderItems:
+                                    type: array
+                                    description: 'for orderItems object require order_name,current_price,quanitty'
+                                    example: [[], []]
+                                    items: { type: object }
+                            required:
+                                - price
+                                - address
+                                - delivery_charge
+                                - orderItems
             security: []
     '/api/order/{order}':
         get:
-            summary: 'Display the specified resource.'
+            summary: 'Display the specified order'
             description: ''
             parameters:
                 -
@@ -2630,7 +2604,7 @@ paths:
                 - Order
             security: []
         put:
-            summary: 'Update the specified resource in storage.'
+            summary: 'Update the specified order'
             description: ''
             parameters:
                 -
@@ -2650,73 +2624,32 @@ paths:
             responses: {  }
             tags:
                 - Order
-            security: []
-        delete:
-            summary: 'Remove the specified resource from storage.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Order
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                status:
+                                    type: integer
+                                    description: ''
+                                    example: 2
+                            required:
+                                - status
             security: []
         parameters:
             -
                 in: path
                 name: order
                 description: ''
-                example: quibusdam
+                example: sed
                 required: true
                 schema:
                     type: string
-    /api/order_item:
-        get:
-            summary: 'Display a listing of the resource.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthenticated.
-                                properties:
-                                    message: { type: string, example: Unauthenticated. }
-            tags:
-                - OrderItem
-            security: []
+    /api/order/orderItems:
         post:
-            summary: 'Store a newly created resource in storage.'
+            summary: 'display order items'
             description: ''
             parameters:
                 -
@@ -2735,94 +2668,19 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - OrderItem
+                - Order
+            requestBody:
+                required: false
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                order_id:
+                                    type: integer
+                                    description: ''
+                                    example: 18
             security: []
-    '/api/order_item/{order_item}':
-        get:
-            summary: 'Display the specified resource.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthenticated.
-                                properties:
-                                    message: { type: string, example: Unauthenticated. }
-            tags:
-                - OrderItem
-            security: []
-        put:
-            summary: 'Update the specified resource in storage.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - OrderItem
-            security: []
-        delete:
-            summary: 'Remove the specified resource from storage.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - OrderItem
-            security: []
-        parameters:
-            -
-                in: path
-                name: order_item
-                description: ''
-                example: sunt
-                required: true
-                schema:
-                    type: string
     /api/product:
         get:
             summary: 'Display all products'
@@ -2894,7 +2752,7 @@ paths:
                 in: path
                 name: product
                 description: ''
-                example: libero
+                example: asperiores
                 required: true
                 schema:
                     type: string
@@ -2936,7 +2794,7 @@ paths:
                 in: path
                 name: name
                 description: ''
-                example: dolores
+                example: architecto
                 required: true
                 schema:
                     type: string
@@ -2978,7 +2836,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: ab
+                example: ea
                 required: true
                 schema:
                     type: string
@@ -3185,7 +3043,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: voluptate
+                example: similique
                 required: true
                 schema:
                     type: string
@@ -3269,7 +3127,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: odit
+                example: ab
                 required: true
                 schema:
                     type: string
@@ -3311,7 +3169,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: odio
+                example: dolorem
                 required: true
                 schema:
                     type: string
@@ -3353,7 +3211,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: possimus
+                example: sint
                 required: true
                 schema:
                     type: string
@@ -3428,7 +3286,7 @@ paths:
                 in: path
                 name: sub_category
                 description: ''
-                example: est
+                example: quasi
                 required: true
                 schema:
                     type: string
@@ -3470,7 +3328,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: quas
+                example: quam
                 required: true
                 schema:
                     type: string
@@ -3512,13 +3370,48 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: et
+                example: sit
                 required: true
                 schema:
                     type: string
+    /api/user/avatar:
+        post:
+            summary: 'Update the image'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: multipart/form-data
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Users
+            requestBody:
+                required: false
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            properties:
+                                image:
+                                    type: array
+                                    description: ''
+                                    example: [null, null]
+                                    items: { type: file }
+            security: []
     '/api/user/{user}':
         get:
-            summary: 'Display the specified resource.'
+            summary: 'Display the specified user info.'
             description: ''
             parameters:
                 -
@@ -3547,10 +3440,10 @@ paths:
                                 properties:
                                     message: { type: string, example: Unauthenticated. }
             tags:
-                - User
+                - Users
             security: []
         put:
-            summary: 'Update the specified resource in storage.'
+            summary: 'Update the information'
             description: ''
             parameters:
                 -
@@ -3569,36 +3462,14 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - User
-            security: []
-        delete:
-            summary: 'Remove the specified resource from storage.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
+                - Users
             security: []
         parameters:
             -
                 in: path
                 name: user
                 description: ''
-                example: earum
+                example: nesciunt
                 required: true
                 schema:
                     type: string

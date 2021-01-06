@@ -30,13 +30,14 @@ class OrderApiController extends Controller
     }
     /**
      * Store a newly created order in storage
-     * @param  double  price
-     *  @param  string  address
-     * @param double delivery_charge
-     * @param string comment optional
-     * @param object[] orderItems
-     * for orderItems object require order_name,current_price,quanitty
+
      * @param  \Illuminate\Http\Request  $request
+     * @bodyParam  price  double required
+     * @bodyParam  address string required
+     * @bodyParam delivery_charge double required
+     * @bodyParam comment string
+     * @bodyParam orderItems object[] required
+     * for orderItems object require order_name,current_price,quanitty
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -71,7 +72,7 @@ class OrderApiController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @param int status
+     * @bodyParam status int required
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -79,17 +80,17 @@ class OrderApiController extends Controller
         //
         $order = Order::where('id',$id)->update($request->all());
         return $order;
-    }
+    }   
 
  /**
      * display order items
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @bodyParam  order_id  int
      * @return \Illuminate\Http\Response
      */
     public function getOrderItems(Request $request)
-    {
+    {   
         $id = Auth::user()->id;
         if($id){
             $items = new OrderItemResource(OrderItem::where('order_id', $request->order_id)->get());

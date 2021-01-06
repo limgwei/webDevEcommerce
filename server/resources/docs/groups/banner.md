@@ -1,11 +1,11 @@
 # Banner
 
-APIs for manage banners
+APIs for user view banners
 
-## Display Banner and link to category or product.
+## Display all banner and link to category or product.
 
 
-
+a
 
 > Example request:
 
@@ -63,7 +63,7 @@ fetch(url, {
 </form>
 
 
-## Display the specified resource.
+## DDisplay specific banner and link to category or product.
 
 
 
@@ -72,14 +72,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "/api/banner/perferendis" \
+    -G "/api/banner/cumque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "/api/banner/perferendis"
+    "/api/banner/cumque"
 );
 
 let headers = {
