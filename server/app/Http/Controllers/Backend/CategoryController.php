@@ -96,11 +96,14 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {   $banner = Banner::where('category_id',$id)->get();
-        $subcategory=SubCategory::where('category_id',$id)->get();;
+        $subcategory=SubCategory::where('category_id',$id)->where('is_enable',1)->get();;
 
-        if($banner->isEmpty() && $subcategory->isEmpty()){
-            Category::where('id',$id)->delete();
-
+        if($subcategory->isEmpty()){
+            $banner->delete();
+            $category = Category::find($id);
+            $category->is_enable = 0;
+             $category->save();
+        
             return redirect()->route('category.index');
         }
         else{

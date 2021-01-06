@@ -21,7 +21,6 @@ class CreateOrdersTable extends Migration
             $table->double('delivery_charge');
             $table->string('comment')->nullable();
             $table->integer('status');
-            $table->string('promocode')->nullable();
             $table->timestamps();
             
         });

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\OrderItemResource;
 use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -35,6 +37,15 @@ class OrderController extends Controller
         
         $order = Order::with(['users'])->where('id',$id)->first();
         return view('order.show',compact('order','users'));
+    }
+
+    
+    public function getOrderItems($id)
+    {
+
+            $items = OrderItem::where('order_id', $id)->get();
+            return view('order.items',compact('items'));
+        
     }
 
 }

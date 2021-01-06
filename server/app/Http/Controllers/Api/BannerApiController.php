@@ -9,14 +9,14 @@ use Illuminate\Http\Request;
 /**
  * @group Banner
  *
- * APIs for manage banners
+ * APIs for user view banners
  */
 class BannerApiController extends Controller
 {
    
     /**
-     * Display Banner and link to category or product.
-     *
+     * Display all banner and link to category or product.
+     * a
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -26,7 +26,7 @@ class BannerApiController extends Controller
 
    
     /**
-     * Display the specified resource.
+     * DDisplay specific banner and link to category or product.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

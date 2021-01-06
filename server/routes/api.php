@@ -1,13 +1,16 @@
 <?php
 
 use App\Http\Controllers\Api\DiscountProductApiController;
+use App\Http\Controllers\Api\OrderApiController;
 use App\Http\Controllers\Api\ProductApiController;
 use App\Http\Controllers\Api\SubCategoryApiController;
+use App\Http\Controllers\Api\BannerApiController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 
 // Authentication Routes...
   Route::post('/register', [RegisterController::class,'register']);
@@ -53,7 +57,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     Route::get('discount_product/sub/{id}/price',[DiscountProductApiController::class,'sub_order_by_price']);
     Route::get('discount_product/sub/{id}/priceD',[DiscountProductApiController::class,'sub_order_by_priceD']);
     
-    Route::apiResource('product','ProductApiController');
+    Route::apiResource('product','ProductApiController',array("as" => "api"));
     Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
     Route::get('product/sub/{id}',[ProductApiController::class,'sub']);
     Route::get('product/latest',[ProductApiController::class,'product_latest']);
@@ -69,21 +73,22 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
 
     Route::apiResource('cart','CartApiController');
 
-    Route::apiResource('banner','BannerApiController');
+    Route::apiResource('banner','BannerApiController',array("as" => "api"));
 
-    Route::apiResource('category','CategoryApiController');
+    Route::apiResource('category','CategoryApiController',array("as" => "api"));
 
-    Route::apiResource('chat','ChatApiController');
+    Route::apiResource('chat','ChatApiController',array("as" => "api"));
 
-    Route::apiResource('order','OrderApiController');
+    Route::apiResource('order','OrderApiController',array("as" => "api"));
+    Route::post('order/orderItems/{id}',[OrderApiController::class,'getOrderItems']);
 
-    Route::apiResource('order_item','OrderItemApiController');
+   
 
-    Route::apiResource('sub_category','SubCategoryApiController');
+    Route::apiResource('sub_category','SubCategoryApiController',array("as" => "api"));
     Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
     Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
 
-    Route::apiResource('user','UserApiController');
+     Route::apiResource('user','UserApiController',array("as" => "api"));
 
     
  

@@ -16,7 +16,7 @@ class UserApiController extends Controller
 {   
 
     /**
-     * Display the specified resource.
+     * Display the specified user info.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -27,7 +27,7 @@ class UserApiController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the information
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -37,6 +37,17 @@ class UserApiController extends Controller
     {   
         
         $user->update($request->all);
+        
+    }
+
+     /**
+     * Update the image
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param   file image
+     * @return \Illuminate\Http\Response
+     */
+    public function updateImage(Request $request, User $user){
         $file = $request->file('image');
         $imageCount = count($request->file('image'));
 
@@ -51,18 +62,5 @@ class UserApiController extends Controller
             $user->addMedia($file[$i])->toMediaCollection('image');
    
        }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        User::where('id',$id)->delete();
-    }
-
-    
+    }    
 }

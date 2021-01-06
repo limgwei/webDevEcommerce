@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Banner;
+use App\Models\Cart;
 use App\Models\DiscountProduct;
 use App\Models\Product;
 use App\Models\SubCategory;
@@ -200,22 +201,14 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {  
-        $banner = Banner::where('product_id',$id)->get();
-        $discountProduct=DiscountProduct::where('product_id',$id)->get();
-        
-        if($banner->isEmpty() && $discountProduct->isEmpty()){
+        Banner::where('product_id',$id)->delete();
+        DiscountProduct::where('product_id',$id)->delete();
+        Cart::where('product_id',$id)->delete();
+   
             $product = Product::find($id);
                 $product->is_enable = 0;
                  $product->save();
-
-            return redirect()->route('product.index');
-        }
-        else{
-            $error = "You have to delete banners or discount product related before delete this product.";
-            return redirect()->route('product.index',['error'=>$error]);
-        }
-        
-      
+            return redirect()->route('product.index');   
     }
 
     public function storeCKEditorImages(Request $request)

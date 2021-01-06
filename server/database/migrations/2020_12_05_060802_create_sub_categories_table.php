@@ -20,6 +20,7 @@ class CreateSubCategoriesTable extends Migration
             $table->integer('parent_id')->nullable();
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
+            $table->integer('is_enable')->default('1');
         });
     }
 

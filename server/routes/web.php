@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    
-    return redirect()->route('login');
-});
+// Route::get('/', function () {
+//     return view('auth.register');
+//     return redirect()->route('login');
+// });
 
 ///Auth::routes();
 Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkValid'],function(){
@@ -32,6 +33,7 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
     Route::resource('product','ProductController');
     Route::resource('subcategory','SubCategoryController');
     Route::resource('user','UserController');
+    Route::get('order/orderItems/{id}',[OrderController::class,'getOrderItems']);
 });
 
  // Route::get('/login',LoginController::class,'login')->name('login');
