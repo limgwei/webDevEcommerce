@@ -25,14 +25,16 @@ class ChatController extends Controller
         
         
         
-        return view('chat.view',compact('chatMessages','user'));
+        return view('chat.view',compact('chatMessages','user','roomId'));
     }
 
     public function newMessage(Request $request,$roomId){
-        $newMessage = new ChatMessage;
-        $newMessage->user_id = Auth::id();
+        
+        $newMessage = new ChatMessage();
+        $newMessage->user_id = $request->user_id;
         $newMessage->chat_room_id = $roomId;
         $newMessage->message = $request->message;
+        $newMessage->is_admin = 1;
         $newMessage->save();
         
         broadcast(new newChatMessage($newMessage))->toOthers();

@@ -38,7 +38,7 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
 
     // Route::get('/chat/rooms',[ChatController::class,'rooms']);
      Route::get('/chat/{roomId}',[ChatController::class,'messages']);
-    // Route::post('/chat/room/{roomId}/message',[ChatController::class,'newMessage']);
+    Route::post('/chat/{roomId}',[ChatController::class,'newMessage']);
 
     Route::get('/chat',[ChatController::class,'rooms']);
     
