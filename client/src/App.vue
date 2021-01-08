@@ -26,13 +26,14 @@ export default {
   *{
     padding: 0;
     margin: 0;
-
+   box-sizing: border-box;
   }
   html{
     font-size: 62.5%;
   }
   body{
     font-family: 'Nunito', sans-serif;
+    background-color: rgb(247, 247, 247);
   }
 
   .container{

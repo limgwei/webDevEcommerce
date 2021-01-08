@@ -33,6 +33,9 @@ export default {
             {id:'1',name: 'White Sofa',category:'sofa',img: require('@/assets/slide1.jpg'),price:'1800',description:'a sofa',discount:{value:'200'}}
             
         }
+    },
+    created:{
+        //api link
     }
 }
 </script>
