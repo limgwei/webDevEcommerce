@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'product', params: { id: product.id } }" class="product-list">
+    <router-link :to="{ name: 'product.detail', params: { id: product.id } }" class="product-list">
                 <img :src="product.img" alt="description" />
                 <h2>Product</h2>
                 <p>Description</p>
@@ -24,16 +24,17 @@ export default {
  
 
  .product-list{
-  align-items: center;
+  align-items: start;
   display: flex;
   flex-direction: column;
-  margin: 10px 5px;
+  padding: 10px 5px;
   background: white;
-
-    
+  color: black;
+  text-decoration: none;
+   width: 25%;
   img{
-      width: 220px;
-      height: 220px;
+      width: 100%;
+      height: 20rem;
   }
  }
 

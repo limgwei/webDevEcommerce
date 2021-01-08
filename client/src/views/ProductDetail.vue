@@ -17,7 +17,27 @@
                 <span v-if="product.discount">
                     <h3 class="discount">RM {{product.price - product.discount.value}}</h3>
                 </span>
+
+                <div class="input-group">
+                    <font-awesome-icon 
+                    @click="addQuantity"
+                    :icon="['fas','plus']" 
+                    class="small-icon" />
+
+    
+                    <span class="quantity">{{ quantity }}</span>
+
+                    <font-awesome-icon 
+                    @click="subQuantity"
+                    :icon="['fas','minus']" 
+                    class="small-icon" />
+                    <button @click="clearQuantity" class="btn btn-add"> Add To Cart</button>
+            
+                </div>
+                
             </div>
+
+            
         </div>
 
     </div>
@@ -30,10 +50,39 @@ export default {
     data(){
         return{
             product:
-            {id:'1',name: 'White Sofa',category:'sofa',img: require('@/assets/slide1.jpg'),price:'1800',description:'a sofa',discount:{value:'200'}}
+            {id:'1',name: 'White Sofa',category:'sofa',img: require('@/assets/slide1.jpg'),price:'1800',description:'a sofa',discount:{value:'200'}},
+            quantity: 0,
             
         }
     },
+    methods:{
+        // async APIHAHA(id) {
+        //     const product = await APIHAHA( id )
+        //     this.product = product;      
+        //     this.PAGE_TITLE(this.product.name);
+        // }
+
+        addQuantity(){
+            this.quantity++
+        },
+        subQuantity(){
+            if(this.quantity!=0){
+                
+                this.quantity--
+            }
+        },
+        clearQuantity(){
+            this.quantity =0
+        },
+    },
+    // async mounted(){
+    //     if (this.$route.params.id) {
+    //         await this.APIHAHA(this.$route.params.id)
+            
+    //     } else {
+    //         this.$router.go(-1)
+    //         }
+    // },
     created:{
         //api link
     }
@@ -46,11 +95,12 @@ export default {
         justify-content: flex-start;
         padding-top: 7rem;
         img{
-            width: 40vw;
+            width: 30vw;
         }
 
         .detail-container{
-            padding: 2rem;
+            padding: 3rem;
+            width: 40%;
             h2{
                 font-size: 300%;
             }
@@ -80,6 +130,21 @@ export default {
             background-color:yellow;
             box-shadow: .2rem .2rem red;
             font-weight:700;
+        }
+
+        .input-group{
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+            
+        }
+
+        .btn-add{
+            padding: 1rem;
+            border-radius: 20px;
+            &:hover{
+            border: black solid 1px;
+            }
         }
     }
     

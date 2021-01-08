@@ -60,10 +60,10 @@ export default {
     padding: .5rem;
     background: none;
     border: rgb(100, 100, 100) solid 0.1rem;
-    border-radius: 10%;
+    border-radius: 20px;
     &:hover{
       background: rgb(235, 235, 235);
-      border: rgb(235,235,235) solid 0.1rem;
+      border: rgb(0,0,0) solid 0.1rem;
     }
 
   }
