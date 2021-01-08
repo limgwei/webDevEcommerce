@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 @isset ($error)
   {{$error}}
 @endisset
@@ -25,3 +27,5 @@
    
   </div>
 @endforeach
+
+@endsection

@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 
   <div style="border:1px solid black">
@@ -21,3 +23,5 @@
 
    
   </div>
+
+  @endsection

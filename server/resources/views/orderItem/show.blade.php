@@ -1,6 +1,8 @@
 
 
+@extends ('layouts.app')
 
+@section ('content')
   <div style="border:1px solid black">
 
     <div>ID:{{$orderItem->id}}</div>
@@ -13,3 +15,5 @@
     <div>Order ID:{{$orderItem->order->id}}</div>
 
   </div>
+
+  @endsection

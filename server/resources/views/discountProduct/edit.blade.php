@@ -1,6 +1,8 @@
 
 
+@extends ('layouts.app')
 
+@section ('content')
 <form action="/discountProduct/{{$discountProduct->id}}" method="post" enctype="multipart/form-data">
 @method('PUT')
 @csrf
@@ -24,3 +26,5 @@
 
 <button>submit</button>
 </form>
+
+@endsection

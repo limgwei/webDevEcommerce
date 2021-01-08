@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 @foreach($discountProducts as $discountProduct)
   <div style="border:1px solid black">
@@ -14,3 +16,5 @@
     <div>End date:{{$discountProduct->end_date}}</div>
   </div>
 @endforeach
+
+@endsection

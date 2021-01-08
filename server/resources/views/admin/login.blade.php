@@ -1,3 +1,6 @@
+@extends ('layouts.app')
+
+@section ('content')
 require
 
 <form action="/login" method="post">
@@ -10,3 +13,4 @@ username <input type="text" name="username">
 password <input type="text" name="password">
 <button type="submit">Submit</button>
 </form>
+@endsection

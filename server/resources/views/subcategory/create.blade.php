@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 <form action="/subcategory" method="post">
 
@@ -29,6 +31,8 @@ Fields require when post <br>
   </select>
 
 </div>
+
+@endsection
 
 <button>submit</button>
 </form>

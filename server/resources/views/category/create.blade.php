@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 <form action="/category" method="post">
 @csrf
@@ -10,3 +12,4 @@ Fields require when post <br>
 
 <button>submit</button>
 </form>
+@endsection

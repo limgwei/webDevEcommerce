@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 
 
 <form action="/banner" method="post" enctype="multipart/form-data">
@@ -29,3 +31,5 @@ Fields require when post <br>
 </div>
 <button>submit</button>
 </form>
+
+@endsection

@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 
 @isset ($error)
   {{$error}}
@@ -12,3 +14,5 @@
     <div>Name:{{$category->name}}</div>
   </div>
 @endforeach
+
+@endsection

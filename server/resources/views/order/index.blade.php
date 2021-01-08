@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 
 @foreach($orders as $order)
   <div style="border:1px solid black">
@@ -15,3 +17,5 @@
     <div>Status:{{$order->user->name}}</div>
   </div>
 @endforeach
+
+@endsection

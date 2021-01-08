@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 
 
 <form action="/subcategory/{{$subcategory->id}}" method="post" enctype="multipart/form-data">
@@ -32,3 +34,5 @@ Fields require when post <br>
 
 <button>submit</button>
 </form>
+
+@endsection

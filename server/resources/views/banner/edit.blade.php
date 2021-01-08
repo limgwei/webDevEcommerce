@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 <form action="/banner/{{$banner->id}}" method="post" enctype="multipart/form-data">
 @method('PUT')
@@ -45,3 +47,4 @@ Fields require when post <br>
 </div>
 <button>submit</button>
 </form>
+@endsection

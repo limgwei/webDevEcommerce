@@ -1,4 +1,6 @@
+@extends ('layouts.app')
 
+@section ('content')
 
 @foreach($orderItems as $orderItem)
   <div style="border:1px solid black">
@@ -14,3 +16,5 @@
 
   </div>
 @endforeach
+
+@endsection

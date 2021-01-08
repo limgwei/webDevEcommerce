@@ -1,6 +1,8 @@
 
 
+@extends ('layouts.app')
 
+@section ('content')
 @foreach($banners as $banner)
   <div style="border:1px solid black">
 
@@ -24,3 +26,4 @@
    
   </div>
 @endforeach
+@endsection ('content')

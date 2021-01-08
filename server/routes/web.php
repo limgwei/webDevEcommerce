@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\OrderController;
+use App\Http\Controllers\Backend\ChatController;
 use Illuminate\Support\Facades\Route;
+//use App\Http\Controllers\ChatController;
 
 
 /*
@@ -16,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
+ Route::get('/', function () {
 //     return view('auth.register');
-//     return redirect()->route('login');
-// });
+    return redirect()->route('login');
+ });
 
 ///Auth::routes();
 Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkValid'],function(){
@@ -33,7 +35,17 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
     Route::resource('subcategory','SubCategoryController');
     Route::resource('user','UserController');
     Route::get('order/orderItems/{id}',[OrderController::class,'getOrderItems']);
+
+    // Route::get('/chat/rooms',[ChatController::class,'rooms']);
+     Route::get('/chat/{roomId}',[ChatController::class,'messages']);
+    // Route::post('/chat/room/{roomId}/message',[ChatController::class,'newMessage']);
+
+    Route::get('/chat',[ChatController::class,'rooms']);
+    
+
 });
+
+
 
  // Route::get('/login',LoginController::class,'login')->name('login');
   Route::get('/login',[LoginController::class,'loginForm'])->name('login');

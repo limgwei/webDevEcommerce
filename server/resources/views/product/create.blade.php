@@ -1,5 +1,7 @@
 
+@extends ('layouts.app')
 
+@section ('content')
 
 <form action="/product" method="post" enctype="multipart/form-data">
 @csrf
@@ -24,3 +26,5 @@ Fields require when post <br>
 
 <button>submit</button>
 </form>
+
+@endsection
