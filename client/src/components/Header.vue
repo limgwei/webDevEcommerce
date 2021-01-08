@@ -4,6 +4,7 @@
         <div class="container">
             <img src="../assets/logo.png" alt="logo" class="logo">
 
+            <!-- check token(if true go to profile) -->
             <button @click="showModal" class="avatarbtntext">
                 <Avatar />
             </button>
@@ -15,7 +16,8 @@
               </router-link>
             </button>
             
-            <font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" />
+            <!-- check token(if false go to login) -->
+            <router-link to="/cart"><font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" /></router-link>
   
         </div>
     </header>

@@ -2,7 +2,6 @@
   <div class="Cart">
     <table>
       <tr>
-        <th><strong>√</strong></th>
         <th class="tablesize1">Product</th>
         <th class="tablesize2">Unit Price (RM)</th>
         <th class="tablesize3">Quantity</th>
@@ -11,7 +10,6 @@
       </tr>
 
       <tr v-for="(item, index) in items" :key="item.id">
-        <td><input type="checkbox" class="checkboxset"></td>
         <td class="tablecontent">{{item.product}}</td>
         <td class="tablecontent">{{item.unitprice | showPrice}}</td>
         <td class="tablecontentquantity">
@@ -26,8 +24,6 @@
     </table>
 
     <div class="buydiv" v-if="items.length">
-      <label class="buylabel">Discount : </label>
-      <strong class="buydiscount">RM {{discount | showPrice}}</strong>
       <label class="buylabel">Total Price (Now) :</label>
       <strong class="buytotal">RM {{buytotal | showPrice}}</strong>
       <button class="buybtn">Buy</button>
@@ -47,8 +43,7 @@ export default {
         {product:'Bed',unitprice:135,quantity:1,totalprice:0},
         {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
         {product:'Knife',unitprice:28,quantity:1,totalprice:0}
-      ],
-      discount:1
+      ]
     }
   },
   methods: {
@@ -72,14 +67,26 @@ export default {
       for (let i=0;i<this.items.length;i++){
         buytotal+=this.items[i].totalprice
       }
-      return buytotal-this.discount
+      return buytotal
     }
   },
   filters:{
     showPrice(price){
       return price.toFixed(2)
     }
-  }
+  },
+  // created(){
+  //     axious.get('http://127.0.0.1:8000/api/cart').then( data=>{
+          // items: [
+          //   {product:'Bed',unitprice:135,quantity:1,totalprice:0},
+          //   {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
+          //   {product:'Knife',unitprice:28,quantity:1,totalprice:0}
+          // ]
+  //       this.products =data.data;
+  //       console.log(this.products);
+  //     })
+    
+  // }
 }
 </script>
 
@@ -109,20 +116,13 @@ table th{
 }
 
 .tablesize1{
-  width: 29%;
+  width: 30%;
 }
 .tablesize2{
-  width: 18%;
+  width: 18.5%;
 }
 .tablesize3{
   width: 16.5%;
-}
-.checkboxset{
-  width: 100%;
-  margin: auto;
-}
-.checkboxset:hover{
-  cursor: pointer;
 }
 .tablecontent{
   text-align: center;
@@ -143,10 +143,6 @@ table th{
 .buylabel{
   display: inline-block;
   width: 100px;
-}
-.buydiscount{
-  display: inline-block;
-  width: 80px;
 }
 .buytotal{
   display: inline-block;

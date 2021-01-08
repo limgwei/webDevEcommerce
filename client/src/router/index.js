@@ -32,17 +32,16 @@ const routes = [
   },
   {
     path: '/Profile',
-    name: 'Profile',
     component: Profile,
     children:[
       {path:'/',redirect:'Edit'},
-      {path:'Edit',component: EditUser},
+      {path:'Edit', component: EditUser},
       {
         path:'History',
         component: History,
         name: 'History',
         children:[
-          {path: 'Profile/History/:id', name: 'History.Detail', component:HistoryDetail}
+          {path: 'HistoryDetail+id=:id', name: 'HistoryDetail', component:HistoryDetail}
         ]
       }
     ]

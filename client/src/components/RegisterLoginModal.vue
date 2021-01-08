@@ -36,22 +36,22 @@
           <div v-show="goLogin" class="card">
             <div class="carddiv">
               <label class="labelclasslogin">Username: </label>
-              <input type="text">
+              <input type="text" v-model="logusername">
             </div>
             <div class="carddiv">
               <label class="labelclasslogin">Password: </label>
-              <input type="password">
+              <input type="password" v-model="logpassword">
             </div>
           </div>
 
           <div v-show="goRegister" class="card">
             <div class="carddiv">
               <label class="labelclass">Username: </label>
-              <input type="text">
+              <input type="text" v-model="regusername">
             </div>
             <div class="carddiv">
               <label class="labelclass">Password: </label>
-              <input :type="isPassType ?'password':'text' ">
+              <input :type="isPassType ?'password':'text' " v-model="regpassword">
               <button @click="changeType">
                 <font-awesome-icon :icon="['fas','eye-slash']" v-if="isPassType"/>
                 <font-awesome-icon :icon="['fas','eye']" v-else/>
@@ -59,11 +59,11 @@
             </div>
             <div class="carddiv">
               <label class="labelclass">Email: </label>
-              <input type="email">
+              <input type="email" v-model="regemail">
             </div>
             <div class="carddiv">
-              <label class="labelclass">Phone Number: </label>
-              <input type="number">
+              <label class="labelclass">Address: </label>
+              <textarea v-model="regaddress"></textarea>
             </div>
           </div>
           
@@ -76,7 +76,7 @@
             <button
               type="button"
               class="btnsubmit"
-              @click="close"
+              @click="login(),close()"
               aria-label="Close modal"
               v-show="goLogin"
             >
@@ -86,7 +86,7 @@
             <button
               type="button"
               class="btnsubmit"
-              @click="register()"
+              @click="register(),close()"
               aria-label="Close modal"
               v-show="goRegister"
             >
@@ -109,7 +109,13 @@ import axious from 'axios';
       return{
         goLogin: true,
         goRegister: false,
-        isPassType:true
+        isPassType:true,
+        regusername:"",
+        regpassword:"",
+        regemail:"",
+        regaddress:"",
+        logusername:"",
+        logpassword:""
       }
     },
     methods: {
@@ -123,15 +129,19 @@ import axious from 'axios';
       changeType() {
         this.isPassType = !this.isPassType;
       },
+      login(){
+        console.log(this.logusername+" , "+this.logpassword)
+        //check token here
+      },
       register(){
         axious.post('http://127.0.0.1:8000/api/register',{
-        name:'gg',
-        email:'liqi@gmail.com',
-        address:'gg',
-        password:'yeah',
-        password_confirmation:'yeah'
+        name:this.regusername,
+        email:this.regemail,
+        address:this.regaddress,
+        password:this.regpassword,
+        password_confirmation:'yeah',
         })
-        
+        console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
       
       }
     },

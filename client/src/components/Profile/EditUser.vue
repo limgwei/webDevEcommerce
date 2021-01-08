@@ -14,26 +14,35 @@
       <table>
         <tr>
           <th><label>Username:</label></th>
-          <td class="texttd"><input type="text" disabled></td>
-          <td><button>Edit</button></td>
+          <td class="texttd"><input type="text" v-model="editusername" :disabled="this.isdisable1"></td>
+          <td>
+            <button v-if="isdisable1" @click="setdisable(1)">Edit</button>
+            <button v-else @click="setdisable(1);saveusername()">Save</button>
+          </td>
         </tr>
 
         <tr>
           <th><label>Password:</label></th>
-          <td class="texttd"><input type="password" disabled></td>
-          <td><button>Edit</button></td>
+          <td class="texttd"><input type="password" v-model="editpassword" :disabled="this.isdisable2"></td>
+          <td>
+            <button v-if="isdisable2" @click="setdisable(2)">Edit</button>
+            <button v-else @click="setdisable(2);savepassword()">Save</button>
+          </td>
         </tr>
 
         <tr>
           <th><label>Email:</label></th>
-          <td class="texttd"><input type="email" disabled></td>
+          <td class="texttd"><input type="email" v-model="editemail" disabled></td>
           <td></td>
         </tr>
 
         <tr>
-          <th><label>Phone Number:</label></th>
-          <td class="texttd"><input type="number" disabled></td>
-          <td><button>Edit</button></td>
+          <th><label>Address:</label></th>
+          <td class="texttd"><textarea v-model="editaddress" :disabled="this.isdisable3"></textarea></td>
+          <td>
+            <button v-if="isdisable3" @click="setdisable(3)">Edit</button>
+            <button v-else @click="setdisable(3);saveaddress()">Save</button>
+          </td>
         </tr>
       </table>
     </div>
@@ -48,8 +57,63 @@ import Avatar from '../Avatar';
 export default {
   name: 'EditUser',
   components: {
-    Avatar
+    Avatar,
+    
   },
+  data() {
+    return{
+      isdisable1:true,
+      isdisable2:true,
+      isdisable3:true,
+
+      editusername:"gwei",
+      editpassword:"loh",
+      editemail:"liqi",
+      editaddress:"yuanxuan"
+    }
+  },
+  // created(){
+  //   axious.get('http://127.0.0.1:8000/api/register').then( data=>{
+  //     this.editusername =data.data;
+  //     this.editpassword="loh",
+  //     this.editemail="loh",
+  //     this.editaddress="loh",
+  //   })
+  // },
+  methods:{
+    setdisable(num){
+      if(num==1){
+        this.isdisable1=!this.isdisable1
+        console.log(this.editusername)
+      }
+      else if(num==2){
+        this.isdisable2=!this.isdisable2
+        console.log(this.editpassword)
+      }
+      else if(num==3){
+        this.isdisable3=!this.isdisable3
+        console.log(this.editaddress)
+      }
+    },
+    saveusername(){
+      console.log(this.editusername+' this is the save btn1')
+      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
+      //   data.name = this.editusername;
+      // })
+    },
+    savepassword(){
+      console.log(this.editpassword+' this is the save btn2')
+      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
+      //   data.password = this.editpassword;
+      // })
+    },
+    saveaddress(){
+      console.log(this.editaddress+' this is the save btn3')
+      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
+      //   data.address = this.editaddress;
+      // })
+    }
+  }
 }
 </script>
 
@@ -101,6 +165,11 @@ export default {
     width: 85%;
     margin-left: 8%;
     height: 30px;
+  }
+  .texttd textarea{
+    width: 85%;
+    margin-left: 8%;
+    height: 60px;
   }
   table tr td button{
     height: 30px;

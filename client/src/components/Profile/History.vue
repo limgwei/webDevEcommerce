@@ -10,7 +10,7 @@
       <td class="tablecontent">{{item.ID}}</td>
       <td class="tablecontent">{{item.Date}}</td>
       <td class="tablecontent">{{item.TotalPrice}}</td>
-      <td><button class="historybtn"><router-link :to="{name:'History.Detail',params:{id:item.ID }}">Detail</router-link></button></td>
+      <td><router-link :to="{name:'HistoryDetail',params:{id:item.ID }}"><button class="historybtn">Detail</button></router-link></td>
     </tr>
   </table>
 </div>
@@ -34,7 +34,20 @@ export default {
     thedetailis(){
       this.thedetail=!this.thedetail
     }
-  }
+  },
+  // created(){
+  //     axious.get('http://127.0.0.1:8000/api/product').then( data=>{
+          // items: [
+          //   { ID: 53184, Date: '1 December 2020', TotalPrice: '38.40' },
+          //   { ID: 54835, Date: '8 December 2020', TotalPrice: '138.40' },
+          //   { ID: 54930, Date: '18 January 2020', TotalPrice: '58.40' },
+          //   { ID: 55184, Date: '30 January 2020', TotalPrice: '88.40' }
+          // ]
+  //       this.products =data.data;
+  //       console.log(this.products);
+  //     })
+    
+  // }
 }
 </script>
 
