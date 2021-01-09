@@ -1,18 +1,26 @@
 <template>
   <div class="Avatar">
 
-    <!-- <div v-if="" class=""><img></div> -->
-    <p class="noregisterimg">登录</p>
+    <div v-if="imgavatar!=null" class=""><img :src="imgavatar[0]"></div>
+    <p else class="noregisterimg">登录</p>
 
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Avatar',
-  // data () {
-    
-  // }
+  data () {
+    return{
+      imgavatar:[]
+    }
+  },
+  created(){
+    axios.get('http://localhost:8000/api/user/'+localStorage.token ).then( data=>{
+      this.imgavatar[0] =data.data.data;
+    })
+  }
 }
 </script>
 

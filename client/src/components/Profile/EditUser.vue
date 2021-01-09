@@ -6,7 +6,11 @@
     </div>
     <br>
     <div>
-      <center><button class="avatarBtnSet">Change Picture</button></center>
+      <input id="file" type="file" ref="file" v-on:change="handleFileUpload()">
+      <center>
+        <button class="avatarBtnSet" @click="changepicture()">Change Picture</button>
+        <button class="avatarBtnSet" @click="savepicture()">Save Picture</button>
+      </center>
     </div>
     <br>
 
@@ -67,6 +71,8 @@ export default {
       isdisable2:true,
       isdisable3:true,
 
+      avatarpicture:[],
+
       editusername:"",
       editpassword:"",
       editemail:"",
@@ -85,6 +91,19 @@ export default {
     })
   },
   methods:{
+    previewFiles(event) {
+      this.avatarpicture[0] = event.target.files;
+   },
+    changepicture(){
+      document.getElementById("fileUpload").click()
+    },
+    savepicture(){
+      axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
+        {image:this.avatarpicture[0]}
+      ).then(data=>{
+        console.log(data);
+      })
+    },
     setdisable(num){
       if(num==1){
         this.isdisable1=false

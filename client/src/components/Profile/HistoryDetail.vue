@@ -1,38 +1,34 @@
 <template class="HistoryDetail">
-<div>
+<div class="main">
   <h2>ID: {{ID}}</h2>
   <table>
     <tr class="tabletitle">
-      <th></th>
-      <th>Product Name</th>
-      <th>Unit</th>
-      <th>Unit Price (RM)</th>
-      <th>Total Price (RM)</th>
+      <th class="tablecontent1">No</th>
+      <th class="tablecontent2">Order Name</th>
+      <th class="tablecontent3">Quantity</th>
+      <th class="tablecontent3">Current Price (RM)</th>
     </tr>
     <tr v-for="(item, index) in items" :key="item.index">
       <td class="tablecontent1">{{index+1}}</td>
-      <td class="tablecontent2">{{item.name}}</td>
-      <td class="tablecontent3">{{item.unit}}</td>
-      <td class="tablecontent3">{{item.unitprice | showPrice}}</td>
-      <td class="tablecontent3">{{totalprice(index) | showPrice}}</td>
+      <td>{{item.order_name}}</td>
+      <td class="tablecontent3">{{item.quantity}}</td>
+      <td class="tablecontent3">{{item.current_price | showPrice}}</td>
     </tr>
   </table>
+  <br><br>
+  <router-link to="/Profile/History" style="text-decoration: none;"><button class="backbtn">Back</button></router-link>
 </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'HistoryDetail',
   
   data() {
       return {
-        ID:53888,
-        items: [
-          { name: 'sofa(yellow)', unit: 5, unitprice: 80.40},
-          { name: 'sofa(black)', unit: 4, unitprice: 80},
-          { name: 'sofa(red)', unit: 3, unitprice: 81.70},
-          { name: 'sofa(blue)', unit: 2, unitprice: 100}
-        ]
+        ID:"",
+        items: ""
       }
   },
   filters:{
@@ -45,11 +41,24 @@ export default {
       this.items[index].totalprice=this.items[index].unit*this.items[index].unitprice
       return this.items[index].totalprice
     }
+  },
+  created(){
+     
+      axios.get('http://127.0.0.1:8000/api/order/orderItems/'+ this.$route.params.id ).then( data=>{
+
+        this.items =data.data.data;
+        this.ID = this.$route.params.id;
+        console.log(this.items);
+      })
   }
 }
 </script>
 
 <style scoped>
+.main{
+  margin-left: 20%;
+  margin-top: 15px;
+}
 table {
   width: 80%;
   font-size: 14px;
@@ -58,15 +67,27 @@ table {
   background: rgb(155, 218, 247);
 }
 .tablecontent1{
-  width: 5%;
+  width: 10%;
+  text-align: center;
 }
 .tablecontent2{
-  width: 35%;
+  width: 50%;
 }
 .tablecontent3{
   width: 20%;
+  text-align: center;
 }
 .tablediv tr td {
   text-align: center;
+}
+.backbtn{
+  width: 80px;
+  border-color: aqua;
+  outline: none;
+}
+.backbtn:hover{
+  cursor: pointer;
+  background-color: aqua;
+  color: white;
 }
 </style>

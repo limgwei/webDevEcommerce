@@ -64,5 +64,6 @@ li .sidefont {
 
 li .sidefont:hover {
   background-color: #111;
+  cursor: pointer;
 }
 </style>

@@ -40,7 +40,7 @@ const routes = [
       }
     ]
   },
-   {path: '/Profile/History/HistoryDetail',name:'HistoryDetail', component:HistoryDetail},
+   {path: '/Profile/History/HistoryDetail/:id',name:'HistoryDetail', component:HistoryDetail},
   {
     path:'/Cart',
     name:'Cart',
