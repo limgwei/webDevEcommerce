@@ -36,7 +36,7 @@ class OrderApiController extends Controller
         $orders = Order::where('user_id',$id)->get();
         foreach($orders as $order){
            
-            $order->updated_date = date('Y-m-d',strtotime($order->updated_at));
+            $order->updated_at = date('Y-m-d',strtotime($order->updated_at));
         }
         return new OrderResource($orders);
     }
