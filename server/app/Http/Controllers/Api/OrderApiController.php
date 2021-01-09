@@ -31,7 +31,11 @@ class OrderApiController extends Controller
         //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
-        return new OrderResource(Order::where('user_id',$id)->get());
+        $orders = Order::where('user_id',$id)->get();
+        foreach($orders as $order){
+            $order->updated_date = date('Y-m-d',$order->updated_date);
+        }
+        return new OrderResource($orders);
     }
     /**
      * Store a newly created order in storage
