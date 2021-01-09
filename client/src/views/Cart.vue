@@ -85,6 +85,7 @@ export default {
         orderItem.order_name = this.items[i].product.name;
         orderItem.current_price = this.items[i].product.price;
         orderItem.quantity = this.items[i].quantity;
+        orderItem.cartId = this.items[i].id;
         var copy = Object.assign({}, orderItem);
         this.orderItems.push(copy);
       }
@@ -95,6 +96,9 @@ export default {
           address:this.address,
           comment:this.comment,
           orderItems:this.orderItems
+        }).then(data=>{
+          console.log(data);
+          this.$router.push({ name: 'Home' })
         })
  
     

@@ -55,9 +55,11 @@ class OrderApiController extends Controller
         $order = Order::create($request->all());
 
         foreach($request->orderItems as $orderItem){
+           
             $orderItem['order_id'] = $order->id;
             OrderItem::create($orderItem);
-            Cart::where('id',$orderItem->cartId)->delete();
+            
+            Cart::where('id',$orderItem['cartId'])->delete();
         }
 
         return response(200);
