@@ -36,9 +36,10 @@ class UserApiController extends Controller
      * @bodyParam image file[]
      * @return \Illuminate\Http\Response
      */
-    public function updateImage(Request $request){
+    public function updateImage(Request $request,$token){
         $file = $request->file('image');
-        $user = Auth::user();
+        $user = User::where('remember_token',$token)->first();
+       
         
         $imageCount = count($request->file('image'));
         
@@ -66,11 +67,10 @@ class UserApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $token)
     {   
-        
-        $user->update($request->all);
-        
+        $user = User::where('remember_token',$token)->first();
+        $user->update($request->all);   
     }
 
     public function storeCKEditorImages(Request $request)

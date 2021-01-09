@@ -44,8 +44,27 @@ Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])
 
 //require user auth
 //Route::apiResource('cart','App\Http\Controllers\Api\CartApiController',array("as" => "api"));    
-Route::apiResource('order','App\Http\Controllers\Api\OrderApiController',array("as" => "api"));
+//Route::apiResource('order','App\Http\Controllers\Api\OrderApiController',array("as" => "api"));
 Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
+
+Route::get('/order/{token}',[UserApiController::class,'index']);
+Route::put('/order/image/{token}',[UserApiController::class,'updateImage']);
+Route::put('/order/{id}',[UserApiController::class,'update']);
+Route::get('/order/{id}',[UserApiController::class,'show']);
+
+
+Route::get('/order/{token}',[OrderApiController::class,'index']);
+Route::post('/order/{token}',[OrderApiController::class,'store']);
+Route::put('/order/{id}',[OrderApiController::class,'update']);
+Route::get('/order/{id}',[OrderApiController::class,'show']);
+
+
+Route::get('/order/{token}',[CartApiController::class,'index']);
+Route::post('/order/{token}',[CartApiController::class,'store']);
+Route::put('/order/{id}',[CartApiController::class,'update']);
+Route::get('/order/{id}',[CartApiController::class,'show']);
+
+
 
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
