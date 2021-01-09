@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\OrderApiController;
 use App\Http\Controllers\Api\ProductApiController;
 use App\Http\Controllers\Api\SubCategoryApiController;
 use App\Http\Controllers\Api\BannerApiController;
+use App\Http\Controllers\Api\CartApiController;
 use App\Http\Controllers\Api\UserApiController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -41,29 +42,22 @@ Route::get('password/reset/{token}', [ResetPasswordController::class,'showResetF
 Route::get('/email/resend',[VerificationController::class,'resend'])->name('verification.resend');
 Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])->name('verification.verify');
 
+//require user auth
+//Route::apiResource('cart','App\Http\Controllers\Api\CartApiController',array("as" => "api"));    
+Route::apiResource('order','App\Http\Controllers\Api\OrderApiController',array("as" => "api"));
+Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
 
-
-Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], function () {
-
-    
-
-    Route::apiResource('cart','CartApiController');
-
-   
-
-    
-    Route::apiResource('order','OrderApiController',array("as" => "api"));
-    Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
-
-
-    
-    
-    Route::post('user/avatar',[UserApiController::class,'updateImage']);
-    Route::apiResource('user','UserApiController',array("as" => "api"));
-});
+Route::get('/cart/{token}',[CartApiController::class,'index']);
+Route::post('/cart/{token}',[CartApiController::class,'store']);
+Route::put('/cart/{id}/{token}',[CartApiController::class,'update']);
+Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
 
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
+Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
+Route::post('user/avatar',[UserApiController::class,'updateImage']);
+
+
 
 Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
 Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);

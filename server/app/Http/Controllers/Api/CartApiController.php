@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use Illuminate\Http\Request;
 use App\Http\Resources\CartResource;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -22,11 +23,11 @@ class CartApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($token)
     {
-        $id = Auth::user()->id;
+        $user = User::where('remember_token',$token)->first();
         
-        return new CartResource(Cart::with(['product'])->where('user_id',$id)->get());
+        return new CartResource(Cart::with(['product'])->where('user_id',$user->id)->get());
     }
     /**
      * Store a newly created cart in storage.
@@ -43,18 +44,6 @@ class CartApiController extends Controller
         $cart = Cart::create($request->all());
         return $cart;
            
-    }
-
-    /**
-     * Display the specified cart items.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $id = Auth::user()->id;
-        return new CartResource(Cart::with(['user','product'])->where('id',$id)->where('user_id',$id)->get());
     }
 
     /**
