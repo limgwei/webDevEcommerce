@@ -69,8 +69,11 @@ class UserApiController extends Controller
      */
     public function update(Request $request, $token)
     {   
+        
         $user = User::where('remember_token',$token)->first();
-        $user->update(array($request->all()));   
+        
+        $user->update($request->all());  
+    
     }
 
     public function storeCKEditorImages(Request $request)

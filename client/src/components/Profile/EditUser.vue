@@ -100,15 +100,21 @@ export default {
     saveusername(){
       if(this.editusername!=""){
       this.isdisable1=true
-      const id = this.$store.state.user.id;
-      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {name:this.editusername});
+      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, 
+      {name:this.editusername}).then( data=>{
+      console.log(data);
+      });
       }
     },
     savepassword(){
       if(this.editpassword!=""){
       this.isdisable2=true
-      const id = this.$store.state.user.id;
-      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {password:this.editpassword});
+      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {password:this.editpassword})
+      .then( data=>{
+      console.log(data);
+      
+      })
+
       }
     },
     saveaddress(){
