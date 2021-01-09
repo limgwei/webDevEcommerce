@@ -7,6 +7,7 @@ use App\Http\Resources\OrderItemResource;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -23,11 +24,12 @@ class OrderApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($token)
     {
         //
         //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
-        $id = Auth::user()->id;
+        $user = User::where('remember_token',$token)->first();
+        $id = $user->id;
         return new OrderResource(Order::where('user_id',$id)->get());
     }
     /**
@@ -42,10 +44,11 @@ class OrderApiController extends Controller
      * for orderItems object require order_name,current_price,quanitty
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$token)
     {
        
-        $id = Auth::user()->id;
+        $user = User::where('remember_token',$token)->first();
+        $id = $user->id;
         $request->merge(["user_id"=>$id]);
         $request->merge(["status"=>1]);
         $order = Order::create($request->all());
@@ -94,11 +97,10 @@ class OrderApiController extends Controller
      */
     public function getOrderItems(Request $request)
     {   
-        $id = Auth::user()->id;
-        if($id){
+        
             $items = new OrderItemResource(OrderItem::where('order_id', $request->order_id)->get());
             return $items;
-        }
+        
     }
 
 

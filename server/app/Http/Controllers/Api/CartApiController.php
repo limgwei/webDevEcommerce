@@ -26,8 +26,9 @@ class CartApiController extends Controller
     public function index($token)
     {
         $user = User::where('remember_token',$token)->first();
-        
-        return new CartResource(Cart::with(['product'])->where('user_id',$user->id)->get());
+        $id = $user->id;
+    
+        return new CartResource(Cart::with(['product'])->where('user_id',$id)->get());
     }
     /**
      * Store a newly created cart in storage.
@@ -36,10 +37,11 @@ class CartApiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$token)
     {
         //$request->request->add(['variable', 'value']);
-        $id = Auth::user()->id;
+        $user = User::where('remember_token',$token)->first();
+        $id = $user->id;
         $request->merge(["user_id"=>$id]);
         $cart = Cart::create($request->all());
         return $cart;
@@ -54,9 +56,10 @@ class CartApiController extends Controller
      *  @bodyParam  quantity int 
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$token)
     {
-        $user_id = Auth::user()->id;
+        $user = User::where('remember_token',$token)->first();
+        $user_id = $user->id;
         $request->merge(["user_id"=>$user_id]);
 
         $cart = Cart::where('id',$id)->update($request->all());
