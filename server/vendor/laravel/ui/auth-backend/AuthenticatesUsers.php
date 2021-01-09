@@ -111,6 +111,8 @@ trait AuthenticatesUsers
             $this->clearLoginAttempts($request);
             $user->remember_token =date('H:i:s').$user->email;
             $user->save();
+
+            $user = Auth::user();
             if ($response = $this->authenticated($request, $this->guard()->user())) {
                 return $response;
             }
