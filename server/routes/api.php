@@ -49,7 +49,7 @@ Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as
 
 
 Route::put('/user/image/{token}',[UserApiController::class,'updateImage']);
-Route::put('/user/{id}',[UserApiController::class,'update']);
+Route::put('/user/{token}',[UserApiController::class,'update']);
 Route::get('/user/{id}',[UserApiController::class,'show']);
 
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 /**
  * @group Users
  *
@@ -69,8 +70,18 @@ class UserApiController extends Controller
      */
     public function update(Request $request, $token)
     {   
+        
         $user = User::where('remember_token',$token)->first();
-        $user->update(array($request->all()));   
+        if($request->password){
+            $user->fill([
+                'password'=>Hash::make($request->password)
+            ])->save(); 
+        }
+        else{
+            $user->update($request->all());  
+        }
+        
+    
     }
 
     public function storeCKEditorImages(Request $request)
