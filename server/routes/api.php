@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;   
-
+use App\Http\Controllers\Api\ChatApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -51,8 +51,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
 
    
 
-    Route::apiResource('chat','ChatApiController',array("as" => "api"));
-
+    
     Route::apiResource('order','OrderApiController',array("as" => "api"));
     Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
 
@@ -63,6 +62,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     Route::apiResource('user','UserApiController',array("as" => "api"));
 });
 
+Route::get('/chat',[ChatApiController::class,'messages']);
+Route::post('/chat',[ChatApiController::class,'newMessage']);
 
 Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
 Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);

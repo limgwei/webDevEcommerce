@@ -10,7 +10,7 @@ use App\Events\NewChatMessage;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class ChatController extends Controller
+class ChatApiController extends Controller
 {
     
 
@@ -25,8 +25,13 @@ class ChatController extends Controller
         
         $newMessage = new ChatMessage();
        
-        $user = Auth::user()->id;
-        $room = ChatRoom::where('user_id',$user)->first();
+        //$user = Auth::user()->id;
+
+        $room = ChatRoom::where('user_id',5)->first();
+        return $room;
+        if($room==""){
+            return 'gg';
+        }
         $newMessage->user_id = $request->user;
         $newMessage->chat_room_id = $room->id;
         $newMessage->message = $request->message;
