@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ChatController;

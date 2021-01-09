@@ -92,8 +92,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     Route::apiResource('user','UserApiController',array("as" => "api"));
     
     
- 
 });
 
-
+Route::post('stripe', [OrderApiController::class, 'stripePost']);
 

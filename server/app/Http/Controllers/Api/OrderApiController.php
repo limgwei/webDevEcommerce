@@ -9,6 +9,8 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
+use Stripe;
 /**
  * @group Order
  *
@@ -42,7 +44,7 @@ class OrderApiController extends Controller
      */
     public function store(Request $request)
     {
-        
+       
         $id = Auth::user()->id;
         $request->merge(["user_id"=>$id]);
         $request->merge(["status"=>1]);
@@ -52,6 +54,7 @@ class OrderApiController extends Controller
             $orderItem['order_id'] = $order->id;
             OrderItem::create($orderItem);
         }
+
         return $order;
            
     }
@@ -96,5 +99,25 @@ class OrderApiController extends Controller
             $items = new OrderItemResource(OrderItem::where('order_id', $request->order_id)->get());
             return $items;
         }
+    }
+
+
+
+    public function stripePost(Request $request)
+    {   
+        
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Charge::create ([
+                "amount" => $request->amount,
+                "currency" => "myr",
+                "source" => $request->stripeToken,
+                "description" => "Furniture Price" 
+        ]);
+  
+        Session::flash('success', 'Payment successful!');
+        
+
+        
+        return back();
     }
 }
