@@ -21,14 +21,7 @@ export default {
   },
   data(){
       return{
-        products:[
-            {id:'1',name: 'White Sofa',category:'sofa',img: require('@/assets/slide1.jpg'),price:'1800',description:'a sofa',discount:{value:'200'}},
-            {id:'2',name: 'Green Sofa',category:'table',img: require('@/assets/slide2.jpg'),price:'1800',description:'a sofa'},
-            {id:'3',name: 'Blue Sofa',category:'sofa',img:require('@/assets/slide3.jpg'),price:'1800',description:'a sofa'},
-            {id:'4',name: 'Yellow Sofa',category:'sofa',img:require('@/assets/slide1.jpg'),price:'1800',description:'a sofa'},
-            {id:'5',name: 'Purple Sofa',category:'sofa',img:require('@/assets/slide2.jpg'),price:'1800',description:'a sofa'},
-            {id:'6',name: 'Pink Sofa',category:'sofa',img:require('@/assets/slide3.jpg'),price:'1800',description:'a sofa'},
-        ],
+        products:'',
       }
   },
   methods:{
@@ -36,7 +29,8 @@ export default {
   },
   created(){
       axious.get('http://127.0.0.1:8000/api/product').then( data=>{
-        this.products = data.data;
+        this.products = data.data.data;
+        
         console.log(this.products);
       })
     

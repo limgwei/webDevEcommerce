@@ -1,9 +1,9 @@
 <template>
     <router-link :to="{ name: 'product.detail', params: { id: product.id } }" class="product-list">
-                <img :src="product.img" alt="description" />
-                <h2>Product</h2>
-                <p>Description</p>
-                <h2>Price</h2>
+                <img :src="product.image[0].url" alt="description" />
+                <h2>{{product.name}}</h2>
+                <p>{{product.description}}</p>
+                <h2>{{product.price}}</h2>
     </router-link>    
 </template>
 
@@ -24,7 +24,7 @@ export default {
  
 
  .product-list{
-  align-items: start;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   padding: 10px 5px;
