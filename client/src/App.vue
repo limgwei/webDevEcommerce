@@ -26,13 +26,14 @@ export default {
   *{
     padding: 0;
     margin: 0;
-
+   box-sizing: border-box;
   }
   html{
     font-size: 62.5%;
   }
   body{
     font-family: 'Nunito', sans-serif;
+    background-color: rgb(247, 247, 247);
   }
 
   .container{
@@ -59,10 +60,10 @@ export default {
     padding: .5rem;
     background: none;
     border: rgb(100, 100, 100) solid 0.1rem;
-    border-radius: 10%;
+    border-radius: 20px;
     &:hover{
       background: rgb(235, 235, 235);
-      border: rgb(235,235,235) solid 0.1rem;
+      border: rgb(0,0,0) solid 0.1rem;
     }
 
   }

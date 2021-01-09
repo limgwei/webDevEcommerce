@@ -35,8 +35,8 @@
           <slot name="body">
           <div v-show="goLogin" class="card">
             <div class="carddiv">
-              <label class="labelclasslogin">Username: </label>
-              <input type="text" v-model="logusername">
+              <label class="labelclasslogin">Email: </label>
+              <input type="email" v-model="logemail">
             </div>
             <div class="carddiv">
               <label class="labelclasslogin">Password: </label>
@@ -58,6 +58,10 @@
               </button>
             </div>
             <div class="carddiv">
+              <label class="labelclass">Confirm Password: </label>
+              <input type="password" v-model="regconpassword">
+            </div>
+            <div class="carddiv">
               <label class="labelclass">Email: </label>
               <input type="email" v-model="regemail">
             </div>
@@ -76,7 +80,7 @@
             <button
               type="button"
               class="btnsubmit"
-              @click="login(),close()"
+              @click="login()"
               aria-label="Close modal"
               v-show="goLogin"
             >
@@ -86,7 +90,7 @@
             <button
               type="button"
               class="btnsubmit"
-              @click="register(),close()"
+              @click="register()"
               aria-label="Close modal"
               v-show="goRegister"
             >
@@ -112,9 +116,10 @@ import axious from 'axios';
         isPassType:true,
         regusername:"",
         regpassword:"",
+        regconpassword:"",
         regemail:"",
         regaddress:"",
-        logusername:"",
+        logemail:"",
         logpassword:""
       }
     },
@@ -130,19 +135,28 @@ import axious from 'axios';
         this.isPassType = !this.isPassType;
       },
       login(){
-        console.log(this.logusername+" , "+this.logpassword)
-        //check token here
+        console.log(this.logemail+" , "+this.logpassword)
+        axious.post('http://127.0.0.1:8000/api/login',{
+          email:this.logemail,
+          password:this.logpassword
+          })
       },
       register(){
-        axious.post('http://127.0.0.1:8000/api/register',{
-        name:this.regusername,
-        email:this.regemail,
-        address:this.regaddress,
-        password:this.regpassword,
-        password_confirmation:'yeah',
-        })
-        console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
-      
+        if(this.regpassword==this.regconpassword){
+          axious.post('http://127.0.0.1:8000/api/register',{
+          name:this.regusername,
+          email:this.regemail,
+          address:this.regaddress,
+          password:this.regpassword,
+          password_confirmation:this.regconpassword,
+          })
+          this.$emit('close');
+          console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
+        }
+        else{
+          alert("Your password not match, please try again")
+          this.regconpassword=""
+        }
       }
     },
   }

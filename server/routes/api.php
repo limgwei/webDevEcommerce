@@ -10,7 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Auth\VerificationController;   
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -45,20 +45,49 @@ Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])
 
 Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], function () {
 
-    Route::apiResource('discount_product','DiscountProductApiController');
-    Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
-    Route::get('discount_product/latest',[DiscountProductApiController::class,'product_latest']);
-    Route::get('discount_product/name',[DiscountProductApiController::class,'order_by_name']);
-    Route::get('discount_product/nameD',[DiscountProductApiController::class,'order_by_nameD']);
-    Route::get('discount_product/price',[DiscountProductApiController::class,'order_by_price']);
-    Route::get('discount_product/priceD',[DiscountProductApiController::class,'order_by_priceD']);
-    Route::get('discount_product/sub/{id}/latest',[DiscountProductApiController::class,'sub_product_latest']);
-    Route::get('discount_product/sub/{id}/name',[DiscountProductApiController::class,'sub_order_by_name']);
-    Route::get('discount_product/sub/{id}/nameD',[DiscountProductApiController::class,'sub_order_by_nameD']);
-    Route::get('discount_product/sub/{id}/price',[DiscountProductApiController::class,'sub_order_by_price']);
-    Route::get('discount_product/sub/{id}/priceD',[DiscountProductApiController::class,'sub_order_by_priceD']);
     
-    Route::apiResource('product','ProductApiController',array("as" => "api"));
+
+    Route::apiResource('cart','CartApiController');
+
+   
+
+    Route::apiResource('chat','ChatApiController',array("as" => "api"));
+
+    Route::apiResource('order','OrderApiController',array("as" => "api"));
+    Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
+
+
+    
+    
+    Route::post('user/avatar',[UserApiController::class,'updateImage']);
+    Route::apiResource('user','UserApiController',array("as" => "api"));
+});
+
+
+Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
+Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
+Route::get('discount_product/latest',[DiscountProductApiController::class,'product_latest']);
+Route::get('discount_product/name',[DiscountProductApiController::class,'order_by_name']);
+Route::get('discount_product/nameD',[DiscountProductApiController::class,'order_by_nameD']);
+Route::get('discount_product/price',[DiscountProductApiController::class,'order_by_price']);
+Route::get('discount_product/priceD',[DiscountProductApiController::class,'order_by_priceD']);
+Route::get('discount_product/sub/{id}/latest',[DiscountProductApiController::class,'sub_product_latest']);
+Route::get('discount_product/sub/{id}/name',[DiscountProductApiController::class,'sub_order_by_name']);
+Route::get('discount_product/sub/{id}/nameD',[DiscountProductApiController::class,'sub_order_by_nameD']);
+Route::get('discount_product/sub/{id}/price',[DiscountProductApiController::class,'sub_order_by_price']);
+Route::get('discount_product/sub/{id}/priceD',[DiscountProductApiController::class,'sub_order_by_priceD']);
+
+
+Route::apiResource('banner','App\Http\Controllers\Api\BannerApiController',array("as" => "api"));
+
+Route::apiResource('category','App\Http\Controllers\Api\CategoryApiController',array("as" => "api"))         ;
+
+Route::apiResource('sub_category','App\Http\Controllers\Api\SubCategoryApiController',array("as" => "api"));
+Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
+Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
+
+
+Route::apiResource('product','App\Http\Controllers\Api\ProductApiController',array("as" => "api"));
     Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
     Route::get('product/sub/{id}',[ProductApiController::class,'sub']);
     Route::get('product/latest',[ProductApiController::class,'product_latest']);
@@ -72,27 +101,4 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     Route::get('product/sub/{id}/price',[ProductApiController::class,'sub_order_by_price']);
     Route::get('product/sub/{id}/priceD',[ProductApiController::class,'sub_order_by_priceD']);
 
-    Route::apiResource('cart','CartApiController');
-
-    Route::apiResource('banner','BannerApiController',array("as" => "api"));
-
-    Route::apiResource('category','CategoryApiController',array("as" => "api"));
-
-    Route::apiResource('chat','ChatApiController',array("as" => "api"));
-
-    Route::apiResource('order','OrderApiController',array("as" => "api"));
-    Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
-
-   
-
-    Route::apiResource('sub_category','SubCategoryApiController',array("as" => "api"));
-    Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
-    Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
-    Route::post('user/avatar',[UserApiController::class,'updateImage']);
-    Route::apiResource('user','UserApiController',array("as" => "api"));
-    
-    
-});
-
-Route::post('stripe', [OrderApiController::class, 'stripePost']);
 

@@ -21,6 +21,7 @@ class ProductApiController extends Controller
      */
     public function index()
     {
+        
         return new ProductResource(Product::with(['sub_category'])->get());
     }
 
