@@ -13,8 +13,9 @@ use App\Models\User;
 class ChatController extends Controller
 {
     public function rooms(Request $request){
+        
+        $chatRooms = ChatMessage::with('user')->groupBy('chat_room_id')->orderBy('created_at','DESC')->get();
        
-        $chatRooms = ChatRoom::with('user')->get();
         
         return view('chat.index',compact('chatRooms'));
     }
