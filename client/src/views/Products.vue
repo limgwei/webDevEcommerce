@@ -36,7 +36,7 @@ export default {
   },
   created(){
       axious.get('http://127.0.0.1:8000/api/product').then( data=>{
-        this.products =data.data;
+        this.products = data.data;
         console.log(this.products);
       })
     
