@@ -29,7 +29,6 @@ Fields require when post <br>
       @endforeach
   </select>
 
-  @endsection
 
 </div>
 
@@ -39,3 +38,6 @@ Fields require when post <br>
 
 <button>submit</button>
 </form>
+
+
+@endsection

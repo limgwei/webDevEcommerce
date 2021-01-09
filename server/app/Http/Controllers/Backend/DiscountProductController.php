@@ -84,7 +84,7 @@ class DiscountProductController extends Controller
      */
     public function update(Request $request,DiscountProduct $discountProduct)
     {
-        $discountProduct->update($request->all());
+        $discountProduct->update(array($request->all()));
         return redirect()->route('discountProduct.index');
     }
 

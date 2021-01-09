@@ -84,6 +84,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        //return $request->file('image');
         $product = Product::create($request->all());
 
         $file = $request->file('image');
@@ -171,7 +172,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $product->update($request->all);
+        //return $product;
+        
+        $product->update(array($request->all()));
         
 
        

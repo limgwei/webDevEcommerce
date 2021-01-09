@@ -182,7 +182,7 @@ class SubCategoryController extends Controller
      */
     public function update(Request $request, SubCategory $subcategory)
     {
-        $subcategory->update($request->all);
+        $subcategory->update(array($request->all()));
         return redirect()->route('subcategory.index');
     }
 

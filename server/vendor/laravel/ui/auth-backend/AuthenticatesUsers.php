@@ -112,11 +112,11 @@ trait AuthenticatesUsers
             $user->remember_token =date('H:i:s').$user->email;
             $user->save();
 
-            $user = Auth::user();
+            
             if ($response = $this->authenticated($request, $this->guard()->user())) {
                 return $response;
             }
-    
+            $user = Auth::user();
             return $user;
         }
         $request->session()->invalidate();

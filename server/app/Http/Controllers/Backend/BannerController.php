@@ -113,7 +113,7 @@ class BannerController extends Controller
      */
     public function update(Request $request, Banner $banner)
     {
-        $banner->update($request->all());
+        $banner->update(array($request->all()));
       
        
         $file = $request->file('image');
