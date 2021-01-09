@@ -1,6 +1,7 @@
 <template>
   <div class="Avatar">
 
+    <!-- <div v-if="" class=""><img></div> -->
     <p class="noregisterimg">登录</p>
 
   </div>

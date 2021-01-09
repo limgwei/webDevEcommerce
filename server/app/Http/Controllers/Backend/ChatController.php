@@ -15,12 +15,13 @@ class ChatController extends Controller
     public function rooms(Request $request){
        
         $chatRooms = ChatRoom::with('user')->get();
-        
+   
         return view('chat.index',compact('chatRooms'));
     }
 
     public function messages($roomId){
         $chatMessages =  ChatMessage::where('chat_room_id',$roomId)->with('user')->orderBy('created_at','DESC')->get();
+        
         $user = User::where('id',$chatMessages[0]->user_id)->first();
         
         

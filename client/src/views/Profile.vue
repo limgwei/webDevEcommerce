@@ -9,6 +9,7 @@
         <li>
           <router-link to="/Profile/History" class="sidefont">History</router-link>
         </li>
+        <li><p class="sidefont" @click="logout">Logout</p></li>
       </ul>
     </div>
 
@@ -21,8 +22,17 @@
 
 <script>
 // @ is an alias to /src
+
 export default {
-  name: 'Profile'
+
+  name: 'Profile',
+  methods:{
+    logout(){
+      this.$store.commit('setUser',{});
+      localStorage.token = "";
+      this.$router.push('/');
+    }
+  }
  
 }
 </script>

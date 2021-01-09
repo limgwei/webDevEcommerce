@@ -5,16 +5,17 @@
             <img src="../assets/logo.png" alt="logo" class="logo">
 
             <!-- check token(if true go to profile) -->
-            <button @click="showModal" class="avatarbtntext">
+            <button v-if="emptyUser"  @click="showModal" class="avatarbtn">
                 <Avatar />
             </button>
-            <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
-
-            <button class="avatarbtn">
+            <button v-else class="avatarbtn">
               <router-link to="/Profile" style="text-decoration:none">
                 <Avatar />
               </router-link>
             </button>
+            <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
+
+            
             
             <!-- check token(if false go to login) -->
             <router-link to="/cart"><font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" /></router-link>
@@ -27,6 +28,7 @@
 <script>
 import Avatar from './Avatar';
 import RegisterLoginModal from './RegisterLoginModal';
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Header',
@@ -37,6 +39,12 @@ export default {
       return {
         isModalVisible: false,
       }
+  },
+  computed: {
+    ...mapGetters(['getUser']),
+    emptyUser() {
+      return Object.keys(this.getUser).length === 0 && this.getUser.constructor === Object
+    }
   },
   methods: {
       showModal() {

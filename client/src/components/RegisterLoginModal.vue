@@ -1,7 +1,7 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <div class="RegisterLoginModal"
+      <div  class="RegisterLoginModal"
         role="dialog"
         aria-labelledby="modalTitle"
         aria-describedby="modalDescription"
@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import axious from 'axios';
+import axios from 'axios';
   
   export default {
     name: 'RegisterLoginModal',
@@ -134,16 +134,31 @@ import axious from 'axios';
       changeType() {
         this.isPassType = !this.isPassType;
       },
-      login(){
+      async login(){
         console.log(this.logemail+" , "+this.logpassword)
-        axious.post('http://127.0.0.1:8000/api/login',{
+        const {data:user} = await axios.post('http://127.0.0.1:8000/api/login',{
           email:this.logemail,
           password:this.logpassword
-          })
+        })
+        this.$store.commit('setUser',user);
+        console.log(this.$store.state.user);
+        localStorage.token = user.remember_token;
+
+        this.$emit('close');
+
+        // if(s){
+        // alert("Login successfully")
+        // this.$emit('close');
+        // }
+        // else{
+        //   alert("Login failed")
+        //   this.logemail=""
+        //   this.logpassword=""
+        // }
       },
       register(){
         if(this.regpassword==this.regconpassword){
-          axious.post('http://127.0.0.1:8000/api/register',{
+          axios.post('http://127.0.0.1:8000/api/register',{
           name:this.regusername,
           email:this.regemail,
           address:this.regaddress,
