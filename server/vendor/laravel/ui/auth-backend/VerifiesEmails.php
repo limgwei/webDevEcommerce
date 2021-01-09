@@ -33,7 +33,7 @@ trait VerifiesEmails
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function verify(Request $request)
-    {   
+    {
         if (! hash_equals((string) $request->route('id'), (string) $request->user()->getKey())) {
             throw new AuthorizationException;
         }

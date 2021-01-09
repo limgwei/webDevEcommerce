@@ -39,6 +39,7 @@ class UserApiController extends Controller
      */
     public function updateImage(Request $request,$token){
         $file = $request->file('image');
+        return $file;
         $user = User::where('remember_token',$token)->first();
        
         
