@@ -79,7 +79,7 @@ export default {
   },
   created(){
    // console.log(localStorage.token);
-      axios.get('http://127.0.0.1:8000/api/cart').then( data=>{
+      axios.get('http://127.0.0.1:8000/api/cart/'+ localStorage.token ).then( data=>{
 
           // items: [
           //   {product:'Bed',unitprice:135,quantity:1,totalprice:0},
@@ -87,7 +87,7 @@ export default {
           //   {product:'Knife',unitprice:28,quantity:1,totalprice:0}
           // ]
         this.items2 =data.data;
-        // console.log(this.item);
+        console.log(this.items2);
       })
     
   }

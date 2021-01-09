@@ -116,9 +116,10 @@ trait AuthenticatesUsers
             if ($response = $this->authenticated($request, $this->guard()->user())) {
                 return $response;
             }
-            $user = Auth::user();
+            
             return $user;
         }
+        
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();

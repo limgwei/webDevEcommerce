@@ -24,8 +24,9 @@ class CartApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($token)
-    {
+    {  
         $user = User::where('remember_token',$token)->first();
+        
         $id = $user->id;
     
         return new CartResource(Cart::with(['product'])->where('user_id',$id)->get());
