@@ -26,16 +26,16 @@
         
     </table>
 
-    <div class="comanddiv">
-      <p><strong>COMAND HERE</strong></p>
-      <textarea v-model="comment"></textarea>
-    </div>
-    <div class="addressdiv">
-      <p>Address</p>
-      <input type="text" v-model="address">
-    </div>
-
     <div class="buydiv" v-if="items.length">
+      <div class="comanddiv">
+        <p><strong>COMAND HERE</strong></p>
+        <textarea v-model="comment"></textarea>
+      </div>
+      <div class="addressdiv">
+        <p>Address</p>
+        <textarea v-model="address"></textarea>
+      </div>
+
       <label class="buylabel">Total Price (Now) :</label>
       <strong class="buytotal">RM {{buytotalfun | showPrice}}</strong>
       <label class="buylabel">Delivery charges :</label>
@@ -183,11 +183,14 @@ table th{
 .tablecontentquantity{
   text-align: center;
 }
-.comanddiv{
-  margin-top: 90px;
+.comanddiv textarea{
+  width: 350px;
+  height: 50px;
 }
-.addressdiv{
+.addressdiv textarea{
   margin-top: 5px;
+  width: 350px;
+  height: 50px;
 }
 .buydiv{
   margin-top: 10px;
