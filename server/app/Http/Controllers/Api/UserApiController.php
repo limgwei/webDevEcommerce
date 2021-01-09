@@ -8,6 +8,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 /**
  * @group Users
  *
@@ -71,8 +72,15 @@ class UserApiController extends Controller
     {   
         
         $user = User::where('remember_token',$token)->first();
+        if($request->password){
+            $user->fill([
+                'password'=>Hash::make($request->password)
+            ])->save(); 
+        }
+        else{
+            $user->update($request->all());  
+        }
         
-        $user->update($request->all());  
     
     }
 

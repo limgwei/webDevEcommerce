@@ -120,8 +120,12 @@ export default {
     saveaddress(){
       if(this.editaddress!=""){
       this.isdisable3=true
-      const id = this.$store.state.user.id;
-      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {address:this.editaddress});
+      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {address:this.editaddress})
+      .then( data=>{
+      console.log(data);
+      
+      })
+
       }
     }
   }
