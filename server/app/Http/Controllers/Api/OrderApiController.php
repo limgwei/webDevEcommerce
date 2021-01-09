@@ -106,10 +106,10 @@ class OrderApiController extends Controller
      * @bodyParam  order_id  int
      * @return \Illuminate\Http\Response
      */
-    public function getOrderItems(Request $request)
-    {      
-        
-            $items = new OrderItemResource(OrderItem::where('order_id', $request->order_id)->get());
+    public function getOrderItems($id)
+    {   
+
+            $items = new OrderItemResource(OrderItem::where('order_id', $id)->get());
             return $items;
         
     }

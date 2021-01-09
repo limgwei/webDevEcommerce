@@ -57,7 +57,7 @@ Route::get('/order/{token}',[OrderApiController::class,'index']);
 Route::post('/order/{token}',[OrderApiController::class,'store']);
 Route::put('/order/{id}',[OrderApiController::class,'update']);
 Route::get('/order/{id}',[OrderApiController::class,'show']);
-Route::post('order/orderItems/check',[OrderApiController::class,'getOrderItems']);
+Route::get('order/orderItems/{id}',[OrderApiController::class,'getOrderItems']);
 
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
