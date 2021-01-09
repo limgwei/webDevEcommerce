@@ -9,6 +9,7 @@ use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -29,11 +30,13 @@ class OrderApiController extends Controller
     {
         //
         //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
         $orders = Order::where('user_id',$id)->get();
         foreach($orders as $order){
-            $order->updated_date = date('Y-m-d',$order->updated_date);
+           
+            $order->updated_date = date('Y-m-d',strtotime($order->updated_at));
         }
         return new OrderResource($orders);
     }
