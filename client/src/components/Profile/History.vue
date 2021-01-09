@@ -36,7 +36,7 @@ export default {
     }
   },
   // created(){
-  //     axious.get('http://127.0.0.1:8000/api/product').then( data=>{
+  //     axious.get('http://127.0.0.1:8000/api/history').then( data=>{
           // items: [
           //   { ID: 53184, Date: '1 December 2020', TotalPrice: '38.40' },
           //   { ID: 54835, Date: '8 December 2020', TotalPrice: '138.40' },
