@@ -47,10 +47,10 @@ Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])
 //Route::apiResource('order','App\Http\Controllers\Api\OrderApiController',array("as" => "api"));
 Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
 
-Route::get('/order/{token}',[UserApiController::class,'index']);
-Route::put('/order/image/{token}',[UserApiController::class,'updateImage']);
-Route::put('/order/{id}',[UserApiController::class,'update']);
-Route::get('/order/{id}',[UserApiController::class,'show']);
+
+Route::put('/user/image/{token}',[UserApiController::class,'updateImage']);
+Route::put('/user/{id}',[UserApiController::class,'update']);
+Route::get('/user/{id}',[UserApiController::class,'show']);
 
 
 Route::get('/order/{token}',[OrderApiController::class,'index']);
@@ -58,28 +58,11 @@ Route::post('/order/{token}',[OrderApiController::class,'store']);
 Route::put('/order/{id}',[OrderApiController::class,'update']);
 Route::get('/order/{id}',[OrderApiController::class,'show']);
 
-
-Route::get('/order/{token}',[CartApiController::class,'index']);
-Route::post('/order/{token}',[CartApiController::class,'store']);
-Route::put('/order/{id}',[CartApiController::class,'update']);
-Route::get('/order/{id}',[CartApiController::class,'show']);
-
-
-
-<<<<<<< HEAD
-    
-    
-    Route::post('user/avatar',[UserApiController::class,'updateImage']);
-  });
-  
-Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
-=======
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
 Route::put('/cart/{id}/{token}',[CartApiController::class,'update']);
 Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
 
->>>>>>> 7177316351beea8b2dd711ea313b9e72b3a8999f
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
 Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
