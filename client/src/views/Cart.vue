@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Cart',
   data() {
@@ -43,7 +44,8 @@ export default {
         {product:'Bed',unitprice:135,quantity:1,totalprice:0},
         {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
         {product:'Knife',unitprice:28,quantity:1,totalprice:0}
-      ]
+      ],
+      items2:""
     }
   },
   methods: {
@@ -75,18 +77,18 @@ export default {
       return price.toFixed(2)
     }
   },
-  // created(){
-  //     axious.get('http://127.0.0.1:8000/api/cart').then( data=>{
+  created(){
+      axios.get('http://127.0.0.1:8000/api/cart').then( data=>{
           // items: [
           //   {product:'Bed',unitprice:135,quantity:1,totalprice:0},
           //   {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
           //   {product:'Knife',unitprice:28,quantity:1,totalprice:0}
           // ]
-  //       this.products =data.data;
-  //       console.log(this.products);
-  //     })
+        this.items2 =data.data;
+        // console.log(this.item);
+      })
     
-  // }
+  }
 }
 </script>
 
