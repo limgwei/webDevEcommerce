@@ -57,6 +57,7 @@ Route::get('/order/{token}',[OrderApiController::class,'index']);
 Route::post('/order/{token}',[OrderApiController::class,'store']);
 Route::put('/order/{id}',[OrderApiController::class,'update']);
 Route::get('/order/{id}',[OrderApiController::class,'show']);
+Route::post('order/orderItems/check',[OrderApiController::class,'getOrderItems']);
 
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
@@ -65,7 +66,7 @@ Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
 
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
-Route::post('order/orderItems',[OrderApiController::class,'getOrderItems']);
+
 Route::post('user/avatar',[UserApiController::class,'updateImage']);
 
 
