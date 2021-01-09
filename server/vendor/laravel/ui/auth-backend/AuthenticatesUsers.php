@@ -117,7 +117,7 @@ trait AuthenticatesUsers
                 return $response;
             }
             $user = Auth::user();
-            return $user;
+            //return $user;
         }
         $request->session()->invalidate();
 

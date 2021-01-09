@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderItemResource;
 use App\Http\Resources\OrderResource;
+use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\User;
@@ -56,9 +57,10 @@ class OrderApiController extends Controller
         foreach($request->orderItems as $orderItem){
             $orderItem['order_id'] = $order->id;
             OrderItem::create($orderItem);
+            Cart::where('id',$orderItem->cardId)->delete();
         }
 
-        return $order;
+        return response(200);
            
     }
 
