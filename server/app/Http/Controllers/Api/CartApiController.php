@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use Illuminate\Http\Request;
 use App\Http\Resources\CartResource;
+use App\Models\DiscountProduct;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -28,8 +30,24 @@ class CartApiController extends Controller
         $user = User::where('remember_token',$token)->first();
         
         $id = $user->id;
-    
-        return new CartResource(Cart::with(['product'])->where('user_id',$id)->get());
+        $carts = Cart::with(['product'])->where('user_id',$id)->get();
+        
+        $date = Carbon::now()->format('Y-m-d');
+        $discountProducts = DiscountProduct::where([
+            ['start_date','<=',$date],
+            ['end_date','>=',$date]
+        ])->get();
+
+        foreach($discountProducts as $discountProduct){
+            
+            foreach($carts as $cart){
+                if($cart->product_id==$discountProduct->product_id){
+                    $cart->product->price = $cart->product->price - $discountProduct->value;
+                }
+            }
+         }
+
+        return new CartResource($carts);
     }
     /**
      * Store a newly created cart in storage.

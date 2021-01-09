@@ -77,11 +77,11 @@ Route::get('discount_product/name',[DiscountProductApiController::class,'order_b
 Route::get('discount_product/nameD',[DiscountProductApiController::class,'order_by_nameD']);
 Route::get('discount_product/price',[DiscountProductApiController::class,'order_by_price']);
 Route::get('discount_product/priceD',[DiscountProductApiController::class,'order_by_priceD']);
-Route::get('discount_product/sub/{id}/latest',[DiscountProductApiController::class,'sub_product_latest']);
-Route::get('discount_product/sub/{id}/name',[DiscountProductApiController::class,'sub_order_by_name']);
-Route::get('discount_product/sub/{id}/nameD',[DiscountProductApiController::class,'sub_order_by_nameD']);
-Route::get('discount_product/sub/{id}/price',[DiscountProductApiController::class,'sub_order_by_price']);
-Route::get('discount_product/sub/{id}/priceD',[DiscountProductApiController::class,'sub_order_by_priceD']);
+// Route::get('discount_product/sub/{id}/latest',[DiscountProductApiController::class,'sub_product_latest']);
+// Route::get('discount_product/sub/{id}/name',[DiscountProductApiController::class,'sub_order_by_name']);
+// Route::get('discount_product/sub/{id}/nameD',[DiscountProductApiController::class,'sub_order_by_nameD']);
+// Route::get('discount_product/sub/{id}/price',[DiscountProductApiController::class,'sub_order_by_price']);
+// Route::get('discount_product/sub/{id}/priceD',[DiscountProductApiController::class,'sub_order_by_priceD']);
 
 
 Route::apiResource('banner','App\Http\Controllers\Api\BannerApiController',array("as" => "api"));
@@ -101,10 +101,10 @@ Route::apiResource('product','App\Http\Controllers\Api\ProductApiController',arr
     Route::get('product/nameD',[ProductApiController::class,'order_by_nameD']);
     Route::get('product/price',[ProductApiController::class,'order_by_price']);
     Route::get('product/priceD',[ProductApiController::class,'order_by_priceD']);
-    Route::get('product/sub/{id}/latest',[ProductApiController::class,'sub_product_latest']);
-    Route::get('product/sub/{id}/name',[ProductApiController::class,'sub_order_by_name']);
-    Route::get('product/sub/{id}/nameD',[ProductApiController::class,'sub_order_by_nameD']);
-    Route::get('product/sub/{id}/price',[ProductApiController::class,'sub_order_by_price']);
-    Route::get('product/sub/{id}/priceD',[ProductApiController::class,'sub_order_by_priceD']);
+    // Route::get('product/sub/{id}/latest',[ProductApiController::class,'sub_product_latest']);
+    // Route::get('product/sub/{id}/name',[ProductApiController::class,'sub_order_by_name']);
+    // Route::get('product/sub/{id}/nameD',[ProductApiController::class,'sub_order_by_nameD']);
+    // Route::get('product/sub/{id}/price',[ProductApiController::class,'sub_order_by_price']);
+    // Route::get('product/sub/{id}/priceD',[ProductApiController::class,'sub_order_by_priceD']);
 
 
