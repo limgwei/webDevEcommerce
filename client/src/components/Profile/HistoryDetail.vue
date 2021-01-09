@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
 table {
-  width: 100%;
+  width: 80%;
   font-size: 14px;
 }
 .tabletitle{

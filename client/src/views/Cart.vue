@@ -10,23 +10,37 @@
       </tr>
 
       <tr v-for="(item, index) in items" :key="item.id">
-        <td class="tablecontent">{{item.product}}</td>
-        <td class="tablecontent">{{item.unitprice | showPrice}}</td>
+       
+       
+        <td class="tablecontent">{{item.product.name}}</td>
+
+        <td class="tablecontent">{{item.product.price | showPrice}}</td>
         <td class="tablecontentquantity">
           <button class="quantitybtn" @click="decrement(index)" v-bind:disabled="item.quantity<=1">-</button>
           <p class="quantitynumber">{{item.quantity}}</p>
           <button class="quantitybtn" @click="increment(index)">+</button>
         </td>
-        <td class="tablecontent">{{totalprice(index) | showPrice}}</td>
+        <td class="tablecontent">{{totalprice(item.quantity,item.product.price) | showPrice}}</td>
         <td><button class="cartactionsbtn" @click="removehandle(index)">Delete</button></td>
       </tr>
-
+        
     </table>
+
+    <div class="comanddiv">
+      <p><strong>COMAND HERE</strong></p>
+      <textarea v-model="comment"></textarea>
+    </div>
+    <div class="addressdiv">
+      <p>Address</p>
+      <input type="text" v-model="address">
+    </div>
 
     <div class="buydiv" v-if="items.length">
       <label class="buylabel">Total Price (Now) :</label>
-      <strong class="buytotal">RM {{buytotal | showPrice}}</strong>
-      <button class="buybtn">Buy</button>
+      <strong class="buytotal">RM {{buytotalfun | showPrice}}</strong>
+      <label class="buylabel">Delivery charges :</label>
+      <strong class="buytotal">RM {{delivery_charge| showPrice}}</strong>
+      <button class="buybtn" @click="buy()">Buy</button>
     </div>
     <div v-else>
       <p class="emptyshow">Your cart is empty. <a href="/products">Go to buy.</a></p>
@@ -40,12 +54,12 @@ export default {
   name: 'Cart',
   data() {
     return {
-      items: [
-        {product:'Bed',unitprice:135,quantity:1,totalprice:0},
-        {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
-        {product:'Knife',unitprice:28,quantity:1,totalprice:0}
-      ],
-      items2:""
+      items: "",
+      buytotal:0,
+      delivery_charge:4,
+      address:"",
+      orderItems:[],
+      comment:""
     }
   },
   methods: {
@@ -58,18 +72,46 @@ export default {
     removehandle(index){
       this.items.splice(index, 1)
     },
-    totalprice(index){
-      this.items[index].totalprice=this.items[index].quantity*this.items[index].unitprice
-      return this.items[index].totalprice
-    }
+    totalprice(quantity,price){
+      
+      return quantity*price
+    },
+
+    buy(){
+      //var orderItems = [];
+      for(let i = 0;i<this.items.length;i++){
+        
+        let orderItem = Object;
+        orderItem.order_name = this.items[i].product.name;
+        orderItem.current_price = this.items[i].product.price;
+        orderItem.quantity = this.items[i].quantity;
+        var copy = Object.assign({}, orderItem);
+        this.orderItems.push(copy);
+      }
+
+      axios.post('http://localhost:8000/api/order/'+localStorage.token,{
+          price:this.buytotal,
+          delivery_charge:this.delivery_charge,
+          address:this.address,
+          comment:this.comment,
+          orderItems:this.orderItems
+        })
+ 
+    
+    },
+    
+    changes(amount){
+      this.buytotal=amount;
+    },
   },
   computed:{
-    buytotal(){
-      let buytotal=0
+    buytotalfun(){
+      var amount = 0;
       for (let i=0;i<this.items.length;i++){
-        buytotal+=this.items[i].totalprice
+       amount += (this.items[i].quantity*this.items[i].product.price)
       }
-      return buytotal
+      this.changes(amount);
+      return this.buytotal
     }
   },
   filters:{
@@ -86,10 +128,13 @@ export default {
           //   {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
           //   {product:'Knife',unitprice:28,quantity:1,totalprice:0}
           // ]
-        this.items2 =data.data;
-        console.log(this.items2);
+
+        this.items =data.data.data;
+        
+        this.address = this.$store.state.user.address;
+       
       })
-    
+
   }
 }
 </script>
@@ -134,9 +179,14 @@ table th{
 .tablecontentquantity{
   text-align: center;
 }
-
+.comanddiv{
+  margin-top: 90px;
+}
+.addressdiv{
+  margin-top: 5px;
+}
 .buydiv{
-  margin-top: 100px;
+  margin-top: 10px;
   width: 100%;
 }
 .emptyshow{

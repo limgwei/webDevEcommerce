@@ -36,13 +36,11 @@ const routes = [
       {
         path:'History',
         component: History,
-        name: 'History',
-        children:[
-          {path: 'HistoryDetail+id=:id', name: 'HistoryDetail', component:HistoryDetail}
-        ]
+        name: 'History'
       }
     ]
   },
+   {path: '/Profile/History/HistoryDetail',name:'HistoryDetail', component:HistoryDetail},
   {
     path:'/Cart',
     name:'Cart',
