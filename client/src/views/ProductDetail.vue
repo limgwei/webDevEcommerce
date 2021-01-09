@@ -45,22 +45,18 @@
 
 
 <script>
+import axious from 'axios'
 export default {
     name: 'ProductDetail',
     data(){
         return{
-            product:
-            {id:'1',name: 'White Sofa',category:'sofa',img: require('@/assets/slide1.jpg'),price:'1800',description:'a sofa',discount:{value:'200'}},
+            product:'',
             quantity: 0,
             
         }
     },
     methods:{
-        // async APIHAHA(id) {
-        //     const product = await APIHAHA( id )
-        //     this.product = product;      
-        //     this.PAGE_TITLE(this.product.name);
-        // }
+        
 
         addQuantity(){
             this.quantity++
@@ -83,8 +79,12 @@ export default {
     //         this.$router.go(-1)
     //         }
     // },
-    created:{
-        //api link
+    created(){
+        axious.get('http://127.0.0.1:8000/api/product/:id').then( data=>{
+        this.products = data.data.data;
+        
+        console.log(this.products);
+      })
     }
 }
 </script>
