@@ -59,9 +59,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Api','middleware'=>'auth'], f
     
     
     Route::post('user/avatar',[UserApiController::class,'updateImage']);
-    Route::apiResource('user','UserApiController',array("as" => "api"));
-});
-
+  });
+  
+Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
 

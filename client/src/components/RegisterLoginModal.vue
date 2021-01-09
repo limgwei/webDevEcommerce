@@ -136,7 +136,7 @@ import axios from 'axios';
       },
       async login(){
         console.log(this.logemail+" , "+this.logpassword)
-        const data = await axios.post('http://127.0.0.1:8000/api/login',{
+        const data = await axios.post('http://localhost:8000/api/login',{
           email:this.logemail,
           password:this.logpassword
         })
@@ -145,7 +145,7 @@ import axios from 'axios';
         this.$store.commit('setUser',user);
         console.log(this.$store.state.user);
         localStorage.token = user.remember_token;
-
+        console.log(localStorage.token);
         this.$emit('close');
 
         // if(s){

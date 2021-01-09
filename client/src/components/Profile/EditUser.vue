@@ -26,7 +26,7 @@
           <td class="texttd"><input type="password" v-model="editpassword" :disabled="this.isdisable2"></td>
           <td>
             <button v-if="isdisable2" @click="setdisable(2)">Edit</button>
-            <button v-else @click="setdisable(2);savepassword()">Save</button>
+            <button v-else @click="savepassword()">Save</button>
           </td>
         </tr>
 
@@ -53,6 +53,7 @@
 
 <script>
 import Avatar from '../Avatar';
+import axios from 'axios';
 
 export default {
   name: 'EditUser',
@@ -66,52 +67,56 @@ export default {
       isdisable2:true,
       isdisable3:true,
 
-      editusername:"gwei",
-      editpassword:"loh",
-      editemail:"liqi",
-      editaddress:"yuanxuan"
+      editusername:"",
+      editpassword:"",
+      editemail:"",
+      editaddress:""
     }
   },
-  // created(){
-  //   axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-  //     this.editusername =data.data;
-  //     this.editpassword="loh",
-  //     this.editemail="loh",
-  //     this.editaddress="loh",
-  //   })
-  // },
+  created(){
+    const id = this.$store.state.user.id;
+    axios.get(`http://127.0.0.1:8000/api/user/${id}`).then( data=>{
+      const user =data.data.data[0];
+      this.editusername = user.name;
+      this.editaddress = user.address;
+      this.editpassword =user.password;
+      this.editemail = user.email;
+
+    })
+  },
   methods:{
     setdisable(num){
       if(num==1){
-        this.isdisable1=!this.isdisable1
-        console.log(this.editusername)
+        this.isdisable1=false
       }
       else if(num==2){
-        this.isdisable2=!this.isdisable2
-        console.log(this.editpassword)
+        this.isdisable2=false
+        this.editpassword =""
       }
       else if(num==3){
-        this.isdisable3=!this.isdisable3
-        console.log(this.editaddress)
+        this.isdisable3=false
       }
     },
     saveusername(){
-      console.log(this.editusername+' this is the save btn1')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.name = this.editusername;
-      // })
+      if(this.editusername!=""){
+      this.isdisable1=true
+      const id = this.$store.state.user.id;
+      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {name:this.editusername});
+      }
     },
     savepassword(){
-      console.log(this.editpassword+' this is the save btn2')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.password = this.editpassword;
-      // })
+      if(this.editpassword!=""){
+      this.isdisable2=true
+      const id = this.$store.state.user.id;
+      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {password:this.editpassword});
+      }
     },
     saveaddress(){
-      console.log(this.editaddress+' this is the save btn3')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.address = this.editaddress;
-      // })
+      if(this.editaddress!=""){
+      this.isdisable3=true
+      const id = this.$store.state.user.id;
+      axios.put(`http://127.0.0.1:8000/api/user/${id}`, {address:this.editaddress});
+      }
     }
   }
 }

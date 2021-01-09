@@ -78,7 +78,9 @@ export default {
     }
   },
   created(){
+   // console.log(localStorage.token);
       axios.get('http://127.0.0.1:8000/api/cart').then( data=>{
+
           // items: [
           //   {product:'Bed',unitprice:135,quantity:1,totalprice:0},
           //   {product:'Sofa',unitprice:100.55,quantity:1,totalprice:0},
