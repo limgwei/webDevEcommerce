@@ -55,4 +55,4 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
   Route::post('logout', [LoginController::class,'logout']);
 
   Route::get('password/reset/{token}', [ResetPasswordController::class,'showResetForm']);
-  Route::post('password/reset', [ResetPasswordController::class,'reset']);
+  Route::post('password/reset', [ResetPasswordController::class,'reset'])->name('password.update');
