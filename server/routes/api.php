@@ -94,6 +94,9 @@ Route::apiResource('sub_category','App\Http\Controllers\Api\SubCategoryApiContro
 Route::get('subcategory/category/{id}',[SubCategoryApiController::class,'filter_by_category']);
 Route::get('subcategory/subcategory/{id}',[SubCategoryApiController::class,'filter_by_subcategory']);
 
+Route::post('order/payment_gateway',[SubCategoryApiController::class,'stripePost']);
+
+
 
 Route::apiResource('product','App\Http\Controllers\Api\ProductApiController',array("as" => "api"));
     Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
