@@ -114,6 +114,7 @@ class OrderApiController extends Controller
             foreach($items as $item){
                 $item->receipt = strtotime($item->updated_at)+$id;
                 $item->updated_date = date('Y-m-d',strtotime($item->updated_at));
+                $item->address = $order->address;
             }
      
             return $items;
