@@ -4,11 +4,14 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Http\Controllers\AuthBackend\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\RedirectsUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+   
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -39,6 +42,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function gg(Request $request){
+        return 'ey';
+    }
+    
+     
     public function logout(Request $request)
     {
         $this->guard()->logout();

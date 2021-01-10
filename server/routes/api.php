@@ -31,8 +31,9 @@ use Illuminate\Support\Facades\Route;
 
 // Authentication Routes...
   Route::post('/register', [RegisterController::class,'register']);
-  Route::post('login', [LoginController::class,'login']);
   Route::post('logout', [LoginController::class,'logout']);
+  Route::post('login',[LoginController::class,'login']);
+
 // Password Reset Routes...
 Route::post('password/email', [ForgotPasswordController::class,'sendResetLinkEmail']);
 Route::post('password/reset', [ResetPasswordController::class,'reset']);
