@@ -39,23 +39,19 @@ class UserApiController extends Controller
      */
     public function updateImage(Request $request,$token){
         $file = $request->file('image');
-        return $file;
+        
         $user = User::where('remember_token',$token)->first();
-       
-        
-        $imageCount = count($request->file('image'));
-        
         if ($user->image) {
             foreach ($user->image as $media) { 
                     $media->delete();  
             }
         }
 
-        for($i = 0;$i<$imageCount;$i++){
+    
             
-            return $user->addMedia($file[$i])->toMediaCollection('image');
+            $user->addMedia($file)->toMediaCollection('image');
           
-       }
+       
 
        return $user;
        

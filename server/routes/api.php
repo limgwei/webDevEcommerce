@@ -68,10 +68,6 @@ Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
 
-Route::post('user/avatar',[UserApiController::class,'updateImage']);
-
-
-
 Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
 Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
 Route::get('discount_product/latest',[DiscountProductApiController::class,'product_latest']);
