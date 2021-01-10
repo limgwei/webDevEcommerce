@@ -34,6 +34,12 @@
           </td>
         </tr>
 
+        <tr v-show="!isdisable2">
+          <th><label>Confirm Password:</label></th>
+          <td class="texttd"><input type="password" v-model="editconfirmpassword"></td>
+          <td><button @click="cancelpassword()">Cancel</button></td>
+        </tr>
+
         <tr>
           <th><label>Email:</label></th>
           <td class="texttd"><input type="email" v-model="editemail" disabled></td>
@@ -75,6 +81,7 @@ export default {
 
       editusername:"",
       editpassword:"",
+      editconfirmpassword:"",
       editemail:"",
       editaddress:""
     }
@@ -85,7 +92,6 @@ export default {
       const user =data.data.data[0];
       this.editusername = user.name;
       this.editaddress = user.address;
-      this.editpassword =user.password;
       this.editemail = user.email;
 
     })
@@ -127,14 +133,23 @@ export default {
     },
     savepassword(){
       if(this.editpassword!=""){
-      this.isdisable2=true
-      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {password:this.editpassword})
-      .then( data=>{
-      console.log(data);
-      
-      })
-
+        if(this.editpassword==this.editconfirmpassword){
+        this.isdisable2=true
+        axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {password:this.editpassword})
+        .then( data=>{
+        console.log(data);
+        })
+        }
+        else{
+          alert("Your password no match please try again!")
+          this.editpassword=""
+          this.editconfirmpassword=""
+        }
       }
+    },
+    cancelpassword(){
+      this.isdisable2=true
+      this.editpassword=""
     },
     saveaddress(){
       if(this.editaddress!=""){

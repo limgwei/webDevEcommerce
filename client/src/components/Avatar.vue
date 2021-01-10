@@ -2,7 +2,7 @@
   <div class="Avatar">
 
     <div v-if="imgavatar!=null" class=""><img :src="imgavatar[0]"></div>
-    <p else class="noregisterimg">登录</p>
+    <p v-else class="noregisterimg">登录</p>
 
   </div>
 </template>
