@@ -37,7 +37,7 @@ use Illuminate\Support\Facades\Route;
 // Password Reset Routes...
 Route::post('password/email', [ForgotPasswordController::class,'sendResetLinkEmail']);
 Route::post('password/reset', [ResetPasswordController::class,'reset']);
-Route::get('password/reset/{token}', [ResetPasswordController::class,'showResetForm']);
+
 
 //email verification
 Route::get('/email/resend',[VerificationController::class,'resend'])->name('verification.resend');
