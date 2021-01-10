@@ -41,6 +41,7 @@
       <label class="buylabel">Delivery charges :</label>
       <strong class="buytotal">RM {{delivery_charge| showPrice}}</strong>
       <button class="buybtn" @click="buy()">Buy</button>
+       <button class="buybtn" @click="stripe()">Stripe</button>
     </div>
     <div v-else>
       <p class="emptyshow">Your cart is empty. <a href="/products">Go to buy.</a></p>
@@ -59,7 +60,9 @@ export default {
       delivery_charge:4,
       address:"",
       orderItems:[],
-      comment:""
+      comment:"",
+
+      card:[]
     }
   },
   methods: {
@@ -76,7 +79,23 @@ export default {
       
       return quantity*price
     },
+    stripe(){
+      var optionAxios = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }
 
+        this.card['number'] = 424242424242;
+        this.card['exp_month'] = 12;
+        this.card['year'] = 2024;
+        this.card['cvc'] = 123;
+          axios.post('http://api.stripe.com/v1/tokens',{
+            card:this.card
+        },optionAxios).then(data=>{
+            console.log(data);
+        })  
+    },
     buy(){
       //var orderItems = [];
       for(let i = 0;i<this.items.length;i++){
