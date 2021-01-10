@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Products from '../views/Products.vue'
+import ProductsPromo from '../views/ProductsPromo.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 import Profile from '../views/Profile.vue'
 import Cart from '../views/Cart.vue'
@@ -27,6 +28,11 @@ const routes = [
   name:'product.detail',
   component: ProductDetail
   },
+  {
+    path:'/products/promo',
+    name:'products.promo',
+    component: ProductsPromo
+    },
   {
     path: '/Profile',
     component: Profile,

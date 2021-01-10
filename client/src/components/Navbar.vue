@@ -1,22 +1,19 @@
 <template>
     <div class="navbar">
-            <div class="toggle"  v-bind:class="{ active: isActive||catActive|| subActive  }"  v-on:click="popUp" >
+            <div class="toggle"  v-bind:class="{ active: isActive||catActive  }"  v-on:click="popUp" >
                 <font-awesome-icon :icon="['fas','bars']" class="small-icon" />
         
             </div>
-            <nav  v-bind:class="{ active: !isActive&&!catActive&&!subActive }"  v-on:click="offNav">
+            <nav  v-bind:class="{ active: !isActive&&!catActive }"  v-on:click="offNav">
             <ul class="left">
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Products</a></li>
                 <li><a href="/products/promo">Promotion</a></li>
-                <li><a @click.prevent="cActive">Rooms</a></li>
+                <li @click="activeCat">><a>Rooms</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <ul :class="{active: !catActive}">
-                    <li v-for="(cat,key) in category"  :key="key"><a @click.prevent="openSub">{{cat}}</a></li>
-            </ul>
-            <ul :class="{active: !subActive}">
-                <li v-for="(sub,key) in subcategory" :key="key"><a href="">{{sub.name}}</a></li>
+                    <li v-for="(cat,key) in category"  :key="key"><a>{{cat}}</a></li>
             </ul>
         </nav>
     </div>
@@ -31,33 +28,22 @@ export default {
         return{
             isActive: false,
             catActive: false,
-            subActive: false,
             category: ['Living Room','Dining Room','Bedroom','Decor'],
-            subcategory:[
-                {cate:'Living Room',name:'Sofa'},
-                {cate:'Living Room',name:'Table'},
-                {cate:'Living Room',name:'Chair'},
-                {cate:'Dining Room',name:'Sofa'},
-                {cate:'Dining Room',name:'Table'},
-                {cate:'Dining Room',name:'Chair'},
-            ],
+            
         }
     },
     methods:{
         popUp: function(){
             this.isActive=!this.isActive;
         },
-        cActive:function(){
+        activeCat:function(){
             this.catActive=!this.catActive
+            this.isActive=true;
         },
         offNav: function(){
             this.isActive=false;
-            this.cActive=false;
-            this.subActive=false;
+            this.catActive=false;
         },
-        openSub: function(){
-            this.subActive=!this.subActive;
-        }
 
     }
 }
