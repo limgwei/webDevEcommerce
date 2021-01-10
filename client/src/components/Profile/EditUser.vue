@@ -6,7 +6,7 @@
     </div>
     <br>
     <div>
-      <input id="file" type="file" ref="file" v-on:change="handleFileUpload()">
+      <input id="file" accept="image/jpeg,image/png" type="file" ref="file" v-on:change="handleFileUpload()">
       <center>
         <button class="avatarBtnSet" @click="changepicture()">Change Picture</button>
         <button class="avatarBtnSet" @click="savepicture()">Save Picture</button>
@@ -77,7 +77,7 @@ export default {
       isdisable2:true,
       isdisable3:true,
 
-      avatarpicture:[],
+      avatarpicture:"",
 
       editusername:"",
       editpassword:"",
@@ -98,14 +98,14 @@ export default {
   },
   methods:{
     previewFiles(event) {
-      this.avatarpicture[0] = event.target.files;
+      this.avatarpicture = event.target.files;
    },
     changepicture(){
       document.getElementById("fileUpload").click()
     },
     savepicture(){
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
-        {image:this.avatarpicture[0]}
+        {image:this.avatarpicture}
       ).then(data=>{
         console.log(data);
       })
