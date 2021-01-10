@@ -1,7 +1,8 @@
 <template>
   <div class="header">
     <header>
-        <div class="container">
+      
+        <div class="container"> 
             <img src="../assets/logo.png" alt="logo" class="logo">
 
             <!-- check token(if true go to profile) -->
@@ -18,7 +19,10 @@
             
             
             <!-- check token(if false go to login) -->
-            <router-link to="/cart"><font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" /></router-link>
+              <font-awesome-icon v-if="emptyUser"  @click="showModal" :icon="['fas','shopping-cart']" class="small-icon" />
+            <router-link to="/cart" v-else>
+              <font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" />
+            </router-link>
   
         </div>
     </header>

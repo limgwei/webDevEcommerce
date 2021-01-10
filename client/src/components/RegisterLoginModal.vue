@@ -42,6 +42,7 @@
               <label class="labelclasslogin">Password: </label>
               <input type="password" v-model="logpassword">
             </div>
+              <a href="#" class="forgetclass" @click="forget()">? Forget password</a>
           </div>
 
           <div v-show="goRegister" class="card">
@@ -127,6 +128,20 @@ import axios from 'axios';
       close() {
         this.$emit('close');
       },
+      forget(){
+        if(this.logemail!=""){
+          axios.post('http://localhost:8000/api/password/email',{
+          email:this.logemail,
+          }).then(data=>{
+            console.log(data);
+            alert("Please go to gmail to reset your password")
+            window.location="http://www.gmail.com";
+          })
+        }
+        else{
+          alert("Please insert your gmail")
+        }
+      },
       changeTitle(){
         this.goLogin=!this.goLogin;
         this.goRegister=!this.goRegister;
@@ -135,7 +150,7 @@ import axios from 'axios';
         this.isPassType = !this.isPassType;
       },
       async login(){
-        console.log(this.logemail+" , "+this.logpassword)
+
         const data = await axios.post('http://localhost:8000/api/login',{
           email:this.logemail,
           password:this.logpassword
@@ -144,19 +159,10 @@ import axios from 'axios';
         console.log(data);
         this.$store.commit('setUser',user);
         console.log(this.$store.state.user);
+        console.log(user.remember_token);
         localStorage.token = user.remember_token;
         console.log(localStorage.token);
         this.$emit('close');
-
-        // if(s){
-        // alert("Login successfully")
-        // this.$emit('close');
-        // }
-        // else{
-        //   alert("Login failed")
-        //   this.logemail=""
-        //   this.logpassword=""
-        // }
       },
       register(){
         if(this.regpassword==this.regconpassword){
@@ -165,10 +171,14 @@ import axios from 'axios';
           email:this.regemail,
           address:this.regaddress,
           password:this.regpassword,
-          password_confirmation:this.regconpassword,
+          password_confirmation:this.regconpassword
+          }).then(data=>{
+            console.log(data);
+            console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
+            alert("Please go to gmail to verify your account")
+            window.location="http://www.gmail.com";
           })
-          this.$emit('close');
-          console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
+
         }
         else{
           alert("Your password not match, please try again")
@@ -264,5 +274,9 @@ import axios from 'axios';
     width: 120px;
     font-weight: bold;
     margin-left: 10%;
+  }
+  .forgetclass{
+    text-decoration: none;
+    margin-left: 11%;
   }
 </style>
