@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace App\Http\Controllers\AuthBackend;
 
 trait RedirectsUsers
 {
@@ -14,7 +14,7 @@ trait RedirectsUsers
         if (method_exists($this, 'redirectTo')) {
             return $this->redirectTo();
         }
-
+        
         return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
     }
 }

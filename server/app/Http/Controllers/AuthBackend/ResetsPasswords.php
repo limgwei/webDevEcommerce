@@ -1,7 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace App\Http\Controllers\AuthBackend;
 
+use App\Http\Controllers\AuthBackend\RedirectsUsers;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;

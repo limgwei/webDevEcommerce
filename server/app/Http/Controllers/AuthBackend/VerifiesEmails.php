@@ -1,7 +1,8 @@
 <?php
 
-namespace Illuminate\Foundation\Auth;
+namespace App\Http\Controllers\AuthBackend;
 
+use App\Http\Controllers\AuthBackend\RedirectsUsers;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\JsonResponse;
@@ -33,7 +34,7 @@ trait VerifiesEmails
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function verify(Request $request)
-    {
+    {   
         if (! hash_equals((string) $request->route('id'), (string) $request->user()->getKey())) {
             throw new AuthorizationException;
         }

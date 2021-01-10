@@ -1,6 +1,5 @@
 <?php
-
-namespace Illuminate\Foundation\Auth;
+namespace App\Http\Controllers\AuthBackend;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
@@ -28,20 +27,28 @@ trait RegistersUsers
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
     public function register(Request $request)
-    {
-        $this->validator($request->all())->validate();
+    {   $validate = $this->validator($request->email);
+        
+        if(!$validate->isEmpty()){
+            return 'email used';
+        }
 
         event(new Registered($user = $this->create($request->all())));
-
-        $this->guard()->login($user);
+        // $file = $request->file('image');
+        // $imageCount = count($request->file('image'));
+    
+        //  for($i = 0;$i<$imageCount;$i++){
+        //       $user->addMedia($file[$i])->toMediaCollection('image');
+              
+        //  }
+        //$this->guard()->login($user);
 
         if ($response = $this->registered($request, $user)) {
             return $response;
         }
 
-        return $request->wantsJson()
-                    ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
+        return $user;
+       
     }
 
     /**

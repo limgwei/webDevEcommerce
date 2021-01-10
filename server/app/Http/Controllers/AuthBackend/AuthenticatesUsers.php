@@ -1,11 +1,10 @@
 <?php
 namespace App\Http\Controllers\AuthBackend;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RedirectsUsers;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
@@ -108,17 +107,24 @@ trait AuthenticatesUsers
         $user = Auth::user();
         $user = User::where('id',Auth::user()->id)->first();
         if($user->is_enable == 1){
-            $request->session()->regenerate();
-            $this->clearLoginAttempts($request);
-            $user->remember_token =date('H:i:s').$user->email;
-            $user->save();
-
-            
-            if ($response = $this->authenticated($request, $this->guard()->user())) {
-                return $response;
+            if($user->email_verified_at != null){
+                $this->clearLoginAttempts($request);
+                $user->setRememberToken(Str::random(60));
+                $user->save();
+    
+                
+                if ($response = $this->authenticated($request, $this->guard()->user())) {
+                    return $response;
+                }
+                
+                return $user;
             }
+            $request->session()->invalidate();
+
+            $request->session()->regenerateToken();
             
-            return $user;
+            return 'email have not verified';
+           
         }
         $request->session()->invalidate();
 
