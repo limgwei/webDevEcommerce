@@ -24,7 +24,7 @@ class UserApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   
         return new UserResource(User::where('id',$id)->get());
     }
 

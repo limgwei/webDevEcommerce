@@ -108,9 +108,17 @@ class OrderApiController extends Controller
      */
     public function getOrderItems($id)
     {   
-
-            $items = new OrderItemResource(OrderItem::where('order_id', $id)->get());
+            $order = Order::where('id',$id)->first();
+            $items = (OrderItem::where('order_id', $id)->get());
+            
+            foreach($items as $item){
+                $item->receipt = strtotime($item->updated_at)+$id;
+                $item->updated_date = date('Y-m-d',strtotime($item->updated_at));
+            }
+     
             return $items;
+       
+            return new OrderItemResource($items);
         
     }
 
