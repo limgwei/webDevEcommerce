@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import ProductList from '@/components/discount_product/ProductList.vue'
+import ProductList from '@/components/Product/ProductList.vue'
 import axious from 'axios'
 
 export default {
