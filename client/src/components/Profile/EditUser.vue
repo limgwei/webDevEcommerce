@@ -77,7 +77,6 @@ export default {
       isdisable3:true,
 
       file:"",
-      avatarpicture:"",
 
       editusername:"",
       editpassword:"",
@@ -99,13 +98,14 @@ export default {
   methods:{
     uploadAvatar(e){
       this.file = e.target.files[0];
-      this.avatarpicture = new FormData();
-      this.avatarpicture.append("file", this.file);
-      console.log(this.avatarpicture.name);
+      const avatarpicture = new FormData();
+      avatarpicture.append("image", this.file);
+      console.log(avatarpicture);
       // this.avatarpicture = this.file;
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
-        {image:this.avatarpicture}
+        {image:avatarpicture}
       ).then(data=>{
+        console.log(avatarpicture)
         console.log(data);
       })
     },
