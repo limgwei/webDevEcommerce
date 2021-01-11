@@ -11,12 +11,9 @@
           id="modalTitle"
         >
           <slot name="header">
-            <button v-show="goLogin" @click="changeTitle" id="btntitle">
-              Go to Login
-            </button>
-            <button v-show="goRegister" @click="changeTitle" id="btntitle">
-              Go to Register
-            </button>
+            <h2 class="headertitle" v-show="goLogin">Login</h2>
+            <h2 class="headertitle" v-show="goRegister">Register</h2>
+              
             <button
               type="button"
               class="btn-close"
@@ -34,41 +31,37 @@
         >
           <slot name="body">
           <div v-show="goLogin" class="card">
+            <br>
+            <center><font-awesome-icon :icon="['fas','user']" class="usericon"/></center>
+            <br>
             <div class="carddiv">
-              <label class="labelclasslogin">Email: </label>
-              <input type="email" v-model="logemail">
+              <input type="email" v-model="logemail" placeholder="Email">
             </div>
             <div class="carddiv">
-              <label class="labelclasslogin">Password: </label>
-              <input type="password" v-model="logpassword">
+              <input type="password" v-model="logpassword" placeholder="Password">
             </div>
               <a href="#" class="forgetclass" @click="forget()">? Forget password</a>
           </div>
 
           <div v-show="goRegister" class="card">
             <div class="carddiv">
-              <label class="labelclass">Username: </label>
-              <input type="text" v-model="regusername">
+              <input type="text" v-model="regusername" placeholder="Username">
             </div>
             <div class="carddiv">
-              <label class="labelclass">Password: </label>
-              <input :type="isPassType ?'password':'text' " v-model="regpassword">
-              <button @click="changeType">
+              <input :type="isPassType ?'password':'text' " v-model="regpassword" placeholder="Password">
+              <button @click="changeType" class="iconbtn">
                 <font-awesome-icon :icon="['fas','eye-slash']" v-if="isPassType"/>
                 <font-awesome-icon :icon="['fas','eye']" v-else/>
               </button>
             </div>
             <div class="carddiv">
-              <label class="labelclass">Confirm Password: </label>
-              <input type="password" v-model="regconpassword">
+              <input type="password" v-model="regconpassword" placeholder="Confirm Password">
             </div>
             <div class="carddiv">
-              <label class="labelclass">Email: </label>
-              <input type="email" v-model="regemail">
+              <input type="email" v-model="regemail" placeholder="Email">
             </div>
             <div class="carddiv">
-              <label class="labelclass">Address: </label>
-              <textarea v-model="regaddress"></textarea>
+              <textarea v-model="regaddress" placeholder="Address"></textarea>
             </div>
           </div>
           
@@ -78,6 +71,13 @@
         <footer class="modal-footer">
           <slot name="footer">
             <center>
+            <button v-show="goLogin" @click="changeTitle" id="btntitle">
+              Go to Register
+            </button>
+            <button v-show="goRegister" @click="changeTitle" id="btntitle">
+              Go to Login
+            </button>
+            <!-- this is hr -->
             <button
               type="button"
               class="btnsubmit"
@@ -203,7 +203,7 @@ import axios from 'axios';
   }
 
   .RegisterLoginModal {
-    background: #FFFFFF;
+    background: #eeeeee;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     flex-direction: column;
@@ -229,7 +229,8 @@ import axios from 'axios';
 
   .modal-body {
     position: relative;
-    padding: 20px 10px;
+    padding: 10px 0px;
+    height: 260px;
   }
 
   .btn-close {
@@ -252,6 +253,11 @@ import axios from 'axios';
     border: aqua 1px solid;
     outline: none;
     padding: 10px;
+    width: 110px;
+    background-color: white;
+  }
+  .btnsubmit{
+    margin-left: 15px;
   }
   .btnsubmit:hover , #btntitle:hover {
     color: white;
@@ -262,21 +268,36 @@ import axios from 'axios';
 
   .carddiv{
     width: 100%;
-    margin: 10px 0;
+    margin: auto;
     display: flex;
   }
-  .labelclasslogin{
-    width: 120px;
-    font-weight: bold;
-    margin-left: 11%;
+  .carddiv input{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    height: 30px;
   }
-  .labelclass{
-    width: 120px;
-    font-weight: bold;
-    margin-left: 10%;
+  .carddiv textarea{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    height: 70px;
+    font-size: 14px;
+  }
+  .iconbtn{
+    margin-top: 10px;
+    height: 30px;
   }
   .forgetclass{
     text-decoration: none;
-    margin-left: 11%;
+    margin-left: 20%;
+    font-size: 13px;
+  }
+  .headertitle{
+    font-size: 30px;
+    margin: auto;
+  }
+  .usericon{
+    font-size: 80px;
   }
 </style>

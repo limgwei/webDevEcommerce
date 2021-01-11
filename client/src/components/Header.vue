@@ -64,13 +64,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   header{
-    box-shadow: 0 .1rem .5rem rgb(228, 228, 228);
+    box-shadow: 0 .1rem .5rem rgb(155, 155, 155);
+    // background: rgb(250, 243, 243);
+    background-image:linear-gradient(135deg,rgb(155, 155, 155),rgb(204, 204, 204),rgb(235, 233, 233));
   }
 
   .container{
     display: flex;
     justify-content: flex-end;
-    padding-top: 4rem;
+    padding-top: 1.8rem;
 
     .logo{
       margin-right: auto;

@@ -171,7 +171,12 @@ export default {
 table{
   width: 100%;
   font-size: 14px;
+  background-color: white;
 }
+table td,table th{
+  border: 1px solid #ddd;
+}
+table tr:nth-child(even){background-color: rgb(230, 230, 230);}
 table th{
   text-align: center;
   background-color: rgb(155, 218, 247);

@@ -38,9 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.navbar{
-  margin-top: 8px;
-}
 ul {
   list-style-type: none;
   margin: 0;

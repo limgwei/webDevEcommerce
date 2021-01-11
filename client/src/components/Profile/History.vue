@@ -72,6 +72,11 @@ table {
 .tabletitle{
   background: rgb(155, 218, 247);
 }
+table td,table th{
+  border: 1px solid #ddd;
+}
+table tr:nth-child(even){background-color: rgb(230, 230, 230);}
+table tr{background-color: white;}
 .tablecontent1{
   width: 5%;
 }
@@ -90,8 +95,8 @@ table {
 .historybtn{
   border-color: aqua;
   outline: none;
-  width: 68px;
-  margin-left: 3px;
+  /* width: 68px; */
+  width:100%;
 }
 .historybtn:hover{
   cursor: pointer;
