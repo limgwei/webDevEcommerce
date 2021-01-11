@@ -1,7 +1,7 @@
 <template>
   <div class="Avatar">
 
-    <div v-if="imgavatar!=null" class=""><img :src="imgavatar[0]"></div>
+    <div v-if="imgavatar!=''" class=""><img :src="imgavatar"></div>
     <p v-else class="noregisterimg">登录</p>
 
   </div>
@@ -13,12 +13,14 @@ export default {
   name: 'Avatar',
   data () {
     return{
-      imgavatar:[]
+      imgavatar:""
     }
   },
   created(){
-    axios.get('http://localhost:8000/api/user/'+localStorage.token ).then( data=>{
-      this.imgavatar[0] =data.data.data;
+    const id = this.$store.state.user.id;
+    axios.get('http://localhost:8000/api/user/' +id).then( data=>{
+      this.imgavatar =data.data.data[0].image[0].url;
+      console.log(data.data.data[0].image[0].url);
     })
   }
 }

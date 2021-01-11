@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import ProductList from '@/components/Product/ProductList.vue'
+import ProductList from '@/components/discount_product/ProductList.vue'
 import axious from 'axios'
 
 export default {
@@ -56,37 +56,37 @@ export default {
     sorting(value){
       
       if(value==1){
-        axious.get('http://127.0.0.1:8000/api/product/latest').then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product/latest').then( data=>{
         this.products = data.data.data;
         console.log(value);
         console.log(this.products);
       })
       }else if(value ==2){
-        axious.get('http://127.0.0.1:8000/api/product/name').then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product/name').then( data=>{
         this.products = data.data.data;
         console.log(value);
         console.log(this.products);
       })
       }else if(value ==3){
-        axious.get('http://127.0.0.1:8000/api/product/nameD').then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product/nameD').then( data=>{
         this.products = data.data.data;
         console.log(value);
         console.log(this.products);
       })
       }else if(value ==4){
-        axious.get('http://127.0.0.1:8000/api/product/price').then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product/price').then( data=>{
         this.products = data.data.data;
         console.log(value);
         console.log(this.products);
       })
       }else if(value ==5){
-         axious.get('http://127.0.0.1:8000/api/product/priceD').then( data=>{
+         axious.get('http://127.0.0.1:8000/api/discount_product/priceD').then( data=>{
         this.products = data.data.data;
         console.log(value);
         console.log(this.products);
       })
       }else{
-        axious.get('http://127.0.0.1:8000/api/product').then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product').then( data=>{
         this.products = data.data.data;
         
         console.log(this.products);
@@ -94,7 +94,7 @@ export default {
       }
     },
     searching(){
-        axious.get('http://127.0.0.1:8000/api/product/search/{name}',this.searchKey).then( data=>{
+        axious.get('http://127.0.0.1:8000/api/discount_product/search/{name}',this.searchKey).then( data=>{
         this.products = data.data.data;
         
         console.log(this.products);
@@ -103,7 +103,7 @@ export default {
 
   },
   created(){
-      axious.get('http://127.0.0.1:8000/api/product').then( data=>{
+      axious.get('http://127.0.0.1:8000/api/discount_product').then( data=>{
         this.products = data.data.data;
         
         console.log(this.products);
