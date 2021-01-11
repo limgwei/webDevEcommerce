@@ -6,7 +6,7 @@
     </div>
     <br>
     <div>
-      <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden accept="image/jpeg,image/png">
+      <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden>
       <center>
         <button class="avatarBtnSet" @click="upload">Change Picture</button>
       </center>
@@ -99,9 +99,8 @@ export default {
   methods:{
     uploadAvatar(e){
       this.file = e.target.files[0];
-      // this.avatarpicture = new FormData();
-      // this.avatarpicture.append("file", this.file);
-      this.avatarpicture=this.file
+      this.avatarpicture = new FormData();
+      this.avatarpicture.append("file", this.file);
       console.log(this.avatarpicture.name);
       // this.avatarpicture = this.file;
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
