@@ -46,9 +46,7 @@ class UserApiController extends Controller
                     $media->delete();  
             }
         }
-
-    
-            
+  
             $user->addMedia($file)->toMediaCollection('image');
           
        

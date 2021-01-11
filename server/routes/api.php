@@ -46,13 +46,13 @@ Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])
 //require user auth
 //Route::apiResource('cart','App\Http\Controllers\Api\CartApiController',array("as" => "api"));    
 //Route::apiResource('order','App\Http\Controllers\Api\OrderApiController',array("as" => "api"));
-Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
+//Route::apiResource('user','App\Http\Controllers\Api\UserApiController',array("as" => "api"));
 
 
 Route::put('/user/image/{token}',[UserApiController::class,'updateImage']);
 Route::put('/user/{token}',[UserApiController::class,'update']);
 Route::get('/user/{id}',[UserApiController::class,'show']);
-
+Route::get('/user/{token}',[UserApiController::class,'show']);
 
 Route::get('/order/{token}',[OrderApiController::class,'index']);
 Route::post('/order/{token}',[OrderApiController::class,'store']);
@@ -68,13 +68,14 @@ Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
 
-Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
-Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
 Route::get('discount_product/latest',[DiscountProductApiController::class,'product_latest']);
 Route::get('discount_product/name',[DiscountProductApiController::class,'order_by_name']);
 Route::get('discount_product/nameD',[DiscountProductApiController::class,'order_by_nameD']);
 Route::get('discount_product/price',[DiscountProductApiController::class,'order_by_price']);
 Route::get('discount_product/priceD',[DiscountProductApiController::class,'order_by_priceD']);
+Route::apiResource('discount_product','App\Http\Controllers\Api\DiscountProductApiController');
+Route::get('discount_product/sub/{id}',[DiscountProductApiController::class,'sub']);
+
 // Route::get('discount_product/sub/{id}/latest',[DiscountProductApiController::class,'sub_product_latest']);
 // Route::get('discount_product/sub/{id}/name',[DiscountProductApiController::class,'sub_order_by_name']);
 // Route::get('discount_product/sub/{id}/nameD',[DiscountProductApiController::class,'sub_order_by_nameD']);
@@ -94,14 +95,16 @@ Route::post('order/payment_gateway',[SubCategoryApiController::class,'stripePost
 
 
 
-Route::apiResource('product','App\Http\Controllers\Api\ProductApiController',array("as" => "api"));
-    Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
-    Route::get('product/sub/{id}',[ProductApiController::class,'sub']);
     Route::get('product/latest',[ProductApiController::class,'product_latest']);
     Route::get('product/name',[ProductApiController::class,'order_by_name']);
     Route::get('product/nameD',[ProductApiController::class,'order_by_nameD']);
     Route::get('product/price',[ProductApiController::class,'order_by_price']);
     Route::get('product/priceD',[ProductApiController::class,'order_by_priceD']);
+    Route::get('product',[ProductApiController::class,'index']);
+    Route::get('product/{id}',[ProductApiController::class,'show']);
+    Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
+    Route::get('product/sub/{id}',[ProductApiController::class,'sub']);
+   
     // Route::get('product/sub/{id}/latest',[ProductApiController::class,'sub_product_latest']);
     // Route::get('product/sub/{id}/name',[ProductApiController::class,'sub_order_by_name']);
     // Route::get('product/sub/{id}/nameD',[ProductApiController::class,'sub_order_by_nameD']);

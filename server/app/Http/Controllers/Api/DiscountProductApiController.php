@@ -28,8 +28,8 @@ class DiscountProductApiController extends Controller
     {
         $now = Carbon::now()->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
-            ['start_date','>=',$now],
-            ['end_date','<=',$now]
+            ['start_date','<=',$now],
+            ['end_date','>=',$now]
         ])->get();
 
         foreach($discountProducts as $discountProduct){
@@ -51,8 +51,8 @@ class DiscountProductApiController extends Controller
         $now = Carbon::now()->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
             ['id',$id],
-            ['start_date','>=',$now],
-            ['end_date','<=',$now]
+            ['start_date','<=',$now],
+            ['end_date','>=',$now]
             ])->get();
 
         foreach($discountProducts as $discountProduct){
@@ -78,8 +78,8 @@ class DiscountProductApiController extends Controller
             }]
             )
             ->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
 
@@ -98,18 +98,18 @@ class DiscountProductApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function product_latest()
-    {
+    {   
         $now = Carbon::now()->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query){
                $query->select('*')->orderByDesc('created_at'); 
             }]
             )->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
-
+        
         foreach($discountProducts as $discountProduct){
             $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
         }
@@ -132,8 +132,8 @@ class DiscountProductApiController extends Controller
                $query->select('*')->orderBy('name'); 
             }]
             )->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
 
@@ -159,8 +159,8 @@ class DiscountProductApiController extends Controller
                $query->select('*')->orderByDesc('name'); 
             }]
             )->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
 
@@ -186,8 +186,8 @@ class DiscountProductApiController extends Controller
                $query->select('*')->orderBy('price'); 
             }]
             )->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
 
@@ -213,8 +213,8 @@ class DiscountProductApiController extends Controller
                $query->select('*')->orderByDesc('price'); 
             }]
             )->where([
-                ['start_date','>=',$now],
-                ['end_date','<=',$now]
+                ['start_date','<=',$now],
+                ['end_date','>=',$now]
                 ])
                 ->get();
 
