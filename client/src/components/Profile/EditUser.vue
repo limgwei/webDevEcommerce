@@ -6,10 +6,9 @@
     </div>
     <br>
     <div>
-      <input id="file" accept="image/jpeg,image/png" type="file" ref="file" v-on:change="handleFileUpload()">
+      <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden accept="image/jpeg,image/png">
       <center>
-        <button class="avatarBtnSet" @click="changepicture()">Change Picture</button>
-        <button class="avatarBtnSet" @click="savepicture()">Save Picture</button>
+        <button class="avatarBtnSet" @click="upload">Change Picture</button>
       </center>
     </div>
     <br>
@@ -77,6 +76,7 @@ export default {
       isdisable2:true,
       isdisable3:true,
 
+      file:"",
       avatarpicture:"",
 
       editusername:"",
@@ -97,19 +97,35 @@ export default {
     })
   },
   methods:{
-    previewFiles(event) {
-      this.avatarpicture = event.target.files;
-   },
-    changepicture(){
-      document.getElementById("fileUpload").click()
-    },
-    savepicture(){
+    uploadAvatar(e){
+      this.file = e.target.files[0];
+      this.avatarpicture = new FormData();
+      this.avatarpicture.append("file", this.file);
+      console.log(this.avatarpicture);
+      // this.avatarpicture = this.file;
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
         {image:this.avatarpicture}
       ).then(data=>{
         console.log(data);
       })
     },
+    upload() {
+        let uplaodBtn = this.$refs.upload;
+        uplaodBtn.click();
+    },
+  //   previewFiles(event) {
+  //     this.avatarpicture = event.target.files;
+  //  },
+  //   changepicture(){
+  //     document.getElementById("fileUpload").click()
+  //   },
+  //   savepicture(){
+  //     axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
+  //       {image:this.avatarpicture}
+  //     ).then(data=>{
+  //       console.log(data);
+  //     })
+  //   },
     setdisable(num){
       if(num==1){
         this.isdisable1=false

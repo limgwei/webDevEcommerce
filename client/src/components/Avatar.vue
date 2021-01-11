@@ -1,7 +1,7 @@
 <template>
   <div class="Avatar">
 
-    <div v-if="imgavatar!=''" class=""><img :src="imgavatar"></div>
+    <img v-if="imgavatar!=''" :src="imgavatar">
     <p v-else class="noregisterimg">登录</p>
 
   </div>
@@ -29,6 +29,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Avatar{
+  width: 100%;
+  height: 100%;
+}
+.Avatar img{
   width: 100%;
   height: 100%;
   border-radius: 50%;
