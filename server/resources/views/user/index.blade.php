@@ -1,28 +1,37 @@
 @extends ('layouts.app')
 
 @section ('content')
-<form action="/logout" method="post">
-  @csrf
-<button>Logout</button>
-</form>
-@foreach($users as $user)
-<div style="border:1px solid black;">
-  <div>ID:{{$user->id}}</div>
-  <div>Name:{{$user->name}}</div>
-  <div>
- Image:
-  @foreach($user->image as $key => $media)
-                  <a href="{{ $media->getUrl() }}" target="_blank" style="display: inline-block">
-                              <img src="{{ $media->getUrl('preview') }}">
-                        </a>
-              @endforeach
-  </div>
-  <div> Email:
- {{$user->email}} 
- </div>
- <div> Address:
- {{$user->address}} 
- </div>
- </div>
-@endforeach
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image </th>
+      <th scope="col"> Email</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+     @foreach($users as $user)
+    <tr>
+      <td scope="row">{{ $user->id }}</td>
+      <td >  {{ $user->name }} </td>
+      <td>
+      @foreach($user->image as $key => $media)
+        <a href="{{ $media->getUrl() }}" target="_blank" style="display: inline-block">
+          <img src="{{ $media->getUrl('preview') }}">
+        </a>
+      @endforeach
+      </td>
+      <td>
+        {{$user->email}} 
+      </td>
+      <td>
+        {{$user->address}} 
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
 @endsection
