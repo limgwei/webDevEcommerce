@@ -2,7 +2,7 @@
 <div class="main">
     <h2>ID: {{ID}}</h2>
     <h2>Date: {{createDate}}</h2>
-    <h2>Address: {{createDate}}</h2>
+    <h2>Address: {{address}}</h2>
   <table>
     <tr class="tabletitle">
       <th class="tablecontent1">No</th>
@@ -38,7 +38,8 @@ export default {
         ID:"",
         createDate:"",
         items: "",
-        totalprice:""
+        totalprice:"",
+        address:""
       }
   },
   filters:{
@@ -62,11 +63,11 @@ export default {
   created(){
      
       axios.get('http://127.0.0.1:8000/api/order/orderItems/'+ this.$route.params.id ).then( data=>{
-
-        this.items =data.data.data;
-        this.ID = this.$route.params.id;
-        this.createDate = this.items[0].updated_at;
-        console.log(this.items);
+        
+         this.items =data.data;
+         this.ID = this.items[0].receipt;
+         this.createDate = this.items[0].updated_date;
+        this.address = this.items[0].address;
       })
   }
 }

@@ -38,7 +38,16 @@ class UserApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function updateImage(Request $request,$token){
+        //return $request->all();
+        //return $request->image;
+        // if($request->hasFile('image')){ 
+        //     return 'yeah';
+        // }
+        // else{
+        //     return 'gg';
+        // }
         $file = $request->file('image');
+        //return $file;
         
         $user = User::where('remember_token',$token)->first();
         if ($user->image) {
@@ -46,14 +55,42 @@ class UserApiController extends Controller
                     $media->delete();  
             }
         }
-  
+        
+       
+        
             $user->addMedia($file)->toMediaCollection('image');
           
        
-
-       return $user;
+        
+      
        
-    }   
+    }  
+    
+    public function updateTry(Request $request,$token){
+        //return $request->all();
+        //return $request->image;
+        // if($request->hasFile('image')){ 
+        //     return 'yeah';
+        // }
+        // else{
+        //     return 'gg';
+        // }
+        $file = $request->file('image');
+        //return $file;
+        
+        $user = User::where('remember_token',$token)->first();
+        if ($user->image) {
+            foreach ($user->image as $media) { 
+                    $media->delete();  
+            }
+        }
+            $user->addMedia($file)->toMediaCollection('image');
+          
+       
+        
+      
+       
+    }
 
     
      /**

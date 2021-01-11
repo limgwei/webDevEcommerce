@@ -163,6 +163,7 @@ import axios from 'axios';
         localStorage.token = user.remember_token;
         console.log(localStorage.token);
         this.$emit('close');
+        
       },
       register(){
         if(this.regpassword==this.regconpassword){

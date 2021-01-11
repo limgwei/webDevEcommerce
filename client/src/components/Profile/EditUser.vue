@@ -5,12 +5,16 @@
       <Avatar class="avatar"/>
     </div>
     <br>
+     <form enctype="multipart/form-data" id="form" method="post" ref="form" action="localhost:8000/api/user/image/">
     <div>
-      <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden>
+      <!-- <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden name="image"> -->
+      <input class="hide" ref="upload" type="file" id="" hidden  @change="uploadImage">
       <center>
-        <button class="avatarBtnSet" @click="upload">Change Picture</button>
+        <button class="avatarBtnSet" @click="upload" type="button">Change Picture</button>
       </center>
+      <button class="avatarBtnSet" @click="upload" type="Submit" hidden></button>
     </div>
+    </form>
     <br>
 
     <div class="info">
@@ -75,14 +79,13 @@ export default {
       isdisable1:true,
       isdisable2:true,
       isdisable3:true,
-
       file:"",
-
       editusername:"",
       editpassword:"",
       editconfirmpassword:"",
       editemail:"",
-      editaddress:""
+      editaddress:"",
+      username:""
     }
   },
   created(){
@@ -96,17 +99,28 @@ export default {
     })
   },
   methods:{
+    uploadImage(e){
+        let files = e.target.files[0];
+        let formData = new FormData()
+
+        formData.append('image', files)
+
+        axios.post('http://localhost:8000/api/user/image/'+localStorage.token, formData).then(response =>{
+          console.log(response);
+        })
+
+       
+    },
     uploadAvatar(e){
-      this.file = e.target.files[0];
-      const avatarpicture = new FormData();
-      avatarpicture.append("image", this.file);
-      console.log(avatarpicture);
-      // this.avatarpicture = this.file;
+      let file= e.target.files[0];
+      let avatarpicture = new FormData();
+      avatarpicture.append("image", file);
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
-        {image:avatarpicture}
+        {avatarpicture}
       ).then(data=>{
-        console.log(avatarpicture)
+        //console.log(avatarpicture)
         console.log(data);
+        
       })
     },
     upload() {

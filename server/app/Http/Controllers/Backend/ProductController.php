@@ -50,7 +50,7 @@ class ProductController extends Controller
      */
     public function create()
     {   
-
+        
         $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
        
         $parent_id = array();
@@ -84,6 +84,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        
         //return $request->file('image');
         $product = Product::create($request->all());
 

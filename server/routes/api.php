@@ -50,6 +50,7 @@ Route::get('/email/verify/{id}/{hash}',[VerificationController::class,'verify'])
 
 
 Route::put('/user/image/{token}',[UserApiController::class,'updateImage']);
+Route::post('/user/image/{token}',[UserApiController::class,'updateTry']);
 Route::put('/user/{token}',[UserApiController::class,'update']);
 Route::get('/user/{id}',[UserApiController::class,'show']);
 Route::get('/user/{token}',[UserApiController::class,'show']);
