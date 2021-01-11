@@ -3,28 +3,44 @@
 @extends ('layouts.app')
 
 @section ('content')
-<form action="/discountProduct/{{$discountProduct->id}}" method="post" enctype="multipart/form-data">
-@method('PUT')
-@csrf
-<div>value:<input type="text" name="value" value="{{$discountProduct->value}}"></div>
-<div>
-  Start_date<input type="date" name="start_date" value="{{$discountProduct->start_date}}">
 
-  End_date<input type="date" name="end_date" value="{{$discountProduct->end_date}}">
-</div>      
+<div class="m-4">
+  <div class="card" >
+    <div class="card-body">
+  
+      <form action="/discountProduct/{{$discountProduct->id}}" method="post" enctype="multipart/form-data">
+        @method('PUT')
+        @csrf
+        <div class="form-group">
+          <label for="value">value</label>
+          <input type="text" class="form-control" name="value" value="{{$discountProduct->value}}" id="value" placeholder="Enter value">
+        </div>
+        <div class="form-group">
+          <label for="Start_date">Start_date</label>
+          <input type="date" name="end_date" value="{{$discountProduct->end_date}}" class="form-control" id="Start_date" placeholder="Enter value">
+        </div>
+        <div class="form-group">
+          <label for="End_date">End_date</label>
+          <input type="date" name="end_date" value="{{$discountProduct->end_date}}" class="form-control" id="End_date" placeholder="Enter value">
+        </div>
 
-<select name="product_id">
-  @foreach ($products as $product)
-  @if($product->id == $discountProduct->product->id)
-    <option value="{{$product->id}}" selected>{{$product->name}}</option>
-@else
-<option value="{{$product->id}}">{{$product->name}}</option>
-@endif
-  @endforeach
+        <div class="form-group">
+          <label for="SubCategory">Sub Category</label>
+          <select class="form-control" name="product_id" id="SubCategory">
+          @foreach ($products as $product)
+            @if($product->id == $discountProduct->product->id)
+              <option value="{{$product->id}}" selected>{{$product->name}}</option>
+            @else
+              <option value="{{$product->id}}">{{$product->name}}</option>
+            @endif
+          @endforeach
+          </select>
+        </div>
 
-</select>
-
-<button>submit</button>
-</form>
+        <button class="btn btn-primary">submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 @endsection

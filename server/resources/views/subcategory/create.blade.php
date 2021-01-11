@@ -3,36 +3,39 @@
 
 @section ('content')
 
-<form action="/subcategory" method="post">
+<div class="m-4">
+    <div class="card">
+        <div class="card-body"> 
+            <h5 class="card-title">Create Sub Category</h5>
+            <form action="/subcategory" method="post">
+              @csrf
+              Fields require when post <br>
+              <div class="form-group">
+                  <label for="nameInput">name</label>
+                  <input type="text" class="form-control" name="name" id="nameInput" placeholder="Insert Category">
+              </div>
+              <div class="form-group">
+                <label for="subcategorySelect">subcategory</label>
+                <select name="parent_id" class="form-control" id="subcategorySelect">
+                <option value="0">___</option>
+                @foreach ($parent_subs as $parent_sub) 
+                  <option value="{{$parent_sub->id}}">{{$parent_sub->name}}</option>
+                @endforeach
+                </select>
+              </div>
 
-@csrf
-Fields require when post <br>
-<div>name:<input type="text" name="name"></div>
-<div>subcategory:
-  <select name="parent_id">
-  <option value="0">___</option>
-  @foreach ($parent_subs as $parent_sub) 
-    
-        <option value="{{$parent_sub->id}}">{{$parent_sub->name}}</option>
-  
-      @endforeach
-  </select>
-
+              <div class="form-group">
+                <label for="subcategorySelect">category</label>
+                <select name="category_id" class="form-control" id="subcategorySelect">
+                <option value="0">___</option>
+                @foreach ($categories as $category) 
+                  <option value="{{$category->id}}">{{$category->name}}</option> 
+                @endforeach
+                </select>
+              </div>
+              <button class="btn btn-primary">submit</button>
+            </form>
+        </div>
+    </div>
 </div>
-
-<div>category:
-  <select name="category_id">
-    <option value="0">___</option>
-  @foreach ($categories as $category) 
- 
-    <option value="{{$category->id}}">{{$category->name}}</option>
-   
-      @endforeach
-  </select>
-
-</div>
-
 @endsection
-
-<button>submit</button>
-</form>

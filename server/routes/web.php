@@ -28,14 +28,14 @@ use Illuminate\Support\Facades\Route;
 ///Auth::routes();
 Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkValid'],function(){
 
-    Route::resource('banner','BannerController');
+    Route::resource('banner','BannerController'); //done
     
-    Route::resource('category','CategoryController');
+    Route::resource('category','CategoryController'); //done
     Route::resource('discountProduct','discountProductController');
     Route::resource('order','OrderController');
     Route::resource('product','ProductController');
-    Route::resource('subcategory','SubCategoryController');
-    Route::resource('user','UserController');
+    Route::resource('subcategory','SubCategoryController'); //done
+    Route::resource('user','UserController'); //done
     Route::get('order/orderItems/{id}',[OrderController::class,'getOrderItems']);
 
     // Route::get('/chat/rooms',[ChatController::class,'rooms']);

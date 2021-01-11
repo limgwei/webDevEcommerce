@@ -5,30 +5,48 @@
   {{$error}}
 @endisset
 
-
-@foreach($products as $product)
-  <div style="border:1px solid black">
-
-    <div>ID:{{$product->id}}</div>
-
-    <div>Name:{{$product->name}}</div>
-    <div>Description:{{$product->description}}</div>
-    <div>Image: 
-      @foreach($product->image as $key => $media)
-        <img src="{{ $media->getUrl('') }}">
-      @endforeach
-    </div>
-            
-    @isset($product->sub_category->id)
-      <div>Subcategory:{{$product->sub_category->name}}</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Prduct Name</th>
+      <th scope="col">Description</th>
+      <th>Image</th>
+      @isset($product->sub_category->id)
+      <th>Sub Category</th>
     @endisset
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($products as $product)
+  <tr>
+    <td scope="row">
+    {{$product->id}}
+    </td>
+    <td>{{ $product->name }}</td>
+    <td> {{ $product->description }} </td>
+    <td>  @foreach($product->image as $key => $media)
+        <img class="w-100" src="{{ $media->getUrl('') }}">
+      @endforeach 
+    </td>
+    @isset($product->sub_category->id)
+      <td>{{$product->sub_category->name}}</td>
+    @endisset
+    <td>{{$product->price}}</td>
+    <td>{{$product->quantity}}</td>
+    <td style="width: 20%;">
+      <a href="/product/{{$product->id}}/edit" class="btn btn-outline-success">Edit</a>
+      <a href="/product/{{$product->id}}" class="btn btn-outline-danger">Del</a>
+      </td>
+  </tr>
+ 
+  @endforeach
 
-    <div>Price:{{$product->price}}</div>
-    <div>Quantity:{{$product->quantity}}</div>
-   
+  </tbody>
+</table>
 
-   
-  </div>
-@endforeach
 
 @endsection

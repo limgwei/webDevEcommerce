@@ -3,18 +3,31 @@
 
 @section ('content')
 
-@foreach($discountProducts as $discountProduct)
-  <div style="border:1px solid black">
 
-    <div>ID:{{$discountProduct->id}}</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Value</th>
+      <th scope="col">Product Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($discountProducts as $discountProduct)
+  <tr>
+    <td scope="row">
+    {{$discountProduct->id}}
+    </td>
+    <td>{{$discountProduct->value}}</td>
+    <td>{{$discountProduct->product->name}}</td>
+    <td>{{$discountProduct->start_date}}</td>
+    <td style="width: 20%;">{{$discountProduct->end_date}}</td>
+  </tr>
+ 
+  @endforeach
 
-    <div>Value:{{$discountProduct->value}}</div>
-    <div>Product:{{$discountProduct->product->name}}</div>
-
-    <div>Start date:{{$discountProduct->start_date}}</div>
-
-    <div>End date:{{$discountProduct->end_date}}</div>
-  </div>
-@endforeach
-
+  </tbody>
+</table>
 @endsection
