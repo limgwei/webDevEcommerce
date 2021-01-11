@@ -38,9 +38,6 @@ export default {
 </script>
 
 <style scoped>
-.navbar{
-  margin-top: 8px;
-}
 ul {
   list-style-type: none;
   margin: 0;
@@ -64,5 +61,6 @@ li .sidefont {
 
 li .sidefont:hover {
   background-color: #111;
+  cursor: pointer;
 }
 </style>

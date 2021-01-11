@@ -1,7 +1,8 @@
 <template>
   <div class="header">
     <header>
-        <div class="container">
+      
+        <div class="container"> 
             <img src="../assets/logo.png" alt="logo" class="logo">
 
             <!-- check token(if true go to profile) -->
@@ -18,7 +19,10 @@
             
             
             <!-- check token(if false go to login) -->
-            <router-link to="/cart"><font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" /></router-link>
+              <font-awesome-icon v-if="emptyUser"  @click="showModal" :icon="['fas','shopping-cart']" class="small-icon" />
+            <router-link to="/cart" v-else>
+              <font-awesome-icon :icon="['fas','shopping-cart']" class="small-icon" />
+            </router-link>
   
         </div>
     </header>
@@ -60,13 +64,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   header{
-    box-shadow: 0 .1rem .5rem rgb(228, 228, 228);
+    box-shadow: 0 .1rem .5rem rgb(155, 155, 155);
+    // background: rgb(250, 243, 243);
+    background-image:linear-gradient(135deg,rgb(155, 155, 155),rgb(204, 204, 204),rgb(235, 233, 233));
   }
 
   .container{
     display: flex;
     justify-content: flex-end;
-    padding-top: 4rem;
+    padding-top: 1.8rem;
 
     .logo{
       margin-right: auto;

@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderItemResource;
 use App\Http\Resources\OrderResource;
+use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -28,9 +30,15 @@ class OrderApiController extends Controller
     {
         //
         //new ItemManagementResource(ItemManagement::with(['sub_category', 'category', 'merchant'])->get());
+        
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
-        return new OrderResource(Order::where('user_id',$id)->get());
+        $orders = Order::where('user_id',$id)->get();
+        foreach($orders as $order){
+           
+            $order->updated_date = date('Y-m-d',strtotime($order->updated_at));
+        }
+        return new OrderResource($orders);
     }
     /**
      * Store a newly created order in storage
@@ -54,11 +62,14 @@ class OrderApiController extends Controller
         $order = Order::create($request->all());
 
         foreach($request->orderItems as $orderItem){
+           
             $orderItem['order_id'] = $order->id;
             OrderItem::create($orderItem);
+            
+            Cart::where('id',$orderItem['cartId'])->delete();
         }
 
-        return $order;
+        return response(200);
            
     }
 
@@ -95,11 +106,20 @@ class OrderApiController extends Controller
      * @bodyParam  order_id  int
      * @return \Illuminate\Http\Response
      */
-    public function getOrderItems(Request $request)
+    public function getOrderItems($id)
     {   
-        
-            $items = new OrderItemResource(OrderItem::where('order_id', $request->order_id)->get());
+            $order = Order::where('id',$id)->first();
+            $items = (OrderItem::where('order_id', $id)->get());
+            
+            foreach($items as $item){
+                $item->receipt = strtotime($item->updated_at)+$id;
+                $item->updated_date = date('Y-m-d',strtotime($item->updated_at));
+                $item->address = $order->address;
+            }
+     
             return $items;
+       
+            return new OrderItemResource($items);
         
     }
 

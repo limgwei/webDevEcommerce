@@ -6,7 +6,10 @@
     </div>
     <br>
     <div>
-      <center><button class="avatarBtnSet">Change Picture</button></center>
+      <input @change="uploadAvatar" class="hide" ref="upload" type="file" id="" hidden>
+      <center>
+        <button class="avatarBtnSet" @click="upload">Change Picture</button>
+      </center>
     </div>
     <br>
 
@@ -26,8 +29,14 @@
           <td class="texttd"><input type="password" v-model="editpassword" :disabled="this.isdisable2"></td>
           <td>
             <button v-if="isdisable2" @click="setdisable(2)">Edit</button>
-            <button v-else @click="setdisable(2);savepassword()">Save</button>
+            <button v-else @click="savepassword()">Save</button>
           </td>
+        </tr>
+
+        <tr v-show="!isdisable2">
+          <th><label>Confirm Password:</label></th>
+          <td class="texttd"><input type="password" v-model="editconfirmpassword"></td>
+          <td><button @click="cancelpassword()">Cancel</button></td>
         </tr>
 
         <tr>
@@ -53,6 +62,7 @@
 
 <script>
 import Avatar from '../Avatar';
+import axios from 'axios';
 
 export default {
   name: 'EditUser',
@@ -66,52 +76,107 @@ export default {
       isdisable2:true,
       isdisable3:true,
 
-      editusername:"gwei",
-      editpassword:"loh",
-      editemail:"liqi",
-      editaddress:"yuanxuan"
+      file:"",
+
+      editusername:"",
+      editpassword:"",
+      editconfirmpassword:"",
+      editemail:"",
+      editaddress:""
     }
   },
-  // created(){
-  //   axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-  //     this.editusername =data.data;
-  //     this.editpassword="loh",
-  //     this.editemail="loh",
-  //     this.editaddress="loh",
-  //   })
-  // },
+  created(){
+    const id = this.$store.state.user.id;
+    axios.get(`http://127.0.0.1:8000/api/user/${id}`).then( data=>{
+      const user =data.data.data[0];
+      this.editusername = user.name;
+      this.editaddress = user.address;
+      this.editemail = user.email;
+
+    })
+  },
   methods:{
+    uploadAvatar(e){
+      this.file = e.target.files[0];
+      const avatarpicture = new FormData();
+      avatarpicture.append("image", this.file);
+      console.log(avatarpicture);
+      // this.avatarpicture = this.file;
+      axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
+        {image:avatarpicture}
+      ).then(data=>{
+        console.log(avatarpicture)
+        console.log(data);
+      })
+    },
+    upload() {
+        let uplaodBtn = this.$refs.upload;
+        uplaodBtn.click();
+    },
+  //   previewFiles(event) {
+  //     this.avatarpicture = event.target.files;
+  //  },
+  //   changepicture(){
+  //     document.getElementById("fileUpload").click()
+  //   },
+  //   savepicture(){
+  //     axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
+  //       {image:this.avatarpicture}
+  //     ).then(data=>{
+  //       console.log(data);
+  //     })
+  //   },
     setdisable(num){
       if(num==1){
-        this.isdisable1=!this.isdisable1
-        console.log(this.editusername)
+        this.isdisable1=false
       }
       else if(num==2){
-        this.isdisable2=!this.isdisable2
-        console.log(this.editpassword)
+        this.isdisable2=false
+        this.editpassword =""
       }
       else if(num==3){
-        this.isdisable3=!this.isdisable3
-        console.log(this.editaddress)
+        this.isdisable3=false
       }
     },
     saveusername(){
-      console.log(this.editusername+' this is the save btn1')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.name = this.editusername;
-      // })
+      if(this.editusername!=""){
+      this.isdisable1=true
+      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, 
+      {name:this.editusername}).then( data=>{
+      console.log(data);
+      });
+      }
     },
     savepassword(){
-      console.log(this.editpassword+' this is the save btn2')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.password = this.editpassword;
-      // })
+      if(this.editpassword!=""){
+        if(this.editpassword==this.editconfirmpassword){
+        this.isdisable2=true
+        axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {password:this.editpassword})
+        .then( data=>{
+        console.log(data);
+        })
+        }
+        else{
+          alert("Your password no match please try again!")
+          this.editpassword=""
+          this.editconfirmpassword=""
+        }
+      }
+    },
+    cancelpassword(){
+      this.isdisable2=true
+      this.editpassword=""
     },
     saveaddress(){
-      console.log(this.editaddress+' this is the save btn3')
-      // axious.get('http://127.0.0.1:8000/api/register').then( data=>{
-      //   data.address = this.editaddress;
-      // })
+      if(this.editaddress!=""){
+      this.isdisable3=true
+      axios.put(`http://127.0.0.1:8000/api/user/`+localStorage.token, {address:this.editaddress})
+      .then( data=>{
+      console.log(data);
+      
+      })
+
+      }
     }
   }
 }

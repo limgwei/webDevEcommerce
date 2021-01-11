@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\OrderController;
@@ -53,3 +54,5 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
   Route::post('/login',[LoginController::class,'login']);
   Route::post('logout', [LoginController::class,'logout']);
 
+  Route::get('password/reset/{token}', [ResetPasswordController::class,'showResetForm']);
+  Route::post('password/reset', [ResetPasswordController::class,'reset'])->name('password.update');

@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar />
     <Header />
-    <router-view/>
+    <router-view class="con"/>
   </div>
 </template>
 // <script>
@@ -30,10 +30,13 @@ export default {
   }
   html{
     font-size: 62.5%;
+    min-height: 100%;
   }
   body{
     font-family: 'Nunito', sans-serif;
-    background-color: rgb(247, 247, 247);
+    // background-color: white;
+    background-image: linear-gradient(135deg,rgb(204,255,229),rgb(153, 255, 204),rgb(102,255,178),rgb(153, 255, 204),rgb(204,255,229));
+    background-repeat: no-repeat;
   }
 
   .container{

@@ -3,51 +3,57 @@
   <table>
     <tr class="tabletitle">
       <th>ID</th>
-      <th>Date</th>
+      <th>Address</th>
       <th>Total Price (RM)</th>
+      <th>Date</th>
     </tr>
     <tr v-for="item in items" :key="item.id">
-      <td class="tablecontent">{{item.ID}}</td>
-      <td class="tablecontent">{{item.Date}}</td>
-      <td class="tablecontent">{{item.TotalPrice}}</td>
-      <td><router-link :to="{name:'HistoryDetail',params:{id:item.ID }}"><button class="historybtn">Detail</button></router-link></td>
+      <td class="tablecontent1">{{item.id}}</td>
+      <td class="tablecontent2">{{item.address}}</td>
+      <td class="tablecontent3">{{item.price | showPrice}}</td>
+      <td class="tablecontent4">{{item.updated_date}}</td>
+      <td><button class="historybtn" @click="jumpToDetail(item.id)">Detail</button></td>
     </tr>
   </table>
 </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'History',
   data() {
       return {
         thedetail: false,
-        items: [
-          { ID: 53184, Date: '1 December 2020', TotalPrice: '38.40' },
-          { ID: 54835, Date: '8 December 2020', TotalPrice: '138.40' },
-          { ID: 54930, Date: '18 January 2020', TotalPrice: '58.40' },
-          { ID: 55184, Date: '30 January 2020', TotalPrice: '88.40' }
-        ]
+        items: ""
       }
   },
   methods:{
     thedetailis(){
       this.thedetail=!this.thedetail
+    },
+    jumpToDetail(id){
+      
+     
+
+          this.$router.push('/Profile/History/HistoryDetail/'+id)
+        
     }
   },
-  // created(){
-  //     axious.get('http://127.0.0.1:8000/api/history').then( data=>{
-          // items: [
-          //   { ID: 53184, Date: '1 December 2020', TotalPrice: '38.40' },
-          //   { ID: 54835, Date: '8 December 2020', TotalPrice: '138.40' },
-          //   { ID: 54930, Date: '18 January 2020', TotalPrice: '58.40' },
-          //   { ID: 55184, Date: '30 January 2020', TotalPrice: '88.40' }
-          // ]
-  //       this.products =data.data;
-  //       console.log(this.products);
-  //     })
-    
-  // }
+  filters:{
+    showPrice(price){
+      return price.toFixed(2)
+    }
+  },
+  created(){
+   // console.log(localStorage.token);
+      axios.get('http://127.0.0.1:8000/api/order/'+ localStorage.token ).then( data=>{
+
+        this.items =data.data.data;
+        console.log(this.items);
+      })
+
+  }
 }
 </script>
 
@@ -66,8 +72,22 @@ table {
 .tabletitle{
   background: rgb(155, 218, 247);
 }
-.tablecontent{
-  width: 28%;
+table td,table th{
+  border: 1px solid #ddd;
+}
+table tr:nth-child(even){background-color: rgb(230, 230, 230);}
+table tr{background-color: white;}
+.tablecontent1{
+  width: 5%;
+}
+.tablecontent2{
+  width: 55%;
+}
+.tablecontent3{
+  width: 15%;
+}
+.tablecontent4{
+  width: 15%;
 }
 .tablediv tr td {
   text-align: center;
@@ -75,8 +95,8 @@ table {
 .historybtn{
   border-color: aqua;
   outline: none;
-  width: 90%;
-  margin: auto;
+  /* width: 68px; */
+  width:100%;
 }
 .historybtn:hover{
   cursor: pointer;

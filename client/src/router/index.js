@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Products from '../views/Products.vue'
+import ProductsPromo from '../views/ProductsPromo.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 import Profile from '../views/Profile.vue'
 import Cart from '../views/Cart.vue'
@@ -28,6 +29,11 @@ const routes = [
   component: ProductDetail
   },
   {
+    path:'/products/promo',
+    name:'products.promo',
+    component: ProductsPromo
+    },
+  {
     path: '/Profile',
     component: Profile,
     children:[
@@ -36,13 +42,11 @@ const routes = [
       {
         path:'History',
         component: History,
-        name: 'History',
-        children:[
-          {path: 'HistoryDetail+id=:id', name: 'HistoryDetail', component:HistoryDetail}
-        ]
+        name: 'History'
       }
     ]
   },
+   {path: '/Profile/History/HistoryDetail/:id',name:'HistoryDetail', component:HistoryDetail},
   {
     path:'/Cart',
     name:'Cart',

@@ -6,7 +6,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\ValidationException;
-use Auth;
 
 trait SendsPasswordResetEmails
 {
@@ -34,7 +33,7 @@ trait SendsPasswordResetEmails
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
         $response = $this->broker()->sendResetLink(
-            $request->only('email')
+            $this->credentials($request)
         );
 
         return $response == Password::RESET_LINK_SENT
@@ -72,8 +71,10 @@ trait SendsPasswordResetEmails
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
     protected function sendResetLinkResponse(Request $request, $response)
-    {   
-        return response(['message'=> $response]);
+    {
+        return $request->wantsJson()
+                    ? new JsonResponse(['message' => trans($response)], 200)
+                    : back()->with('status', trans($response));
     }
 
     /**
@@ -87,7 +88,15 @@ trait SendsPasswordResetEmails
      */
     protected function sendResetLinkFailedResponse(Request $request, $response)
     {
-        return response(['error'=> $response]);
+        if ($request->wantsJson()) {
+            throw ValidationException::withMessages([
+                'email' => [trans($response)],
+            ]);
+        }
+
+        return back()
+                ->withInput($request->only('email'))
+                ->withErrors(['email' => trans($response)]);
     }
 
     /**
