@@ -99,9 +99,10 @@ export default {
   methods:{
     uploadAvatar(e){
       this.file = e.target.files[0];
-      this.avatarpicture = new FormData();
-      this.avatarpicture.append("file", this.file);
-      console.log(this.avatarpicture);
+      // this.avatarpicture = new FormData();
+      // this.avatarpicture.append("file", this.file);
+      this.avatarpicture=this.file
+      console.log(this.avatarpicture.name);
       // this.avatarpicture = this.file;
       axios.put(`http://localhost:8000/api/user/image/`+localStorage.token, 
         {image:this.avatarpicture}
