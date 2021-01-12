@@ -94,5 +94,7 @@ class CartApiController extends Controller
     public function destroy($id)
     {
         Cart::where('id',$id)->delete();
+        return 'success';
     }
+
 }

@@ -8,6 +8,7 @@ use App\Http\Resources\OrderResource;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Models\Product;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -49,12 +50,11 @@ class OrderApiController extends Controller
      * @bodyParam delivery_charge double required
      * @bodyParam comment string
      * @bodyParam orderItems object[] required
-     * for orderItems object require order_name,current_price,quanitty
+     * for orderItems object require product_id,oorder_name,current_price,quanitty,cartId
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request,$token)
     {
-       
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
         $request->merge(["user_id"=>$id]);
@@ -67,6 +67,11 @@ class OrderApiController extends Controller
             OrderItem::create($orderItem);
             
             Cart::where('id',$orderItem['cartId'])->delete();
+
+            $product = Product::where('id',$orderItem['product_id'])->first();
+            $product->quantity = $product->quantity - $orderItem['quantity'];
+            $product->save();
+            
         }
 
         return response(200);
@@ -141,5 +146,13 @@ class OrderApiController extends Controller
 
         
         return back();
+    }
+
+    public function getStripeKey(){
+        return env('STRIPE_KEY', 'pk_test_51I7Ps9JjzffrEIKdmsKl2bWO60jfWWX2PJigQ8sQvrebjjeN1zYPp9aS1wCjkDO97CH0dxcoFwImfqBnICE0c9TF0041T2sCK6');
+    }
+
+    public function getStripeSecret(){
+        return env('STRIPE_SECRET', 'sk_test_51I7Ps9JjzffrEIKdaPF6jcawJ4vJsAvNVYVNtZjp2EqzxmJy00YyxjBn6gb0DnyFFCxWSqYFwECYzEo6yURuZuEh00aOn35m3V');
     }
 }

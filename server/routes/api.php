@@ -60,11 +60,13 @@ Route::post('/order/{token}',[OrderApiController::class,'store']);
 Route::put('/order/{id}',[OrderApiController::class,'update']);
 Route::get('/order/{id}',[OrderApiController::class,'show']);
 Route::get('order/orderItems/{id}',[OrderApiController::class,'getOrderItems']);
+Route::get('order/stripeKey',[OrderApiController::class,'getStripeKey']);
+Route::get('order/stripeSecret',[OrderApiController::class,'getStripeSecrets']);
 
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
 Route::put('/cart/{id}/{token}',[CartApiController::class,'update']);
-Route::delete('/cart/{id}/{token}',[CartApiController::class,'delete']);
+Route::delete('/cart/{id}',[CartApiController::class,'delete']);
 
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
