@@ -7,7 +7,7 @@
 <div class="m-4">
   <div class="card" >
     <div class="card-body">
-  
+      <h5 class="card-title">Create Discount</h5>
       <form action="/discountProduct/{{$discountProduct->id}}" method="post" enctype="multipart/form-data">
         @method('PUT')
         @csrf

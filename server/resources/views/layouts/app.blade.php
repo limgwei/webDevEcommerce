@@ -115,7 +115,7 @@
                 </form>
     </nav>
 
-    <div>
+    <div class="mx-5">
     @yield('content');
     </div>
 </div>

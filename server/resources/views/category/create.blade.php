@@ -7,7 +7,7 @@
 
     <div class="card">
         <div class="card-body"> 
-            <h5 class="card-title">Edit Category</h5>
+            <h5 class="card-title">Create Category</h5>
             <form action="/category" method="post">
             @csrf
             Fields require when post <br>
@@ -15,7 +15,7 @@
                 <label for="nameInput">name</label>
                 <input type="text" class="form-control" name="name" id="nameInput" placeholder="Insert Category">
             </div>
-            <button>submit</button>
+            <button class="btn btn-primary">submit</button>
             </form>
         </div>
     </div>

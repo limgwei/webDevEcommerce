@@ -6,7 +6,7 @@
 <div class="m-4">
   <div class="card" >
     <div class="card-body">
-  
+      <h5 class="card-title">Create Discount</h5>
       <form action="/discountProduct" method="post" enctype="multipart/form-data"action="/discountProduct" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

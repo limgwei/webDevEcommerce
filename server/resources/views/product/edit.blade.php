@@ -5,7 +5,7 @@
 <div class="m-4">
   <div class="card" >
     <div class="card-body">
-  
+      <h5 class="card-title">Edit Product</h5>
       <form action="/product/{{$product->id}}" method="post" enctype="multipart/form-data">
       @method('PUT')
       @csrf

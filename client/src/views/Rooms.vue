@@ -1,9 +1,12 @@
 <template>
     <div class="container flex">
-         <router-link v-for="cat in cats" :key="cat.id" :to="{ name: 'product.category', params: { category: cat.name } }" class="product-list">
+         <div v-for="(cat ,index) in cats" :key="cat.id"  class="product-list">
                 
-                <h2>{{cat.name}}</h2>
-        </router-link> 
+                <h1>{{cat.name}}</h1>
+                <ul >
+                    <li v-for="(sub,key) in subs[index]" :key="key"> <router-link :to="{ name: 'product.sub', params: { id: sub.id } }" >{{sub.name}}</router-link></li>
+                </ul>
+        </div> 
     </div>
 </template>
 
@@ -14,8 +17,10 @@ export default {
     data(){
         return{
             cats:'',
-            catArray:[],
-            product:[]
+            products:'',
+            productArray:[],
+            subCategory:[],
+            subs:[]
         }
     },
     created(){
@@ -25,16 +30,16 @@ export default {
         console.log(this.cats);
         this.cats.forEach(item => {
             axios.get('http://127.0.0.1:8000/api/subcategory/category/'+item.id).then( data=>{
-            this.product = data.data.data;
-            this.catArray.push(this.product);
-            console.log(this.product);
-        })
+                this.subCategory = data.data.data;
+                this.subs.push(this.subCategory)
+                
+            })
         })
 
     })
     
     
-  }
+  },
 }
 </script>
 
@@ -60,6 +65,12 @@ export default {
  .flex {
     display: flex; 
     flex-wrap: wrap;  
+  }
+
+  ul{
+      li{
+          font-size: 180%;
+      }
   }
 
  

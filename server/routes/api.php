@@ -108,10 +108,10 @@ Route::post('order/payment_gateway',[SubCategoryApiController::class,'stripePost
     Route::get('product/search/{name}',[ProductApiController::class,'serach_name']);
     Route::get('product/sub/{id}',[ProductApiController::class,'sub']);
    
-    // Route::get('product/sub/{id}/latest',[ProductApiController::class,'sub_product_latest']);
-    // Route::get('product/sub/{id}/name',[ProductApiController::class,'sub_order_by_name']);
-    // Route::get('product/sub/{id}/nameD',[ProductApiController::class,'sub_order_by_nameD']);
-    // Route::get('product/sub/{id}/price',[ProductApiController::class,'sub_order_by_price']);
-    // Route::get('product/sub/{id}/priceD',[ProductApiController::class,'sub_order_by_priceD']);
+    Route::get('product/sub/{id}/latest',[ProductApiController::class,'sub_product_latest']);
+    Route::get('product/sub/{id}/name',[ProductApiController::class,'sub_order_by_name']);
+    Route::get('product/sub/{id}/nameD',[ProductApiController::class,'sub_order_by_nameD']);
+    Route::get('product/sub/{id}/price',[ProductApiController::class,'sub_order_by_price']);
+    Route::get('product/sub/{id}/priceD',[ProductApiController::class,'sub_order_by_priceD']);
 
 
