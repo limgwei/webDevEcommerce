@@ -22,10 +22,14 @@
 </template>
 
 <script>
+
+import axios from 'axios'
 export default {
+    
     name: 'Slider',
-    data: () => ({
-        slides: [
+    data(){
+        return{
+            slides: [
             {
             image: require('@/assets/slide1.jpg')
             },
@@ -36,7 +40,16 @@ export default {
             image: require('@/assets/slide3.jpg')
             },
         ]
-    }),
+        }
+        
+    },
+    created(){
+        axios.get('http://127.0.0.1:8000/api/banner').then( data=>{
+        this.slides = data.data.data;
+        })
+    },
+
+
 }
 
 
