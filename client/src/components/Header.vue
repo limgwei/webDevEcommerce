@@ -3,10 +3,10 @@
     <header>
       
         <div class="container"> 
-            <router-link to="/">
-              <font-awesome-icon :icon="['fas','home']" class="home-icon"/>
+            <!-- <router-link to="/"> -->
+              <!-- <font-awesome-icon :icon="['fas','home']" class="home-icon"/> -->
               <!-- <img src="../assets/logo.png" alt="logo" class="logo"> -->
-            </router-link>
+            <!-- </router-link> -->
 
             <!-- check token(if true go to profile) -->
             <button v-if="emptyUser"  @click="showModal" class="avatarbtn">
@@ -137,13 +137,13 @@ export default {
   background-color: #3e8e41;
 }
 
-.home-icon{
-  color: white;
-  font-size: 48px;
-  margin-left: 10px;
-}
-.home-icon:hover{
-  color: #000;
-}
+// .home-icon{
+//   color: white;
+//   font-size: 48px;
+//   margin-left: 10px;
+// }
+// .home-icon:hover{
+//   color: #000;
+// }
 
 </style>

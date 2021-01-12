@@ -157,6 +157,10 @@ import axios from 'axios';
           email:this.logemail,
           password:this.logpassword
         }).then(data=>{
+          if(data.data=="email have not verified"){
+            this.error = "Email have not verified";
+          }
+          else{
         const user = data.data;
         console.log(data);
         this.$store.commit('setUser',user);
@@ -165,6 +169,7 @@ import axios from 'axios';
         localStorage.token = user.remember_token;
         console.log(localStorage.token);
         this.$emit('close');
+          }
         }).catch(e=>{
              this.error = "Error email or password";
             console.log(e);
@@ -182,9 +187,14 @@ import axios from 'axios';
           password_confirmation:this.regconpassword
           }).then(data=>{
             console.log(data);
-            console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
-            alert("Please go to gmail to verify your account")
-            window.open="http://www.gmail.com";
+            if(data.data=="email used"){
+              alert("Email Used");
+            }
+            else{
+              
+            alert("Please go to gmail to verify your account");
+             window.location.href="http://www.gmail.com";
+            }
           })
 
         }
