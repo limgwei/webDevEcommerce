@@ -1,6 +1,6 @@
 <template class="HistoryDetail">
 <div class="main">
-    <h2>ID: {{ID}}</h2>
+    <h2>Receipt: {{ID}}</h2>
     <h2>Date: {{createDate}}</h2>
     <h2>Address: {{address}}</h2>
   <table>
@@ -24,7 +24,7 @@
     </tr>
   </table>
   <br><br>
-  <router-link to="/Profile/History" style="text-decoration: none;"><button class="backbtn">Back</button></router-link>
+  <a href="/History" style="text-decoration: none;"><button class="backbtn">Back</button></a>
 </div>
 </template>
 

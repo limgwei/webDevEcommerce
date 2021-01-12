@@ -54,7 +54,7 @@ export default {
         
         .toggle{
             position: fixed;
-            margin-top: 5%;
+            margin-top: 9%;
             margin-left: 3%;
             height: 6rem;
             width: 6rem;

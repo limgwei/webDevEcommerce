@@ -18,10 +18,10 @@
         <td class="tablecontentquantity">
           <button class="quantitybtn" @click="decrement(index)" v-bind:disabled="item.quantity<=1">-</button>
           <p class="quantitynumber">{{item.quantity}}</p>
-          <button class="quantitybtn" @click="increment(index)">+</button>
+          <button class="quantitybtn" @click="increment(index)" v-bind:disabled="item.quantity==item.product.quantity">+</button>
         </td>
         <td class="tablecontent">{{totalprice(item.quantity,item.product.price) | showPrice}}</td>
-        <td><button class="cartactionsbtn" @click="removehandle(index)">Delete</button></td>
+        <td><button class="cartactionsbtn" @click="removehandle(item.id)">Delete</button></td>
       </tr>
         
     </table>
@@ -72,8 +72,13 @@ export default {
     decrement(index){
       this.items[index].quantity--
     },
-    removehandle(index){
-      this.items.splice(index, 1)
+    removehandle(id){
+      console.log(id);
+      axios.delete('http://127.0.0.1:8000/api/cart/'+id)
+      .then(response=>
+      {console.log(response);
+      });
+
     },
     totalprice(quantity,price){
       
@@ -101,6 +106,7 @@ export default {
       for(let i = 0;i<this.items.length;i++){
         
         let orderItem = Object;
+        orderItem.product_id = this.items[i].product.id;
         orderItem.order_name = this.items[i].product.name;
         orderItem.current_price = this.items[i].product.price;
         orderItem.quantity = this.items[i].quantity;
@@ -155,6 +161,7 @@ export default {
         this.items =data.data.data;
         
         this.address = this.$store.state.user.address;
+        console.log(this.items)
        
       })
 

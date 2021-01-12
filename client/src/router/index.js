@@ -4,7 +4,6 @@ import Home from '../views/Home.vue'
 import Products from '../views/Products.vue'
 import ProductsPromo from '../views/ProductsPromo.vue'
 import ProductDetail from '../views/ProductDetail.vue'
-import Profile from '../views/Profile.vue'
 import Cart from '../views/Cart.vue'
 
 import EditUser from '../components/Profile/EditUser.vue'
@@ -33,20 +32,10 @@ const routes = [
     name:'products.promo',
     component: ProductsPromo
     },
-  {
-    path: '/Profile',
-    component: Profile,
-    children:[
-      {path:'/',redirect:'Edit'},
-      {path:'Edit', component: EditUser},
-      {
-        path:'History',
-        component: History,
-        name: 'History'
-      }
-    ]
-  },
-   {path: '/Profile/History/HistoryDetail/:id',name:'HistoryDetail', component:HistoryDetail},
+
+  {path:'/Edit', component: EditUser},
+  {path:'/History',component: History, name: 'History'},
+  {path: '/History/HistoryDetail/:id',name:'HistoryDetail', component:HistoryDetail},
   {
     path:'/Cart',
     name:'Cart',
