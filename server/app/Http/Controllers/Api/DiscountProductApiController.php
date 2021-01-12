@@ -226,25 +226,32 @@ class DiscountProductApiController extends Controller
         return new DiscountProductResource($discountProducts);
     }
 
-    //  /**
-    //  * Display by subcategory and order by latest
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function sub_product_latest($id)
-    // {
-    //     $now = Carbon::now()->toDateString('Y-m-d');
-    //     return new DiscountProductResource(DiscountProduct::with(
-    //         ['product'=>function($query) use ($id){
-    //            $query->select('*')->where('sub_category_id',$id)->orderBy('created_at'); 
-    //         }]
-    //         )->where([
-    //             ['start_date','>=',$now],
-    //             ['end_date','<=',$now]
-    //             ])
-    //             ->get());
-    // }
+     /**
+     * Display by subcategory and order by latest
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function sub_product_latest($id)
+    {
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id)->orderBy('created_at'); 
+            }]
+            )->where([
+                ['start_date','>=',$now],
+                ['end_date','<=',$now]
+                ])
+                ->get();
+
+        foreach($discountProducts as $discountProduct){
+            $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
+        }
+
+
+        return new DiscountProductResource($discountProducts);
+    }
 
     //  /**
     //  * Display by subcategory and order by name A-Z
@@ -252,20 +259,28 @@ class DiscountProductApiController extends Controller
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function sub_order_by_name($id)
-    // {
-    //     $now = Carbon::now()->toDateString('Y-m-d');
-    //     return new DiscountProductResource(DiscountProduct::with(
-    //         ['product'=>function($query) use ($id){
-    //            $query->select('*')->where('sub_category_id',$id)->orderBy('name'); 
-    //         }]
-    //         )
-    //         ->where([
-    //             ['start_date','>=',$now],
-    //             ['end_date','<=',$now]
-    //             ])
-    //             ->get());
-    // }
+    public function sub_order_by_name($id)
+    {
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id)->orderBy('name'); 
+            }]
+            )
+            ->where([
+                ['start_date','>=',$now],
+                ['end_date','<=',$now]
+                ])
+                ->get();
+
+        foreach($discountProducts as $discountProduct){
+            $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
+        }
+
+
+        return new DiscountProductResource($discountProducts);
+
+    }
 
     //  /**
     //  * Display by subcategory and order by name Z-A
@@ -273,19 +288,27 @@ class DiscountProductApiController extends Controller
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function sub_order_by_nameD($id)
-    // {
-    //     $now = Carbon::now()->toDateString('Y-m-d');
-    //     return new DiscountProductResource(DiscountProduct::with(
-    //         ['product'=>function($query) use ($id){
-    //            $query->select('*')->where('sub_category_id',$id)->orderByDesc('name'); 
-    //         }]
-    //         )->where([
-    //             ['start_date','>=',$now],
-    //             ['end_date','<=',$now]
-    //             ])
-    //             ->get());
-    // }
+    public function sub_order_by_nameD($id)
+    {
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id)->orderByDesc('name'); 
+            }]
+            )->where([
+                ['start_date','>=',$now],
+                ['end_date','<=',$now]
+                ])
+                ->get();
+
+        foreach($discountProducts as $discountProduct){
+            $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
+        }
+
+
+        return new DiscountProductResource($discountProducts);
+
+    }
 
     //  /**
     //  * Display by subcategory and order by price Low-High
@@ -293,19 +316,26 @@ class DiscountProductApiController extends Controller
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function sub_order_by_price($id)
-    // {
-    //     $now = Carbon::now()->toDateString('Y-m-d');
-    //     return new DiscountProductResource(DiscountProduct::with(
-    //         ['product'=>function($query) use ($id){
-    //            $query->select('*')->where('sub_category_id',$id)->orderBy('price'); 
-    //         }]
-    //         )->where([
-    //             ['start_date','>=',$now],
-    //             ['end_date','<=',$now]
-    //             ])
-    //             ->get());
-    // }
+    public function sub_order_by_price($id)
+    {
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id)->orderBy('price'); 
+            }]
+            )->where([
+                ['start_date','>=',$now],
+                ['end_date','<=',$now]
+                ])
+                ->get();
+
+        foreach($discountProducts as $discountProduct){
+            $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
+        }
+
+
+        return new DiscountProductResource($discountProducts);
+    }
 
     //  /**
     //  * Display by subcategory and order by price High-Low
@@ -313,18 +343,25 @@ class DiscountProductApiController extends Controller
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function sub_order_by_priceD($id)
-    // {
-    //     $now = Carbon::now()->toDateString('Y-m-d');
-    //     return new DiscountProductResource(DiscountProduct::with(
-    //         ['product'=>function($query) use ($id){
-    //            $query->select('*')->where('sub_category_id',$id)->orderByDesc('price'); 
-    //         }]
-    //         )->where([
-    //             ['start_date','>=',$now],
-    //             ['end_date','<=',$now]
-    //             ])
-    //             ->get());
-    // }
+    public function sub_order_by_priceD($id)
+    {
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(
+            ['product'=>function($query) use ($id){
+               $query->select('*')->where('sub_category_id',$id)->orderByDesc('price'); 
+            }]
+            )->where([
+                ['start_date','>=',$now],
+                ['end_date','<=',$now]
+                ])
+                ->get();
+
+        foreach($discountProducts as $discountProduct){
+            $discountProduct->product->current_price = $discountProduct->product->price - $discountProduct->value;
+        }
+
+
+        return new DiscountProductResource($discountProducts);
+    }
 
 }

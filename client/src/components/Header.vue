@@ -47,7 +47,8 @@ export default {
   components:{
     Avatar,
     RegisterLoginModal
-  },data () {
+  },
+  data () {
       return {
         isModalVisible: false,
       }

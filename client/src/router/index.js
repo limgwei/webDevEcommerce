@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Products from '../views/Products.vue'
 import ProductsPromo from '../views/ProductsPromo.vue'
 import ProductDetail from '../views/ProductDetail.vue'
+import ProductsRooms from '../views/ProductsRooms.vue'
 import Cart from '../views/Cart.vue'
 import Rooms from '../views/Rooms.vue'
 
@@ -37,6 +38,11 @@ const routes = [
     path:'/rooms/',
     name:'rooms',
     component: Rooms
+  },
+  {
+    path:'/products/sub/:id',
+    name:'product.sub',
+    component: ProductsRooms
   },
 
   {path:'/Edit', component: EditUser},

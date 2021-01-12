@@ -3,7 +3,7 @@
 
 @section ('content')
 <div class="m-4">
-  
+
   <div class="card" >
     <div class="card-body">
     <h5 class="card-title">Edit Banner</h5>
@@ -50,25 +50,20 @@
           <select class="form-control" name="category_id" id="category">
           <option value="0">___</option>
           @foreach ($categories as $category) 
-            @if($category->id == $banner->category->id)
-              <option value="{{$category->id}}" selected>{{$category->name}}</option>
-              @else
-              <option value="{{$category->id}}">{{$category->name}}</option>
-            @endif
+            
+              <option value="{{$category->id}}" {{$category->id==$banner->category_id?"selected":""}} >{{$category->name}}>{{$category->name}}</option>
+             
+            
           @endforeach
           </select>
         </div>
-
         <div class="form-group">
-          <label for="product">Category</label>
+          <label for="product">Product</label>
           <select class="form-control" name="product_id" id="product">
           <option value="0">___</option>
+          
           @foreach ($products as $product) 
-            @if($product->id == $banner->product->id)
-                <option value="{{$product->id}}" selected>{{$product->name}}</option>
-                @else
-                <option value="{{$product->id}}">{{$product->name}}</option>
-            @endif
+          <option value="{{$product->id}}" {{$product->id==$banner->product_id?"selected":""}} >{{$product->name}}</option>
           @endforeach
           </select>
         </div>

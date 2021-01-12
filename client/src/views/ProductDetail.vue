@@ -17,7 +17,8 @@
                 <span v-if="product.discount">
                     <h3 class="discount">RM {{product.price - product.discount.value}}</h3>
                 </span>
-
+                
+                <p>In Stock {{product.quantity}}</p>
                 <div class="input-group">
 
                     <font-awesome-icon 
@@ -29,9 +30,11 @@
                     <font-awesome-icon 
                     @click="addQuantity"
                     :icon="['fas','plus']" 
-                    class="small-icon" />
+                    class="small-icon" 
+                    />
                     
-                    <button @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
+                    <button v-if="emptyUser"  @click="showModal" class="btn btn-add"> Add To Cart</button>
+                    <button v-else @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
             
                 </div>
                 
@@ -39,27 +42,49 @@
 
             
         </div>
+        
+            <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
 
     </div>
 </template> 
 
 
 <script>
+
+import RegisterLoginModal from '@/components/RegisterLoginModal';
+import { mapGetters } from 'vuex'
 import axios from 'axios'
 export default {
     name: 'ProductDetail',
+    components:{
+    RegisterLoginModal
+    },
     data(){
         return{
             product:'',
             quantity: 0,
-            
+            isModalVisible: false,
+        }
+    },
+    computed: {
+        ...mapGetters(['getUser']),
+        emptyUser() {
+            return Object.keys(this.getUser).length === 0;
         }
     },
     methods:{
-        
+              showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      },
 
         addQuantity(){
-            this.quantity++
+            if(this.quantity<this.product.quantity){
+                    
+                this.quantity++
+            }
         },
         subQuantity(){
             if(this.quantity!=0){

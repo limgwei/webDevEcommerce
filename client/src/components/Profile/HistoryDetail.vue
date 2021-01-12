@@ -1,9 +1,20 @@
 <template class="HistoryDetail">
 <div class="main">
-    <h2>Receipt: {{ID}}</h2>
-    <h2>Date: {{createDate}}</h2>
-    <h2>Address: {{address}}</h2>
-  <table>
+  <table class="table1">
+    <tr>
+      <th class="infotable">Receipt: </th>
+      <td class="infotable">{{ID}}</td>
+    </tr>
+    <tr>
+      <th class="infotable">Date: </th>
+      <td class="infotable">{{createDate}}</td>
+    </tr>
+    <tr>
+      <th class="infotable">Address: </th>
+      <td class="infotable">{{address}}</td>
+    </tr>
+  </table>
+  <table class="table2">
     <tr class="tabletitle">
       <th class="tablecontent1">No</th>
       <th class="tablecontent2">Order Name</th>
@@ -78,7 +89,13 @@ export default {
   margin-left: 15%;
   margin-top: 15px;
 }
-table {
+.table1 {
+  font-size: 14px;
+}
+.infotable{
+  text-align: left;
+}
+.table2 {
   width: 80%;
   font-size: 14px;
 }
@@ -102,11 +119,10 @@ table {
 }
 .totaltable1{
   text-align: right;
-  border-top: 1px solid rgb(155, 218, 247);
-  border-right: 1px solid rgb(155, 218, 247);
 }
 .totaltable2{
   text-align: center;
+  border-top: 1.5px solid rgb(155, 218, 247);
   border-bottom: 1px solid rgb(155, 218, 247);
 }
 .tablediv tr td {
