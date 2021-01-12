@@ -2,21 +2,39 @@
 
 @section ('content')
 
-@foreach($orders as $order)
-  <div style="border:1px solid black">
 
-    <div>ID:{{$order->id}}</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Price</th>
+      <th scope="col">Comment</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th>User</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($orders as $order)
+  <tr>
+    <td scope="row">
+    {{$order->id}}
+    </td>
+    <td>{{$order->price}}</td>
+    <td> {{$order->comment}} </td>
+    <td>{{$order->address}}</td>
+    <td>{{$order->status}}</td>
+    <td>{{$order->user->name}}</td>
+    <td style="width: 20%;">
+      <a class="btn btn-outline-success" href="order/orderItems/{{$order->id}}">View</a>
+    </td>
+  </tr>
+ 
+  @endforeach
 
-    <div>Price:{{$order->price}}</div>
-    <div>Comment:{{$order->comment}}</div>
+  </tbody>
+</table>
 
-    <div>Address:{{$order->address}}</div>
-
-    <div>Status:{{$order->status}}</div>
-
-    <div>User:{{$order->user->name}}</div>
-    <div><a href="order/orderItems/{{$order->id}}">View</a></div>
-  </div>
-@endforeach
 
 @endsection

@@ -6,7 +6,7 @@
 <div class="m-4">
   <div class="card" >
     <div class="card-body">
-  
+    <h5 class="card-title">Create Product</h5>
     <form action="/product" method="post" enctype="multipart/form-data">
       @csrf
       Fields require when post <br>

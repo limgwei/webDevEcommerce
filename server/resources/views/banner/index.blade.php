@@ -3,27 +3,49 @@
 @extends ('layouts.app')
 
 @section ('content')
-@foreach($banners as $banner)
-  <div style="border:1px solid black">
 
-    <div>ID:{{$banner->id}}</div>
-
-    <div>Name:{{$banner->name}}</div>
-
-    <div>Image: 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th>Category</th>
+      <th>Product</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($banners as $banner)
+  <tr>
+    <td scope="row">
+    {{$banner->id}}
+    </td>
+    <td>{{$banner->name}}</td>
+    <td>  
       @foreach($banner->image as $key => $media)
         <img src="{{ $media->getUrl('') }}">
-      @endforeach
-    </div>
-            
-    @isset($banner->category->id)
-      <div>Category:{{$banner->category->name}}</div>
-    @endisset
-   
-    @isset($banner->product->id)
-      <div>Product:{{$banner->product}}</div>
-    @endisset
-   
-  </div>
-@endforeach
+      @endforeach 
+    </td>
+    @if(isset($banner->category->id))
+    <td>{{$banner->category->name}}</td>
+    @else
+    <td></td>
+    @endif
+    @if(isset($banner->product->id))
+    <td>{{$banner->product->name}}</td>
+    @else
+    <td></td>
+    @endif
+    <td style="width: 20%;">
+      <a class="btn btn-outline-success" href="banner/{{$banner->id}}/edit">View</a>
+    </td>
+  </tr>
+ 
+  @endforeach
+
+  </tbody>
+</table>
+
+
 @endsection ('content')

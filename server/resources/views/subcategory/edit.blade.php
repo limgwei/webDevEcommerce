@@ -4,7 +4,7 @@
 <div class="m-4">
     <div class="card">
         <div class="card-body"> 
-            <h5 class="card-title">Edit Category</h5>
+            <h5 class="card-title">Edit Sub Category</h5>
             <form action="/subcategory/{{$subcategory->id}}" method="post" enctype="multipart/form-data">
               @method('PUT')
               @csrf
