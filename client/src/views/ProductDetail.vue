@@ -33,7 +33,8 @@
                     class="small-icon" 
                     />
                     
-                    <button @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
+                    <button v-if="emptyUser"  @click="showModal" class="btn btn-add"> Add To Cart</button>
+                    <button v-else @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
             
                 </div>
                 
@@ -41,24 +42,43 @@
 
             
         </div>
+        
+            <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
 
     </div>
 </template> 
 
 
 <script>
+
+import RegisterLoginModal from '@/components/RegisterLoginModal';
+import { mapGetters } from 'vuex'
 import axios from 'axios'
 export default {
     name: 'ProductDetail',
+    components:{
+    RegisterLoginModal
+    },
     data(){
         return{
             product:'',
             quantity: 0,
-            
+            isModalVisible: false,
+        }
+    },
+    computed: {
+        ...mapGetters(['getUser']),
+        emptyUser() {
+            return Object.keys(this.getUser).length === 0;
         }
     },
     methods:{
-        
+              showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      },
 
         addQuantity(){
             if(this.quantity<this.product.quantity){
