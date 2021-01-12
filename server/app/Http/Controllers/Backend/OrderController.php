@@ -21,30 +21,21 @@ class OrderController extends Controller
         
         $users = User::all();
         
-        $orders = Order::with(['users'])->get();
+        $orders = Order::with(['user'])->get();
+        
         return view('order.index',compact('orders','users'));
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $users = User::all();
-        
-        $order = Order::with(['users'])->where('id',$id)->first();
-        return view('order.show',compact('order','users'));
-    }
-
     
     public function getOrderItems($id)
     {
-
+            $order = Order::with(['user'])->where('id',$id)->first();
             $items = OrderItem::where('order_id', $id)->get();
-            return view('order.items',compact('items'));
+
+            $order->receipt = strtotime($order->updated_at)+$id;
+            $order->updated_date = date('Y-m-d',strtotime($order->updated_at));     
+            
+
+            return view('order.items',compact('items','order'));
         
     }
 

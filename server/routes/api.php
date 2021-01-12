@@ -66,7 +66,7 @@ Route::get('order/stripeSecret',[OrderApiController::class,'getStripeSecrets']);
 Route::get('/cart/{token}',[CartApiController::class,'index']);
 Route::post('/cart/{token}',[CartApiController::class,'store']);
 Route::put('/cart/{id}/{token}',[CartApiController::class,'update']);
-Route::delete('/cart/{id}',[CartApiController::class,'delete']);
+Route::delete('/cart/{id}',[CartApiController::class,'destroy']);
 
 Route::get('/chat',[ChatApiController::class,'messages']);
 Route::post('/chat',[ChatApiController::class,'newMessage']);
