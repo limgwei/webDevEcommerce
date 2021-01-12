@@ -31,7 +31,7 @@
         </div>
     </div>
       <div class="container flex">
-         <ProductList v-for="product in products" :key="product.id" :product="product" />
+         <ProductList v-for="product in products" :key="product.product_id" :product="product.product" />
       </div>
   </div>
 </template>
