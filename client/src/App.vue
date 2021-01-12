@@ -45,14 +45,19 @@ export default {
   }
   .small-icon{
       font-size: 2.3rem;
-      color: $icon-grey-1;
+      color: darken($icon-grey-1,10%);
       margin: 2rem;
       cursor: pointer;
       &:hover{
-        color: darken($icon-grey-1,15%);
+        color: darken($icon-grey-1,18%);
       }
   }
-
+  button :hover{
+    cursor: pointer;
+  }
+  router-link :hover{
+    cursor: pointer;
+  }
   .static-icon{
     font-size: 2.5rem;
     color: $icon-grey-1;
