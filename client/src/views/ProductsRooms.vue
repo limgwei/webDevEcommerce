@@ -3,7 +3,7 @@
         <div class="product-filter">
         <div class="container">
           
-            <h1 style="text-decoration:underline;">All Promo Product</h1>
+            <h1 style="text-decoration:underline;">Rooms Product</h1>
             <div class="filter-bar">
             
 
@@ -33,14 +33,14 @@
         </div>
     </div>
       <div class="container flex">
-         <ProductList v-for="product in products" :key="product.product_id" :product="product.product" />
+         <ProductList v-for="product in products" :key="product.id" :product="product" />
       </div>
   </div>
 </template>
 
 <script>
 import ProductList from '@/components/Product/ProductList.vue'
-import axious from 'axios'
+import axios from 'axios'
 
 export default {
   name: 'Products',
@@ -52,64 +52,73 @@ export default {
       return{
         products:'',
         searchKey:'',
+        id:'',
+        latests:'',
+        nameA:'',
+        nameD:'',
+        priceA:'',
+        priceD:'',
+        ori:'',
       }
   },
   methods:{
     sorting(value){
-      
       if(value==1){
-        axious.get('http://127.0.0.1:8000/api/discount_product/latest').then( data=>{
-        this.products = data.data.data;
-        console.log(value);
-        console.log(this.products);
-      })
+          this.products=this.latests
       }else if(value ==2){
-        axious.get('http://127.0.0.1:8000/api/discount_product/name').then( data=>{
-        this.products = data.data.data;
-        console.log(value);
-        console.log(this.products);
-      })
+        this.products=this.nameA
       }else if(value ==3){
-        axious.get('http://127.0.0.1:8000/api/discount_product/nameD').then( data=>{
-        this.products = data.data.data;
-        console.log(value);
-        console.log(this.products);
-      })
+        this.products=this.nameD
       }else if(value ==4){
-        axious.get('http://127.0.0.1:8000/api/discount_product/price').then( data=>{
-        this.products = data.data.data;
-        console.log(value);
-        console.log(this.products);
-      })
+        this.products=this.priceA
       }else if(value ==5){
-         axious.get('http://127.0.0.1:8000/api/discount_product/priceD').then( data=>{
-        this.products = data.data.data;
-        console.log(value);
-        console.log(this.products);
-      })
+          this.products=this.priceD
       }else{
-        axious.get('http://127.0.0.1:8000/api/discount_product').then( data=>{
-        this.products = data.data.data;
+        this.products = this.ori
         
-        console.log(this.products);
-      })
       }
     },
     searching(){
-        axious.get('http://127.0.0.1:8000/api/discount_product/search/{name}',this.searchKey).then( data=>{
+      
+        axios.get('http://127.0.0.1:8000/api/sub/'+this.id+'/search/{name}',this.searchKey).then( data=>{
         this.products = data.data.data;
         
         console.log(this.products);
-      })
+        })
     }
 
   },
   created(){
-      axious.get('http://127.0.0.1:8000/api/discount_product').then( data=>{
-        this.products = data.data.data;
+    
         
+        var id = this.$route.params.id;
+      axios.get('http://127.0.0.1:8000/api/product/sub/'+id).then( data=>{
+        this.products = data.data.data;
+        this.ori = this.products;
+        this.id = this.products[0].sub_category_id;
+        console.log(this.id)
         console.log(this.products);
       })
+
+      axios.get('http://127.0.0.1:8000/api/sub/'+id+'/latest').then( data=>{
+        this.latests = data.data.data;
+        console.log(this.latests)
+      })
+
+      axios.get('http://127.0.0.1:8000/api/sub/'+id+'/name').then( data=>{
+        this.nameA = data.data.data;
+      })
+      axios.get('http://127.0.0.1:8000/api/sub/'+id+'/nameD').then( data=>{
+        this.nameD = data.data.data;
+      })
+      axios.get('http://127.0.0.1:8000/api/sub/'+id+'/price').then( data=>{
+        this.priceA = data.data.data;
+      })
+      axios.get('http://127.0.0.1:8000/api/sub/'+id+'/priceD').then( data=>{
+        this.priceD = data.data.data;
+      })
+
+
     
   }
   
