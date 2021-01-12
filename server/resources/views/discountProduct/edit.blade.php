@@ -26,7 +26,7 @@
 
         <div class="form-group">
           <label for="SubCategory">Product</label>
-          <select class="form-control" name="product_id" id="SubCategory">
+          <select class="form-control" name="product_id" id="SubCategory" disabled>
           @foreach ($products as $product)
             @if($product->id == $discountProduct->product->id)
               <option value="{{$product->id}}" selected>{{$product->name}}</option>

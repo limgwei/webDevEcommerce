@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\DiscountProduct;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class DiscountProductController extends Controller
@@ -18,9 +19,14 @@ class DiscountProductController extends Controller
     {
        
 
-        $products = Product::all();
-        $discountProducts = DiscountProduct::with(['product'])->get();
-        return view('discountProduct.index',compact('discountProducts','products'));
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(['product'])->where([
+            ['start_date','<=',$now],
+            ['end_date','>=',$now]
+        ])->get();
+   
+        
+        return view('discountProduct.index',compact('discountProducts'));
     }
 
     /**
@@ -30,7 +36,20 @@ class DiscountProductController extends Controller
      */
     public function create()
     {
-        $products = Product::all();
+        $allProducts = Product::where('id','<>',0);
+   
+        $now = Carbon::now()->toDateString('Y-m-d');
+        $discountProducts = DiscountProduct::with(['product'])->where([
+            ['start_date','<=',$now],
+            ['end_date','>=',$now]
+        ])->get();
+           
+        foreach($discountProducts as $discountProduct){
+            $allProducts = $allProducts->where('id','<>',$discountProduct->product_id);
+        }
+
+        $products = $allProducts->get();
+
         return view('discountProduct.create',compact('products'));
     }
 

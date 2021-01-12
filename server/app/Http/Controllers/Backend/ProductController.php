@@ -19,28 +19,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        
-        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
-       
-        $parent_id = array();
-
-        foreach($subcategories_with_parent as $subcategory_with_parent){
-           
-            if(!in_array($subcategory_with_parent->parent_id,$parent_id)){
-               
-                array_push($parent_id,$subcategory_with_parent->parent_id);
-            }
-            
-        }
-
-        $subcategories = SubCategory::where('id','<>',0);
-        foreach($parent_id as $parent){
-           $subcategories = $subcategories->where('id','<>',$parent);
-        }
-        $subcategories = $subcategories->get();
-        
-        $products = Product::with(['media','sub_category'])->get();
-        return view('product.index',compact('subcategories','products'));
+                
+        $products = Product::with(['media','sub_category'])->where('is_enable',1)->get();
+        return view('product.index',compact('products'));
     }
 
     /**
@@ -106,7 +87,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->where('is_enable',1)->get();
        
         $parent_id = array();
 
