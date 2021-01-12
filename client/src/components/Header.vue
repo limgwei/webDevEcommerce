@@ -92,10 +92,13 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    outline: 0!important;
+    border: 0;
     margin: auto 0 auto auto;
   }
-  
+  .avatarbtn:focus{
+    outline: 0;
+  }
+
 .modal{
   position: fixed;
   z-index: 99;
