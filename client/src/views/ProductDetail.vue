@@ -17,7 +17,8 @@
                 <span v-if="product.discount">
                     <h3 class="discount">RM {{product.price - product.discount.value}}</h3>
                 </span>
-
+                
+                <p>In Stock {{product.quantity}}</p>
                 <div class="input-group">
 
                     <font-awesome-icon 
@@ -29,7 +30,8 @@
                     <font-awesome-icon 
                     @click="addQuantity"
                     :icon="['fas','plus']" 
-                    class="small-icon" />
+                    class="small-icon" 
+                    />
                     
                     <button @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
             
@@ -59,7 +61,10 @@ export default {
         
 
         addQuantity(){
-            this.quantity++
+            if(this.quantity<this.product.quantity){
+                    
+                this.quantity++
+            }
         },
         subQuantity(){
             if(this.quantity!=0){
