@@ -111,7 +111,7 @@
         
                 <form action="/logout" method="post">
                     @csrf
-                    <button  type="button" class="btn btn-outline-secondary">Logout</button>
+                    <button  type="submit" class="btn btn-outline-secondary">Logout</button>
                 </form>
     </nav>
 
