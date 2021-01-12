@@ -48,8 +48,8 @@ export default {
         
         .toggle{
             position: fixed;
-            margin-top: 9%;
-            margin-left: 3%;
+            margin-top: 1%;
+            margin-left: 1%;
             height: 6rem;
             width: 6rem;
             align-items: center;

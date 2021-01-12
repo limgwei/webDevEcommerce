@@ -63,7 +63,6 @@ export default {
   width: 80%;
   margin-left: 10%;
   padding: 5px;
-  border: black solid 2px;
 }
 table {
   width: 100%;
@@ -72,10 +71,10 @@ table {
 .tabletitle{
   background: rgb(155, 218, 247);
 }
-table td,table th{
+table td{
   border: 1px solid #ddd;
+  background-color: white;
 }
-table tr:nth-child(even){background-color: rgb(230, 230, 230);}
 table tr{background-color: white;}
 .tablecontent1{
   width: 5%;
