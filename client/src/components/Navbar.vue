@@ -1,19 +1,16 @@
 <template>
     <div class="navbar">
-            <div class="toggle"  v-bind:class="{ active: isActive||catActive  }"  v-on:click="popUp" >
+            <div class="toggle"  v-bind:class="{ active: isActive  }"  v-on:click="popUp" >
                 <font-awesome-icon :icon="['fas','bars']" class="small-icon" />
         
             </div>
-            <nav  v-bind:class="{ active: !isActive&&!catActive }"  v-on:click="offNav">
+            <nav  v-bind:class="{ active: !isActive }"  v-on:click="offNav">
             <ul class="left">
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Products</a></li>
                 <li><a href="/products/promo">Promotion</a></li>
-                <li @click="activeCat">><a>Rooms</a></li>
+                <li><a href="/rooms">Rooms</a></li>
                 <li><a href="#">Contact Us</a></li>
-            </ul>
-            <ul :class="{active: !catActive}">
-                    <li v-for="(cat,key) in category"  :key="key"><a>{{cat}}</a></li>
             </ul>
         </nav>
     </div>
@@ -27,9 +24,6 @@ export default {
     data:function(){
         return{
             isActive: false,
-            catActive: false,
-            category: ['Living Room','Dining Room','Bedroom','Decor'],
-            
         }
     },
     methods:{

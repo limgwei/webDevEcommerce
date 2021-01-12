@@ -5,6 +5,7 @@ import Products from '../views/Products.vue'
 import ProductsPromo from '../views/ProductsPromo.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 import Cart from '../views/Cart.vue'
+import Rooms from '../views/Rooms.vue'
 
 import EditUser from '../components/Profile/EditUser.vue'
 import History from '../components/Profile/History.vue'
@@ -31,7 +32,12 @@ const routes = [
     path:'/products/promo',
     name:'products.promo',
     component: ProductsPromo
-    },
+  },
+  {
+    path:'/rooms/',
+    name:'rooms',
+    component: Rooms
+  },
 
   {path:'/Edit', component: EditUser},
   {path:'/History',component: History, name: 'History'},
