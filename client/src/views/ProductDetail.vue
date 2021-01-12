@@ -80,8 +80,9 @@ export default {
     //         }
     // },
     created(){
-        axious.get('http://127.0.0.1:8000/api/product/{product}',this.$route.params.id).then( data=>{
+        axious.get('http://127.0.0.1:8000/api/product/',this.$route.params.id).then( data=>{
         this.products = data.data.data;
+        console.log(this.$router.params.id);
         console.log(this.products);
       })
     }
