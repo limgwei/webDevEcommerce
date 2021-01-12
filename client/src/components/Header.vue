@@ -3,7 +3,9 @@
     <header>
       
         <div class="container"> 
-            <img src="../assets/logo.png" alt="logo" class="logo">
+            <router-link to="/">
+              <img src="../assets/logo.png" alt="logo" class="logo">
+            </router-link>
 
             <!-- check token(if true go to profile) -->
             <button v-if="emptyUser"  @click="showModal" class="avatarbtn">
