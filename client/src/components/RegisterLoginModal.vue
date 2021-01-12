@@ -34,6 +34,7 @@
             <br>
             <center><font-awesome-icon :icon="['fas','user']" class="usericon"/></center>
             <br>
+            <div v-if="error" class="errordiv">Error:{{error}}</div>
             <div class="carddiv">
               <input type="email" v-model="logemail" placeholder="Email">
             </div>
@@ -121,7 +122,8 @@ import axios from 'axios';
         regemail:"",
         regaddress:"",
         logemail:"",
-        logpassword:""
+        logpassword:"",
+        error:""
       }
     },
     methods: {
@@ -151,10 +153,10 @@ import axios from 'axios';
       },
       async login(){
 
-        const data = await axios.post('http://localhost:8000/api/login',{
+         await axios.post('http://localhost:8000/api/login',{
           email:this.logemail,
           password:this.logpassword
-        })
+        }).then(data=>{
         const user = data.data;
         console.log(data);
         this.$store.commit('setUser',user);
@@ -163,6 +165,11 @@ import axios from 'axios';
         localStorage.token = user.remember_token;
         console.log(localStorage.token);
         this.$emit('close');
+        }).catch(e=>{
+             this.error = "Error email or password";
+            console.log(e);
+        })
+        
         
       },
       register(){
@@ -300,5 +307,9 @@ import axios from 'axios';
   }
   .usericon{
     font-size: 80px;
+  }
+  .errordiv{
+    margin-left: 20%;
+    color: red;
   }
 </style>
