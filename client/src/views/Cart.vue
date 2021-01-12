@@ -40,8 +40,34 @@
       <strong class="buytotal">RM {{buytotalfun | showPrice}}</strong>
       <label class="buylabel">Delivery charges :</label>
       <strong class="buytotal">RM {{delivery_charge| showPrice}}</strong>
-      <button class="buybtn" @click="buy()">Buy</button>
-       <button class="buybtn" @click="stripe()">Stripe</button>
+      <button class="buybtn" @click="showmodel()">Buy</button>
+
+    <div class="modal-backdrop" v-show="cardpaymodel">
+      <div class="buycarddiv">
+        <img class="cardpicture" src="../assets/card.png"/>
+        <div class="buycarddiv-up">
+          <div>
+            <input class="modelinput" v-model="cardnumber" placeholder="Card Number" type="number">
+          </div>
+          <div>
+            <input class="modelinput" v-model="cardmonth" placeholder="Month" type="number">
+          </div>
+          <div>
+            <input class="modelinput" v-model="cardyear" placeholder="Year" type="number">
+          </div>
+          <div>
+            <input class="modelinput" v-model="cardcvc" placeholder="Card CVC" type="number">
+          </div>
+        </div>
+        <div class="buycarddiv-down">
+          <center>
+            <button class="modelbtn" @click="closemodel()">Cancel</button>
+            <button class="modelbtn" @click="buy()">Pay</button>
+          </center>
+        </div>
+      </div>
+    </div>
+
     </div>
     <div v-else>
       <p class="emptyshow">Your cart is empty. <a href="/products">Go to buy.</a></p>
@@ -61,6 +87,7 @@ export default {
       address:"",
       orderItems:[],
       comment:"",
+      cardpaymodel:false,
 
       card:[]
     }
@@ -77,12 +104,19 @@ export default {
       axios.delete('http://127.0.0.1:8000/api/cart/'+id)
       .then(response=>
       {console.log(response);
+      window.location.reload(true);
       });
 
     },
     totalprice(quantity,price){
       
       return quantity*price
+    },
+    showmodel(){
+      this.cardpaymodel = true
+    },
+    closemodel(){
+      this.cardpaymodel = false
     },
     stripe(){
       var optionAxios = {
@@ -261,5 +295,58 @@ table th{
 .quantitynumber{
   width: 40%;
   display: inline-block;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buycarddiv{
+  width: 300px;
+  height: 400px;
+  bottom: 100px;
+  position: fixed;
+  z-index: 99;
+  background: #eeeeee;
+  box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  flex-direction: column;
+}
+.modelinput{
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+  margin-top: 10px;
+  background-color: #eeeeee;
+  border: 0;
+  border-bottom: 1px solid;
+}
+.modelinput:focus{
+  outline: none;
+}
+.modelbtn{
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 15px;
+  border-color: red;
+  color: red;
+}
+.modelbtn:hover{
+  cursor: pointer;
+  color: white;
+  background-color: red;
+  border-color: red;
+}
+.cardpicture{
+  width: 300px;
+  height: 180px;
+  margin-top: 10px;
 }
 </style>
