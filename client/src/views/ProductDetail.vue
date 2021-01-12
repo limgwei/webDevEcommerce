@@ -3,7 +3,7 @@
 
         <div class="container">
             <div class="img-container">
-                <img :src="product.img" alt="">
+                <img :src="product.image[0].url" alt="">
             </div>
 
             <div class="detail-container">
@@ -19,19 +19,19 @@
                 </span>
 
                 <div class="input-group">
-                    <font-awesome-icon 
-                    @click="addQuantity"
-                    :icon="['fas','plus']" 
-                    class="small-icon" />
-
-    
-                    <span class="quantity">{{ quantity }}</span>
 
                     <font-awesome-icon 
                     @click="subQuantity"
                     :icon="['fas','minus']" 
                     class="small-icon" />
-                    <button @click="clearQuantity" class="btn btn-add"> Add To Cart</button>
+    
+                    <span class="quantity">{{ quantity }}</span>
+                    <font-awesome-icon 
+                    @click="addQuantity"
+                    :icon="['fas','plus']" 
+                    class="small-icon" />
+                    
+                    <button @click="clearQuantity(); addToCart()" :disabled="quantity ==0" class="btn btn-add"> Add To Cart</button>
             
                 </div>
                 
@@ -41,11 +41,11 @@
         </div>
 
     </div>
-</template>
+</template> 
 
 
 <script>
-import axious from 'axios'
+import axios from 'axios'
 export default {
     name: 'ProductDetail',
     data(){
@@ -68,8 +68,18 @@ export default {
             }
         },
         clearQuantity(){
-            this.quantity =0
         },
+
+        addToCart(){
+        axios.post('http://localhost:8000/api/cart/'+localStorage.token,{
+            product_id :this.product.id,
+            quantity :this.quantity
+        })
+        
+            this.quantity =0
+
+        }
+        
     },
     // async mounted(){
     //     if (this.$route.params.id) {
@@ -80,10 +90,12 @@ export default {
     //         }
     // },
     created(){
-        axious.get('http://127.0.0.1:8000/api/product/',this.$route.params.id).then( data=>{
-        this.products = data.data.data;
-        console.log(this.$router.params.id);
-        console.log(this.products);
+        var id = this.$route.params.id;
+        axios.get('http://127.0.0.1:8000/api/product/'+id).then( data=>{
+        this.product = data.data.data[0];
+        console.log(id);
+        console.log(this.product);
+        
       })
     }
 }
