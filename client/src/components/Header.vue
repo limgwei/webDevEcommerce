@@ -49,7 +49,7 @@ export default {
   computed: {
     ...mapGetters(['getUser']),
     emptyUser() {
-      return Object.keys(this.getUser).length === 0 && this.getUser.constructor === Object
+      return Object.keys(this.getUser).length === 0;
     }
   },
   methods: {
@@ -60,6 +60,7 @@ export default {
         this.isModalVisible = false;
       }
   },
+
 }
 </script>
 
