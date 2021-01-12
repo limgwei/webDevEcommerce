@@ -284,6 +284,12 @@ import axios from 'axios';
     margin-left: 20%;
     margin-top: 10px;
     height: 30px;
+    border: 0;
+    background-color: #eeeeee;
+    border-bottom: 1px solid;
+  }
+  .carddiv input:focus {
+    outline: none;
   }
   .carddiv textarea{
     width: 60%;
@@ -291,10 +297,20 @@ import axios from 'axios';
     margin-top: 10px;
     height: 70px;
     font-size: 14px;
+    border: 0;
+    background-color: #eeeeee;
+    border-bottom: 1px solid;
+  }
+  .carddiv textarea:focus {
+    outline: none;
   }
   .iconbtn{
     margin-top: 10px;
     height: 30px;
+    border: 0;
+  }
+  .iconbtn:focus {
+    outline: none;
   }
   .forgetclass{
     text-decoration: none;

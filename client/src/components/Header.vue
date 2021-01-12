@@ -4,18 +4,24 @@
       
         <div class="container"> 
             <router-link to="/">
-              <img src="../assets/logo.png" alt="logo" class="logo">
+              <font-awesome-icon :icon="['fas','home']" class="home-icon"/>
+              <!-- <img src="../assets/logo.png" alt="logo" class="logo"> -->
             </router-link>
 
             <!-- check token(if true go to profile) -->
             <button v-if="emptyUser"  @click="showModal" class="avatarbtn">
                 <Avatar />
             </button>
-            <button v-else class="avatarbtn">
-              <router-link to="/Profile" style="text-decoration:none">
+
+            <div v-else class="dropdown avatarbtn">
                 <Avatar />
-              </router-link>
-            </button>
+
+              <div class="dropdown-content">
+                <a href="/Edit">Edit Profile</a>
+                <a href="/History">History</a>
+                <a href="#" @click="logout">Logout</a>
+              </div>
+            </div>
             <RegisterLoginModal v-show="isModalVisible" @close="closeModal" class="modal"/>
 
             
@@ -58,6 +64,11 @@ export default {
       },
       closeModal() {
         this.isModalVisible = false;
+      },
+      logout(){
+        this.$store.commit('setUser',{});
+        localStorage.token = "";
+        this.$router.push('/');
       }
   },
 }
@@ -67,47 +78,67 @@ export default {
 <style lang="scss" scoped>
   header{
     box-shadow: 0 .1rem .5rem rgb(155, 155, 155);
-    // background: rgb(250, 243, 243);
-    background-image:linear-gradient(135deg,rgb(155, 155, 155),rgb(204, 204, 204),rgb(235, 233, 233));
+    background: #424242;
+    // background-image:linear-gradient(135deg,rgb(155, 155, 155),rgb(204, 204, 204),rgb(235, 233, 233));
   }
 
   .container{
     display: flex;
     justify-content: flex-end;
     padding-top: 1.8rem;
-
-    .logo{
-      margin-right: auto;
-      margin-left: 7rem;
-      height: 6rem;
-      width: auto;
-    }
   }
   .avatarbtn{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid red;
     outline: 0!important;
     margin: auto 0 auto auto;
   }
-
-.avatarbtntext{
-  width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid red;
-    outline: 0!important;
-    margin: auto 0 auto auto;
-}
-.avatarbtntext:hover{
-  cursor: pointer;
-}
+  
 .modal{
   position: fixed;
   z-index: 99;
 }
-  
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 99;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.home-icon{
+  color: white;
+  font-size: 48px;
+  margin-left: 10px;
+}
+.home-icon:hover{
+  color: #000;
+}
 
 </style>

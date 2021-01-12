@@ -206,7 +206,6 @@ export default {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 5px solid red;
     margin: auto;
   }
   .avatarBtnSet{

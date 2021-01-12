@@ -36,7 +36,7 @@ export default {
       
      
 
-          this.$router.push('/Profile/History/HistoryDetail/'+id)
+          this.$router.push('/History/HistoryDetail/'+id)
         
     }
   },

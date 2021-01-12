@@ -2,7 +2,8 @@
   <div class="Avatar">
 
     <img v-if="imgavatar!=''" :src="imgavatar">
-    <p v-else class="noregisterimg">登录</p>
+
+    <img v-else src="../assets/user.png">
 
   </div>
 </template>
@@ -37,8 +38,13 @@ export default {
   height: 100%;
   border-radius: 50%;
 }
-.noregisterimg{
-  color: red;
-  text-align: center;
+/* .noregister{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
+.noregistericon{
+  font-size: 100%;
+} */
 </style>

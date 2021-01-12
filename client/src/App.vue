@@ -36,6 +36,7 @@ export default {
     font-family: 'Nunito', sans-serif;
     // background-color: white;
     background-image: linear-gradient(135deg,rgb(204,255,229),rgb(153, 255, 204),rgb(102,255,178),rgb(153, 255, 204),rgb(204,255,229));
+    // background-image: rgb(230, 230, 230);
     background-repeat: no-repeat;
   }
 
@@ -53,6 +54,9 @@ export default {
       }
   }
   button :hover{
+    cursor: pointer;
+  }
+  a :hover{
     cursor: pointer;
   }
   router-link :hover{

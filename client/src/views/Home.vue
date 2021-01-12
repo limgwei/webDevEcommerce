@@ -21,7 +21,4 @@ export default {
 </script>
 
 <style scoped>
-.home{
-  background-repeat: no-repeat;
-}
 </style>
