@@ -88,12 +88,19 @@
         <a class="small-font-size" href="/product/create">Create Product</a>
         <a class="small-font-size" href="/product">Show Product</a>
     </div>
+     <!-- discount product collapse -->
+    <a class="my-2" data-toggle="collapse" href="#discountProduct" >Discount</a>
+    <div class="collapse ml-2" id="discountProduct">
+        <a class="small-font-size" href="/discountProduct/create">Create Discount</a>
+        <a class="small-font-size" href="/discountProduct">Show Discount</a>
+    </div>
     <!-- user collapse -->
     <a class="my-2" data-toggle="collapse" href="#UserArea" >User</a>
     <div class="collapse ml-2" id="UserArea">
         <a class="small-font-size" href="/user">Show Users</a>
     </div>
     <a href="/order">Order</a>
+    
 
 </div>
 

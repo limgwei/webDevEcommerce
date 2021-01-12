@@ -84,17 +84,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        
+            
         //return $request->file('image');
         $product = Product::create($request->all());
 
         $file = $request->file('image');
-        $imageCount = count($request->file('image'));
         
-         for($i = 0;$i<$imageCount;$i++){
-              $product->addMedia($file[$i])->toMediaCollection('image');
+    
+         
+              $product->addMedia($file)->toMediaCollection('image');
               
-         }
+         
          return redirect()->route('product.index');
     }
 
@@ -180,7 +180,7 @@ class ProductController extends Controller
 
        
         $file = $request->file('image');
-        $imageCount = count($request->file('image'));
+
 
         if ($product->image) {
             foreach ($product->image as $media) { 
@@ -188,11 +188,11 @@ class ProductController extends Controller
             }
         }
 
-        for($i = 0;$i<$imageCount;$i++){
+ 
             
-            $product->addMedia($file[$i])->toMediaCollection('image');
+            $product->addMedia($file)->toMediaCollection('image');
    
-       }
+       
 
        return redirect()->route('product.index');
     }

@@ -41,9 +41,10 @@ class DiscountProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
         $discountProduct = DiscountProduct::create($request->all());
-        return $discountProduct;
+        return redirect()->route('discountProduct.index');
     }
 
     /**
@@ -84,7 +85,7 @@ class DiscountProductController extends Controller
      */
     public function update(Request $request,DiscountProduct $discountProduct)
     {
-        $discountProduct->update(array($request->all()));
+        $discountProduct->update($request->all());
         return redirect()->route('discountProduct.index');
     }
 

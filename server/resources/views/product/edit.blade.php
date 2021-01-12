@@ -29,7 +29,7 @@
             </div>
             <div class="custom-file">
               <!-- <input type="file" class="custom-file-input" id="inputGroupFile01"> -->
-              <input type="file" class="custom-file-input" name="image[]" >
+              <input type="file" class="custom-file-input" name="image" >
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
               <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label> -->
             </div>
@@ -70,9 +70,6 @@
   </div>
 </div>
 
-
-
-<button>submit</button>
 </form>
 
 

@@ -29,11 +29,14 @@
             </div>
             <div class="custom-file">
               <!-- <input type="file" class="custom-file-input" id="inputGroupFile01"> -->
-              <input type="file" class="custom-file-input" name="image[]" >
+              <!-- <input type="file" class="custom-file-input" name="image" > -->
+              <input type="file" class="custom-file-input" name="image" >
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-              <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label> -->
+              <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
             </div>
           </div>
+    
+        </div>
         <div class="form-group">
           <label for="SubCategory">Sub Category</label>
           <select class="form-control" name="sub_category_id" id="SubCategory">
@@ -44,7 +47,7 @@
         </div>
 
         <div class="form-group">
-          <label for="ProductPrice">Product Name</label>
+          <label for="ProductPrice">Product Price</label>
           <input type="text" class="form-control" name="price"  id="ProductPrice" placeholder="Enter Product Price">
         </div>
 
@@ -58,29 +61,4 @@
     </div>
   </div>
 </div>
-
-<form action="/product" method="post" enctype="multipart/form-data">
-@csrf
-Fields require when post <br>
-<div>name:<input type="text" name="name"></div>
-<div>description:<input type="text" name="description"></div>
-<div>image:<input type="file" name="image[]"></div>
-
-<div>subcategory:
-  <select name="sub_category_id">
-
-  @foreach ($subcategories as $subcategory) 
-        <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>
-  @endforeach
-  </select>
-
-</div>
-
-<div>Price: <input type="text" name="price"></div>
-
-<div>Quantity: <input type="number" name="quantity"></div>
-
-<button>submit</button>
-</form>
-
 @endsection
