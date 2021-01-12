@@ -43,7 +43,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+    public function enable($id)
+    {
+        $user = User::find($id);
+                $user->is_enable = 1;
+                 $user->save();
+
+                 return redirect()->route('user.index');
+    }
+
+    public function disable($id)
     {
         $user = User::find($id);
                 $user->is_enable = 0;

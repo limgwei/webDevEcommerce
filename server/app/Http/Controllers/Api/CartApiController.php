@@ -7,6 +7,7 @@ use App\Models\Cart;
 use Illuminate\Http\Request;
 use App\Http\Resources\CartResource;
 use App\Models\DiscountProduct;
+use App\Models\Product;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -61,8 +62,21 @@ class CartApiController extends Controller
         //$request->request->add(['variable', 'value']);
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
+        
         $request->merge(["user_id"=>$id]);
-        $cart = Cart::create($request->all());
+        $cart = Cart::where('user_id',$id)->where('product_id',$request->product_id)->first();
+        if($cart){
+          
+            $cart->quantity += $request->quantity;
+            $product = Product::where('id',$request->product_id)->first();
+            if($product->quantity<$cart->quantity){
+                $cart->quantity = $product->quantity;
+            }
+            $cart->save();
+        }
+        else{
+            $cart = Cart::create($request->all());
+        }    
         return $cart;
            
     }
@@ -80,7 +94,7 @@ class CartApiController extends Controller
         $user = User::where('remember_token',$token)->first();
         $user_id = $user->id;
         $request->merge(["user_id"=>$user_id]);
-
+        
         $cart = Cart::where('id',$id)->update($request->all());
         return $cart;
     }

@@ -24,7 +24,7 @@ class CategoryApiController extends Controller
      */
     public function index()
     {
-        return new CategoryResource(Category::all());
+        return new CategoryResource(Category::where('is_enable',1)->get());
     }
 
     /**
@@ -35,11 +35,9 @@ class CategoryApiController extends Controller
      */
     public function show($id)
     {
-        return new CategoryResource(Category::where('id',$id)->get());
+        return new CategoryResource(Category::where('id',$id)->where('is_enable',1)->get());
     }
 
-    public function getAll(){
-        
-    }
+
 
 }

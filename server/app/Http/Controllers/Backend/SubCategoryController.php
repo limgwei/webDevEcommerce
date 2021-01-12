@@ -182,7 +182,7 @@ class SubCategoryController extends Controller
      */
     public function update(Request $request, SubCategory $subcategory)
     {
-        $subcategory->update(array($request->all()));
+        $subcategory->update($request->all());
         return redirect()->route('subcategory.index');
     }
 
@@ -193,6 +193,24 @@ class SubCategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+    {
+        $product = Product::where('sub_category_id',$id)->where('is_enable',1)->get();
+        $subcategory=SubCategory::where('parent_id',$id)->where('is_enable',1)->get();
+
+        if($product->isEmpty() && $subcategory->isEmpty()){
+           
+            $subcategory = SubCategory::find($id);
+            $subcategory->is_enable = 0;
+             $subcategory->save();
+            return redirect()->route('subcategory.index');
+        }
+      
+            $error = "You have to delete subcategory or product related before delete this subcategory.";
+            return redirect()->route('subcategory.index',['error'=>$error]);
+        
+    }
+
+    public function delete($id)
     {
         $product = Product::where('sub_category_id',$id)->where('is_enable',1)->get();
         $subcategory=SubCategory::where('parent_id',$id)->where('is_enable',1)->get();

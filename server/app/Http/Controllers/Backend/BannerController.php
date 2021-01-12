@@ -113,26 +113,23 @@ class BannerController extends Controller
      */
     public function update(Request $request, Banner $banner)
     {
-        $banner->update(array($request->all()));
+        $banner->update($request->all());
       
        
         $file = $request->file('image');
         
-
-        if ($banner->image) {
-            foreach ($banner->image as $media) { 
-                    $media->delete();  
+        if($request->hasFile('image')){
+            if ($banner->image) {
+                foreach ($banner->image as $media) { 
+                        $media->delete();  
+                }
             }
-        }
 
-        if(!$file==null){
             $imageCount = count($request->file('image'));
             for($i = 0;$i<$imageCount;$i++){
                 $banner->addMedia($file[$i])->toMediaCollection('image');
            }
         }
-
-         
 
         return redirect()->route('banner.index');
     }
@@ -146,6 +143,12 @@ class BannerController extends Controller
     public function destroy($id)
     {
         Banner::where('id',$id)->delete();
+    }
+
+    public function delete($id)
+    {
+        Banner::where('id',$id)->delete();
+        return redirect()->route('banner.index');
     }
 
     public function storeCKEditorImages(Request $request)

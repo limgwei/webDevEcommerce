@@ -25,7 +25,7 @@ class UserApiController extends Controller
      */
     public function show($id)
     {   
-        return new UserResource(User::where('id',$id)->get());
+        return new UserResource(User::where('id',$id)->where('is_enable',1)->get());
     }
 
    

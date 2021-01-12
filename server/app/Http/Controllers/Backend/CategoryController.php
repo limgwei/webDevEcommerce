@@ -17,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::where('is_enable',1)->get();
         return view('category.index',compact('categories'));
     }
 
@@ -82,7 +82,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {      
-        $category->update(array($request->all()));
+        $category->update($request->all());
        return redirect()->route('category.index');
     }
 
@@ -92,12 +92,17 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {   $banner = Banner::where('category_id',$id)->get();
+
+    public function delete($id)
+    {
+        $banner = Banner::where('category_id',$id)->get();
         $subcategory=SubCategory::where('category_id',$id)->where('is_enable',1)->get();;
 
         if($subcategory->isEmpty()){
-            $banner->delete();
+            if($banner){
+                Banner::where('category_id',$id)->delete();
+            }
+           
             $category = Category::find($id);
             $category->is_enable = 0;
              $category->save();
@@ -105,9 +110,9 @@ class CategoryController extends Controller
             return redirect()->route('category.index');
         }
         else{
-            $error = "You have to delete banners or subcategory related before delete this category.";
+            $error = "You have to delete subcategory related before delete this category.";
             return redirect()->route('category.index',['error'=>$error]);
         }
-        
     }
+
 }

@@ -1,10 +1,16 @@
 <?php
 
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Backend\BannerController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ChatController;
+use App\Http\Controllers\Backend\DiscountProductController;
+use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 //use App\Http\Controllers\ChatController;
 
@@ -44,7 +50,13 @@ Route::group(['namespace'=>'App\Http\Controllers\Backend','middleware'=>'checkVa
 
     Route::get('/chat',[ChatController::class,'rooms']);
     
-
+    Route::get('/banner/delete/{id}',[BannerController::class,'delete']);
+    Route::get('/category/delete/{id}',[CategoryController::class,'delete']);
+    Route::get('/discountProduct/delete/{id}',[DiscountProductController::class,'delete']);
+    Route::get('/product/delete/{id}',[ProductController::class,'delete']);
+    Route::get('/subcategory/delete/{id}',[SubCategoryController::class,'delete']);
+    Route::get('/user/{id}/enable',[UserController::class,'enable']);
+    Route::get('/user/{id}/disable',[UserController::class,'disable']);
 });
 
 

@@ -163,15 +163,18 @@ class ProductController extends Controller
         $file = $request->file('image');
 
 
-        if ($product->image) {
-            foreach ($product->image as $media) { 
-                    $media->delete();  
+        if($request->hasFile('image')){
+            if ($product->image) {
+                foreach ($product->image as $media) { 
+                        $media->delete();  
+                }
             }
-        }
 
- 
-            
-            $product->addMedia($file)->toMediaCollection('image');
+           
+     
+                $product->addMedia($file)->toMediaCollection('image');
+           
+        }
    
        
 
@@ -184,7 +187,8 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+    public function delete($id)
     {  
         Banner::where('product_id',$id)->delete();
         DiscountProduct::where('product_id',$id)->delete();

@@ -38,7 +38,8 @@
     <td></td>
     @endif
     <td style="width: 20%;">
-      <a class="btn btn-outline-success" href="banner/{{$banner->id}}/edit">View</a>
+      <a class="btn btn-outline-success" href="banner/{{$banner->id}}/edit">Edit</a>
+      <a href="/banner/delete/{{$banner->id}}" class="btn btn-outline-danger">Del</a>
     </td>
   </tr>
  

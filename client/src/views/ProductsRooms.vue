@@ -63,18 +63,45 @@ export default {
   },
   methods:{
     sorting(value){
+      var id = this.$route.params.id;
+      
       if(value==1){
-          this.products=this.latests
+         axios.get('http://127.0.0.1:8000/api/product/sub/'+id+'/latest').then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
       }else if(value ==2){
-        this.products=this.nameA
+       axios.get('http://127.0.0.1:8000/api/product/sub/'+id+'/name').then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
       }else if(value ==3){
-        this.products=this.nameD
+        axios.get('http://127.0.0.1:8000/api/product/sub/'+id+'/nameD').then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
+       
       }else if(value ==4){
-        this.products=this.priceA
+        axios.get('http://127.0.0.1:8000/api/product/sub/'+id+'/priceA').then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
       }else if(value ==5){
-          this.products=this.priceD
+           axios.get('http://127.0.0.1:8000/api/product/sub/'+id+'/products').then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
       }else{
-        this.products = this.ori
+         axios.get('http://127.0.0.1:8000/api/product/sub/'+id).then( data=>{
+        this.products = data.data.data;
+        console.log(value);
+        console.log(this.products);
+      })
         
       }
     },

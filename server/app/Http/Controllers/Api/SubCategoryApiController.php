@@ -23,7 +23,7 @@ class SubCategoryApiController extends Controller
      */
     public function index()
     {
-        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->get());
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('is_enable',1)->get());
 
         for($i=0;$i<$subCategories->count();$i++){
 
@@ -47,7 +47,7 @@ class SubCategoryApiController extends Controller
      */
     public function show($id)
     {   
-        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('id',$id)->get());
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('is_enable',1)->where('id',$id)->get());
 
         for($i=0;$i<$subCategories->count();$i++){
 
@@ -70,7 +70,7 @@ class SubCategoryApiController extends Controller
      */
     public function filter_by_category($id){
 
-        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('category_id',$id)->get());
+        $subCategories = new SubCategoryResource(SubCategory::with(['category','parent'])->where('is_enable',1)->where('category_id',$id)->get());
 
         for($i=0;$i<$subCategories->count();$i++){
 
@@ -94,7 +94,7 @@ class SubCategoryApiController extends Controller
      */
     public function filter_by_subcategory($id){
 
-            $subCategories = new SubCategoryResource(SubCategory::with(['parent'])->where('parent_id',$id)->get());
+            $subCategories = new SubCategoryResource(SubCategory::with(['parent'])->where('is_enable',1)->where('parent_id',$id)->get());
 
             for($i=0;$i<$subCategories->count();$i++){
 

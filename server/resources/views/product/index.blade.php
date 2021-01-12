@@ -12,9 +12,9 @@
       <th scope="col">Prduct Name</th>
       <th scope="col">Description</th>
       <th>Image</th>
-      @isset($product->sub_category->id)
+      
       <th>Sub Category</th>
-    @endisset
+   
       <th>Price</th>
       <th>Quantity</th>
       <th>Options</th>
@@ -32,9 +32,9 @@
         <img class="w-100" src="{{ $media->getUrl('') }}">
       @endforeach 
     </td>
-    @isset($product->sub_category->id)
+   
       <td>{{$product->sub_category->name}}</td>
-    @endisset
+   
     <td>{{$product->price}}</td>
     <td>{{$product->quantity}}</td>
     <td style="width: 20%;">

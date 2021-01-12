@@ -33,7 +33,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->get();
+        $products =  Product::with(['sub_category'])->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -60,7 +60,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('id',$id)->get();
+        $products =  Product::with(['sub_category'])->where('id',$id)->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -88,7 +88,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('name','LIKE',"%$name")->get();
+        $products =  Product::with(['sub_category'])->where('name','LIKE',"%$name")->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -115,7 +115,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -142,7 +142,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->orderByDesc('created_at')->get();
+        $products =  Product::with(['sub_category'])->orderByDesc('created_at')->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -171,7 +171,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->orderBy('name')->get();
+        $products =  Product::with(['sub_category'])->orderBy('name')->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -198,7 +198,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->orderByDesc('name')->get();
+        $products =  Product::with(['sub_category'])->orderByDesc('name')->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -227,7 +227,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->orderBy('price')->get();
+        $products =  Product::with(['sub_category'])->orderBy('price')->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -253,7 +253,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->orderByDesc('price')->get();
+        $products =  Product::with(['sub_category'])->orderByDesc('price')->where('is_enable',1)->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -279,7 +279,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->orderByDesc('created_at')->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->orderByDesc('created_at')->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -306,7 +306,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->orderBy('name')->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->orderBy('name')->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -332,7 +332,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->orderByDesc('name')->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->orderByDesc('name')->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -360,7 +360,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->orderBy('price')->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->orderBy('price')->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){
@@ -387,7 +387,7 @@ class ProductApiController extends Controller
             ['end_date','>=',$date]
         ])->get();
         
-        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->orderByDesc('price')->get();
+        $products =  Product::with(['sub_category'])->where('sub_category_id',$id)->where('is_enable',1)->orderByDesc('price')->get();
         foreach($discountProducts as $discountProduct){
             
            foreach($products as $product){

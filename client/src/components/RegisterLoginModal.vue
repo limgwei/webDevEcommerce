@@ -160,6 +160,9 @@ import axios from 'axios';
           if(data.data=="email have not verified"){
             this.error = "Email have not verified";
           }
+          else if(data.data=="you have been blocked"){
+            this.error = "You have been blocked";
+          }
           else{
         const user = data.data;
         console.log(data);

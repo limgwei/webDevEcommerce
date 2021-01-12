@@ -28,7 +28,7 @@
 
       <td style="width: 20%;">
       <a href="/subcategory/{{$subcategory->id}}/edit" class="btn btn-outline-success">Edit</a>
-      <a href="/subcategory/{{$subcategory->id}}" class="btn btn-outline-danger">Del</a>
+      <a href="/subcategory/delete/{{$subcategory->id}}" class="btn btn-outline-danger">Del</a>
       </td>
     </tr>
     @endforeach

@@ -19,7 +19,7 @@
       <td >  {{  $category->name }} </td>
       <td style="width: 20%;">
       <a href="/category/{{$category->id}}/edit" class="btn btn-outline-success">Edit</a>
-      <a href="/category/{{$category->id}}" class="btn btn-outline-danger">Del</a>
+      <a href="/category/delete/{{$category->id}}" class="btn btn-outline-danger">Del</a>
       </td>
     </tr>
     @endforeach

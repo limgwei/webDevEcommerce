@@ -71,6 +71,14 @@ class OrderApiController extends Controller
             $product = Product::where('id',$orderItem['product_id'])->first();
             $product->quantity = $product->quantity - $orderItem['quantity'];
             $product->save();
+
+            $carts = Cart::where('product_id',$orderItem['product_id'])->get();
+            foreach($carts as $cart){
+                if($cart->quantity > $product->quantity){
+                    $cart->quantity = $product->quantity;
+                    $cart->save();
+                }
+            }
             
         }
 

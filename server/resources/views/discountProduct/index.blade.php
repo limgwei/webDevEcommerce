@@ -24,6 +24,10 @@
     <td>{{$discountProduct->product->name}}</td>
     <td>{{$discountProduct->start_date}}</td>
     <td style="width: 20%;">{{$discountProduct->end_date}}</td>
+    <td style="width: 20%;">
+      <a href="/discountProduct/{{$discountProduct->id}}/edit" class="btn btn-outline-success">Edit</a>
+      <a href="/discountProduct/delete/{{$discountProduct->id}}" class="btn btn-outline-danger">Del</a>
+      </td>
   </tr>
  
   @endforeach

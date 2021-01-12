@@ -30,6 +30,15 @@
       <td>
         {{$user->address}} 
       </td>
+      <td>
+      @if($user->is_enable=='0')
+      <a href="/user/{{$user->id}}/enable" class="btn btn-outline-success">Enable</a>
+      @else
+      <a href="/user/{{$user->id}}/disable" class="btn btn-outline-danger">Disable</a>
+      @endif
+      </td>
+    
+    
     </tr>
     @endforeach
   </tbody>

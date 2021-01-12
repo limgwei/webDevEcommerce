@@ -32,7 +32,7 @@
             <div class="custom-file">
               <!-- <input type="file" class="custom-file-input" id="inputGroupFile01"> -->
               <!-- <input type="file" class="custom-file-input" name="image" > -->
-              <input type="file" class="custom-file-input" name="image[]" >
+              <input type="file" class="custom-file-input" name="image[]" value="">
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
               <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
               @foreach($banner->image as $key => $media)
@@ -51,7 +51,7 @@
           <option value="0">___</option>
           @foreach ($categories as $category) 
             
-              <option value="{{$category->id}}" {{$category->id==$banner->category_id?"selected":""}} >{{$category->name}}>{{$category->name}}</option>
+              <option value="{{$category->id}}" {{$category->id==$banner->category_id?"selected":""}} >{{$category->name}}</option>
              
             
           @endforeach
