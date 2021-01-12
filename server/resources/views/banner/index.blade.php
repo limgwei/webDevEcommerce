@@ -24,7 +24,7 @@
     <td>{{$banner->name}}</td>
     <td>  
       @foreach($banner->image as $key => $media)
-        <img src="{{ $media->getUrl('') }}">
+        <img class="w-50" src="{{ $media->getUrl('') }}">
       @endforeach 
     </td>
     @if(isset($banner->category->id))
