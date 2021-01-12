@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Models\Category;
 use App\Http\Resources\CategoryResource;
+use App\Models\Product;
+use App\Models\SubCategory;
+
 /**
  * @group Category
  *
@@ -33,6 +36,10 @@ class CategoryApiController extends Controller
     public function show($id)
     {
         return new CategoryResource(Category::where('id',$id)->get());
+    }
+
+    public function getAll(){
+        
     }
 
 }

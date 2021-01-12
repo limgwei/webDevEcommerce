@@ -10,7 +10,6 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Category Name</th>
-      <th>Subcategory </th>
       <th> Category</th>
       <th scope="col">Option</th>
     </tr>
@@ -20,12 +19,6 @@
     <tr>
       <th scope="row">{{ $subcategory->id }}</th>
       <td >  {{ $subcategory->name }} </td>
-      @if(isset($subcategory->parent->id))
-      <td>{{$subcategory->parent->name}}</td>
-
-      @else 
-      <td></td>
-      @endif
 
       @if(isset($subcategory->category->id))
       <td>{{$subcategory->category->name}}</td>

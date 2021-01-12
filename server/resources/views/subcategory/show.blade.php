@@ -10,10 +10,6 @@
 
     <div>Name:{{$subcategory->name}}</div>
             
-    @isset($subcategory->parent->id)
-      <div>Subcategory:{{$subcategory->parent->name}}</div>
-    @endisset
-
     @isset($subcategory->category->id)
       <div>Category:{{$subcategory->category->name}}</div>
     @endisset
