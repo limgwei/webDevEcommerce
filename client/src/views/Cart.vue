@@ -39,10 +39,11 @@
       <label class="buylabel">Total Price (Now) :</label>
       <strong class="buytotal">RM {{buytotalfun | showPrice}}</strong>
       <label class="buylabel">Delivery charges :</label>
-      <strong class="buytotal">RM {{delivery_charge| showPrice}}</strong>
-      <button class="buybtn" @click="showmodel()">Buy</button>
+      <strong class="buytotal">RM {{delivery_charge | showPrice}}</strong>
+      <!-- <button class="buybtn" @click="showmodel()">Buy</button> -->
+      <button class="buybtn" @click="buy()">Buy</button>
 
-    <div class="modal-backdrop" v-show="cardpaymodel">
+    <!-- <div class="modal-backdrop" v-show="cardpaymodel">
       <div class="buycarddiv">
         <img class="cardpicture" src="../assets/card.png"/>
         <div class="buycarddiv-up">
@@ -62,11 +63,11 @@
         <div class="buycarddiv-down">
           <center>
             <button class="modelbtn" @click="closemodel()">Cancel</button>
-            <button class="modelbtn" @click="buy()">Pay</button>
+            <button class="modelbtn" @click="stripe()">Pay</button>
           </center>
         </div>
       </div>
-    </div>
+    </div> -->
 
     </div>
     <div v-else>
@@ -87,9 +88,14 @@ export default {
       address:"",
       orderItems:[],
       comment:"",
-      cardpaymodel:false,
-
-      card:[]
+      // cardpaymodel:false,
+      // cardnumber:"",
+      // cardyear:"",
+      // cardcvc:"",
+      // cardmonth:"",
+      card:[],
+      // pk:"",
+      // sk:""
     }
   },
   methods: {
@@ -118,23 +124,21 @@ export default {
     closemodel(){
       this.cardpaymodel = false
     },
-    stripe(){
-      var optionAxios = {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }
-
-        this.card['number'] = 424242424242;
-        this.card['exp_month'] = 12;
-        this.card['year'] = 2024;
-        this.card['cvc'] = 123;
-          axios.post('http://api.stripe.com/v1/tokens',{
-            card:this.card
-        },optionAxios).then(data=>{
-            console.log(data);
-        })  
-    },
+    // stripe(){
+    
+    //     this.card['number'] = this.cardnumber;
+    //     this.card['exp_month'] = this.cardmonth;
+    //     this.card['year'] = this.cardyear;
+    //     this.card['cvc'] = this.cardcvc;
+    //       axios.get('http://localhost:8000/api/order/stripeKey').then(data=>{
+    //         console.log(data);
+    //       })
+    //     //   axios.post('http://api.stripe.com/v1/tokens',{
+    //     //     card:this.card
+    //     // }).then(data=>{
+    //     //     console.log(data);
+    //     // })  
+    // },
     buy(){
       //var orderItems = [];
       for(let i = 0;i<this.items.length;i++){
@@ -213,11 +217,11 @@ table{
   width: 100%;
   font-size: 14px;
   background-color: white;
+  /* box-shadow: 5px 10px; */
 }
 table td,table th{
-  border: 1px solid #ddd;
+  background-color: white;
 }
-table tr:nth-child(even){background-color: rgb(230, 230, 230);}
 table th{
   text-align: center;
   background-color: rgb(155, 218, 247);
