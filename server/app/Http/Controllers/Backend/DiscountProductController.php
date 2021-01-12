@@ -18,8 +18,9 @@ class DiscountProductController extends Controller
     public function index()
     {
        
-
-        $now = Carbon::now()->toDateString('Y-m-d');
+       
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
+        
         $discountProducts = DiscountProduct::with(['product'])->where([
             ['start_date','<=',$now],
             ['end_date','>=',$now]
@@ -38,7 +39,7 @@ class DiscountProductController extends Controller
     {
         $allProducts = Product::where('id','<>',0);
    
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
             ['start_date','<=',$now],
             ['end_date','>=',$now]

@@ -26,7 +26,7 @@ class DiscountProductApiController extends Controller
      */
     public function index()
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
             ['start_date','<=',$now],
             ['end_date','>=',$now]
@@ -48,7 +48,7 @@ class DiscountProductApiController extends Controller
      */
     public function show($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
             ['id',$id],
             ['start_date','<=',$now],
@@ -71,7 +71,7 @@ class DiscountProductApiController extends Controller
      */
     public function sub($id)
     {   
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id); 
@@ -126,7 +126,7 @@ class DiscountProductApiController extends Controller
      */
     public function order_by_name()
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query){
                $query->select('*')->orderBy('name'); 
@@ -153,7 +153,7 @@ class DiscountProductApiController extends Controller
      */
     public function order_by_nameD()
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query){
                $query->select('*')->orderByDesc('name'); 
@@ -180,7 +180,7 @@ class DiscountProductApiController extends Controller
      */
     public function order_by_price()
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query){
                $query->select('*')->orderBy('price'); 
@@ -207,7 +207,7 @@ class DiscountProductApiController extends Controller
      */
     public function order_by_priceD()
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query){
                $query->select('*')->orderByDesc('price'); 
@@ -234,7 +234,7 @@ class DiscountProductApiController extends Controller
      */
     public function sub_product_latest($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderBy('created_at'); 
@@ -261,7 +261,7 @@ class DiscountProductApiController extends Controller
     //  */
     public function sub_order_by_name($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderBy('name'); 
@@ -290,7 +290,7 @@ class DiscountProductApiController extends Controller
     //  */
     public function sub_order_by_nameD($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderByDesc('name'); 
@@ -318,7 +318,7 @@ class DiscountProductApiController extends Controller
     //  */
     public function sub_order_by_price($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderBy('price'); 
@@ -345,7 +345,7 @@ class DiscountProductApiController extends Controller
     //  */
     public function sub_order_by_priceD($id)
     {
-        $now = Carbon::now()->toDateString('Y-m-d');
+        $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(
             ['product'=>function($query) use ($id){
                $query->select('*')->where('sub_category_id',$id)->orderByDesc('price'); 

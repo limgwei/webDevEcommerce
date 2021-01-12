@@ -26,7 +26,7 @@ class ProductApiController extends Controller
     public function index()
     {
         
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -53,7 +53,7 @@ class ProductApiController extends Controller
      */
     public function show($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -81,7 +81,7 @@ class ProductApiController extends Controller
      */
     public function serach_name($name)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -108,7 +108,7 @@ class ProductApiController extends Controller
      */
     public function sub($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -135,7 +135,7 @@ class ProductApiController extends Controller
      */
     public function product_latest()
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -164,7 +164,7 @@ class ProductApiController extends Controller
      */
     public function order_by_name()
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         //return $date;
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -191,7 +191,7 @@ class ProductApiController extends Controller
      */
     public function order_by_nameD()
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
 
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
@@ -221,7 +221,7 @@ class ProductApiController extends Controller
     public function order_by_price()
     {
 
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -247,7 +247,7 @@ class ProductApiController extends Controller
      */
     public function order_by_priceD()
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -273,7 +273,7 @@ class ProductApiController extends Controller
      */
     public function sub_product_latest($id)
     {   
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -300,7 +300,7 @@ class ProductApiController extends Controller
      */
     public function sub_order_by_name($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -326,7 +326,7 @@ class ProductApiController extends Controller
      */
     public function sub_order_by_nameD($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -354,7 +354,7 @@ class ProductApiController extends Controller
      */
     public function sub_order_by_price($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
@@ -381,7 +381,7 @@ class ProductApiController extends Controller
      */
     public function sub_order_by_priceD($id)
     {
-        $date = Carbon::now()->format('Y-m-d');
+        $date = Carbon::now()->add(1,'days')->format('Y-m-d');
         $discountProducts = DiscountProduct::where([
             ['start_date','<=',$date],
             ['end_date','>=',$date]
