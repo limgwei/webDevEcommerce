@@ -107,6 +107,7 @@ export default {
 
         axios.post('http://localhost:8000/api/user/image/'+localStorage.token, formData).then(response =>{
           console.log(response);
+          window.location.reload(true);
         })
 
        
@@ -120,6 +121,7 @@ export default {
       ).then(data=>{
         //console.log(avatarpicture)
         console.log(data);
+        window.location.reload(true);
         
       })
     },

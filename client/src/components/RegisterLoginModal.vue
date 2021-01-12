@@ -177,7 +177,7 @@ import axios from 'axios';
             console.log(data);
             console.log(this.regusername+' , '+this.regemail+' , '+this.regaddress+' , '+this.regpassword)
             alert("Please go to gmail to verify your account")
-            window.location="http://www.gmail.com";
+            window.open="http://www.gmail.com";
           })
 
         }
