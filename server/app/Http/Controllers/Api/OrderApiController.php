@@ -54,7 +54,18 @@ class OrderApiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request,$token)
-    {
+    {    
+        
+        Stripe\Stripe::setApiKey('sk_test_51I7Ps9JjzffrEIKdaPF6jcawJ4vJsAvNVYVNtZjp2EqzxmJy00YyxjBn6gb0DnyFFCxWSqYFwECYzEo6yURuZuEh00aOn35m3V');
+        Stripe\Charge::create ([
+                "amount" => $request->price * 100,
+                "currency" => "myr",
+                "source" => 'tok_1I8r8PJjzffrEIKdBjnKMryE',
+                "description" => "Furniture Price" 
+        ]);
+  
+        Session::flash('success', 'Payment successful!');
+      
         $user = User::where('remember_token',$token)->first();
         $id = $user->id;
         $request->merge(["user_id"=>$id]);

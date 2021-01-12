@@ -93,9 +93,10 @@ class CartApiController extends Controller
     {
         $user = User::where('remember_token',$token)->first();
         $user_id = $user->id;
-        $request->merge(["user_id"=>$user_id]);
-        
-        $cart = Cart::where('id',$id)->update($request->all());
+        $cart = Cart::where('id',$id)->first();
+        $cart->quantity = $request->quantity;
+        $cart->save();
+        // $cart = Cart::where('id',$id)->update($request->all());
         return $cart;
     }
 
