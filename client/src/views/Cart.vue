@@ -41,9 +41,9 @@
       <label class="buylabel">Delivery charges :</label>
       <strong class="buytotal">RM {{delivery_charge | showPrice}}</strong>
       <!-- <button class="buybtn" @click="showmodel()">Buy</button> -->
-      <button class="buybtn" @click="showmodel()">Buy</button>
+      <button class="buybtn" @click="buy()">Buy</button>
 
-    <div class="modal-backdrop" v-show="cardpaymodel">
+    <!-- <div class="modal-backdrop" v-show="cardpaymodel">
       <div class="buycarddiv">
         <img class="cardpicture" src="../assets/card.png"/>
         <div class="buycarddiv-up">
@@ -67,7 +67,7 @@
           </center>
         </div>
       </div>
-    </div>
+    </div> -->
 
     </div>
     <div v-else>
@@ -89,13 +89,13 @@ export default {
       orderItems:[],
       comment:"",
       cardpaymodel:false,
-      cardnumber:"",
-      cardyear:"",
-      cardcvc:"",
-      cardmonth:"",
-      card:[],
-      pk:"",
-      sk:""
+      // cardnumber:"",
+      // cardyear:"",
+      // cardcvc:"",
+      // cardmonth:"",
+      // card:[],
+     // pk:"",
+      //sk:""
     }
   },
   methods: {
@@ -137,40 +137,40 @@ export default {
     closemodel(){
       this.cardpaymodel = false
     },
-    stripe(){
+    // stripe(){
     
-        this.card['number'] = this.cardnumber;
-        this.card['exp_month'] = this.cardmonth;
-        this.card['exp_year'] = this.cardyear;
-        this.card['cvc'] = this.cardcvc;
-        console.log(this.card);
-          axios.get('http://localhost:8000/api/order/stripe/stripeKey').then(data=>{
+        // this.card['number'] = this.cardnumber;
+        // this.card['exp_month'] = this.cardmonth;
+        // this.card['exp_year'] = this.cardyear;
+        // this.card['cvc'] = this.cardcvc;
+        // console.log(this.card);
+        //   axios.get('http://localhost:8000/api/order/stripe/stripeKey').then(data=>{
             
-            let config = {
-            headers: {
-          'Authorization': 'Bearer ' + data.data,
-          'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
-          }
-          }
+        //     let config = {
+        //     headers: {
+        //   'Authorization': 'Bearer ' + data.data,
+        //   'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+        //   }
+        //   }
 
-          axios.post('https://api.stripe.com/v1/tokens',
-         {
-           number:this.cardnumber,
-           exp_month:this.exp_month,
-           exp_year:this.exp_year,
-           cvc:this.cvc
-         },config).then(data=>{
-            console.log(data);
-          }).catch(e=>{
-            console.log(e);
-          })
-          })
+        //   axios.post('https://api.stripe.com/v1/tokens',
+        //  {
+        //    number:this.cardnumber,
+        //    exp_month:this.exp_month,
+        //    exp_year:this.exp_year,
+        //    cvc:this.cvc
+        //  },config).then(data=>{
+        //     console.log(data);
+        //   }).catch(e=>{
+        //     console.log(e);
+        //   })
+        //   })
         //   axios.post('http://api.stripe.com/v1/tokens',{
         //     card:this.card
         // }).then(data=>{
         //     console.log(data);
         // })  
-    },
+    // },
     buy(){
       //var orderItems = [];
       for(let i = 0;i<this.items.length;i++){

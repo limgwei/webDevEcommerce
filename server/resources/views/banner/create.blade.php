@@ -8,7 +8,7 @@
     <h5 class="card-title">Create Banner</h5>
     <form action="/banner" method="post" enctype="multipart/form-data">
       @csrf
-      Fields require when post <br>
+     
         <div class="form-group">
           <label for="BannerName"> Name</label>
           <input type="text" class="form-control" name="name" id="BannerName" placeholder="Enter Product Name">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-group">
-          <label for="product">Category</label>
+          <label for="product">Product</label>
           <select class="form-control" name="product_id" id="product">
           <option value="0">___</option>
             @foreach ($products as $product) 

@@ -6,7 +6,7 @@
                     <div class="detail-title">
                             <h2>We delivery Malaysia wide!</h2>
                             <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quaerat similique repudiandae, consequuntur distinctio id rem aut veniam autem voluptatum iste, adipisci, excepturi alias inventore mollitia repellendus libero quod accusamus.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quaerat similique repudiandae
                             </p>
                     </div>
                 </div>

@@ -30,22 +30,26 @@ export default {
     data(){
         return{
             slides: [
-            {
-            image: require('@/assets/slide1.jpg')
-            },
-            {
-            image: require('@/assets/slide2.jpg')
-            },
-            {
-            image: require('@/assets/slide3.jpg')
-            },
+           
         ]
         }
         
     },
     created(){
         axios.get('http://127.0.0.1:8000/api/banner').then( data=>{
-        this.slides = data.data.data;
+            console.log(this.slides);
+            this.slides = "";
+            var datas = data.data.data;
+            var images = [];
+            //console.log(datas[i].image[0].url);
+            for(var i=0;i<datas.length;i++){
+                var image =datas[i].image[0].url;
+               images[i] ={image};
+            }
+            console.log(images);
+            this.slides =images;
+        //     console.log(data.data.data);
+         //this.slides = data.data.data.image.url;
         })
     },
 

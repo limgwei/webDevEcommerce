@@ -37,7 +37,7 @@ class DiscountProductController extends Controller
      */
     public function create()
     {
-        $allProducts = Product::where('id','<>',0);
+        $allProducts = Product::where('id','<>',0)->where('is_enable',1);
    
         $now = Carbon::now()->add(1,'days')->toDateString('Y-m-d');
         $discountProducts = DiscountProduct::with(['product'])->where([
@@ -75,7 +75,7 @@ class DiscountProductController extends Controller
      */
     public function show($id)
     {
-        $products = Product::all();
+        $products = Product::where('is_enable',1)->get();
         
         $discountProduct = DiscountProduct::with(['product'])->where('id',$id)->first();
         return view('discountProduct.show',compact('discountProduct','products'));
@@ -89,7 +89,7 @@ class DiscountProductController extends Controller
      */
     public function edit($id)
     {
-        $products = Product::all();
+        $products = Product::where('is_enable',1)->get();
 
         $discountProduct = DiscountProduct::with(['product'])->where('id',$id)->first();
         
