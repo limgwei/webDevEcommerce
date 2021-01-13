@@ -12,10 +12,10 @@
             </div>
 
             <div class="price-tag">
-                    <h3 :class="{strike: product.discount}">RM {{product.price}}</h3>
+                    <h3 :class="{strike: product.current_price}">RM {{product.price}}</h3>
                     
-                <span v-if="product.discount">
-                    <h3 class="discount">RM {{product.price - product.discount.value}}</h3>
+                <span v-if="product.current_price">
+                    <h3 class="discount">RM {{product.current_price}}</h3>
                 </span>
                 
                 <p>In Stock {{product.quantity}}</p>
