@@ -110,8 +110,9 @@ class CategoryController extends Controller
             return redirect()->route('category.index');
         }
         else{
+            $categories = Category::where('is_enable',1)->get();
             $error = "You have to delete subcategory related before delete this category.";
-            return redirect()->route('category.index',['error'=>$error]);
+            return view('category.index',compact('categories'),['error'=>$error]);
         }
     }
 

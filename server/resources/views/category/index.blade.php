@@ -2,11 +2,12 @@
 @section ('content')
 
 @isset ($error)
-  {{$error}}
+  <h6 style="color:red">{{$error}}</h6>
 @endisset
 <table class="table">
   <thead>
     <tr>
+    
       <th scope="col">#</th>
       <th scope="col">Category Name</th>
       <th scope="col">Option</th>

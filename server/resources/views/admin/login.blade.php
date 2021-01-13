@@ -30,13 +30,14 @@
 
 <form action="/login" method="post" class="form-container">
 @csrf 
-@isset($error)
-  {{$error}}
-@endisset
+
 <div class="card" style="width: 50%;margin:0 auto;margin-top:120px">
   <div class="card-header">
     Login
   </div>
+  @isset($error)
+  {{$error}}
+@endisset
   <div class="card-body">
   <div class="input-group mb-4">
     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

@@ -2,7 +2,7 @@
 
 @section ('content')
 @isset ($error)
-  {{$error}}
+  <h6 style="color:red">{{$error}}</h6>
 @endisset
 
 <table class="table">

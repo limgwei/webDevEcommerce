@@ -222,9 +222,9 @@ class SubCategoryController extends Controller
              $subcategory->save();
             return redirect()->route('subcategory.index');
         }
-      
-            $error = "You have to delete subcategory or product related before delete this subcategory.";
-            return redirect()->route('subcategory.index',['error'=>$error]);
+            $subcategories = SubCategory::where('is_enable',1)->get();
+            $error = "You have to delete product related before delete this subcategory.";
+            return view('subcategory.index',compact('subcategories'),['error'=>$error]);
         
     }
 }
