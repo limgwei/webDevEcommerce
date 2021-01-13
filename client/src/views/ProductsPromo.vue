@@ -23,10 +23,7 @@
                 </select>
                 </div>
 
-                <div class="right">
-                <input type="text" v-model="searchKey">
-                <button class="btn" @click="searching">Search</button>
-            </div>
+               
             </div>
 
             
@@ -51,7 +48,6 @@ export default {
   data(){
       return{
         products:'',
-        searchKey:'',
       }
   },
   methods:{
@@ -95,13 +91,6 @@ export default {
       })
       }
     },
-    searching(){
-        axious.get('http://127.0.0.1:8000/api/discount_product/search/{name}',this.searchKey).then( data=>{
-        this.products = data.data.data;
-        
-        console.log(this.products);
-      })
-    }
 
   },
   created(){

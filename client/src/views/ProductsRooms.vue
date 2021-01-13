@@ -23,10 +23,7 @@
                 </select>
                 </div>
 
-                <div class="right">
-                <input type="text" v-model="searchKey">
-                <button class="btn" @click="searching">Search</button>
-            </div>
+                
             </div>
 
             
@@ -51,7 +48,6 @@ export default {
   data(){
       return{
         products:'',
-        searchKey:'',
         id:'',
         latests:'',
         nameA:'',
@@ -105,14 +101,6 @@ export default {
         
       }
     },
-    searching(){
-      
-        axios.get('http://127.0.0.1:8000/api/sub/'+this.id+'/search/{name}',this.searchKey).then( data=>{
-        this.products = data.data.data;
-        
-        console.log(this.products);
-        })
-    }
 
   },
   created(){
