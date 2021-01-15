@@ -53,6 +53,11 @@ export default {
         isModalVisible: false,
       }
   },
+  created:function(){
+        this.$store.commit('setUser',{});
+        localStorage.token = "";
+        this.$router.push('/');
+  },
   computed: {
     ...mapGetters(['getUser']),
     emptyUser() {
