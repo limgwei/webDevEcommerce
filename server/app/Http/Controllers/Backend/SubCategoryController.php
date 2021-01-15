@@ -17,7 +17,7 @@ class SubCategoryController extends Controller
      */
     public function index()
     {   
-        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->where('is_enable',1)->get();
        
         $sub_id = array();
 
@@ -30,7 +30,7 @@ class SubCategoryController extends Controller
             
         }
         
-        $parent_subs = SubCategory::where('id','<>',0);
+        $parent_subs = SubCategory::where('id','<>',0)->where('is_enable',1);
         
         
         foreach($sub_id as $sub){
@@ -38,8 +38,8 @@ class SubCategoryController extends Controller
         }
         $parent_subs = $parent_subs->get();
 
-        $categories = Category::all();
-        $subcategories = SubCategory::with(['category','parent'])->get();
+        $categories = Category::where('is_enable',1)->get();
+        $subcategories = SubCategory::with(['category','parent'])->where('is_enable',1)->get();
         return view('subcategory.index',compact('subcategories','parent_subs','categories'));
     }
 
@@ -50,7 +50,7 @@ class SubCategoryController extends Controller
      */
     public function create()
     {
-        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->where('is_enable',1)->get();
        
         $sub_id = array();
 
@@ -62,11 +62,11 @@ class SubCategoryController extends Controller
             }
             
         }
-            $categories = Category::all();
+            $categories = Category::where('is_enable',1)->get();
       
         
             //$parent_subs = SubCategory::where('id','<>',$sub_id?$sub_id:0)->get();
-            $parent_subs = SubCategory::where('id','<>',0);
+            $parent_subs = SubCategory::where('id','<>',0)->where('is_enable',1);
         
         
             foreach($sub_id as $sub){
@@ -107,7 +107,7 @@ class SubCategoryController extends Controller
      */
     public function show($id)
     {
-        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->where('is_enable',1)->get();
        
         $sub_id = array();
 
@@ -120,7 +120,7 @@ class SubCategoryController extends Controller
             
         }
 
-        $parent_subs = SubCategory::where('id','<>',0);
+        $parent_subs = SubCategory::where('id','<>',0)->where('is_enable',1);
         
         
         foreach($sub_id as $sub){
@@ -128,9 +128,9 @@ class SubCategoryController extends Controller
         }
         $parent_subs = $parent_subs->get();
         
-        $subcategories = SubCategory::with(['category','parent'])->where('id',$id)->first();
+        $subcategories = SubCategory::with(['category','parent'])->where('id',$id)->where('is_enable',1)->first();
 
-        $categories = Category::all();
+        $categories = Category::where('is_enable',1)->get();
         return view('subcategory.show',compact('subcategories','parent_subs','categories'));
     }
 
@@ -142,7 +142,7 @@ class SubCategoryController extends Controller
      */
     public function edit($id)
     {
-        $products_sub_id = Product::where('sub_category_id','<>',0)->get();
+        $products_sub_id = Product::where('sub_category_id','<>',0)->where('is_enable',1)->get();
        
         $sub_id = array();
 
@@ -155,7 +155,7 @@ class SubCategoryController extends Controller
             
         }
 
-        $parent_subs = SubCategory::where('id','<>',0);
+        $parent_subs = SubCategory::where('id','<>',0)->where('is_enable',1);
         
         
         foreach($sub_id as $sub){
@@ -163,9 +163,9 @@ class SubCategoryController extends Controller
         }
         $parent_subs = $parent_subs->get();
         
-        $subcategory = SubCategory::with(['category','parent'])->where('id',$id)->first();
+        $subcategory = SubCategory::with(['category','parent'])->where('id',$id)->where('is_enable',1)->first();
 
-        $categories = Category::all();
+        $categories = Category::where('is_enable',1)->get();
         return view('subcategory.edit',compact('subcategory','parent_subs','categories'));
     }
 
@@ -213,9 +213,9 @@ class SubCategoryController extends Controller
     public function delete($id)
     {
         $product = Product::where('sub_category_id',$id)->where('is_enable',1)->get();
-        $subcategory=SubCategory::where('parent_id',$id)->where('is_enable',1)->get();
+       
 
-        if($product->isEmpty() && $subcategory->isEmpty()){
+        if($product->isEmpty()){
            
             $subcategory = SubCategory::find($id);
             $subcategory->is_enable = 0;

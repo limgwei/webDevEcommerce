@@ -30,12 +30,14 @@
             <div class="custom-file">
               <!-- <input type="file" class="custom-file-input" id="inputGroupFile01"> -->
               <!-- <input type="file" class="custom-file-input" name="image" > -->
-              <input type="file" class="custom-file-input" name="image" >
+              <input type="file" class="custom-file-input" name="image" id="imgInp">
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
               <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
             </div>
           </div>
-    
+          <small id="emailHelp" class="form-text text-muted">
+            <img src="" alt="" id="blah">
+          </small>
         </div>
         <div class="form-group">
           <label for="SubCategory">Sub Category</label>
@@ -61,4 +63,23 @@
     </div>
   </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+  $("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
 @endsection

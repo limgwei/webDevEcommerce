@@ -39,7 +39,7 @@
     <td>{{$product->quantity}}</td>
     <td style="width: 20%;">
       <a href="/product/{{$product->id}}/edit" class="btn btn-outline-success">Edit</a>
-      <a href="/product/{{$product->id}}" class="btn btn-outline-danger">Del</a>
+      <a href="/product/delete/{{$product->id}}" class="btn btn-outline-danger">Del</a>
       </td>
   </tr>
  

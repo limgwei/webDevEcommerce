@@ -32,7 +32,7 @@ class ProductController extends Controller
     public function create()
     {   
         
-        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->where('is_enable',1)->get();
        
         $parent_id = array();
         //return $subcategories_with_parent;
@@ -45,7 +45,7 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',0);
+        $subcategories = SubCategory::where('id','<>',0)->where('is_enable',1);
         foreach($parent_id as $parent){
            $subcategories = $subcategories->where('id','<>',$parent);
         }
@@ -100,7 +100,7 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',0);
+        $subcategories = SubCategory::where('id','<>',0)->where('is_enable',1);
         foreach($parent_id as $parent){
            $subcategories = $subcategories->where('id','<>',$parent);
         }
@@ -118,7 +118,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->get();
+        $subcategories_with_parent = SubCategory::where('parent_id','<>',0)->where('is_enable',1)->get();
        
         $parent_id = array();
 
@@ -131,7 +131,7 @@ class ProductController extends Controller
             
         }
 
-        $subcategories = SubCategory::where('id','<>',0);
+        $subcategories = SubCategory::where('id','<>',0)->where('is_enable',1);
         foreach($parent_id as $parent){
            $subcategories = $subcategories->where('id','<>',$parent);
         }
@@ -140,7 +140,7 @@ class ProductController extends Controller
 
        
 
-        $product = Product::with(['media','sub_category'])->where('id',$id)->first();
+        $product = Product::with(['media','sub_category'])->where('id',$id)->where('is_enable',1)->first();
         
         return view('product.edit', compact('product', 'subcategories'));
     }
